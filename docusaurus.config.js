@@ -10,7 +10,7 @@ module.exports = {
   baseUrl: "/website-docs/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.png",
+  favicon: "img/favicon.ico",
   organizationName: "pufferfinance",
   projectName: "doctest",
   themeConfig: {
