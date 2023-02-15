@@ -24,7 +24,7 @@ const sidebars = {
     {
       type: "category",
       label: "Background",
-      items: ["background/slash", "background/mev", "background/mergeshang"],
+      items: ["background/mergeshang", "background/slash", "background/mev"],
     },
     {
       type: "category",
