@@ -25,12 +25,12 @@ staking rewards will vary depending on factors like the validator’s performanc
 capital requirement should make it infeasible for a centralized entity to acquire more than two-thirds
 of the validator set (a critical consensus threshold).
 
-## The [Shanghai](<(https://notes.ethereum.org/@launchpad/withdrawals-faq)>) Update
+## The Shanghai Update
 
 The Merge succeeded in consolidating the main chain and Beacon Chain, but this was just a milestone
 in the larger plan to transition to PoS safely. Further functionality will be added in future forks.
 
-In particular, until the Shanghai update, expected in mid-2023, validators cannot withdraw their locked
+In particular, until the [Shanghai](<(https://notes.ethereum.org/@launchpad/withdrawals-faq)>) update, expected in mid-2023, validators cannot withdraw their locked
 ETH without irreversibly surrendering their duties, with the result that all staked ETH is inaccessible
 by validators.
 
