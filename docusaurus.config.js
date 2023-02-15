@@ -10,10 +10,52 @@ module.exports = {
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.png",
+  favicon: "img/favicon.ico",
   organizationName: "pufferfinance",
   projectName: "doctest",
   themeConfig: {
+    footer: {
+      style: "dark",
+      links: [
+        {
+          title: "Website",
+          items: [
+            {
+              label: "Puffer",
+              href: "https://www.puffer.fi/",
+            },
+          ],
+        },
+        {
+          title: "Community",
+          items: [
+            // {
+            //   label: "Discord",
+            //   href: "https://discordapp.com/invite/docusaurus",
+            // },
+            {
+              label: "Twitter",
+              href: "https://twitter.com/puffer_finance",
+            },
+          ],
+        },
+        {
+          title: "More",
+          items: [
+            // {
+            //   label: "Blog",
+            //   to: "/blog",
+            // },
+            {
+              label: "GitHub",
+              href: "https://github.com/PufferFinance",
+            },
+          ],
+        },
+      ],
+      // copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+    },
+
     prism: {
       additionalLanguages: ["solidity"],
     },

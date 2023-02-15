@@ -3,7 +3,9 @@ sidebar_position: 2
 title: Secure-Signer
 ---
 
-Puffer’s Secure-Signer prevents these vulnerabilities through the use of Enclaves. To prevent possible
+## Slash Prevention
+
+Puffer’s Secure-Signer prevents [slashing](background/slash.md) through the use of Enclaves. To prevent possible
 slashes through double-signing, the Secure-Signer generates and safeguards the BLS validator key
 inside its encrypted and tamper-proof memory. This key can only be accessed during runtime and
 remains encrypted at rest, making it inaccessible to the NoOp unless used to sign block proposals or
@@ -23,3 +25,20 @@ on the following assertions holding:
 These assertions are enforced through the enclave and hold even if the NoOp’s operating system
 is compromised, significantly reducing NoOp risk and allowing the Puffer Pool to lower the bond
 requirement safely.
+
+## Hardware
+
+Currently, the enclave running Secure-Signer software is [Intel's SGX](https://www.intel.com/content/www/us/en/developer/tools/software-guard-extensions/overview.html) which is a Trusted Execution Environment (TEE). To promote manufacturing diversity, [AMD's SEV](https://developer.amd.com/sev/) is to be adopted for use by Secure-Singer technology.
+
+In the near future, other upcoming TEE-enabled hardware will be integrated into Secure-Signer.
+
+## Remote Attestation
+
+The interactive process by which an enclave proves that it is running the
+Secure-Signer. During this operation, the enclave can commit to data (e.g., a public key).
+
+Remote attestation produces Attestation Evidence which will contain the committed data and
+a measurement of the enclave’s state which can be verified to ensure the enclave is running the
+correct program.
+
+![mevboost](img/mevboost.jpg)

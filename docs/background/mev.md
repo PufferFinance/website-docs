@@ -14,3 +14,12 @@ more validators will have 10 times the opportunities to extract MEV and optimize
 Additionally, some MEV strategies require proposing consecutive blocks, which is statistically unlikely
 unless you control many validators ($k/Ni$ , where k is the validators controlled out of N and i the number
 of consecutive blocks).
+
+To mitigate the effects of economies of scale, [Proposer-Builder Separation (PBS)](https://ethresear.ch/t/proposer-block-builder-separation-friendly-fee-market-designs/9725/6) was proposed
+and implementations like [MEV-Boost](https://github.com/flashbots/mev-boost) were built to help democratize access to MEV opportunities
+to all validators. MEV-Boost is a middleware software that interacts with consensus clients, exposing
+validators to a marketplace of MEV-optimized blocks. Builders bid to have their blocks proposed by
+validators in exchange for the block rewards. By decoupling block building from proposing, validators
+are no longer required to specialize in MEV extraction to remain competitive, lowering the barrier
+of entry and promoting decentralization. For example, efficient MEV extraction requires compute
+requirements beyond what is expected for validators, barring entry for many solo validators.

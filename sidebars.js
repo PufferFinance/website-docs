@@ -24,7 +24,7 @@ const sidebars = {
     {
       type: "category",
       label: "Background",
-      items: ["background/slash", "background/mev", "background/mevboost"],
+      items: ["background/slash", "background/mev", "background/mergeshang"],
     },
     {
       type: "category",
@@ -39,8 +39,17 @@ const sidebars = {
         "arch/smoothing",
         "arch/ejection",
         "arch/governance",
-        "arch/board",
       ],
+    },
+    {
+      type: "category",
+      label: "Joining Puffer Pool",
+      items: ["joining/stakers", "joining/noop"],
+    },
+    {
+      type: "category",
+      label: "FAQ",
+      items: ["FAQ/faq"],
     },
   ],
 };
