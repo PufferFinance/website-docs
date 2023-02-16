@@ -10,7 +10,7 @@ Secure-Signer leverages Trusted Execution Environments (TEEs), and is currently 
 TEEs provide confidentiality and integrity guarantees. In the context of SGX, an enclave is a protected region of memory where code and data are stored. The enclave ensures that the code is executed as expected without tampering and that the data remains encrypted and protected. The physical hardware ensures that these properties hold.
 
 ## Where is it run?
-|![](img/mevboost.jpg)|
+|![](img/mevboost.png)|
 |:--:|
 |Secure-Signer in the validator tech stack. Adapted from https://github.com/flashbots/mev-boost"|
 

@@ -24,12 +24,12 @@ const sidebars = {
     {
       type: "category",
       label: "Background",
-      items: ["background/mergeshang", "background/slash", "background/mev"],
+      items: ["background/mergeshang", "background/slash"],
     },
     {
       type: "category",
       label: "Technology",
-      items: ["tech/securesigner"],
+      items: ["tech/securesigner", "tech/rave"],
     },
     {
       type: "category",
