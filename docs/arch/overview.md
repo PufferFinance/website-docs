@@ -15,4 +15,4 @@ the rest is socialized across the Puffer Pool and Treasury. The consensus reward
 Pool with a small fee going to the Treasury to fuel protocol development. The ETH from consensus
 rewards will automatically accrue on a weekly basis following the [Shanghai](https://notes.ethereum.org/@launchpad/withdrawals-faq) update.
 
-![pufferarch](img/arch.jpg)
+![pufferarch](img/arch.png)
