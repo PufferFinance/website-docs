@@ -6,7 +6,7 @@ slug: /
 # Puffer Introduction
 
 Puffer is a slash-free and permissionless liquid staking protocol that facilitates at-home staking via a low bond
-requirement of 2 ETH. The Puffer team presents Secure-Signer, a remote-signing tool compatible
+requirement of 2 ETH. The Puffer team presents [Secure-Signer](tech/securesigner.md), a remote-signing tool compatible
 with all consensus clients that prevents slashable offenses through trusted hardware. Requiring
 the use of Secure-Signer within the Puffer Pool eliminates the risk of slashing, either by accident
 or due to bugs in the consensus client.

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: Ethereum Merge and Shanghai Update
+title: Ethereum Proof of Stake
 ---
 
 ## The Merge
