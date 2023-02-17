@@ -20,7 +20,6 @@ const sidebars = {
 
   background: [
     "intro",
-    // 'hello',
     {
       type: "category",
       label: "Background",
@@ -47,11 +46,7 @@ const sidebars = {
       label: "Joining Puffer Pool",
       items: ["joining/stakers", "joining/noop"],
     },
-    {
-      type: "category",
-      label: "FAQ",
-      items: ["FAQ/faq"],
-    },
+    "faq"
   ],
 };
 
