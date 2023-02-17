@@ -36,6 +36,7 @@ const sidebars = {
       label: "Architecture",
       items: [
         "arch/overview",
+        "arch/pufETH",
         "arch/smoothing",
         "arch/ejection",
         "arch/governance",
