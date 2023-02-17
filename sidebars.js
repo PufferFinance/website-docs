@@ -36,7 +36,7 @@ const sidebars = {
       items: [
         "arch/overview",
         "arch/pufeth",
-        "arch/smoothing",
+        "arch/mev",
         "arch/ejection",
         "arch/governance",
       ],
