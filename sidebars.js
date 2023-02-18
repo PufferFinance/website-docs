@@ -41,11 +41,11 @@ const sidebars = {
         "arch/governance",
       ],
     },
-    {
-      type: "category",
-      label: "Joining Puffer Pool",
-      items: ["joining/stakers", "joining/noop"],
-    },
+    // {
+    //   type: "category",
+    //   label: "Joining Puffer Pool",
+    //   items: ["joining/stakers", "joining/noop"],
+    // },
     "faq"
   ],
 };
