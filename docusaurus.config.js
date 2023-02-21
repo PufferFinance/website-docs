@@ -67,6 +67,16 @@ module.exports = {
       },
       items: [
         {
+          href: "https://www.puffer.fi/",
+          label: "Puffer.fi",
+          position: "right",
+        },
+        {
+          href: "https://twitter.com/puffer_finance",
+          label: "Twitter",
+          position: "right",
+        },
+        {
           href: "https://github.com/PufferFinance",
           label: "GitHub",
           position: "right",
