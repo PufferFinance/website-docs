@@ -7,7 +7,7 @@ module.exports = {
   title: "Puffer Docs",
   tagline: "Documentation for the Puffer Protocol",
   url: "https://pufferFinance.github.io",
-  baseUrl: "/website-docs/",
+  baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
