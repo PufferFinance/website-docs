@@ -65,6 +65,9 @@ title: FAQ
 
 > Puffer is dedicated to building a permissionless stake pool from day one. For this reason, we will not adopt DVT during the first phase of the Puffer Pool. However, in terms of technology, [Secure-Signer](tech/securesigner#what-is-it) and our [ejection rule](arch/ejection) provide scalable slash protection and NoOp uptime without the unsolved issues in a permissionless setting.
 
+### How hard is it to get access to SGX?
+> Running Secure-Signer doesn't require anything expensive or technical like purchasing and running an ASIC. Instead, Secure-Signer is software that runs on compatible Intel CPUs that support SGX. Many cloud providers (e.g., Microsoft Azure) readily supply SGX-enabled servers for cheap that are compatible with Secure-Signer. Additionally, Intel SGX-enabled XEON servers with the specs to run a validator can be purchased to be run at home.
+
 ### Is Puffer hiring?
 
 > Yes! We are looking for value-aligned and motivated candidates to join our team at Puffer and help keep Ethereum decentralized.
