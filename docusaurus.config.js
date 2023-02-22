@@ -92,7 +92,7 @@ module.exports = {
           routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl: "https://github.com/PufferFinance/website-docs",
+          editUrl: "https://github.com/PufferFinance/website-docs/tree/main",
           remarkPlugins: [math],
           rehypePlugins: [katex],
         },
