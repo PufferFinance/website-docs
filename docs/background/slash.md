@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-title: Slashing in Ethereum PoS
+title: Penalties in Ethereum PoS
 ---
 
 ## Validator Stack
@@ -31,3 +31,9 @@ The Ethereum PoS specifications introduce the notion of an [anti-correlation pen
 For low-correlation slashing events (e.g., user error), a validator will lose close to the 1 ETH minimum, but for high-correlation events (e.g., consensus client bug), they could lose their full 32 ETH. See this [article](https://dankradfeist.de/ethereum/2022/03/24/run-the-majority-client-at-your-own-peril.html) for more information.
 
 The existence of slashable offenses and the large penalty increase risk and motivate Puffer's Secure-Signer.
+
+## Inactivity Penalties
+The rule of thumb is that offline validators will lose approximately as much as they would have made by being online and doing their duties. There are some caveats. This applies to consensus rewards and does not take into account the money that could have been made if they missed a block proposal. Additionally, this does not consider [inactivity leaks](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#rewards-and-penalties).
+
+In the case of an inactivity leak, a validator will lose increasingly more ETH as a penalty until the chain can reach finality. If the protocol had taken months to years to eject an inactive validator, the inactivity leak mechanism would expedite this to days to weeks. This poses a risk in permissionless pools and motivates Puffer's architecture.
+
