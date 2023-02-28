@@ -8,7 +8,7 @@ Puffer introduces Puffer DVT (pDVT), an optimized version of [DVT](https://www.y
 
 The pDVT’s cryptoeconomics are designed to incentivize the SR or the NoOps to sign VEMs to withdraw if the opposite party misbehaves, protecting the pool’s staked ETH from inactivity penalties. For example, if the SR stops receiving responses from the NoOps, they are incentivized to sign and post a VEM to prevent harm to their deposit. Similarly, if an SR goes offline or decides to censor, the NoOps can sign and aggregate VEMs on-chain to exit and protect their bonds. 
 
-Beyond solving the core problem of inactivity penalties, pDVTs enable previously impossible [MEV-Smoothing](arch/mev.md), which increases the Puffer Pool’s competitiveness. Execution rewards (priority fees + MEV) constitute the largest part of a NoOp’s revenue. Centralized pools can arbitrarily share execution rewards with the pool to increase APR and capture more market share. To remain competitive, permissionless pools should be able to offer similar yields to their LSD holders.
+Beyond solving the core problem of inactivity penalties, pDVTs enable previously impossible [MEV-Smoothing](arch/mev.md), which increases the Puffer Pool’s competitiveness. Execution rewards (priority fees + MEV) constitute the largest part of a NoOp’s revenue. Centralized pools can arbitrarily share execution rewards with the pool to increase APR and capture more market share. To remain competitive, permissionless pools should be able to offer similar yields to their LSD holders. Enabling MEV-Smoothing increases the pufETH LSD's yield, helping Stakers earn more and allowing the Puffer Pool to compete with centralized LSDs.
 
 ![pufferarch](img/arch.png)
 
