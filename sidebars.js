@@ -37,7 +37,7 @@ const sidebars = {
         "arch/overview",
         "arch/pufeth",
         "arch/mev",
-        "arch/ejection",
+        // "arch/ejection",
         "arch/governance",
       ],
     },

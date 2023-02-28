@@ -15,11 +15,27 @@ or due to bugs in the consensus client.
 
 Ever since Ethereum switched to proof of stake (PoS), anyone with 32 ETH can participate as a validator, but the high capital requirement favors institutions. As a result, the validator set tends towards centralization.
 Liquid staking derivatives (LSDs) have recently accelerated this, resulting in a validator set composed of just a few entities with unprecedented control over Ethereum blockspace ([more on risks of LSDs](https://notes.ethereum.org/@djrtwo/risks-of-lsd)).
+
 Puffer reduces the node operators (NoOps) bond by a factor of sixteen to just 2 ETH. This reduces the barrier of entry, allowing for more non-instututional NoOp participation, therefore further decentralizing the Ethereum. Additionally, the high capital efficiency offers NoOps sixteen times the opportunities for high-revenue execution rewards, further increasing the viability of at-home staking.
 
-## How can we safely reduce it?
-NoOp operating risk typically increases as the NoOp bond requirement decreases due to two factors:
--  First, the penalty for a slashable offense ranges from 1 to 32 ETH. If the bond requirement is 2 ETH, a NoOp risks losing at least 50% of their collateral if they are slashed with the minimum penalty (compared to ~3% if they had the standard 32 ETH bond). 
-- Second, NoOps that leverage the high capital efficiency to operate multiple parallel validators take on increased risk. For example, a NoOp can run 16 validators with 32 ETH, but must be careful about key management. They have effectively increased their risk sixteen times with the additional added complexity of key management (many past slashable offenses were due to NoOps accidentally double-signing messages).
+## What are the risks?
+> ### Slashing Risk
+> NoOp operating risk typically increases as the NoOp bond requirement decreases for two reasons:
 
-Secure-Signer completely eliminates the risk of accidental slashing which allows Puffer to safely reduce the NoOp bond requirement without increasing NoOp risk. To learn more about what bonds and slashlable offenses are, check out the [background section](background/slash.md). See [here](tech/securesigner.md) for more information on Secure-Signer.
+> First, the penalty for a slashable offense ranges from 1 to 32 ETH. If the bond requirement is 2 ETH, a NoOp risks losing at least 50% of their collateral if they are slashed with the minimum penalty (compared to ~3% if they had the standard 32 ETH bond). 
+
+> Second, NoOps that leverage the high capital efficiency to operate multiple parallel validators take on increased risk. For example, a NoOp can run 16 validators with 32 ETH, but must be careful about key management. They have effectively increased their risk sixteen times with the additional added complexity of key management (many past slashable offenses were due to NoOps accidentally double-signing messages).
+
+> ### Inactivity Risk
+> The PoS validator set will only eject inactive validators after their effective balance falls below 16 ETH. In a stake pool, an inactive NoOp could lose $16 - B$ ETH of Staker capital at the cost of only $B$ ETH to themself. Without a means to perform automatic ejections, bonds have been set to $B=16$ to protect Stakers from losing capital.
+
+> Currently, the only way to withdraw a validator is by signing a VoluntaryExit message (VEM) with the validator key. In a permissioned pool where NoOps are trusted, the problem of getting them to sign a VEM is easy; however, the NoOp may go offline or refuse to sign the VEM in a permissionless pool. 
+
+> This has been the key hurdle in reducing the bond requirement. Modifications to the PoS specs to allow for smart-contract-triggered-ejections have stayed in the research phase, so it could be months or years before implementation. This valuable time could allow centralized staking operations to take market share from permissionless pools by outcompeting in terms of capital efficiency. 
+
+
+
+## How does Puffer address this?
+[Secure-Signer](tech/securesigner.md) eliminates the risk of accidental slashing and consensus client bugs, allowing Puffer to safely reduce the NoOp bond requirement without increasing NoOp risk. 
+
+Puffer's architecture addresses the issue of inactivity penalties by introducing Secure-Router and pDTV. These modules incentivize for excellent validator performance,  provide the cryptoeconomic incentives for VEM signatures, and enable previously impossible features like execution rewards sharing in a permissionless pool.
