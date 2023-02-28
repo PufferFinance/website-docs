@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-title: MEV-Boost
+title: MEV-Smoothing
 ---
 ## Maximal Extractable Value (MEV)
 
@@ -13,6 +13,9 @@ To mitigate the effects of economies of scale, [Proposer-Builder Separation (PBS
 
 Block builders benefit from economies of scale and are prone to cartelization, but do not pose the same threat to Ethereum since validators ultimately control the blockspace.
 
-Secure-Signer is compatible with MEV-Boost. The NoOp’s consensus client transfers block headers from the MEV-Boost middleware to Secure-Signer, which will only sign it if the header’s slot is strictly greater than the last slot signed by Secure-Signer. This combination empowers any NoOp with slash-resistance and access to MEV-competitive blocks. The Puffer Pool further increases financial opportunities by exposing the NoOp to the pufETH LSD and leveraged staking.
+## MEV-Smoothing
+In-protocol MEV-smoothing has been [proposed](https://ethresear.ch/t/committee-driven-mev-smoothing/10408) with the goal of reducing the variance of MEV distribution to as close to uniform as possible but remains in the research phase. Puffer's pDVT groups socialize the execution rewards earned from using MEV-Boost back to the rest of the pool, allowing for MEV-smoothing within the Puffer Pool.
 
-MEV-Boost usage must be optional. While it provides access to competitive blocks, MEV-Boost requires trusting Relays which may comply with regulations. To maximize censorship resistance, we allow NoOps to build their blocks or opt-in to use MEV-Boost.
+We refer to the lever that controls the socialization of execution rewards as the Smoothing Factor ($S$, where $0 \le S \le 1$). A smoothing factor of $S = 1.0$ will socialize all execution rewards to the Puffer Pool, while a smoothing factor of $S = 0.0$ will return all execution rewards to the pDVT group that proposed the block.
+
+We believe that implementing MEV-smoothing is crucial for solo validators to have a fair opportunity to compete in the Puffer Pool, especially in the presence of wealthy institutional Stakers that have control over many validator keys. Additionally, MEV-smoothing contributes to censorship resistance as solo validators can participate with non-dominant MEV strategies while still earning competitive revenue.
