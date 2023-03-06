@@ -9,7 +9,7 @@ There are many pooled staking protocols that commonly will provide a Liquid Stak
 LSDs are a convenient way for ETH holders to earn staking rewards without requiring any technical knowledge or the infrastructure to run an Ethereum validator. Simply by holding the LSD, a `Staker` will earn rewards over time and contribute to the overall security of Ethereum.
 
 ## pufETH
-Puffer's pool offers a LSD called `pufETH` that is an ERC20, rebasing token based off of [Aave's aToken](https://docs.aave.com/developers/tokens/atoken). Any Staker with at least 0.01 ETH can mint new pufETH and begin earning passive staking rewards. This significantly reduces the barrier of entry to start contributing to Ethereum's decentralization.
+Puffer's pool offers a LSD called `pufETH` that is an ERC20 token based off of [Compound's cToken](https://docs.compound.finance/v2/ctokens/#ctokens). Any Staker with at least 0.01 ETH can mint new pufETH and begin earning passive staking rewards. This significantly reduces the barrier of entry to start contributing to Ethereum's decentralization.
 
 ### Minting
 Stakers mint() pufETH by sending ETH to the pool contract. Their pufETH will immediately begin earning staking rewards. 
