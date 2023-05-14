@@ -7,7 +7,7 @@ Puffer's Secure-Signer is a remote signing tool backed by an Ethereum Foundation
 
 ## What is it?
 
-[Secure-Signer](https://pufferfinance.github.io/secure-signer/)leverages Trusted Execution Environments (TEEs), and is currently implemented as an [Intel SGX](https://www.intel.com/content/www/us/en/developer/tools/software-guard-extensions/overview.html) enclave. To mitigate points of failure, Puffer is committed to manufacturer diversity with plans to implement Secure-Signer on [AMD's SEV](https://developer.amd.com/sev/) TEE, as well as on new hardware as they come to market.
+[Secure-Signer](https://pufferfinance.github.io/secure-signer/) leverages Trusted Execution Environments (TEEs), and is currently implemented as an [Intel SGX](https://www.intel.com/content/www/us/en/developer/tools/software-guard-extensions/overview.html) enclave. To mitigate points of failure, Puffer is committed to manufacturer diversity with plans to implement Secure-Signer on [AMD's SEV](https://developer.amd.com/sev/) TEE, as well as on new hardware as they come to market.
 
 TEEs provide confidentiality and integrity guarantees. In the context of SGX, an enclave is a protected region of memory where code and data are stored. The enclave ensures that the code is executed as expected without tampering and that the data remains encrypted and protected. The physical hardware ensures that these properties hold.
 
