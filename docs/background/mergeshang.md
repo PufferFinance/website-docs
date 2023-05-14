@@ -16,13 +16,10 @@ Validators are incentivized to participate through consensus and execution rewar
 
 To ensure that validators perform honestly and diligently, Ethereum PoS enforces penalties. In the event of minor offenses (e.g., going offline), validators are penalized amounts equal to the rewards they would have received if they operated correctly.
 
-In more serious cases, validators may be slashed, which removes them from the validator network and burns some or all of their bond. Slashing happens in response to [three specific offenses](background/slash.md), all of which cause validators to equivocate or send conflicting messages that cause disagreements and disarray in the consensus protocol. 
-
+In more serious cases, validators may be slashed, which removes them from the validator network and burns some or all of their bond. Slashing happens in response to [three specific offenses](background/slash.md), all of which cause validators to equivocate or send conflicting messages that cause disagreements and disarray in the consensus protocol.
 
 ## The Shanghai Update
 
 The Merge succeeded in consolidating the main chain and Beacon Chain, but this was just a milestone in the larger plan to transition to PoS safely. Additional functionality will be added in future forks.
 
-In particular, until the [Shanghai/Capella](https://notes.ethereum.org/@launchpad/withdrawals-faq) update, expected in mid-2023, validators cannot withdraw their locked ETH without irreversibly surrendering their duties, with the result that all staked ETH is inaccessible by validators. Additionally, the only liquid revenue available to validators is via execution rewards, with consensus rewards locked until the update. 
-
-Post-Shanghai update, there will likely be a massive reshuffling of ETH as existing validators reclaim their ETH and new validators join without the risk of being unable to withdraw, something that heavily favors large institutions.
+With [Shanghai/Capella](https://notes.ethereum.org/@launchpad/withdrawals-faq) update,validators can now withdraw their locked ETH without irreversibly surrendering their duties. Additionally, both execution rewards and consensus rewards are now accesible.
