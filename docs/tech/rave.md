@@ -2,7 +2,7 @@
 sidebar_position: 2
 title: RAVe
 ---
-RAVe is part of Puffer's Ethereum Foundation grant deliverable and stands for `Remote Attestation VErification`. This essential set of smart contracts allows the Puffer Pool to be permissionless. Beyond this, RAVe enables entirely [new use cases](https://ethresear.ch/t/2fa-zk-rollups-using-sgx/14462) that weren't previously possible that we are excited to explore at Puffer.
+RAVe is part of Puffer's Ethereum Foundation grant deliverable and stands for `Remote Attestation Verification`. This essential set of smart contracts allows the Puffer Pool to be permissionless. Beyond this, RAVe enables entirely [new use cases](https://ethresear.ch/t/2fa-zk-rollups-using-sgx/14462) that weren't previously possible that we are excited to explore at Puffer.
 
 ## Remote Attestation
 Remote Attestation (RA) is necessary for an SGX-enabled CPU to establish trust with third parties. This is essential for anyone to prove that they are running a specific program. In Puffer, RA is how a NoOp proves that they are running Secure-Signer and RAVe smart contracts verify RA evidence to allow entrance into the pool. 
