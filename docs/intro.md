@@ -40,4 +40,4 @@ Puffer reduces the node operators (NoOps) bond by a factor of sixteen to just 2 
 
 [Secure-Signer](tech/securesigner.md) eliminates the risk of accidental slashing and consensus client bugs, allowing Puffer to safely reduce the NoOp bond requirement without increasing NoOp risk.
 
-Puffer's architecture addresses the issue of inactivity penalties by introducing Secure-Router and pDTV. These modules incentivize for excellent validator performance, provide the cryptoeconomic incentives for VEM signatures, and enable previously impossible features like execution rewards sharing in a permissionless pool.
+Puffer's architecture addresses the issue of inactivity penalties by introducing Secure-Router and pDVT. These modules incentivize for excellent validator performance, provide the cryptoeconomic incentives for VEM signatures, and enable previously impossible features like execution rewards sharing in a permissionless pool.
