@@ -32,13 +32,13 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "Architecture",
+      label: "Protocol",
       items: [
         "arch/overview",
-        "arch/pufeth",
-        "arch/mev",
+        // "arch/pufeth",
+        // "arch/mev",
         // "arch/ejection",
-        "arch/governance",
+        // "arch/governance",
       ],
     },
     // {

@@ -2,23 +2,46 @@
 sidebar_position: 1
 title: Overview
 ---
-Puffer’s liquid staking protocol uses a combination of cryptoeconomics and a novel slash-protection mechanism to solve the problem of lowering the NoOp bond requirement in a permissionless setting ([without waiting for 0x03 withdrawal credentials](https://ethresear.ch/t/withdrawal-credentials-exits-based-on-a-generalized-message-bus/12516)). We believe our solution is the most decentralized and trust-minimized solution to be built with Ethereum’s ethos in mind. We reduce the total bond requirement to just 2 ETH, which is split between the Secure-Router (SR, a module built from Secure-Signer) and NoOps (e.g., $1$ ETH for SR and $N * \frac{1}{N}$ ETH for NoOps). 
+Restaking is a paradigm shift that will forever change web3's infrastructure and unlock unprecedented value for Ethereum validators and the AVSs they operate. However, as with earlier developments like MEV and liquid staking, there is potential to centralize Ethereum. Now that Pandora's Box is opened, it is essential to build protocols to that preserve decentralization. In pursuit of this goal, Puffer has built the first native liquid staking protocol on [Eigenlayer](https://www.eigenlayer.xyz/) with Ethereum's ethos in mind. To counteract the risk of centralization, Puffer is preemptively self-capping its pool size and implementing guardrails to mitigate the negative externalities that restaking may have on the Ethereum ecosystem.
 
-Puffer introduces Puffer DVT (pDVT), an optimized version of [DVT](https://www.youtube.com/watch?v=awBX1SrXOhk&t=898s) that resolves the problems of using DVT in a permissionless setting. Each pDVT group contains $N$ NoOps, is led by an SR and manages a single validator key on behalf of the Puffer Pool. Each NoOp operates like a normal validator, signing block proposals and attestations with their validator key share, then forwards their signatures to the SR. The duty of the SR is to aggregate signatures from NoOps, provide an additional layer of slash protection via Secure-Signer, and sign Voluntary Exit messages (VEMs) if the NoOps go offline or misbehave.
+At its core, the Puffer Protocol is a liquid staking protocol where node operators are permissionlessly allocated ETH to launch an Ethereum PoS validator. Anyone can stake ETH for the pufETH LST, which is expected to increase in value over time as the Puffer Protocol accrues validator and restaking rewards. PUFI token is used to govern the protocol via voting in the Puffer DAO. Some important duties include approving which AVSs Puffer nodes can use, and which ones to allocate protocol treasury ETH to in the form of Economic Security as a Service (ESaaS). 
 
-The pDVT’s cryptoeconomics are designed to incentivize the SR or the NoOps to sign VEMs to withdraw if the opposite party misbehaves, protecting the pool’s staked ETH from inactivity penalties. For example, if the SR stops receiving responses from the NoOps, they are incentivized to sign and post a VEM to prevent harm to their deposit. Similarly, if an SR goes offline or decides to censor, the NoOps can sign and aggregate VEMs on-chain to exit and protect their bonds. 
+At a high level, the Puffer Protocol can be conceptualized as a platform to increase participation in Ethereum validating and, more broadly, web3 infrastructure through two means:
+1. decreasing the barrier to entry to becoming a node
+2. increasing rewards opportunities via restaking and MEV-Smoothing
 
-Beyond solving the core problem of inactivity penalties, pDVTs enable previously impossible [MEV-Smoothing](arch/mev.md), which increases the Puffer Pool’s competitiveness. Execution rewards (priority fees + MEV) constitute the largest part of a NoOp’s revenue. Centralized pools can arbitrarily share execution rewards with the pool to increase APR and capture more market share. To remain competitive, permissionless pools should be able to offer similar yields to their LSD holders. Enabling MEV-Smoothing increases the pufETH LSD's yield, helping Stakers earn more and allowing the Puffer Pool to compete with centralized LSDs.
+By providing higher profit margins and lowering ETH requirements, at-home nodes can better compete with centralized staking operations, helping to cement a pocket of decentralization within Ethereum's validator set.
 
-![pufferarch](img/arch.png)
+# Puffer Protocol
+<!-- ![pufferarch](img/arch.png) -->
 
-In the Puffer Pool, `Puffer Pods` consist of a pDVT group and multiple Stakers. The pDVT group must provide a 2 ETH bond and is then paired with Stakers, who contribute chunks of 30 ETH in increments of $\ge 0.01$ ETH. 
+### Puffer AVS
+Eigenlayer defines [actively validated services](https://github.com/Layr-Labs/eigenlayer-contracts/blob/master/docs/AVS-Guide.md) (AVSs) to be services or middlewares that a restaker can opt in to, where provably incorrect behavior can be programatically slashed. For example, a validator's 32 ETH deposit can be programatically slashed if fraud is proven while restaking to operate an optimistic rollup. Since the Puffer Protocol is built on top of Eigenlayer, its rules can be recursively defined as an AVS. If a Puffer AVS violation occurs, the offending validator's ETH will be programmably slashed and the amount distributed back to the pool.
 
-The Pod registers a validator key (generated by SR’s Secure-Signer instance) and joins the validator queue. Stakers mint Puffer's [pufETH LSD](arch/pufeth.md) (one-to-one with their staked ETH), while the pDVT group mints locked pufETH for their bonded ETH. The pDVT group's pufETH serves as collateral while allowing them to earn consensus rewards on their 2 ETH bond beyond the execution rewards. 
+1. To actively protect staker ETH from [inactivity penalties](../intro.md#inactivity-risk), each validator's [current balance](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance) is required to remain above a threshold set by the Puffer DAO. This threshold should be low enough to allow reasonable downtime but high enough to incentivize good performance. 
+2. MEV-Smoothing is vital to curb centralization within the Puffer Protocol. It allows at-home nodes to earn more than they would on their own and reduces advantages for large-scale operations. Validators proposing blocks are required to distribute the execution rewards with the pool. If theft is proven on-chain, the offending validator is penalized. 
 
-As the pDVT group earns consensus rewards, following the [Shanghai/Capella](https://notes.ethereum.org/@launchpad/withdrawals-faq) upgrade, ETH will be partially withdrawn to the pool on a weekly basis. The Treasury receives a 2.5% fee from consensus rewards while the remaining 97.5% is distributed to the pool, increasing the value accrued by pufETH. Additionally, 2.5% of execution rewards are received by the Treasury, and the remaining is split between the pDVT group and the pool according to the **Smoothing Factor**.
+### Node operators
+The Puffer Protocol prioritizes protecting stakers' assets, recognizing their significant ETH contributions to the protocol. To accommodate different risk preferences, nodes can choose from three modes of operation, ranging from high to low capital efficiency, with corresponding requirements. Nodes using [Secure-Signer](../tech/securesigner.md) enjoy increased capital efficiency and access to enclave-specific AVSs. For bonds less than 16 ETH, Guardian support is currently needed to avoid inactivity penalties, until [EIP-7002](https://github.com/ethereum/EIPs/pull/7002) removes this requirement. Prior to this, nodes with a 16 ETH bond can join without requiring Guardian support.
 
-# Burst Threshold
-As part of Puffer's commitment to building a decentralized Ethereum, we are self-limiting the size of the Puffer Pool. We refer to this as the `Burst Threshold` with a maximum capacity of 22%. This means that if the Puffer Pool reaches 22% of the validator set, pufETH minting and pDVT group onboarding will freeze. 
+Risk Preference | Bond (ETH) | Guardian Support | TEE Requirement
+--- | --- | --- | ---
+Low | 2 ETH | Yes | SGX
+Mid | 4 ETH | Yes | None
+High | 16 ETH | No | None
 
-This commitment is critical to ensure that the Puffer Pool never breaches the dangerous consensus threshold of 33%, which threatens the stability of Ethereum. We firmly believe that the Burst Threshold must be included from day one rather than after the pool is profitable.
+
+### Rewards
+- upon exiting the Puffer Protocol, their pufETH is redeemed for bond + rewards - penalties.
+
+### Withdrawals
+
+### Restaking
+
+### Governance
+
+
+### Burst Threshold
+As part of Puffer's commitment to Ethereum's decentralization, we are self-limiting the size of the Puffer Pool. We refer to this as the *Burst Threshold* with a maximum capacity of 22%. This means that if the Puffer Pool reaches 22% of the validator set, pufETH minting and node onboarding will freeze. 
+
+This commitment is critical to ensure that the Puffer Pool never breaches the dangerous consensus threshold of 33%, which threatens the stability of Ethereum. We firmly believe that the Burst Threshold must be included from day one rather than after the protocol is profitable.
