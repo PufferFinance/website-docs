@@ -30,14 +30,12 @@ Puffer reduces the node operators (NoOps) bond by a factor of sixteen to just 2 
 
 > ### Inactivity Risk
 >
-> The PoS validator set will only eject inactive validators after their effective balance falls below 16 ETH. In a stake pool, an inactive NoOp could lose $16 - B$ ETH of Staker capital at the cost of only $B$ ETH to themself. Without a means to perform automatic ejections, bonds have been set to $B=16$ to protect Stakers from losing capital.
+> The PoS validator set will only eject inactive validators after their effective balance falls below 16 ETH. In a stake pool, an inactive NoOp could lose $16 - B$ ETH of Staker capital at the cost of only $B$ ETH to themself. Without a means to perform automatic ejections, bonds have been set to $B=16$ ETH to protect Stakers from losing capital.
 
 > Currently, the only way to withdraw a validator is by signing a VoluntaryExit message (VEM) with the validator key. In a permissioned pool where NoOps are trusted, the problem of getting them to sign a VEM is easy; however, the NoOp may go offline or refuse to sign the VEM in a permissionless pool.
 
-> This has been the key hurdle in reducing the bond requirement. Modifications to the PoS specs to allow for smart-contract-triggered-ejections have stayed in the research phase, so it could be months or years before implementation. This valuable time could allow centralized staking operations to take market share from permissionless pools by outcompeting in terms of capital efficiency.
+> This has been the key hurdle in reducing the bond requirement. Modifications to the PoS specs to [allow for smart-contract-triggered-ejections](https://github.com/ethereum/EIPs/pull/7002) have been drafted but are not ready to be added a hard fork. This valuable time could allow centralized staking operations to take market share from permissionless pools by outcompeting in terms of capital efficiency.
 
 ## How does Puffer address this?
 
-[Secure-Signer](tech/securesigner.md) eliminates the risk of accidental slashing and consensus client bugs, allowing Puffer to safely reduce the NoOp bond requirement without increasing NoOp risk.
-
-Puffer's architecture addresses the issue of inactivity penalties by introducing Secure-Router and pDVT. These modules incentivize for excellent validator performance, provide the cryptoeconomic incentives for VEM signatures, and enable previously impossible features like execution rewards sharing in a permissionless pool.
+[Secure-Signer](tech/securesigner.md) eliminates the risk of accidental slashing and consensus client bugs, allowing Puffer to safely reduce the NoOp bond requirement without increasing NoOp risk. Puffer's architecture addresses the issue of inactivity penalties prior to [EIP-7002](https://github.com/ethereum/EIPs/pull/7002) through the use of the Puffer Guardians and Puffer's SLA. These components ensure excellent pool performance while unlocking features like MEV-Smoothing to allow nodes to earn more than they would on their own.  
