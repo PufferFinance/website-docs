@@ -6,7 +6,7 @@ slug: /
 # Puffer Introduction
 
 Puffer is an anti-slashing and permissionless liquid staking protocol that facilitates at-home staking via a low bond
-requirement of 2 ETH. The Puffer team presents [Secure-Signer](tech/securesigner.md), a remote-signing tool compatible
+requirement of as low as 2 ETH. The Puffer team presents [Secure-Signer](tech/securesigner.md), a remote-signing tool compatible
 with all consensus clients that prevents slashable offenses through trusted hardware. Requiring
 the use of Secure-Signer within the Puffer Pool eliminates the risk of slashing, either by accident
 or due to bugs in the consensus client.
@@ -14,9 +14,15 @@ or due to bugs in the consensus client.
 ## Why reduce the bond requirement?
 
 Ever since Ethereum switched to proof of stake (PoS), anyone with 32 ETH can participate as a validator, but the high capital requirement favors institutions. As a result, the validator set tends towards centralization.
-Liquid staking derivatives (LSDs) have recently accelerated this, resulting in a validator set composed of just a few entities with unprecedented control over Ethereum blockspace ([more on risks of LSDs](https://notes.ethereum.org/@djrtwo/risks-of-lsd)).
+Liquid staking Tokens (LSTs) have recently accelerated this, resulting in a validator set composed of just a few entities with unprecedented control over Ethereum blockspace ([more on risks of LSDs](https://notes.ethereum.org/@djrtwo/risks-of-lsd)).
 
 Puffer reduces the node operators (NoOps) bond by a factor of sixteen to just 2 ETH. This reduces the barrier of entry, allowing for more non-instututional NoOp participation, therefore further decentralizing the Ethereum. Additionally, the high capital efficiency offers NoOps sixteen times the opportunities for high-revenue execution rewards, further increasing the viability of at-home staking.
+
+## How to further make at-home staking more viable:
+
+The widespread adoption of massive, centralized Liquid Staking Protocols (LSPs) primarily stems from the reduced reward margin associated with at-home staking. Considering the high costs of hardware and associated risks, becoming an at-home staker is increasingly less feasible.
+
+Puffer aims to address this issue not only by mitigating the risks tied to Proof-of-Stake (PoS) operations, but also by offering additional reward opportunities. These incentives derive from the latent computational power of the stakers, thereby encouraging more individuals to engage in at-home staking.
 
 ## What are the risks?
 
@@ -38,4 +44,4 @@ Puffer reduces the node operators (NoOps) bond by a factor of sixteen to just 2 
 
 ## How does Puffer address this?
 
-[Secure-Signer](tech/securesigner.md) eliminates the risk of accidental slashing and consensus client bugs, allowing Puffer to safely reduce the NoOp bond requirement without increasing NoOp risk. Puffer's architecture addresses the issue of inactivity penalties prior to [EIP-7002](https://github.com/ethereum/EIPs/pull/7002) through the use of the Puffer Guardians and Puffer's SLA. These components ensure excellent pool performance while unlocking features like MEV-Smoothing to allow nodes to earn more than they would on their own.  
+[Secure-Signer](tech/securesigner.md) eliminates the risk of accidental slashing and consensus client bugs, allowing Puffer to safely reduce the NoOp bond requirement without increasing NoOp risk. Puffer's architecture addresses the issue of inactivity penalties prior to [EIP-7002](https://github.com/ethereum/EIPs/pull/7002) through the use of the Puffer Guardians and Puffer's SLA. These components ensure excellent pool performance while unlocking features like MEV-Smoothing to allow nodes to earn more than they would on their own.
