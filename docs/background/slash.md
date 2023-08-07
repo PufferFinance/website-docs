@@ -37,3 +37,21 @@ The rule of thumb is that offline validators will lose approximately as much as 
 
 In the case of an inactivity leak, a validator will lose increasingly more ETH as a penalty until the chain can reach finality. If the protocol had taken months to years to eject an inactive validator, the inactivity leak mechanism would expedite this to days to weeks. This poses a risk in permissionless pools and motivates Puffer's architecture.
 
+
+## Liquid Staking Protocol Considerations
+
+> ### Slashing Risk
+>
+> Node operating risk typically increases as the node's bond requirement decreases for two reasons:
+
+> First, the penalty for a slashable offense ranges from 1 to 32 ETH. If the bond requirement is 2 ETH, a node risks losing at least 50% of their collateral if they are slashed with the minimum penalty (compared to ~3% if they had the standard 32 ETH bond).
+
+> Second, nodes that leverage the high capital efficiency to operate multiple parallel validators take on increased risk. For example, a node can run 16 validators with 32 ETH, but must be careful about key management. They have effectively increased their risk sixteen times with the additional added complexity of key management (many past slashable offenses were due to nodes accidentally double-signing messages).
+
+> ### Inactivity Risk
+>
+> The PoS validator set will only eject inactive validators after their effective balance falls below 16 ETH. In a stake pool, an inactive node could lose $16 - B$ ETH of Staker capital at the cost of only $B$ ETH to themself. Without a means to perform automatic ejections, protocols have set their bonds to $B=16$ ETH to protect Stakers from losing capital.
+
+> Currently, the only way to withdraw a validator is by signing a VoluntaryExit message (VEM) with the validator key. In a permissioned pool where nodes are trusted, the problem of getting them to sign a VEM is easy; however, the node may go offline or refuse to sign the VEM in a permissionless pool.
+
+> This has been the key hurdle in reducing the bond requirement. Modifications to the PoS specs to [allow for smart-contract-triggered-ejections](https://github.com/ethereum/EIPs/pull/7002) have been drafted but are not ready to be added a hard fork. This valuable time could allow centralized staking operations to take market share from permissionless pools by outcompeting in terms of capital efficiency.
