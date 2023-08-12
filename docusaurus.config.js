@@ -29,10 +29,10 @@ module.exports = {
         {
           title: "Community",
           items: [
-            // {
-            //   label: "Discord",
-            //   href: "https://discordapp.com/invite/docusaurus",
-            // },
+            {
+              label: "Discord",
+              href: "https://discord.gg/pufferfi",
+            },
             {
               label: "Twitter",
               href: "https://twitter.com/puffer_finance",
@@ -74,6 +74,11 @@ module.exports = {
         {
           href: "https://twitter.com/puffer_finance",
           label: "Twitter",
+          position: "right",
+        },
+        {
+          href: "https://discord.gg/pufferfi",
+          label: "Discord",
           position: "right",
         },
         {
