@@ -1,6 +1,6 @@
 ---
-sidebar_position: 1
 title: Ethereum Proof of Stake
+slug: /reference/ethereum-hard-forks
 ---
 
 ## The Merge

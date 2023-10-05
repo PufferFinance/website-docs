@@ -1,9 +1,7 @@
 ---
-sidebar_position: 1
-slug: /
+title: Puffer Introduction
+slug: /protocol/introduction
 ---
-
-# Puffer Introduction
 
 ## **More than a stake pool**
 

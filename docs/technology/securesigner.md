@@ -1,6 +1,6 @@
 ---
-sidebar_position: 2
 title: Secure-Signer
+slug: /technology/secure-signer
 ---
 
 Puffer's Secure-Signer is a remote signing tool backed by an [Ethereum Foundation grant](https://blog.ethereum.org/2023/02/22/allocation-update-q4-22) designed to prevent slashable offenses using Intel SGX.

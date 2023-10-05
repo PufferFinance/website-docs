@@ -1,6 +1,6 @@
 ---
-sidebar_position: 6
 title: FAQ
+slug: /reference/faq
 ---
 
 ### 🐡 Explain ETH Liquid staking to me like I'm five?

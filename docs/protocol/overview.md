@@ -1,6 +1,6 @@
 ---
-sidebar_position: 1
 title: Overview
+slug: /protocol/overview
 ---
 <!-- > ### :blowfish: Puffer is the first liquid staking protocol built on Eigenlayer :blowfish: -->
 

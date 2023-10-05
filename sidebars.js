@@ -19,34 +19,49 @@ const sidebars = {
   // But you can create a sidebar manually
 
   background: [
-    "intro",
     {
       type: "category",
-      label: "Background",
-      items: ["background/mergeshang", "background/slash"],
+      label: "Puffer",
+      items: [
+        "protocol/intro",
+        "protocol/overview",
+        "protocol/features",
+        "protocol/lst",
+        "protocol/stakers",
+        "protocol/smoothing",
+        "protocol/nodes",
+        "protocol/growthspurts",
+        "protocol/guardians",
+        "protocol/liquidrestaking",
+        "protocol/burstthreshold",
+        "protocol/governance",
+      ],
     },
     {
       type: "category",
       label: "Technology",
-      items: ["tech/securesigner", "tech/rave"],
+      items: ["technology/securesigner", "technology/rave"],
     },
     {
       type: "category",
-      label: "Protocol",
+      label: "Node Operators",
       items: [
-        "arch/overview",
-        // "arch/pufeth",
-        // "arch/mev",
-        // "arch/ejection",
-        // "arch/governance",
+        "nodes/requirements", 
+        "nodes/setup",
+        "nodes/registration",
+        "nodes/rewards"
       ],
     },
-    // {
-    //   type: "category",
-    //   label: "Joining Puffer Pool",
-    //   items: ["joining/stakers", "joining/noop"],
-    // },
-    "faq"
+    {
+      type: "category",
+      label: "Stakers",
+      items: ["stakers/minting", "stakers/redeeming"],
+    },
+    {
+      type: "category",
+      label: "Reference",
+      items: ["reference/mergeshang", "reference/slash", "reference/comparisons", "reference/faq"],
+    }
   ],
 };
 

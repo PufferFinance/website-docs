@@ -1,6 +1,6 @@
 ---
-sidebar_position: 2
 title: Penalties in Ethereum PoS
+slug: /reference/slashing-in-PoS
 ---
 
 ## Validator Stack
