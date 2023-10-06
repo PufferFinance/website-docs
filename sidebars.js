@@ -23,44 +23,54 @@ const sidebars = {
       type: "category",
       label: "Puffer",
       items: [
-        "protocol/intro",
-        "protocol/overview",
-        "protocol/features",
-        "protocol/lst",
-        "protocol/stakers",
-        "protocol/smoothing",
-        "protocol/nodes",
-        "protocol/growthspurts",
-        "protocol/guardians",
-        "protocol/liquidrestaking",
-        "protocol/burstthreshold",
-        "protocol/governance",
+        "intro",
+        "overview",
+        "lst",
+        "stakers",
+        "smoothing",
+        "nodes",
+        "growth-spurts",
+        "guardians",
+        "liquid-restaking",
+        "burst-threshold",
+        "governance",
       ],
     },
     {
       type: "category",
       label: "Technology",
-      items: ["technology/securesigner", "technology/rave"],
+      items: [
+        "secure-signer", 
+        "rave"
+      ],
     },
     {
       type: "category",
       label: "Node Operators",
       items: [
-        "nodes/requirements", 
-        "nodes/setup",
-        "nodes/registration",
-        "nodes/rewards"
+        "requirements", 
+        "setup",
+        "registration",
+        "rewards"
       ],
     },
     {
       type: "category",
       label: "Stakers",
-      items: ["stakers/minting", "stakers/redeeming"],
+      items: [
+        "minting", 
+        "redeeming"
+      ],
     },
     {
       type: "category",
       label: "Reference",
-      items: ["reference/mergeshang", "reference/slash", "reference/comparisons", "reference/faq"],
+      items: [
+        "hardforks", 
+        "slash", 
+        "comparisons", 
+        "faq"
+      ],
     }
   ],
 };

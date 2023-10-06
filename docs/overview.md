@@ -2,7 +2,28 @@
 title: Overview
 slug: /protocol/overview
 ---
-<!-- > ### :blowfish: Puffer is the first liquid staking protocol built on Eigenlayer :blowfish: -->
+> ### Puffer is a next-gen liquid staking protocol designed to improve upon its predecessors
+
+### How Puffer Works:
+
+- **Strategy Selection**: Each strategy earns rewards from Ethereum Proof of Stake validating and through fees generated from its committed-to AVSs. NoOps have the liberty to deploy their validators to strategies that align with their risk and reward preferences, such as **`{Ethereum PoS}, {Ethereum PoS, EigenDA}, {Ethereum PoS, EigenDA, ...}`**. The NoOps that meet the prerequisites are eligible to operate the AVSs on behalf of the strategy.
+- **Liquid Staking Token**: The pufETH LST gains value over time as NoOps earn rewards through executing strategies. The stakers that hold pufETH reap higher rewards compared to traditional LSTs due to the inclusion of restaking rewards.
+- **Always Permissionless Validating**: From its inception, Puffer is permissionless, allowing NoOps to operate validators without the need for approval or authorization.
+- **Smoothing Commitment**: Puffer introduces a novel cryptoeconomic mechanism for NoOp bonds, known as a smoothing commitment. For stakers, this means the value of pufETH increases every time a new NoOp deploys a validator on Puffer. When registering a validator, the NoOp pays a non-refundable smoothing commitment for a predefined staking duration. In exchange, they are allocated 32 eth to run a validator and they are entitled to 100% of the validator rewards they generate over the duration. The smoothing commitments, representing months of expected validator rewards, are paid to the pool to increase the value of pufETH, creating strong growth incentives. This mechanism is favorable for stakers, capital efficient, and incentivizes for optimal NoOp performance.
+- **NoOp Incentives**: NoOps are required to utilize Puffer’s anti-slashing technology to mitigate the risk of their validators being slashed, thereby safeguarding both staker eth and NoOps from inadvertent losses. However, this technology is used as defense-in-depth since NoOps are already strongly incentivized to be performant to earn back their smoothing commitments to be profitable.
+- **Puffer Seasons**: Stakers and NoOps are onboarded into Puffer during fixed-duration periods called seasons. At the end of each season, the value of pufETH is repriced to reflect the new smoothing commitments, and the NoOps are able to withdraw any rewards they’ve accrued. Each season, the number of new NoOps who can join is limited to ensure that smoothing commitments are fairly distributed among a larger group of stakers.
+- **Burst Threshold**: In alignment with its mission to democratize access to Ethereum validating, Puffer proactively caps its pool size at 22% to prevent posing a risk to Ethereum’s decentralization in the future.
+- **Governance**: Puffer governance plays a crucial role in overseeing strategies, which includes adding new strategies and managing the flow of eth from the pool to different strategies. Initially, Puffer’s governance will determine the NoOps eligible to operate restaking services as a risk mitigation measure. As Eigenlayer, AVSs, and Puffer’s anti-slashing mechanisms mature, reputable NoOps will have the option to run restaking services without governance intervention.
+- **Guardians:** The Guardians serve as the protocol’s security counsel for operations that require upcoming technology such as new EIPs or ZKPs to be done trustlessly. Key Guardian operations include ejecting offline validators prior to EIP-7002, posting proof of reserves for pufETH, and calculating Merkle trees for efficient protocol rewards distribution.
+
+
+
+
+
+
+
+
+
 
 > Puffer's goal is to make validating more accessible and profitable for at-home nodes, thereby contributing to Ethereum's security and censorship resistance. :blowfish:
 
@@ -13,13 +34,13 @@ At its core, the Puffer Protocol is a liquid staking protocol where node operato
 ### Guiding Principles
 The Puffer Protocol functions as a platform to increase the profitability of at-home nodes operating as Ethereum validators and web3 infrastructure providers, helping to cement a pocket of decentralization within the wider validator set. This is achieved through three core guiding principles:
 
-1. *increase capital efficiency*:
+1. *Increase capital efficiency*:
 > By reducing the amount of ETH required to operate a node, Puffer allows for far greater node participation and diversity than the status quo. However, [care must be taken](../background/slash.md#liquid-staking-protocol-considerations) to protect both nodes and stakers. Puffer's [Secure-Signer](../tech/securesigner.md) and [Guardians](#guardians) allow the bond requirement to be reduced to just 2 ETH by mitigating the risk of slashing and inactivity penalties. In the future, Puffer's [Fractal DVT](#dvt-in-puffer) massively decreases the barrier as hundreds of nodes can split the bond requirement. 
 
-2. *increase economic opportunities*:
+2. *Increase economic opportunities*:
 > To truly incentivize people to run nodes from home, increasing node operator profit margins is essential. Decentralized liquid staking protocols that fail to do so will need help attracting nodes, as they are economically better off staking their ETH on centralized platforms at the expense of Ethereum's security. In the Puffer Protocol, nodes can increase their profit margins by restaking to operate unique web3 infrastructure and services. 
 
-3. *increase hardware efficiency*:
+3. *Increase hardware efficiency*:
 > Validators must pay an upfront hardware cost and ongoing electricity and internet costs that hurt their overall profitability. Additionally, validator hardware must be better utilized as the main duty of signing attestation messages is only required once per epoch (every 6.4 minutes). Restaking increases the hardware efficiency as the latent compute power can generate additional revenue streams to get a better ROI on their hardware. TEE-compatible hardware comes at comparable costs to the hardware typically recommended for Ethereum validators. Puffer nodes using TEEs benefit from slash protection to reduce risk and unlock unique restaking services, maximizing their ROI on the fixed hardware costs.
 
 <!-- ![pufferarch](img/arch.png) -->
@@ -55,10 +76,10 @@ pufETH is a reward-bearing token akin to [Compound's cToken](https://docs.compou
 
 ### Guardians
 The Guardians are a permissioned set of nodes whose job is to ensure the smooth functioning of the protocol. They have two responsibilities that will eventually be phased out as [EIP-4788](https://eips.ethereum.org/EIPS/eip-4788) and [EIP-7002](https://github.com/ethereum/EIPs/pull/7002) are implemented in upcoming hardforks:
-1. *reporting the amount of ETH that backs pufETH*
+1. *Reporting the amount of ETH that backs pufETH*
 > To calculate the conversion ratio between ETH and pufETH, the main contract must be aware of the amount of ETH currently backing the protocol. This requires summing the on-chain balances of all active validators with their current balances on the beacon chain. The Guardians are currently responsible for performing this computation, but after EIP-4788, this will be replaced by a trustless ZKP.
 
-2. *exiting nodes who breached the Puffer Protocol AVS*
+2. *Exiting nodes who breached the Puffer Protocol AVS*
 > The first rule in the [Puffer Protocol AVS](#puffer-protocol-rules) is in place to protect offline nodes from harming Puffers. Unfortunately, until EIP-7002 is implemented, exiting validators cannot be done on-chain but instead requires signing exit messages with the validator's key. Since EIP-7002 may take years to implement, to be practical and proactive about preserving decentralization before it is too late, the Puffer Protocol requires its nodes with a `< 16` ETH bond to encrypt their validator keyshares to the Guardians' enclaves. These enclaves are implemented such that they can only sign an exit message with the validator keyshare. As soon as EIP-7002 is implemented, the Guardian 'training wheels' will be removed. 
 
 To reduce counterparty risk, the Guardians have many guardrails in place. They are composed of public community members with a strong alignment with Ethereum's ethos and reputation at stake. The Guardians must use enclaves to increase the security of their actions and require quorum from a high threshold of Guardians (e.g., 8/9 signatures). 
@@ -73,10 +94,10 @@ To reduce counterparty risk, the Guardians have many guardrails in place. They a
 ### Governance
 One of Puffer's goals is to build an unstoppable decentralized protocol that can eventually continue to grow and operate without relying on Puffer's core team. For this reason, we strive to minimize the role of governance in the protocol. 
 The PUFI token will primarily be used for the following: 
-- pausing and upgrading contracts in the event of vulnerabilities and Ethereum hard forks
-- voting on protocol parameters like commission rates
-- managing the Puffer Protocol treasury in the form of grants and ESaaS
-- whitelisting AVSs that are aligned with Ethereum's ethos
+- Pausing and upgrading contracts in the event of vulnerabilities and Ethereum hard forks
+- Voting on protocol parameters like commission rates
+- Managing the Puffer Protocol treasury in the form of grants and ESaaS
+- Whitelisting AVSs that are aligned with Ethereum's ethos
 
 ### Restaking
 Since Puffer is built on Eigenlayer, all Puffer nodes can become native restakers to increase their rewards. Such restaking jobs span from important middlewares such as bridges and oracles to services like data availability layers and L2 sequencers. Additionally, the nodes with enclave support can participate in AVSs unique to Puffer, like privacy-preserving L2s and [ZK-2FA](https://ethresear.ch/t/2fa-zk-rollups-using-sgx/14462). Puffer is committed to supporting only the AVSs that are not considered [problematic for Ethereum](https://vitalik.ca/general/2023/05/21/dont_overload.html).
