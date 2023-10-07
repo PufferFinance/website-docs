@@ -7,7 +7,7 @@ module.exports = {
   title: "Puffer Docs",
   tagline: "Documentation for the Puffer Protocol",
   url: "https://pufferFinance.github.io",
-  baseUrl: "/",
+  baseUrl: "/website-docs-dev/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
@@ -97,7 +97,8 @@ module.exports = {
           routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl: "https://github.com/PufferFinance/website-docs/tree/main",
+          editUrl:
+            "https://github.com/PufferFinance/website-docs-dev/tree/main",
           remarkPlugins: [math],
           rehypePlugins: [katex],
         },

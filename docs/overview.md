@@ -2,8 +2,10 @@
 title: Overview
 slug: /protocol/overview
 ---
+
 :::info 
 Puffer is a next-generation liquid staking protocol designed to harness the power of restaking.
+
 
 :::
 
@@ -48,7 +50,6 @@ Compared to traditional LSTs, pufETH holders can earn more since pufETH captures
 
 ### 2️⃣ Registering a NoOp validator
 NoOps pay a `1 ≤ S < 2 ETH`, non-refundable smoothing commitment to the PufferProtocol to register a new validator public key. NoOps are required to share their encrypted validator keyshares with the Guardians' enclaves to eject them if their balance falls below 1 ETH. This requirement is to protect Staker ETH and it will be replaced with a trustless solution once Ethereum's specs allow it via EIP-7002. 
-
 
 ### 3️⃣ Provisioning ETH
 Each PufferStrategy contract will contain a queue of pending validator registrations. As the PufferPool accrues 32 ETH chunks from deposits and rewards, the Guardians will provision the chunks to pending validators. They are required to follow a weighted round-robin schedule to service all of the PufferStrategy contracts. Governance is used to decide the schedule and it should be chosen to balance the pool's growth and restaking risk. After provisioning, the NoOp's validator has deposited to the BeaconDepositContract and awaits activation.

@@ -1,4 +1,4 @@
 ---
-title: Rewards
+title: Node Rewards
 slug: /nodes/rewards
 ---
