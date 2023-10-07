@@ -19,11 +19,11 @@ const sidebars = {
   // But you can create a sidebar manually
 
   background: [
+    "intro",
     {
       type: "category",
       label: "Puffer",
       items: [
-        "intro",
         "guiding-principles",
         "overview",
         "smoothing",
@@ -37,40 +37,23 @@ const sidebars = {
     {
       type: "category",
       label: "Technology",
-      items: [
-        "secure-signer", 
-        "rave"
-      ],
+      items: ["secure-signer", "rave"],
     },
     {
       type: "category",
       label: "Node Operators",
-      items: [
-        "requirements", 
-        "setup",
-        "registration",
-        "rewards"
-      ],
+      items: ["requirements", "setup", "registration", "rewards"],
     },
     {
       type: "category",
       label: "Stakers",
-      items: [
-        "minting", 
-        "redeeming"
-      ],
+      items: ["minting", "redeeming"],
     },
     {
       type: "category",
       label: "Reference",
-      items: [
-        "glossary", 
-        "hardforks", 
-        "slash", 
-        "comparisons", 
-        "faq"
-      ],
-    }
+      items: ["glossary", "hardforks", "slash", "comparisons", "faq"],
+    },
   ],
 };
 
