@@ -3,7 +3,7 @@ title: Guiding Principles
 slug: /protocol/guiding-principles
 ---
 :::info 
-Puffer aims to Ethereum validating not just accessible but profitable 💪🐡
+Puffer aims to make Ethereum validating not just accessible but profitable 💪🐡
 
 :::
 
