@@ -29,7 +29,7 @@ slug: /protocol/overview
 
 Restaking is a paradigm shift that will forever change web3's infrastructure and unlock unprecedented value for Ethereum validators and the [AVSs](#puffer-protocol-rules) they operate. However, as with earlier developments like MEV and liquid staking, there is potential to centralize Ethereum. Now that Pandora's Box is opened, building protocols that preserve decentralization is essential. In pursuit of this goal, Puffer has built the first native liquid staking protocol on [Eigenlayer](https://www.eigenlayer.xyz/) with Ethereum's ethos in mind. To counteract the risk of centralization, Puffer is preemptively [self-capping its pool size](#burst-threshold) and implementing guardrails to mitigate the negative externalities that restaking may have on the Ethereum ecosystem.
 
-At its core, the Puffer Protocol is a liquid staking protocol where node operators are permissionlessly allocated ETH to launch an Ethereum PoS validator. Puffer nodes can restake to operate AVSs on top of Eigenlayer. Puffers are users who stake ETH for the pufETH LST, which is expected to increase in value over time as the Puffer Protocol accrues validator and restaking rewards. PUFI token is used to govern the protocol via voting in the Puffer DAO. Some important duties include approving which AVSs Puffer nodes can use and which ones to allocate protocol treasury ETH to in the form of Economic Security as a Service (ESaaS). 
+At its core, the Puffer Protocol is a liquid staking protocol where node operators are permissionlessly allocated ETH to launch an Ethereum PoS validator. Puffer nodes can restake to operate AVSs on top of Eigenlayer. Stakers are users who stake ETH for the pufETH LST, which is expected to increase in value over time as the Puffer Protocol accrues validator and restaking rewards. The PUFI token is used to govern the protocol via voting in the Puffer DAO. Some important duties include approving which AVSs Puffer nodes can use and which ones to allocate protocol treasury ETH to in the form of Economic Security as a Service (ESaaS). 
 
 ### Guiding Principles
 The Puffer Protocol functions as a platform to increase the profitability of at-home nodes operating as Ethereum validators and web3 infrastructure providers, helping to cement a pocket of decentralization within the wider validator set. This is achieved through three core guiding principles:
@@ -48,14 +48,14 @@ The Puffer Protocol functions as a platform to increase the profitability of at-
 ### Puffer Protocol Rules
 Since the Puffer Protocol is built on top of Eigenlayer, its rules can be defined as an [actively validated service](https://github.com/Layr-Labs/eigenlayer-contracts/blob/master/docs/AVS-Guide.md) or AVS. Eigenlayer defines AVSs as services or middlewares that a restaker can opt in to, where provably incorrect behavior can be programmably slashed. For example, a validator's 32 ETH deposit can be programmably slashed if fraud is proven while restaking to operate an optimistic rollup. If the Puffer Protocol's AVS is violated, the offending validator's ETH will be programmably slashed, and the amount distributed back to the pool.
 
-1. To actively protect Puffers' ETH from [inactivity penalties](../background/slash.md#inactivity-risk), each validator's [current balance](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance) is required to remain above a threshold set by the Puffer DAO. This threshold should be low enough to allow reasonable downtime but high enough to incentivize good performance. 
+1. To actively protect stakers' ETH from [inactivity penalties](../background/slash.md#inactivity-risk), each validator's [current balance](https://kb.beaconcha.in/glossary#current-balance-and-effective-balance) is required to remain above a threshold set by the Puffer DAO. This threshold should be low enough to allow reasonable downtime but high enough to incentivize good performance. 
 2. MEV-Smoothing is vital to curb centralization within the protocol. It allows at-home nodes to earn more than they would on their own and reduces the economies of scale of centralized staking operations. Validators proposing blocks are required to distribute the execution rewards with the pool. If theft is proven on-chain, the offending validator is penalized. 
 
-### Puffers
-Puffers are the individuals who stake their ETH at the Puffer Protocol to receive the pufETH liquid staking token. When the Puffer stakes `≥ 0.01` ETH it is added to a pool of ETH. Part of this pool is provisioned to nodes to meet the 32 ETH requirement to activate an Ethereum validator, and the rest provides exit liquidity for when Puffers want to redeem ETH for their pufETH. 
+### Stakers
+Stakers are the individuals who stake their ETH at the Puffer Protocol to receive the pufETH liquid staking token. When the staker stakes `≥ 0.01` ETH it is added to a pool of ETH. Part of this pool is provisioned to nodes to meet the 32 ETH requirement to activate an Ethereum validator, and the rest provides exit liquidity for when stakers want to redeem ETH for their pufETH. 
 
 ### Nodes
-The ETH staked by Puffers buoy the Puffer Protocol, so protecting them is one of the protocol's main priorities. The protocol requires all nodes to be economically bonded for proper incentivization, and should penalties accrue, they are first deducted from this bond. To minimize penalties, enclaves reduce slashing risk, while Guardian support is in place to counteract node inactivity.
+The ETH staked by stakers buoy the Puffer Protocol, so protecting them is one of the protocol's main priorities. The protocol requires all nodes to be economically bonded for proper incentivization, and should penalties accrue, they are first deducted from this bond. To minimize penalties, enclaves reduce slashing risk, while Guardian support is in place to counteract node inactivity.
 
 To accommodate different risk preferences and ETH requirements, nodes can choose from three modes of operation, ranging from high to low capital efficiency, with corresponding requirements. Secure-Signer nodes enjoy increased capital efficiency and access to [enclave](../tech/securesigner.md#what-is-it)-specific AVSs. Guardian support is currently needed for bonds less than 16 ETH to prevent inactivity penalties from threatening staker eth until [EIP-7002](https://github.com/ethereum/EIPs/pull/7002) removes this requirement. Before this, nodes with a 16 ETH bond could join without Guardian support.
 
@@ -68,8 +68,8 @@ Low | 16 ETH | No | No
 ### Rewards
 pufETH is a reward-bearing token akin to [Compound's cToken](https://docs.compound.finance/v2/ctokens/#ctokens), which is optimal regarding DeFi compatibility. As the protocol generates rewards, the amount of ETH backing pufETH increases, increasing the conversion rate between the two. Holding liquid pufETH allows one to earn staking and restaking rewards over time while still being able to participate in DeFi.
 
-**Puffer Rewards** 
-> Puffers deposit ETH at the PufferPool contract to mint pufETH. At the protocol's inception, the conversion rate would be one-to-one, but assuming the protocol performs well, i.e., accrues more rewards than penalties, the conversion rate would value pufETH higher than ETH. Thus Puffers holding pufETH can expect its value to increase over time.
+**Staker Rewards** 
+> Stakers deposit ETH at the PufferPool contract to mint pufETH. At the protocol's inception, the conversion rate would be one-to-one, but assuming the protocol performs well, i.e., accrues more rewards than penalties, the conversion rate would value pufETH higher than ETH. Thus stakers holding pufETH can expect its value to increase over time.
 
 **Node Rewards**
 > Upon registering validator keys, Puffer nodes mint their bond's worth of pufETH, which is locked until they exit the protocol. As the node generates consensus, execution, and restaking rewards, they are rewarded liquid ETH dependent on commission rates set by the Puffer DAO, with the remainder sent to the PufferPool and treasury. Since nodes hold locked pufETH, they also share in the rewards generated by other nodes in the protocol. This allows for efficient MEV-Smoothing and helps to align node incentives. 
@@ -85,8 +85,8 @@ The Guardians are a permissioned set of nodes whose job is to ensure the smooth 
 To reduce counterparty risk, the Guardians have many guardrails in place. They are composed of public community members with a strong alignment with Ethereum's ethos and reputation at stake. The Guardians must use enclaves to increase the security of their actions and require quorum from a high threshold of Guardians (e.g., 8/9 signatures). 
 
 ### Withdrawals
-**Puffer Withdrawals**
-> Puffers can burn their pufETH to redeem their original ETH plus the accrued rewards when there is sufficient liquidity in the protocol's withdrawal pool. A portion of all Puffer deposits, rewards, and node withdrawals are added to the withdrawal pool to provide exit liquidity. 
+**Staker Withdrawals**
+> Stakers can burn their pufETH to redeem their original ETH plus the accrued rewards when there is sufficient liquidity in the protocol's withdrawal pool. A portion of all staker deposits, rewards, and node withdrawals are added to the withdrawal pool to provide exit liquidity. 
 
 **Node Withdrawals**
 > Nodes can fully withdraw from the Puffer Protocol by proving they have exited from the beacon chain. Upon fully exiting the Puffer Protocol, their locked pufETH is burned and redeemed for liquid ETH equal to their `original bond + accrued rewards - penalties`. For example, if a node with a 2 ETH bond exits with a validator balance of 32 ETH and the ratio of pufETH:ETH has doubled since they registered, they would receive 4 ETH, and 28 ETH is returned to the pool.
