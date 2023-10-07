@@ -16,10 +16,10 @@ Validators are incentivized to participate through consensus and execution rewar
 
 To ensure that validators perform honestly and diligently, Ethereum PoS enforces penalties. In the event of minor offenses (e.g., going offline), validators are penalized amounts equal to the rewards they would have received if they operated correctly.
 
-In more serious cases, validators may be slashed, which removes them from the validator network and burns some or all of their bond. Slashing happens in response to [three specific offenses](background/slash.md), all of which cause validators to equivocate or send conflicting messages that cause disagreements and disarray in the consensus protocol.
+In more serious cases, validators may be slashed, which removes them from the validator network and burns some or all of their bond. Slashing happens in response to [three specific offenses](slash.md), all of which cause validators to equivocate or send conflicting messages that cause disagreements and disarray in the consensus protocol.
 
 ## The Shapella Update
 
 The Merge succeeded in consolidating the main chain and Beacon Chain, but this was just a milestone in the larger plan to transition to PoS safely. Additional functionality will be added in future forks.
 
-With the [Shanghai/Capella](https://notes.ethereum.org/@launchpad/withdrawals-faq) update, validators can now withdraw their ETH entirely. Additionally, validators enjoy more liquidity as consensus rewards in excess of 32 ETH will be partially withdrawn to an execution layer address approximately weekly. 
+With the [Shanghai/Capella](https://notes.ethereum.org/@launchpad/withdrawals-faq) update, validators can now withdraw their ETH entirely. Additionally, validators enjoy more liquidity as consensus rewards in excess of 32 ETH will be partially withdrawn to an execution layer address approximately weekly.
