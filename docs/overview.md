@@ -5,8 +5,6 @@ slug: /protocol/overview
 
 :::info 
 Puffer is a next-generation liquid staking protocol designed to harness the power of restaking.
-
-
 :::
 
 <div style={{textAlign: 'center'}}>
