@@ -3,6 +3,10 @@ title: Growth Spurts
 slug: /protocol/growth-spurts
 ---
 
+:::info 
+A Growth Spurt is a weekly interval in the Puffer Protocol that limits NoOp participation and pufETH minting to manage growth and ensure equitable rewards distribution among stakers.
+:::
+
 ## Motivation
 
 Growth Spurts are a unique mechanism to the Puffer Protocol. They go hand-in-hand with [smoothing commitments](./smoothing.md) to ensure the protcol is safe and fair to all participants. Since stakers will realize gains on their pufETH tokens immediately upon NodeOps paying their smoothing commitments, this can cause a race to stake ETH before all NoOps have joined. For example, imagine a scenario in which all NoOps join immediately on day one. Then anyone staking after would not see their pufETH appreciate from new smoothing commitments.

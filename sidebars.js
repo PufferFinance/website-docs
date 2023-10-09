@@ -22,7 +22,7 @@ const sidebars = {
     "intro",
     {
       type: "category",
-      label: "Puffer",
+      label: "Protocol",
       items: [
         "overview",
         "guiding-principles",
