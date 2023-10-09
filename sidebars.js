@@ -24,8 +24,9 @@ const sidebars = {
       type: "category",
       label: "Puffer",
       items: [
-        "guiding-principles",
         "overview",
+        "guiding-principles",
+        "strategies",
         "smoothing",
         "rewards",
         "growth-spurts",
