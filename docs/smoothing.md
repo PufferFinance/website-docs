@@ -20,6 +20,19 @@ Current liquid staking protocols (LSPs) follow two NoOp paradigms:
 For stakers, this means the value of pufETH increases every time a new NoOp deploys a validator on Puffer. 
 :::
 
+
+### NoOp Incentives 
+The success of an LSP largely depends upon the performance of its NoOps. Traditionally, having NoOps deposit collateral has been a method to ensure alignment with the protocol's objectives. The logic is simple: with a financial stake in play, NoOps have a deterrent against going offline, suffering slashing penalties, or engaging in nefarious activities like MEV theft ("rug-pooling"). If they were to engage in such activities, they'd stand to lose their collateral.
+
+However, while this collateral approach serves as a disincentive against penalties, it does not necessarily promote exceptional performance. For instance, a 'lazy' NoOp could alternate between being online and offline, ensuring their validator balance stays at 32 ETH. This strategy results in no reward generation for the LSP, but also no collateral loss for the NoOp.
+
+Puffer's changes this incentive landscape by having NoOps pay an upfront, non-refundable smoothing commitment, eliminating the need for locked collateral. They stand to gain nothing from underperforming since they cannot recoup this initial payment, even if they maintain their validator balance. Thus, for a NoOp to turn a profit, they must perform at least on par with the average validator. Those who excel can earn even more.
+
+This new approach neatly tackles two traditional problems:
+- Rug-pooling: With NoOps entitled to all the execution rewards they generate, there's no longer a need to police or penalize them for rug-pooling.
+- Lazy NoOps: Since the LSP gets the staking rewards from NoOps upfront via the smoothing commitment, the protocol isn't adversely affected if a NoOp underperforms.
+
+
 ### Calculating smoothing commitments
 The following calculates a smoothing commitment $S$:
 
@@ -47,8 +60,13 @@ The expected value $V_{expected}$ of running a validator for a year is the avera
 
 - From the protocol's POV, they earn an immediate $1.44/32=4.5\%$ yield on the 32 ETH provisioned to the NoOp.
 
-### NoOp Incentives 
-There is no longer a need for a bond because the NoOp has already paid the pool ETH upfront. To make a profit, the NoOp must to earn back more than their original smoothing commitment. This incentivizes them to maximize for long-term good performance. If they go offline or are slashed, they will not be able to earn back their smoothing commitment and will end the year net-negative.
+
 
 ### Pros and Cons
 todo
+
+- fast execution rewards
+- no rug pooling policing
+- avoid validator queue
+- mitigates lazy noops (lock 2 eth then dont do anything for years -> essentially holds the eth hostage with no penalty to themself except missed opportunity cost)
+- 
