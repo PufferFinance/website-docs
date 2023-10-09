@@ -9,7 +9,9 @@ Smoothing Commitments are Puffer's novel reframing of how validator collateral w
 
 
 ### The status quo
-todo
+Current liquid staking protocols (LSPs) follow two NoOp paradigms: 
+- **unbonded**: LSPs with unbonded NoOps place a high degree of trust in the NoOps since they are not required to lock any collateral. The LSP enjoys greater capital efficiency and growth but the tradeoff is that validator penalties will directly hurt the LST. This approach favors permissioned validators and is proving problematic for Ethereum.
+- **bonded**: Bonded NoOps can be untrusted since they lock collateral for the entire duration that they operate a validator. After exiting the valiator, their bond minus any accrued penalties is returned. This is undoubtedly better for Ethereum since it allows for permissionless LSPs. Additionally, staked ETH is better protected as validator penalties are deducted from the NoOps' collateral before hurting the LST. The tradeoff is that requiring collateral hurts the LST's capital efficiency and thus the growth of the LSP. For example, while requiring a 16 ETH bond provides excellent slash protection, it limits NoOp participation to those with multiples of 16 ETH.
 
 ### What is it?
 **Smoothing Commitments** completely *eliminate locking a bond*. Instead, when registering a validator, the NoOp pays a non-refundable ETH amount called a smoothing commitment. In exchange, they are allocated 32 ETH to run a validator and they are entitled to 100% of the validator rewards they over the next year. The smoothing commitments, representing a year of expected Proof of Stake rewards, are paid to the protocol to increase the value of pufETH, creating strong growth incentives. This mechanism is favorable for stakers, capital efficient, and incentivizes for optimal NoOp performance.
