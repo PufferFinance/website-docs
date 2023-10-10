@@ -26,7 +26,7 @@ Instead of waiting a year for staking rewards to accrue, pufETH holders receive 
 ![PufferFlywheel](/img/PufferFlywheel.svg)
 </div>
 
-Together, Stakers and NoOps create a flywheel effect that allows the protocol to outpace the growth of traditional liquid staking protocols. However, to ensure that Puffer never becomes a threat to Ethereum's credible neutrality, the [Burst Threshold](protocol/burst-threshold) caps the protocol at 22% of the validator set. 
+Together, Stakers and NoOps create a flywheel effect that allows the protocol to outpace the growth of traditional liquid staking protocols. However, to ensure that Puffer never becomes a threat to Ethereum's credible neutrality, the [burst threshold](protocol/burst-threshold) caps the protocol at 22% of the validator set. 
 
 ## What does Puffer bring? 🍽️ 
 
@@ -37,6 +37,8 @@ Together, Stakers and NoOps create a flywheel effect that allows the protocol to
 - 🥩 Native Restaking: the first native liquid restaking protocol on Eigenlayer.
 
 - 🧢 Ethos Alignment: the protocol is self-capped to protect Ethereum.
+
+- 🐡 Explosive Growth: pufETH can grow in value even if validator queues are long.
 
 ### **NoOps**
 
@@ -53,6 +55,6 @@ Together, Stakers and NoOps create a flywheel effect that allows the protocol to
 
 - 🚀 Restaking Rewards: Eigenlayer integration supercharges rewards.
 
-- 🧈 Smoothing Commitments: aligns incentives, smooths MEV, and provides explosive growth 💪.
+- 🧈 Smoothing Commitments: aligns NoOp incentives and smooths MEV.
 
-- 🏃‍♀️ Fast Rewards: execution rewards immediately liquid.
+- 💧 Liquid Rewards: NoOps' execution rewards are immediately liquid.

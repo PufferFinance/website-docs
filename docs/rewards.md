@@ -3,7 +3,17 @@ title: Rewards
 slug: /protocol/rewards
 ---
 
-pufETH is a reward-bearing token akin to [Compound's cToken](https://docs.compound.finance/v2/ctokens/#ctokens), which is optimal regarding DeFi compatibility. As the protocol generates restaking rewards, the amount of ETH backing pufETH increases, increasing the conversion rate between the two. Holding liquid pufETH allows one to earn restaking rewards over time while still being able to participate in DeFi.
+:::info
+The pufETH LST accrues Proof of Stake rewards and restaking rewards through Eigenlayer.
+:::
+
+### Liquid Staking Token
+pufETH is the ERC20 token that stakers get as a receipt when they stake ETH in Puffer. It is a reward-b  token follows the yield-bearing model It follows the 
+
+reward-bearing token akin to [Compound's cToken](https://docs.compound.finance/v2/ctokens/#ctokens), which is optimal regarding DeFi compatibility. 
+
+
+As the protocol generates restaking rewards, the amount of ETH backing pufETH increases, increasing the conversion rate between the two. Holding liquid pufETH allows one to earn restaking rewards over time while still being able to participate in DeFi.
 
 
 **Puffer Rewards** 
