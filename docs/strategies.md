@@ -37,11 +37,9 @@ As Eigenlayer, AVSs, and Puffer’s anti-slashing mechanisms mature, proven NoOp
 
 **Allocating ETH to strategies**
 
-The protocol will receive ETH from staker deposits, smoothing commitments, and restaking rewards. 
-- governance picks with goal of diversification
-- dont want too much to flow to untested AVSs
-- we use weighted round robin where schedule is picked through governance
-- heres example
+The protocol will receive ETH from staker deposits, smoothing commitments, and restaking rewards.  An essential duty of the PufferProtocol contract is to allocate this ETH to various strategies based on their risk-reward profiles, potential returns, and the evolving landscape of the Eigenlayer restaking ecosystem.
+
+Puffer employs a weighted round-robin allocation schedule, determined by governance, that rotates validator assignments to strategies based on predetermined weights. For instance, a schedule like `["Non-Restaking", "Non-Restaking", "Non-Restaking", "EigenDA"]` would indicate that for every four validators funded, three would go to the "Non-Restaking" strategy and one to the "EigenDA" strategy. The schedule should be chosen to prioritize the "Non-Restaking" strategy and low-risk restaking strategies.
 
 
 ### Strategy participants 🙋‍♀️
