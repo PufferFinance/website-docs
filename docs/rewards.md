@@ -7,7 +7,6 @@ slug: /protocol/rewards
 The stakers that hold pufETH can earn more than to traditional liquid staking tokens (LSTs) due to the inclusion of restaking rewards.
 :::
 
-
 pufETH is a reward-bearing ERC20 token akin to [Compound's cToken](https://docs.compound.finance/v2/ctokens/#ctokens), which is optimal regarding DeFi compatibility. As the protocol receives smoothing commitments and generates restaking rewards, the amount of ETH backing pufETH increases, increasing the conversion rate between the two and the value of pufETH. Holding liquid pufETH allows one to earn rewards over time while still being able to participate in DeFi. 
 
 
