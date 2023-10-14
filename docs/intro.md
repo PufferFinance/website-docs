@@ -7,18 +7,31 @@ slug: /
 Puffer is the first native liquid restaking protocol built on Eigenlayer 🐡🤝🟣
 :::
 
-It makes native restaking on [Eigenlayer](https://www.eigenlayer.xyz/) more accessible, allowing anyone to run an Ethereum Proof of Stake validator while supercharging their rewards.
+It makes native restaking on [Eigenlayer](https://www.eigenlayer.xyz/) more accessible, allowing anyone to run an Ethereum Proof of Stake (PoS) validator while supercharging their rewards.
 
 The protocol is driven by **Stakers** and **Node Operators** (NoOps):
-- **NoOps** pay the protocol [smoothing commitments](protocol/smoothing-commitments) worth less than 2 ETH and in exchange get to run 32 ETH validators and keep 100% of the staking rewards they generate. The NoOps that engage in [restaking](reference/glossary#Restaking) will earn additional restaking rewards commissions from the [AVSs](reference/glossary#AVS) they operate.
-- **Stakers** deposit ETH to fund the protocol's 32 ETH validators in exchange for the pufETH [Liquid Staking Token](protocol/liquid-staking-token). The amount of ETH that pufETH can be redeemed for will increase as the protocol receives smoothing commitments and restaking rewards from NoOps.
+- **NoOps** can join *any* Puffer [strategy](/protocol/strategy) by locking 1 ETH as collateral and paying stakers an upfront [smoothing commitment](protocol/smoothing-commitment). In exchange, they get to operate a 32 ETH validator and keep 100% of its PoS rewards until their commitment expires or is renewed. NoOps can optionally boost their rewards by joining [restaking](reference/glossary#Restaking) strategies and delegating the validator's ETH to an [AVS](/reference/glossary/#AVS) operator in exchange for restaking rewards commission.
 
+
+- **Stakers** can deposit any amount of ETH to help fund the protocol's 32 ETH NoOp-controlled validators. In exchange, they receive the pufETH [Liquid Staking Token](protocol/liquid-staking-token) (LST) which grows in value as the protocol receives smoothing commitments and restaking rewards.
 
 ### Why be a NoOp? 🤖
-Puffer allows anyone with less than 2 ETH to run their own validator to earn sustainable Proof of Stake rewards while helping to decentralize the network. Since they are entitled to 100% of their validators' execution rewards, NoOps get to decide their MEV strategy [which can be very lucrative in some cases](https://etherscan.io/block/17806773#mevinfo). They also receive 100% of their validators' consensus rewards, meaning their profitability depends solely on their own performance, creating long-term incentives for honest NoOp behavior. Finally, Puffer's capital efficiency extends to restaking. NoOps can get restaking exposure for additional rewards without requiring the 32 ETH to become a native restaker.
+Puffer has the best capital efficiency for a permissionless liquid staking protocol and this extends to restaking. Anyone with less than 2 ETH can run their own validator to earn sustainable PoS rewards while helping to decentralize Ethereum. NoOps can get restaking exposure for additional rewards without requiring the 32 ETH to become a native restaker, allowing them to earn several times more than they could as a solo validator.
+
+NoOps are entitled to 100% of their validators' [execution rewards](/reference/glossary#execution-rewards). This means they get to decide their MEV strategy which helps strengthen Ethereum's censorship-resistance and [can be very lucrative in some cases](https://etherscan.io/block/17806773#mevinfo).
+
+NoOps also receive 100% of their validators' [consensus rewards](/reference/glossary#consensus-rewards), meaning their validator's profitability depends solely on themselves, incentivizing for excellent long-term NoOp performance.
+
+A NoOp's 1 ETH collateral is converted to pufETH during registration, allowing them to earn additional passive rewards throughout their commitment. This also means that the earlier NoOps will benefit from the later NoOps that join the protocol since pufETH will grow from their smoothing commitments and restaking rewards.
 
 ### Why stake? 🥩
-Instead of waiting a year for staking rewards to accrue, pufETH holders receive a year’s worth of staking rewards each time a NoOp pays a smoothing commitment to deploy a new validator. This favors early stakers as pufETH benefits from all future smoothing commitments and restaking rewards. To ensure staked ETH is safe, the protocol requires NoOps to run Puffer’s [anti-slashing technology](technology/secure-signer), will eject validators whose balance falls too low, and has restaking guardrails.
+Compared to traditional liquid staking protocols, stakers on Puffer no longer have to trust validators to have good performance for pufETH to earn competitive rewards, rather smoothing commitments provide stakers with guaranteed rewards regardless of the validators' performance.   
+
+Instead of waiting for PoS rewards to slowly accrue, pufETH holders receive month[s] worth of PoS rewards each time a NoOp joins the protocol and pays their smoothing commitment. This dynamic favors early stakers as pufETH can quickly appreciate from all future smoothing commitments even if the beacon chain's validator queue is extremely congested.
+
+Traditional LSTs only accrue PoS rewards. pufETH is the first LST to accrue both PoS and restaking rewards, allowing a staker to earn more without requiring complicated DeFi strategies. However, pufETH is a liquid token and therefore is 100% compatible with DeFi for those that want.
+
+Puffer prioritizes the safety of stakers' ETH. To ensure staked ETH is safe, the protocol requires NoOps to lock 1 ETH of collateral, run [Puffer’s anti-slashing technology](technology/secure-signer) for defense-in-depth, will eject validators whose balance falls too low, and has restaking guardrails.
 
 ### The Puffer Flywheel 🎡
 <div style={{textAlign: 'center'}}>
@@ -26,7 +39,7 @@ Instead of waiting a year for staking rewards to accrue, pufETH holders receive 
 ![PufferFlywheel](/img/PufferFlywheel.svg)
 </div>
 
-Together, Stakers and NoOps create a flywheel effect that allows the protocol to outpace the growth of traditional liquid staking protocols. However, to ensure that Puffer never becomes a threat to Ethereum's credible neutrality, the [burst threshold](protocol/burst-threshold) caps the protocol at 22% of the validator set. 
+Together, stakers and NoOps create a flywheel effect that allows Puffer to outpace the growth of traditional liquid staking protocols. However, to ensure that Puffer never becomes a threat to Ethereum's credible neutrality, the [burst threshold](protocol/burst-threshold) caps the Puffer at 22% of the validator set. 
 
 ## What does Puffer bring? 🍽️ 
 
@@ -58,3 +71,4 @@ Together, Stakers and NoOps create a flywheel effect that allows the protocol to
 - 🧈 Smoothing Commitments: aligns NoOp incentives and smooths MEV.
 
 - 💧 Liquid Rewards: NoOps' execution rewards are immediately liquid.
+
