@@ -3,44 +3,77 @@ title: Strategies
 slug: /protocol/strategies
 ---
 
-:::info 
-It is permissionless for NoOps to deploy validators to restaking strategies.
+:::info
+Puffer allows NoOps to get native restaking exposure to earn more than they could in traditional liquid staking protocols.
 :::
 
+
+### Native restaking 🥩
+A *native restaker* is an Ethereum Proof of Stake (PoS) validator that restakes their 32 ETH to be used as collateral when operating Eigenlayer [AVSs](/reference/glossary/#AVS). Native restakers are awarded AVS fees in exchange for their service but are subject to penalties if they break the AVS's rules. To engage in native restaking validators must point their [withdrawal credentials](/reference/glossary/#withdrawal-credentials) to an [EigenPod](https://github.com/Layr-Labs/eigenlayer-contracts/blob/master/docs/core/EigenPodManager.md#eigenpodmanager) contract which then opts-in to restaking and chooses its AVSs.
+
+Native restaking allows validators to better utilize their ETH capital and hardware to supplement their PoS rewards. However, the 32 ETH requirement is too high a barrier for most to participate. Additionally, some AVSs may require far greater computational requirements than what is expected from PoS. Puffer aims to address is through its strategies. 
+
+### Puffer strategies 🐡
+At its core, the Puffer protocol is a collection of **strategy** contracts. Each strategy controls an EigenPod that functions as a single native restaker but is composed of *many* NoOp-controlled validators.
 
 <div style={{textAlign: 'center'}}>
 
 ![PufferStrategy](/img/PufferStrategy.png)
 </div>
 
-### Strategy selection 🤔
-The Puffer protocol is a collection of strategy contracts that each commit to restaking to operate an immutable set of AVSs. However, irrespective of their individual configurations, all strategies fundamentally include Ethereum Proof of Stake (PoS) validating. 
+Strategies are filled with NoOps who focus solely on Ethereum PoS validation. If it is a restaking strategy, the NoOps' cummulative validator ETH is restaked as collateral for the strategy's AVSs. During Puffer's initial phase, the responsibility of operating the AVSs is delegated to a DAO-chosen [**strategy operator**](/protocol/strategies#restaking-risks-and-mitigations-), who provides the service in exchange for a portion of the generated AVS fees. 
 
-When NoOps choose to operate within a given strategy, they actively participate in earning both staking and restaking rewards. The choices aren't limited, rather they span a range that matches the varying risk and reward preferences of NoOps. The strategies that operate more AVSs serve to earn more restaking rewards from the generated AVS fees but also increase the chances that they are penalized from violating an AVS's rules. For this reason, some NoOps will prefer the default **`{Non-Restaking}`** strategy that abstains from restaking and minimizes NoOp risk. The NoOps that seek higher rewards can opt-in to joining the **`{EigenDA}`** strategy or even broader combinations like **`{EigenDA, Bridge}`**. 
+Given the delegation risk, the NoOps are awarded commission on the AVS fees with the rest returned to the protocol, helping grow the value of pufETH. This allows NoOps with less than 2 ETH to earn rewards from native restaking. Risk-averse NoOps can choose the default Puffer strategy which will not engage in restaking or delegation. 
+
+:::tip
+When NoOps deploy their validators to restaking strategies they automatically earn restaking rewards commission. 
+:::
+
+### Choosing a strategy 🤔
+The protocol's default **Non-Restaking** strategy does not engage in any restaking and therefore does not generate restaking rewards nor increase risk. 
+
+When NoOps choose to operate within a restaking strategy, they actively participate in earning both PoS and restaking rewards. The choices aren't limited, rather they span a range that matches the varying risk and reward preferences of NoOps. 
+
+The restaking strategies that operate more AVSs serve to earn more restaking rewards from the generated AVS fees but also increase the chances that they are penalized from violating an AVS's rules. 
+
+For this reason, some NoOps will prefer the default strategy that abstains from restaking and minimizes NoOp risk. The NoOps that seek higher rewards can opt-in to joining the **`{EigenDA}`** strategy or even broader combinations like **`{EigenDA, ZK Rollup}`**. 
 
 ### Joining a strategy 👈
-To hold strong to our alignment to Ethereum's ethos, it is **always permissionless** for NoOps to join a strategy and deploy an Ethereum validator. To join, NoOps pay a non-refundable [smoothing commitment](/protocol/smoothing-commitments), which represents a long-term commitment to run a validator in the strategy. In exchange, they are provisioned 32 ETH to deploy their validator to the strategy's [EigenPod](https://github.com/Layr-Labs/eigenlayer-contracts/blob/master/docs/core/EigenPodManager.md#eigenpodmanager) contract. The NoOp is now entitled to keep all of the staking rewards (consensus and execution) generated by their validator. The NoOps that joined restaking strategies will receive restaking commission after each [growth spurt](/protocol/growth-spurts).
+To hold strong to our alignment to Ethereum's ethos, it is **always permissionless** for NoOps to join a strategy and deploy an Ethereum validator. 
 
+:::tip 
+It is permissionless for NoOps to deploy validators to strategies.
+:::
+
+To join, NoOps lock 1 ETH collateral and pay a non-refundable [smoothing commitment](/protocol/smoothing-commitments), which represents a long-term commitment to run a validator in the strategy. Their collateral is then locked as pufETH and they are provisioned 32 ETH to deploy their validator to the strategy's [EigenPod](https://github.com/Layr-Labs/eigenlayer-contracts/blob/master/docs/core/EigenPodManager.md#eigenpodmanager) contract.
+
+The NoOp is now entitled to keep all of the PoS rewards (consensus and execution) generated by their validator. The NoOps that joined restaking strategies will receive restaking commission after each [growth spurt](/protocol/growth-spurts).
 
 ### Restaking risks and mitigations 🚧
-The concept of restaking, while promising, introduces certain inherent risks to stakers and NoOps alike. These primarily revolve around the vulnerabilities of smart contracts and potential AVS slashing risks. Yet, it's hard to ignore the immense value restaking brings to Ethereum's ecosystem. Through the sustainable rewards that it can offer, restaking can reshape the dynamics of the liquid staking market, which is currently on a dangerous path towards complete centralization.
+The concept of restaking, while promising, introduces certain inherent risks to stakers and NoOps alike. These primarily revolve around the vulnerabilities of smart contracts and potential AVS slashing risks. Yet, it's hard to ignore the immense value restaking brings to Ethereum's ecosystem. 
 
 :::tip
 Puffer strives to mitigate these risks by taking a conservative approach as restaking matures. 
 :::
 
-**Selecting NoOps for restaking**
+Through the sustainable rewards that it can offer, restaking can reshape the dynamics of the liquid staking market, which is currently on a dangerous path towards complete centralization.
+
+
+**Restricting strategy operators**
 
 To ensure a safe transition into the world of restaking, Puffer will rely more heavily on governance to decide restaking qualifications during its nascent stages. During this time, only the reputable NoOps with excellent performance that have been selected through governance will be eligible to operate the AVSs on behalf of a given strategy. 
 
-As Eigenlayer, AVSs, and Puffer’s anti-slashing mechanisms mature, proven NoOps will have the option to operate AVSs without approval from governance.
+As Eigenlayer, AVSs, and Puffer’s anti-slashing mechanisms mature, proven NoOps will have the option to become strategy operators without DAO-approval.
+
+**Restricting AVSs**
+
+As an open platform, Eigenlayer allows anyone to deploy an AVS. Thus, allowing strategies to service any AVS would expose the stakers and NoOps to too much slashing risk. 
+
+To mitigate this risk, Puffer requires the DAO to onboard new strategies and carefully vet the allowed AVSs. Once deployed, the restaking strategies cannot add additional AVSs. Similarly, the Non-Restaking strategy is designed such that it cannot ever opt in to restaking after deployment. 
+
 
 **Allocating ETH to strategies**
 
-The protocol will receive ETH from staker deposits, smoothing commitments, and restaking rewards.  An essential duty of the PufferProtocol contract is to allocate this ETH to various strategies based on their risk-reward profiles, potential returns, and the evolving landscape of the Eigenlayer restaking ecosystem.
+The protocol will receive ETH from staker deposits, smoothing commitments, NoOp collateral, and restaking rewards. An essential duty of the PufferProtocol contract is to allocate this ETH to various strategies based on their risk-reward profiles, potential returns, and the evolving landscape of the Eigenlayer restaking ecosystem.
 
 Puffer employs a weighted round-robin allocation schedule, determined by governance, that rotates validator assignments to strategies based on predetermined weights. For instance, a schedule like `["Non-Restaking", "Non-Restaking", "Non-Restaking", "EigenDA"]` would indicate that for every four validators funded, three would go to the "Non-Restaking" strategy and one to the "EigenDA" strategy. The schedule should be chosen to prioritize the "Non-Restaking" strategy and low-risk restaking strategies.
-
-
-### Strategy participants 🙋‍♀️
-Each restaking strategy will contain validator-only NoOps and restaking NoOp[s]. While the former solely focuses on Ethereum PoS validation, the latter operates the AVSs on behalf of the strategy by restaking the other NoOps' ETH, earning commission. Given the elevated risk, validator-only NoOps are compensated through restaking commissions. This allows NoOps to earn more than they could in traditional liquid staking protocols. Risk-averse NoOps can choose the default Puffer strategy which will not engage in restaking. 
