@@ -16,7 +16,11 @@ The protocol is driven by **Stakers** and **Node Operators** (NoOps):
 - **Stakers** can deposit any amount of ETH to help fund the protocol's 32 ETH NoOp-controlled validators. In exchange, they receive the pufETH [Liquid Staking Token](protocol/liquid-staking-token) (LST) which grows in value as the protocol receives smoothing commitments and restaking rewards.
 
 ### Why be a NoOp? 🤖
-Puffer has the best capital efficiency for a permissionless liquid staking protocol and this extends to restaking. Anyone with less than 2 ETH can run their own validator to earn sustainable PoS rewards while helping to decentralize Ethereum. NoOps can get restaking exposure for additional rewards without requiring the 32 ETH to become a native restaker, allowing them to earn several times more than they could as a solo validator.
+Anyone with less than 2 ETH can run their own validator to earn sustainable PoS rewards while helping to decentralize Ethereum. NoOps can get restaking exposure for additional rewards without requiring the 32 ETH to become a native restaker, allowing them to earn several times more than they could as a solo validator.
+
+:::tip
+Puffer has the best capital efficiency for a permissionless liquid staking protocol and this extends to restaking.
+:::
 
 NoOps are entitled to 100% of their validators' [execution rewards](/reference/glossary#execution-rewards). This means they get to decide their MEV strategy which helps strengthen Ethereum's censorship-resistance and [can be very lucrative in some cases](https://etherscan.io/block/17806773#mevinfo).
 
@@ -26,6 +30,10 @@ A NoOp's 1 ETH collateral is converted to pufETH during registration, allowing t
 
 ### Why stake? 🥩
 Compared to traditional liquid staking protocols, stakers on Puffer no longer have to trust validators to have good performance for pufETH to earn competitive rewards, rather smoothing commitments provide stakers with guaranteed rewards regardless of the validators' performance.   
+
+:::tip
+pufETH accrues months of PoS rewards immediately instead of relying on NoOp performance.
+:::
 
 Instead of waiting for PoS rewards to slowly accrue, pufETH holders receive month[s] worth of PoS rewards each time a NoOp joins the protocol and pays their smoothing commitment. This dynamic favors early stakers as pufETH can quickly appreciate from all future smoothing commitments even if the beacon chain's validator queue is extremely congested.
 
