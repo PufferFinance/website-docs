@@ -24,6 +24,7 @@ The protocol strives to improve Ethereum validator diversity. Success means ceme
 - Puffer is preemptively self-capping it's pool size to 22% to protect Ethereum's credible neutrality. Learn more 👉 [burst threshold to self-cap](/protocol/burst-threshold).
 - Puffer is designed with a roadmap to complete decentralization. Learn more 👉 [decentralizing the Guardians](/protocol/guardians#roadmap-to-decentralization).
 - Puffer helps increase Ethereum's Proof of Stake stability since NoOps have long-term commitments. Learn more 👉 [smoothing commitments](/protocol/smoothing-commitments#pros-and-cons).
+- Puffer received an Ethereum Foundation grant for our anti-slashing technology. Learn more 👉 [Secure-Signer](https://blog.ethereum.org/2023/02/22/allocation-update-q4-22).
 
 ### Permissionless
 > *The protocol must allow anyone to run a validator.*
