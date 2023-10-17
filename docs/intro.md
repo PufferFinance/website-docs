@@ -10,10 +10,10 @@ Puffer is the first native liquid restaking protocol built on Eigenlayer 🐡�
 It makes [native restaking](/protocol/strategies/#native-restaking-) on [Eigenlayer](https://www.eigenlayer.xyz/) more accessible, allowing anyone to run an Ethereum Proof of Stake (PoS) validator while supercharging their rewards.
 
 The protocol is driven by **Stakers** and **Node Operators** (NoOps):
-- **NoOps** can join *any* Puffer [strategy](/protocol/strategies) by locking 1 ETH as collateral and paying stakers an upfront [smoothing commitment](protocol/smoothing-commitment). In exchange, they get to operate a 32 ETH validator and keep 100% of its PoS rewards until their commitment expires or is renewed. NoOps can optionally boost their rewards by joining [restaking](reference/glossary#Restaking) strategies and delegating the validator's ETH to an [AVS](/reference/glossary/#AVS) operator in exchange for restaking rewards commission.
+- **NoOps** can join *any* Puffer [strategy](/protocol/strategies) by locking 1 ETH as collateral and paying stakers an upfront [smoothing commitment](protocol/smoothing-commitments). In exchange, they get to operate a 32 ETH validator and keep 100% of its PoS rewards until their commitment expires or is renewed. NoOps can optionally boost their rewards by joining [restaking](reference/glossary#Restaking) strategies and delegating the validator's ETH to an [AVS](/reference/glossary/#AVS) operator in exchange for restaking rewards commission.
 
 
-- **Stakers** can deposit any amount of ETH to help fund the protocol's 32 ETH NoOp-controlled validators. In exchange, they receive the pufETH [Liquid Staking Token](protocol/liquid-staking-token) (LST) which grows in value as the protocol receives smoothing commitments and restaking rewards.
+- **Stakers** can deposit any amount of ETH to help fund the protocol's 32 ETH NoOp-controlled validators. In exchange, they receive the pufETH [Liquid Staking Token](protocol/rewards) (LST) which grows in value as the protocol receives smoothing commitments and restaking rewards.
 
 ### Why be a NoOp? 🤖
 Anyone with less than 2 ETH can run their own validator to earn sustainable PoS rewards while helping to decentralize Ethereum. NoOps can get restaking exposure for additional rewards without requiring the 32 ETH to become a native restaker, allowing them to earn several times more than they could as a solo validator.
