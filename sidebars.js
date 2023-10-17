@@ -53,7 +53,7 @@ const sidebars = {
     {
       type: "category",
       label: "Reference",
-      items: ["glossary", "hardforks", "slash", "comparisons", "faq"],
+      items: ["glossary", "hardforks", "slash", "faq"],
     },
   ],
 };
