@@ -22,31 +22,39 @@ const sidebars = {
     "intro",
     {
       type: "category",
-      label: "Background",
-      items: ["background/mergeshang", "background/slash"],
+      label: "Protocol",
+      items: [
+        "overview",
+        "guiding-principles",
+        "strategies",
+        "smoothing",
+        "rewards",
+        "growth-spurts",
+        "guardians",
+        "burst-threshold",
+        "governance",
+      ],
     },
     {
       type: "category",
       label: "Technology",
-      items: ["tech/securesigner", "tech/rave"],
+      items: ["secure-signer", "rave"],
     },
     {
       type: "category",
-      label: "Protocol",
-      items: [
-        "arch/overview",
-        // "arch/pufeth",
-        // "arch/mev",
-        // "arch/ejection",
-        // "arch/governance",
-      ],
+      label: "Node Operators",
+      items: ["requirements", "setup", "registration", "node-rewards"],
     },
-    // {
-    //   type: "category",
-    //   label: "Joining Puffer Pool",
-    //   items: ["joining/stakers", "joining/noop"],
-    // },
-    "faq"
+    {
+      type: "category",
+      label: "Stakers",
+      items: ["minting", "redeeming"],
+    },
+    {
+      type: "category",
+      label: "Reference",
+      items: ["glossary", "hardforks", "slash", "faq"],
+    },
   ],
 };
 
