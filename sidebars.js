@@ -22,31 +22,29 @@ const sidebars = {
     "intro",
     {
       type: "category",
-      label: "Background",
-      items: ["background/mergeshang", "background/slash"],
+      label: "Protocol",
+      items: [
+        "overview",
+        "guiding-principles",
+        "nlrt",
+        "modules",
+        "validator-tickets",
+        "rewards",
+        "guardians",
+        "burst-threshold",
+        "governance",
+      ],
     },
     {
       type: "category",
       label: "Technology",
-      items: ["tech/securesigner", "tech/rave"],
+      items: ["secure-signer", "rave"],
     },
     {
       type: "category",
-      label: "Protocol",
-      items: [
-        "arch/overview",
-        // "arch/pufeth",
-        // "arch/mev",
-        // "arch/ejection",
-        // "arch/governance",
-      ],
+      label: "Reference",
+      items: ["glossary", "hardforks", "slash", "faq"],
     },
-    // {
-    //   type: "category",
-    //   label: "Joining Puffer Pool",
-    //   items: ["joining/stakers", "joining/noop"],
-    // },
-    "faq"
   ],
 };
 

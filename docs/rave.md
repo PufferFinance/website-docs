@@ -1,6 +1,6 @@
 ---
-sidebar_position: 2
 title: RAVe
+slug: /technology/RAVe
 ---
 RAVe is the second component of Puffer's Ethereum Foundation grant and stands for `Remote Attestation Verification`. This essential set of smart contracts allows enclaves to interface with blockchains securely and helps let the Puffer Pool be permissionless. RAVe enables entirely [new use cases](https://ethresear.ch/t/2fa-zk-rollups-using-sgx/14462) that weren't previously possible that we are excited to explore at Puffer.
 
