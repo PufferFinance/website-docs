@@ -30,8 +30,8 @@ The protocol strives to improve Ethereum validator diversity. In this spirit, th
 ### Permissionless
 > *The protocol must allow anyone to run a validator.*
 
-- Puffer allows anyone with [enclave-compatible](/reference/glossary#enclave) hardware and 1 ETH to run an Ethereum validator. Learn more 👉 [NoOp Requirements](/nodes/requirements).
-- Puffer allows anyone with a 2 ETH bond (any hardware) to run an Ethereum validator. Learn more 👉 [NoOp Requirements](/nodes/requirements).
+- Puffer allows anyone with [enclave-compatible](/reference/glossary#enclave) hardware and 1 ETH to run an Ethereum validator. Learn more 👉 [NoOp Requirements](/reference/faq#%EF%B8%8F-how-many-eth-do-i-need-to-run-a-puffer-node).
+- Puffer allows anyone with a 2 ETH bond (any hardware) to run an Ethereum validator. Learn more 👉 [NoOp Requirements](/reference/faq#%EF%B8%8F-how-many-eth-do-i-need-to-run-a-puffer-node).
 
 ### Low barriers
 > *The protocol must be capital efficient to attract NoOps.*
@@ -48,7 +48,7 @@ The protocol strives to improve Ethereum validator diversity. In this spirit, th
 ### Scalable
 > *The protocol must be scalable to compete with centralized liquid staking protocols.*
 
-- Puffer helps the protocol grow by allowing stakers to bring any amount of ETH. Learn more 👉 [minting pufETH](/stakers/minting-pufETH).
+- Puffer helps the protocol grow by allowing stakers to bring any amount of ETH. Learn more 👉 [minting pufETH](/protocol/nlrt).
 - Puffer supercharges rewards for pufETH holders through restaking exposure. Learn more 👉 [nLRTs](/protocol/nlrt).
 - Puffer is designed so that pufETH can grow in value even if validator queues are very long. Learn more 👉 [validator tickets](/protocol/validator-tickets#pros-and-cons).
 - Puffer stakers earn rewards even if the protocol's validators underperform. Learn more 👉 [NoOp incentives](/protocol/validator-tickets#why--noop-incentives).
