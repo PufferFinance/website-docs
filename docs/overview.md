@@ -57,7 +57,7 @@ Since NoOps receive 100% of the PoS rewards they generate, they are [incentivize
 ### 5️⃣ Restaking Rewards 
 Restaking operators execute the AVSs on the module's behalf and receive a commission for their services. The accumulated fees from these AVSs enhance the value of pufETH. This mechanism allows stakers to achieve higher returns compared to conventional LSTs.
 
-By participating in a restaking module, NoOps bear additional risks to their collateral. To compensate, they are granted a portion of the restaking rewards. This arrangement allows them to earn more rewards than through PoS alone, without the need for additional hardware or computational resources. They can access these rewards periodically, using the same [NoOp withdrawal process](/nodes/rewards) as for consensus rewards.
+By participating in a restaking module, NoOps bear additional risks to their collateral. To compensate, they are granted a portion of the restaking rewards. This arrangement allows them to earn more rewards than through PoS alone, without the need for additional hardware or computational resources. They can access these rewards periodically, using the same NoOp withdrawal process as for consensus rewards.
 
 ---
 ### ️6️⃣ Exiting Validators
