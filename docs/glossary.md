@@ -37,9 +37,6 @@ A secure-computing environment capable of running Puffer’s anti-slashing techn
 ### `Burst Threshold`
 Code in our smart contracts that self-caps the pool at 22% marketshare
 
-### `Puffer DAO (pDAO)`
-Governance for the protocol controlled by the `PUFI` governance token
-
 ### `Beacon Chain`
 The main component of the Ethereum blockchain responsible for Proof of Stake consensus
 
