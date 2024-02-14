@@ -27,7 +27,6 @@ For example, adding a new module to the PufferProtocol contract requires governa
 ---
 ### 1️⃣ Staking ETH  
 Stakers can deposit ETH and mint the [pufETH nLRT](/protocol/nlrt#pufeth) via the PufferPool contract, which serves as a redeemable receipt for their restaked ETH. If sufficient exit liquidity is available, stakers can reclaim their ETH from the PufferVault. Over time, the redeemable amount is expected to increase from [validator tickets](/protocol/validator-tickets) and restaking rewards.
-Stakers can deposit ETH and mint the [pufETH nLRT](/protocol/nlrt#pufeth) via the PufferPool contract, which serves as a redeemable receipt for their staked ETH. If sufficient exit liquidity is available, stakers can reclaim their ETH from the PufferVault. Over time, the redeemable amount is expected to increase from selling [validator tickets](/protocol/validator-tickets) and restaking rewards.
 
 In [contrast with conventional liquid staking tokens (LSTs)](/protocol/nlrt#what-is-an-lst), pufETH can provide strictly more rewards for its holders. Not only does pufETH encompass PoS rewards **and** restaking rewards, but its value can accelerate quickly due to validator ticket sales. Furthermore, the PoS rewards for stakers are decoupled from the protocol validators' performance.
 
