@@ -86,6 +86,6 @@ Traditional liquid staking tokens (LSTs) only accrue PoS rewards. As a nLRT, puf
 
 Puffer prioritizes the safety of stakers' ETH. To ensure staked ETH is safe, the protocol requires:
 - NoOps to lock 1 ETH of collateral and run [Puffer’s anti-slashing technology](/technology/secure-signer) for defense-in-depth or lock 2 ETH of collateral without the anti-slasher
-- [Eject validators](/protocol/guardians#what-are-their-duties) whose balance falls too low
+- [Ejecting validators](/protocol/guardians#what-are-their-duties) whose balance falls too low
 - Guardrails around [which AVSs are allowed](/protocol/restaking-modules#restricting-avss)
 - Guardrails around who can become a [restaking operator](/protocol/restaking-modules#restricting-reops)

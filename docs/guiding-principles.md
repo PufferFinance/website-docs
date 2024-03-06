@@ -30,13 +30,13 @@ The protocol strives to improve Ethereum validator diversity. In this spirit, th
 ### Permissionless
 > *The protocol must allow anyone to run a validator.*
 
-- Puffer allows anyone with [enclave-compatible](/reference/glossary#enclave) hardware and 1 ETH to run an Ethereum validator. Learn more 👉 [NoOp Requirements](/reference/faq#%EF%B8%8F-how-many-eth-do-i-need-to-run-a-puffer-node).
-- Puffer allows anyone with a 2 ETH bond (any hardware) to run an Ethereum validator. Learn more 👉 [NoOp Requirements](/reference/faq#%EF%B8%8F-how-many-eth-do-i-need-to-run-a-puffer-node).
+- Puffer allows anyone with [enclave-compatible](/reference/glossary#enclave) hardware and 1 ETH to run an Ethereum validator. Learn more 👉 [NoOp Requirements](/reference/faq#%EF%B8%8F-how-much-eth-do-i-need-to-run-a-puffer-node).
+- Puffer allows anyone with a 2 ETH bond (any hardware) to run an Ethereum validator. Learn more 👉 [NoOp Requirements](/reference/faq#%EF%B8%8F-how-much-eth-do-i-need-to-run-a-puffer-node).
 
 ### Low barriers
 > *The protocol must be capital efficient to attract NoOps.*
 
-- Puffer reduces the ETH amount needed to become an Ethereum validator to as little as ETH, inviting more participants. Learn more 👉 [validator tickets](/protocol/validator-tickets).
+- Puffer reduces the ETH amount needed to become an Ethereum validator to as little as 1 ETH, inviting more participants. Learn more 👉 [validator tickets](/protocol/validator-tickets).
 - Puffer gives NoOps restaking exposure with less than 32 ETH. Learn more 👉 [modules](/protocol/restaking-modules).
 
 ### Profitable 
