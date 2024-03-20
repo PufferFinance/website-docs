@@ -36,7 +36,7 @@ The protocol strives to improve Ethereum validator diversity. In this spirit, th
 ### Low barriers
 > *The protocol must be capital efficient to attract NoOps.*
 
-- Puffer reduces the ETH amount needed to become an Ethereum validator to as little as ETH, inviting more participants. Learn more 👉 [validator tickets](/protocol/validator-tickets).
+- Puffer reduces the ETH amount needed to become an Ethereum validator to as little as 1 ETH, inviting more participants. Learn more 👉 [validator tickets](/protocol/validator-tickets).
 - Puffer gives NoOps restaking exposure with less than 32 ETH. Learn more 👉 [modules](/protocol/restaking-modules).
 
 ### Profitable 
