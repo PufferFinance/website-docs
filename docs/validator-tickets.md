@@ -21,7 +21,7 @@ The idea is simple but powerful:
 - **pufETH**: People stake their ETH and receive pufETH, a token representing their staked ETH within the Puffer protocol, which is used to fund Ethereum validators.
 - **Validator Tickets (VTs)**: VTs are ERC20 tokens that grant the holder the right to run a staker-funded Ethereum validator for a day. VTs are minted by ETH deposits. This ETH goes towards compensating pufETH holders for financing validators.
 - **Running Validators**: To run a validator, a node operator must lock VTs and lock in 1 ETH of pufETH as collateral.
-- **Pricing VTs**: The price of a VT is set based on the expected daily earnings from running a validator, with a discount to incentivize purchases. This price directly influences the expected pufETH APR.
+- **Pricing VTs**: The price of a VT is set based on the expected daily earnings from running a validator. This price directly influences the expected pufETH APR.
 - **Benefits**: VTs create new trading opportunities, address “rug-pooling”, and incentivize good performance. pufETH holders earn rewards immediately when VTs are purchased. Consuming VTs allows the node operator to keep 100% of the validator’s earnings.
 
 :::tip
@@ -54,7 +54,7 @@ In exchange, they are allocated 32 ETH to run a validator, and are entitled to 1
 For stakers, this means the value of pufETH increases every time a VT is minted. 
 :::
 
-Each VT represents one validator-day of expected Proof of Stake (PoS) rewards. The payments to mint VTs directly pay pufETH holders, creating strong growth dynamics. This mechanism is favorable for stakers, capital efficient, and incentivizes for optimal NoOp performance. Upon exiting a validator, the number of locked VT tokens, corresponding to the number of days the validator was active, will be burned and the remaining locked VTs are released back to the NoOp as a refund.
+Each VT represents one validator-day of expected Proof of Stake (PoS) rewards. The payments to mint VTs directly pay pufETH holders, creating strong growth dynamics. This mechanism is favorable for stakers, capital efficient, and incentivizes for optimal NoOp performance. Upon exiting a validator, the number of locked VT tokens, corresponding to the number of days the validator was active, will be burned and the remaining locked VTs may be retrieved by the NoOp.
 
 
 
@@ -63,7 +63,7 @@ The success of an LSP largely depends upon the performance of its NoOps. Traditi
 
 While this collateral approach discourages penalties, it does not strongly incentivize performance. For instance, a "lazy" NoOp could alternate between being online and offline, ensuring their validator balance stays at 32 ETH. This strategy results in no reward generation for the LSP, but also no collateral loss for the NoOp.
 
-Puffer changes this incentive landscape through the use of VTs. Since NoOps have already purchased VTs, they stand to gain nothing from underperforming since they cannot recoup this initial payment, even if they maintain their validator balance. Thus, for a NoOp to turn a profit, they must perform at least on par with the average validator. Those who excel can earn even more.
+Puffer changes this incentive landscape through the use of VTs. Since NoOps have already purchased VTs, they stand to gain nothing from underperforming since they cannot recoup this initial payment (as days pass and their VTs are burned), even if they maintain their validator balance. Thus, for a NoOp to turn a profit, they must perform at least on par with the average validator. Those who excel can earn even more.
 
 While VTs provide strong disincentives for slashing, to further protect the staker's ETH, Puffer requires a [1 or 2 ETH](/reference/faq#%EF%B8%8F-how-many-eth-do-i-need-to-run-a-puffer-node) bond and for NoOps to use [anti-slashing technology](/technology/secure-signer) for defense-in-depth.
 
@@ -74,7 +74,7 @@ This new approach neatly tackles two traditional problems:
 ### Requirements
 For PoS stability and NoOp incentive alignment, [1 or 2 ETH](/reference/faq#%EF%B8%8F-how-many-eth-do-i-need-to-run-a-puffer-node) worth of pufETH and a minimum of 28 VTs are required to be deposited at registration time. Their duration begins at the moment their validator is activated on the beacon chain, and each VT represents 1 day or 255 epochs.
 
-Assuming they deposited 28 VTs, after 28 days of validating, the NoOp's validator will be automatically ejected, its 32 ETH returned to the protocol, and bond returned. If they wish to extend their duration, NoOps can deposit additional VTs at any time. Validators with unconsumed VTs (e.g deposited 100 VTs) that exit after the 28 days will be refunded (e.g., 72 VTs).
+Assuming they deposited 28 VTs, after 28 days of validating, the NoOp's validator will be automatically ejected, its 32 ETH returned to the protocol, and bond returned. If they wish to extend their duration, NoOps can deposit additional VTs at any time. NoOps who have Validators with unconsumed VTs (e.g deposited 100 VTs) may retrieve them from the protocol (e.g., 72 VTs).
 
 
 ### Pricing Validator Tickets

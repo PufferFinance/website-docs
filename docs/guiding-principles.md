@@ -22,7 +22,7 @@ The protocol strives to improve Ethereum validator diversity. In this spirit, th
 ### Ethos-aligned
 > *The protocol must be aligned with Ethereum's ethos.*
 
-- Puffer is preemptively self-capping it's pool size to 22% to protect Ethereum's credible neutrality. Learn more 👉 [burst threshold to self-cap](/protocol/burst-threshold).
+- Puffer is preemptively self-capping it's protocol size to 22% to protect Ethereum's credible neutrality. Learn more 👉 [burst threshold to self-cap](/protocol/burst-threshold).
 - Puffer is designed with a roadmap to complete decentralization. Learn more 👉 [decentralizing the Guardians](/protocol/guardians#roadmap-to-decentralization).
 - Puffer helps increase Ethereum's Proof of Stake stability since NoOps have long-term commitments. Learn more 👉 [validator tickets](/protocol/validator-tickets#pros-and-cons).
 - Puffer received an Ethereum Foundation grant for our anti-slashing technology. Learn more 👉 [Secure-Signer](https://blog.ethereum.org/2023/02/22/allocation-update-q4-22).
@@ -30,8 +30,8 @@ The protocol strives to improve Ethereum validator diversity. In this spirit, th
 ### Permissionless
 > *The protocol must allow anyone to run a validator.*
 
-- Puffer allows anyone with [enclave-compatible](/reference/glossary#enclave) hardware and 1 ETH to run an Ethereum validator. Learn more 👉 [NoOp Requirements](/reference/faq#%EF%B8%8F-how-many-eth-do-i-need-to-run-a-puffer-node).
-- Puffer allows anyone with a 2 ETH bond (any hardware) to run an Ethereum validator. Learn more 👉 [NoOp Requirements](/reference/faq#%EF%B8%8F-how-many-eth-do-i-need-to-run-a-puffer-node).
+- Puffer allows anyone with [enclave-compatible](/reference/glossary#enclave) hardware and 1 ETH to run an Ethereum validator. Learn more 👉 [NoOp Requirements](/reference/faq#%EF%B8%8F-how-much-eth-do-i-need-to-run-a-puffer-node).
+- Puffer allows anyone with a 2 ETH bond (any hardware) to run an Ethereum validator. Learn more 👉 [NoOp Requirements](/reference/faq#%EF%B8%8F-how-much-eth-do-i-need-to-run-a-puffer-node).
 
 ### Low barriers
 > *The protocol must be capital efficient to attract NoOps.*

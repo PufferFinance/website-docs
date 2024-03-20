@@ -48,7 +48,7 @@ Within the burgeoning LSDeFi ecosystem, the adaptability of staking mechanisms t
 Unlike the two-step process of holding an LST and then restaking it into an LRP to earn restaking rewards, with pufETH, users achieve this with a single step. By merely holding onto pufETH, they inherently tap into restaking rewards. This streamlining ensures that stakers can maximize the utility and rewards of their staked assets without compromising on the flexibility and opportunities traditional LSTs offer in DeFi.
 
 ### How pufETH Works
-Stakers deposit ETH at the PufferPool contract to the mint pufETH nLRT. At the protocol's inception, pufETH's conversion rate is one-to-one, but is updated daily when the protocol performs [proof of reserves](/protocol/guardians#what-are-their-duties). Assuming the protocol performs well, i.e., accrues more rewards than penalties, the amount of ETH reedamable for pufETH will increase between growth spurts. 
+Stakers deposit ETH to the PufferVault contract to mint the pufETH nLRT. At the protocol's inception, pufETH's conversion rate is one-to-one, but is updated daily when the protocol performs [proof of reserves](/protocol/guardians#what-are-their-duties). Assuming the protocol performs well, i.e., accrues more rewards than penalties, the amount of ETH reedamable for pufETH will increase. 
 
 #### Calculating the Conversion Rate
 The conversion rate can be calculated simply as:

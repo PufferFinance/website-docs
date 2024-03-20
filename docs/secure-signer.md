@@ -35,7 +35,7 @@ Beyond safeguarding the validator key, Secure-Signer prevents slashing by mainta
 The enclave enforces these assertions even if the node's operating system
 is compromised. If a catastrophic consensus client bug (e.g., one that overrides the EIP-3076 protection), nodes using Secure-Signer would be protected as the enclave runs in an isolated environment and maintains its integrity-protected slash protection database.
 
-By removing the possibility of slashing due to accidents or consensus client bugs, Secure-Signer significantly reduces node risk and allows the Puffer Pool to lower the bond requirement safely.
+By removing the possibility of slashing due to accidents or consensus client bugs, Secure-Signer significantly reduces node risk and allows the Puffer protocol to lower the bond requirement safely.
 
 ## Why use it?
 Distributed Validator Technology (DVT) can be considered the "MPC approach" to reduce slashing risk but requires paying in efficiency. Secure-Signer provides a cheaper alternative for validators to increase slash resistance. It is worth noting that Secure-Signer is complimentary with DVT, where each of the N key shares is stored in Secure-Signer enclaves.

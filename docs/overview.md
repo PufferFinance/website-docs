@@ -26,7 +26,7 @@ For example, adding a new module to the PufferProtocol contract requires governa
 
 ---
 ### 1️⃣ Staking ETH  
-Stakers can deposit ETH and mint the [pufETH nLRT](/protocol/nlrt#pufeth) via the PufferPool contract, which serves as a redeemable receipt for their restaked ETH. If sufficient exit liquidity is available, stakers can reclaim their ETH from the PufferVault. Over time, the redeemable amount is expected to increase from [validator tickets](/protocol/validator-tickets) and restaking rewards.
+Stakers can deposit ETH and mint the [pufETH nLRT](/protocol/nlrt#pufeth) via the PufferVault contract, which serves as a redeemable receipt for their restaked ETH. If sufficient exit liquidity is available, stakers can reclaim their ETH from the PufferVault. Over time, the redeemable amount is expected to increase from [validator tickets](/protocol/validator-tickets) and restaking rewards.
 
 In [contrast with conventional liquid staking tokens (LSTs)](/protocol/nlrt#what-is-an-lst), pufETH can provide strictly more rewards for its holders. Not only does pufETH encompass PoS rewards **and** restaking rewards, but its value can accelerate quickly due to validator ticket sales. Furthermore, the PoS rewards for stakers are decoupled from the protocol validators' performance.
 
@@ -41,7 +41,7 @@ To ensure the safety of stakers, NoOps must distribute their encrypted validator
 
 ---
 ### 3️⃣ Provisioning ETH
-Each RestakingModule contract will contain a queue of pending NoOp registrations. As the PufferPool accrues 32 ETH chunks from deposits and rewards, the Guardians will provision the chunks to the NoOps' pending validators, following a round-robin schedule to ensure all of the protocol's modules are serviced.
+Each RestakingModule contract will contain a queue of pending NoOp registrations. As the PufferVault accrues 32 ETH chunks from deposits and rewards, the Guardians will provision the chunks to the NoOps' pending validators, following a round-robin schedule to ensure all of the protocol's modules are serviced.
 
 The provisioning step will create a new validator within the EigenPod whose ETH can be natively restaked on Eigenlayer to serve as collateral for its registered AVS. For this reason, the NoOp's validator's [withdrawal credential](/reference/glossary#withdrawal-credentials) is required to the module's EigenPod contract. After provisioning, the NoOp's validator will have deposited 32 ETH to the [BeaconDepositContract](https://etherscan.io/address/0x00000000219ab540356cBB839Cbe05303d7705Fa) and will await activation.
 

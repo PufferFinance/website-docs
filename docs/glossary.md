@@ -23,7 +23,7 @@ Native Liquid Restaking Protocol. The Puffer protocol offers native ETH liquid r
 The yield bearing token that represents staked ETH in Puffer’s LSP
 
 ### `Stakers`
-The users who “stake” ETH to the pool to receive pufETH
+The users who “stake” ETH to the vault to receive pufETH
 
 ### `NoOps`
 The Puffer nodes that operate an Ethereum validator (and optionally additional AVSs)
@@ -35,7 +35,7 @@ A committee of Ethereum aligned community members and organizations to assist th
 A secure-computing environment capable of running Puffer’s anti-slashing technology
 
 ### `Burst Threshold`
-Code in our smart contracts that self-caps the pool at 22% marketshare
+Code in our smart contracts that self-caps the vault at 22% marketshare
 
 ### `Beacon Chain`
 The main component of the Ethereum blockchain responsible for Proof of Stake consensus

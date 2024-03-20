@@ -85,7 +85,7 @@ slug: /reference/faq
 
 > Since breaking SGX is of great interest in academia, there is a back-and-forth between white hat hackers finding exploits and Intel patches.
 
-> It is essential that Puffer relies on SGX as a **strict security enhancement**. Honest nodes are completely protected against all slashable offenses. However, should a nefarious node manage to break SGX, all that they would learn is knowledge of their validator private key. Knowledge of one's validator private key is the status quo for _all_ existing staking operations and does not provide the node with any way to steal from the pool.
+> It is essential that Puffer relies on SGX as a **strict security enhancement**. Honest nodes are completely protected against all slashable offenses. However, should a nefarious node manage to break SGX, all that they would learn is knowledge of their validator private key. Knowledge of one's validator private key is the status quo for _all_ existing staking operations and does not provide the node with any way to steal from the protocol.
 
 ### 🐊 Why don't other permissionless pools reduce their bond requirement to 1 ETH?
 
