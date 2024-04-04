@@ -42,6 +42,11 @@ const sidebars = {
     },
     {
       type: "category",
+      label: "Node Operators",
+      items: ["requirements", "setup", "registration"],
+    },
+    {
+      type: "category",
       label: "Reference",
       items: ["glossary", "hardforks", "slash", "faq"],
     },
