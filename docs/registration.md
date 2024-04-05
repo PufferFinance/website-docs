@@ -75,9 +75,11 @@ The Guardians will provision pending validators when there is 32 ETH of liquidit
 Invalid registrations will be skipped by the Guardians. The NoOp's bond will be returned but their VTs are penalized to prevent griefing.  
 
 ### Step 6: Prepare your Validator
-Import validator keys to beacon/validator client:
+Import your validator keys to your beacon/validator client. 
 
 **Without Secure-Signer**:
+
+You can find your generated keystore files in the `coral/etc/keys/bls_keys/` directory where each keystore file name is your BLS public key. The contents are encrypted using your supplied password file adhering to [ERC-2335](https://github.com/ethereum/ercs/blob/master/ERCS/erc-2335.md).
 - [Import your validator keys to Nimbus ↗](https://nimbus.guide/run-a-validator.html#2-import-your-validator-keys) 
 - [Import your validator keys to Teku ↗](https://docs.teku.consensys.io/how-to/load-validators-without-restarting) 
 - [Import your validator keys to Lodestar ↗](https://chainsafe.github.io/lodestar/validator-management/vc-configuration/#import-a-validator-keystore-to-lodestar) 
@@ -85,7 +87,14 @@ Import validator keys to beacon/validator client:
 - [Import your validator keys to Prysm ↗](https://docs.prylabs.network/docs/wallet/nondeterministic#import-validator-accounts) 
 
 **Using Secure-Signer**
-Secure-Signer follows the same API as [Web3Signer](https://consensys.github.io/web3signer/web3signer-eth2.html) so the same instructions apply:
+
+Secure-Signer follows the same API as [Web3Signer](https://consensys.github.io/web3signer/web3signer-eth2.html) so the same instructions apply. Since your BLS private keys are encrypted at all times, you cannot directly view your keystore files. However, you can list all of your enclave's public keys by calling this API (assuming the enclave is running at `localhost:9001`):
+
+```bash
+curl -X GET localhost:9001/api/v1/eth2/publicKeys
+```
+
+This is the same API that many consensus/validator clients use to interface with a remote signer:
 - [Connect Secure-Signer to Nimbus ↗](https://nimbus.guide/run-a-validator.html#2-import-your-validator-keys) 
 - [Connect Secure-Signer to Teku ↗](https://docs.teku.consensys.io/how-to/use-external-signer/use-web3signer) 
 - [Connect Secure-Signer to Lighthouse ↗](https://lighthouse-book.sigmaprime.io/validator-web3signer.html?highlight=web3signer#usage) 
