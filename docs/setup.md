@@ -104,7 +104,7 @@ Run commands:
 ./install_secure_signer_docker.sh
 ```
 
-Example Output (assumes Docker image tag `1.1.3`, check for latest Docker image release [here](https://hub.docker.com/repository/docker/pufferfinance/puffer_validator/general) ):
+Example Output (assumes Docker image tag `1.0.0`, check for latest Docker image release [here](https://hub.docker.com/r/pufferfi/validator)):
 
 ```
 puffer@Puffer-Dev:~/coral/scripts$ ./install_secure_signer_docker.sh
@@ -126,12 +126,12 @@ Do you want to create another volume? (yes/no) no
         "Scope": "local"
     }
 ]
-Enter the version of the Puffer validator image you want to use (default 1.1.3): 1.1.3
-1.1.3: Pulling from pufferfinance/puffer_validator
+Enter the version of the Puffer validator image you want to use (default 1.0.0): 1.0.0
+1.0.0: Pulling from pufferfi/validator
 Digest: sha256:47af33f8634799734b3818a992adaad146b53245dba22ebef2542d36f61e05fd
-Status: Image is up to date for pufferfinance/puffer_validator:1.1.3
-docker.io/pufferfinance/puffer_validator:1.1.3
-[SUCCESS] Docker image puffer_validator:1.1.3 pulled successfully!
+Status: Image is up to date for pufferfi/validator:1.0.0
+docker.io/pufferfinance/validator:1.0.0
+[SUCCESS] Docker image validator:1.0.0 pulled successfully!
 f3b600f2d50b4c1cc42495f6c4f20bdb0c9a1dd17d5923de83d2723c2d1cab04
 [SUCCESS] Container deployed successfully!
 [SUCCESS] Container puffer_secure_signer_container is running successfully!
@@ -140,16 +140,16 @@ f3b600f2d50b4c1cc42495f6c4f20bdb0c9a1dd17d5923de83d2723c2d1cab04
 The following command run a container with the name `puffer_secure_signer_container` built from the pulled `puffer_validator` image. Notice we are mounting our volume `Puffer-Validator-Backup` to the `/Validator` enclave directory so any changes to the `/Validator` enclave directory persist if the container is removed:
 
 :::caution 
-Ensure image tag matches latest version described on testnet repository before running the next command! (Here image tag is 1.1.3) 
+Ensure image tag matches latest version described on testnet repository before running the next command! (Here image tag is 1.0.0) 
 :::
 
 ```
-docker run -itd --network host --mount type=volume,source=Puffer-Validator-Backup,destination=/Validator -v /var/run/aesmd:/var/run/aesmd --device /dev/sgx/enclave --device /dev/sgx/provision --name puffer_secure_signer_container pufferfinance/puffer_validator:1.1.3
+docker run -itd --network host --mount type=volume,source=Puffer-Validator-Backup,destination=/Validator -v /var/run/aesmd:/var/run/aesmd --device /dev/sgx/enclave --device /dev/sgx/provision --name puffer_secure_signer_container pufferfi/validator:1.0.0
 ```
 
 Output:
 ```
-puffer@Puffer-Dev:~/coral/scripts$ docker run -itd --network host --mount type=volume,source=Puffer-Validator-Backup,destination=/Validator -v /var/run/aesmd:/var/run/aesmd --device /dev/sgx/enclave --device /dev/sgx/provision --name puffer_secure_signer_container pufferfinance/puffer_validator:1.1.3
+puffer@Puffer-Dev:~/coral/scripts$ docker run -itd --network host --mount type=volume,source=Puffer-Validator-Backup,destination=/Validator -v /var/run/aesmd:/var/run/aesmd --device /dev/sgx/enclave --device /dev/sgx/provision --name puffer_secure_signer_container pufferfi/validator:1.0.0
 d72c2f398f9823b91073b92d608e02bfe3fbebb113fbb3e46b2ebfaa74712d9e
 ```
 
@@ -163,7 +163,7 @@ Output:
 ```
 puffer@Puffer-Dev:~/coral/scripts$ docker container ls
 CONTAINER ID   IMAGE                                  COMMAND                  CREATED         STATUS         PORTS     NAMES
-d72c2f398f98   pufferfinance/puffer_validator:1.1.3   "/bin/bash"              2 minutes ago   Up 2 minutes             puffer_secure_signer_container
+d72c2f398f98   pufferfi/validator:1.0.0   "/bin/bash"              2 minutes ago   Up 2 minutes             puffer_secure_signer_container
 ```
 
 #### Run Secure-Signer
