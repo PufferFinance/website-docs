@@ -34,5 +34,8 @@ If a validator is slashed, the NoOp will forfeit their entire bond.
 For more information, please see [Geth hardware requirements](https://geth.ethereum.org/docs/getting-started/hardware-requirements)
 
 ### TEE Info
+:::caution
+The current version of Secure-Signer requires Ubuntu 20.04!
+:::
 
 For instructions on how to set up an Azure instance with SGX, refer [here](https://pufferfinance.github.io/secure-signer/getting-started/). For information on compatible machines and instructions on how to set up Secure-Signer, please refer to this [documentation](https://pufferfinance.github.io/secure-signer/installation/).
