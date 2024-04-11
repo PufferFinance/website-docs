@@ -31,6 +31,10 @@ The protocol receives rewards from the [validator tickets](/protocol/validator-t
 #### Consensus Rewards
 Due to validator tickets, **NoOps receive 100% of consensus rewards**. These consensus rewards are directed to the [withdrawal credentials](/reference/glossary#withdrawal-credentials) which will, in this case, be the [module's EigenPod](/protocol/restaking-modules#restaking-modules-). However, these rewards are not immediately accessible for withdrawal. After a delay, NoOps can withdraw their consensus rewards using a merkle rewards tree.
 
+:::caution EigenLayer Partial Withdrawals Proofs are being improved 🚧  
+Currently it is [cost-prohibitive](https://docs.eigenlayer.xyz/eigenlayer/restaking-guides/restaking-user-guide/native-restaking/withdraw-from-eigenlayer/partial-withdrawals) to withdraw consensus rewards from EigenPods but the EigenLayer team is working to decrease these costs. Until then, withdrawing consensus rewards is temporarily disabled.
+:::
+
 #### Execution Rewards
 Thanks to validator tickets, **NoOps also receive 100% of execution rewards**. This arrangement grants NoOps full control over their MEV (Maximal Extractable Value) strategy, without any mandatory software constraints such as [MEV-Boost](https://github.com/flashbots/mev-boost), allowing for potentially more censorship resistance. Execution rewards are immediately liquid as they are routed automatically to the NoOps' specified wallet using their own `fee_recipient` address.
 
