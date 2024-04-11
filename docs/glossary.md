@@ -79,8 +79,5 @@ AKA ReOp: A NoOp that is delegated funds to operate an AVS on behalf of other No
 ### `Secure Signer`
 A software developed by Puffer that helps prevent validators from being slashed. It utilizes Trusted Execution Environments (TEEs) such as Intel SGX
 
-### `Proof of Reserves`
-This refers to the process by which the protocol proves the amount of ETH backing pufETH, and thus determining the fair exchange ratio between ETH and pufETH
-
 ### `Proof of Rewards`
 This refers to the process by which NoOps prove and receive the rewards generated as a result of running their validator node
