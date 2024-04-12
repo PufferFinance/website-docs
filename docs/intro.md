@@ -6,7 +6,7 @@ slug: /
 :::info About Puffer
 Puffer is a decentralized native liquid restaking protocol (nLRP) built on Eigenlayer 🐡🤝🟣
 
-It makes [native restaking](/protocol/restaking-modules/#native-restaking-) on [Eigenlayer](https://www.eigenlayer.xyz/) more accessible, allowing anyone to run an Ethereum Proof of Stake (PoS) validator while supercharging their rewards.
+It makes [native restaking](/protocol/puffer-modules/#native-restaking-) on [Eigenlayer](https://www.eigenlayer.xyz/) more accessible, allowing anyone to run an Ethereum Proof of Stake (PoS) validator while supercharging their rewards.
 :::
 
 
@@ -55,7 +55,7 @@ Together, stakers and NoOps create a flywheel effect that allows Puffer to outpa
 
 
 The protocol is driven by **Stakers** and **Node Operators** (NoOps):
-- **NoOps** can join *any* Puffer [module](/protocol/restaking-modules) by locking [Validator Tickets](/protocol/validator-tickets) and 1 ETH as collateral. In exchange, they get to operate a 32 ETH validator and keep 100% of its PoS rewards until they run out of VTs. NoOps can boost their rewards by joining [restaking](/reference/glossary#Restaking) modules and delegating the validator's ETH to a [restaking operator](/protocol/restaking-modules#restaking-operators) in exchange for restaking rewards commission.
+- **NoOps** can join *any* Puffer [module](/protocol/puffer-modules) by locking [Validator Tickets](/protocol/validator-tickets) and 1 ETH as collateral. In exchange, they get to operate a 32 ETH validator and keep 100% of its PoS rewards until they run out of VTs. NoOps can boost their rewards by joining [restaking](/reference/glossary#Restaking) modules and delegating the validator's ETH to a [restaking operator](/protocol/puffer-modules#restaking-operators) in exchange for restaking rewards commission.
 
 
 - **Stakers** can deposit any amount of ETH to help fund the protocol's 32 ETH NoOp-controlled validators. In exchange, they receive the pufETH [native Liquid Restaking Token](/protocol/nlrt#what-is-an-lst) (nLRT) which grows in value as the protocol mints validator tickets and receives restaking rewards.
@@ -87,5 +87,5 @@ Traditional liquid staking tokens (LSTs) only accrue PoS rewards. As a nLRT, puf
 Puffer prioritizes the safety of stakers' ETH. To ensure staked ETH is safe, the protocol requires:
 - NoOps to lock 1 ETH of collateral and run [Puffer’s anti-slashing technology](/technology/secure-signer) for defense-in-depth or lock 2 ETH of collateral without the anti-slasher
 - [Ejecting validators](/protocol/guardians#what-are-their-duties) whose balance falls too low
-- Guardrails around [which AVSs are allowed](/protocol/restaking-modules#restricting-avss)
-- Guardrails around who can become a [restaking operator](/protocol/restaking-modules#restricting-reops)
+- Guardrails around [which AVSs are allowed](/protocol/puffer-modules#restricting-avss)
+- Guardrails around who can become a [restaking operator](/protocol/puffer-modules#restricting-reops)

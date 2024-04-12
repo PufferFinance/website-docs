@@ -19,7 +19,7 @@ Guardians have three main responsibilities within the Puffer Protocol:
 
 1. **Ejecting validators**: Until [**EIP-7002**](https://eips.ethereum.org/EIPS/eip-7002) is realized, the protocol relies on the Guardians to eject validators under certain conditions. They use encrypted validator keyshares, stored in specialized enclaves designed solely to sign exit messages. A validator will be ejected if:
    - Its beacon chain balance falls below below the DAO threshold.
-   - Its [module](/protocol/restaking-modules#restaking-modules-) was slashed due to an AVS violation.
+   - Its [module](/protocol/puffer-modules#puffer-modules-) was slashed due to an AVS violation.
    - It consumes all of its validator tickets without renewal.
 
 2. **Provisioning or skipping validators**: When a NoOp registers a validator, the Guardians are responsible for vetting the registration before provisioning them 32 ETH. If the registration is invalid (e.g., uses the wrong withdrawal credentials, is signed with the wrong fork version, uses the wrong enclave version, or the validator already exists) or they failed to properly encrypt keys for the Guardians, they will be skipped. If a NoOp's registration is skipped, their full bond will be returned but a portion of their validator tickets will be penalized to prevent NoOps from griefing the protocol.

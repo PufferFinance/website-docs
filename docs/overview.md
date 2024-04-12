@@ -15,14 +15,15 @@ Puffer is a native liquid restaking protocol (nLRP) designed to harness the powe
 ![PufferFlywheel](/img/PufferProtocol.png)
 </div>
 
-### 0️⃣ Creating Restaking Modules
-The protocol starts with a default [module](/protocol/restaking-modules#puffer-modules-) that only allows for PoS validating and cannot engage in restaking, which is considered the "risk-free" module for NoOps. Over time, new restaking modules will be added.
+### 0️⃣ Creating PufferModules
+Puffer will begin with several empty [PufferModules](/protocol/puffer-modules#puffer-modules-) that will be populated as new validators join the protocol.
 
-Puffer governance plays a crucial role in overseeing modules, including adding new modules and managing their AVS commitments.
+Puffer governance plays a crucial role in overseeing restaking, including adding new modules, managing their delegations to [RestakingOperator](/protocol/puffer-modules#restaking-operators) contracts, and managing operators' AVS commitments.
 
 For example, adding a new module to the PufferProtocol contract requires governance to:
-1. Vet and select the [restaking operator](/protocol/restaking-modules#restricting-reops) to run the module.
-2. Vet and [select the Eigenlayer AVSs](/protocol/restaking-modules#restricting-avss) that the module should service.
+1. Vet and select the [restaking operator](/protocol/puffer-modules#restricting-reops) to operate on behalf of a RestakingOperator contract.
+2. Vet and [select the Eigenlayer AVSs](/protocol/puffer-modules#restricting-avss) that the RestakingOperator contract can opt in to.
+3. Delegate the module's ETH to the RestakingOperator contract.
 
 ---
 ### 1️⃣ Staking ETH  
