@@ -33,6 +33,7 @@ The Coral-CLI is used to generate validator keys, prepare registration payloads,
 - Dependencies: [Rust](https://www.rust-lang.org/learn/get-started)
 ```
 git clone https://github.com/PufferFinance/coral
+cd coral
 cargo build --release
 ```
 
