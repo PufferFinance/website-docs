@@ -57,7 +57,7 @@ docker volume inspect Puffer-Validator-Backup
 ```
 
 Output:
-
+```
         $ docker volume inspect Puffer-Validator-Backup
         [
             {
@@ -70,6 +70,7 @@ Output:
                 "Scope": "local"
             }
         ]
+```
 
 ### Install SGX Drivers
 
