@@ -4,16 +4,17 @@ slug: /nodes/setup
 ---
 
 ## Setup Beacon Node and Execution Node
-In order to run a [validator](https://ethereum.org/en/staking/solo/), you will need to run an Execution Layer client, a Consensus Layer client, and the validator software. 
+In order to run a [validator](https://ethereum.org/en/developers/docs/nodes-and-clients/run-a-node/), you will need to run an Execution Layer client, a Consensus Layer client, and the validator software. 
 
 :::note
 Puffer is in testnet and is using the 🦁 [Holesky testnet](https://holesky.dev/), so make sure to set the network to `holesky`
 :::
 
 ### Easy Mode
-There are some great open-source [projects](https://ethereum.org/en/staking/solo/#node-and-client-tools) that make it easy to run an Ethereum full node and a validator. Here are some of the most popular ones:
+There are some great open-source [projects](https://ethereum.org/en/staking/solo/#node-and-client-tools) that make it easy to run an Ethereum full node and a validator. Here are some of the popular ones:
 - [Eth Docker](https://github.com/eth-educators/eth-docker): Docker automation for Ethereum nodes.
 - [🍄 Stereum](https://github.com/stereum-dev/ethereum-node): Ethereum Node Setup & Manager
+- [Dappnode](https://docs.dappnode.io/docs/user/getting-started/choose-your-path/): Operating System for running Ethereum nodes and more.
 
 
 ### Manual Installation
