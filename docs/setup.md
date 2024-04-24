@@ -4,7 +4,7 @@ slug: /nodes/setup
 ---
 
 ## Setup Beacon Node and Execution Node
-In order to run a [validator](https://ethereum.org/en/developers/docs/nodes-and-clients/run-a-node/), you will need to run an Execution Layer client, a Consensus Layer client, and the validator software. 
+In order to run a [validator](https://ethereum.org/en/developers/docs/nodes-and-clients/run-a-node/), you will need to run an Execution Layer client, a Consensus Layer client, and the validator software.
 
 :::note
 Puffer is in testnet and is using the 🦁 [Holesky testnet](https://holesky.dev/), so make sure to set the network to `holesky`
@@ -119,7 +119,7 @@ Run commands:
 ./install_secure_signer_docker.sh
 ```
 
-Example Output (assumes Docker image tag `1.0.0`, check for latest Docker image release [here](https://hub.docker.com/r/pufferfi/validator)):
+Example Output (assumes Docker image tag `1.0.0`, check for latest Docker image release [here](https://hub.docker.com/r/pufferfi/validator/tags)):
 
 ```
 puffer@Puffer-Dev:~/coral/scripts$ ./install_secure_signer_docker.sh
@@ -145,7 +145,7 @@ Enter the version of the Puffer validator image you want to use (default 1.0.0):
 1.0.0: Pulling from pufferfi/validator
 Digest: sha256:47af33f8634799734b3818a992adaad146b53245dba22ebef2542d36f61e05fd
 Status: Image is up to date for pufferfi/validator:1.0.0
-docker.io/pufferfinance/validator:1.0.0
+docker.io/pufferfi/validator:1.0.0
 [SUCCESS] Docker image validator:1.0.0 pulled successfully!
 f3b600f2d50b4c1cc42495f6c4f20bdb0c9a1dd17d5923de83d2723c2d1cab04
 [SUCCESS] Container deployed successfully!
@@ -154,8 +154,8 @@ f3b600f2d50b4c1cc42495f6c4f20bdb0c9a1dd17d5923de83d2723c2d1cab04
 #### Start the Container
 The following command run a container with the name `puffer_secure_signer_container` built from the pulled `puffer_validator` image. Notice we are mounting our volume `Puffer-Validator-Backup` to the `/Validator` enclave directory so any changes to the `/Validator` enclave directory persist if the container is removed:
 
-:::caution 
-Ensure image tag matches latest version described on testnet repository before running the next command! (Here image tag is 1.0.0) 
+:::caution
+Ensure image tag matches latest version described on testnet repository before running the next command! (Here image tag is 1.0.0)
 :::
 
 ```
