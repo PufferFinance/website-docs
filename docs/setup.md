@@ -155,7 +155,7 @@ f3b600f2d50b4c1cc42495f6c4f20bdb0c9a1dd17d5923de83d2723c2d1cab04
 The following command run a container with the name `puffer_secure_signer_container` built from the pulled `puffer_validator` image. Notice we are mounting our volume `Puffer-Validator-Backup` to the `/Validator` enclave directory so any changes to the `/Validator` enclave directory persist if the container is removed:
 
 :::caution
-Ensure image tag matches latest version described on testnet repository before running the next command! (Here image tag is 1.0.0)
+Ensure image tag matches latest version described on testnet repository before running the next command! (Here image tag is 1.1.0)
 :::
 
 ```
