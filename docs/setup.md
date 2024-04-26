@@ -144,7 +144,7 @@ Do you want to create another volume? (yes/no) no
 Enter the version of the Puffer validator image you want to use (default 1.0.0): 1.0.0
 1.0.0: Pulling from pufferfi/validator
 Digest: sha256:47af33f8634799734b3818a992adaad146b53245dba22ebef2542d36f61e05fd
-Status: Image is up to date for pufferfi/validator:1.0.0
+Status: Image is up to date for pufferfi/validator:1.1.0
 docker.io/pufferfi/validator:1.1.0
 [SUCCESS] Docker image validator:1.0.0 pulled successfully!
 f3b600f2d50b4c1cc42495f6c4f20bdb0c9a1dd17d5923de83d2723c2d1cab04
