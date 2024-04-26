@@ -119,7 +119,7 @@ Run commands:
 ./install_secure_signer_docker.sh
 ```
 
-Example Output (assumes Docker image tag `1.0.0`, check for latest Docker image release [here](https://hub.docker.com/r/pufferfi/validator/tags)):
+Example Output (assumes Docker image tag `1.1.0`, check for latest Docker image release [here](https://hub.docker.com/r/pufferfi/validator/tags)):
 
 ```
 puffer@Puffer-Dev:~/coral/scripts$ ./install_secure_signer_docker.sh
