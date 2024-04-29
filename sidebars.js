@@ -47,6 +47,11 @@ const sidebars = {
     },
     {
       type: "category",
+      label: "Deployments",
+      items: ["deployed-contracts", "multisig"],
+    },
+    {
+      type: "category",
       label: "Reference",
       items: ["glossary", "hardforks", "slash", "faq"],
     },

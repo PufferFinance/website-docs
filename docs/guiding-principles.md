@@ -15,9 +15,9 @@ The protocol strives to improve Ethereum validator diversity. In this spirit, th
 - Puffer's NoOps run anti-slashing hardware and lock collateral to mitigate slashing risk. Learn more 👉 [Secure-Signer for slash protection](/technology/secure-signer).
 - Puffer introduces a novel approach to validator collateral with better long-term NoOp incentives. Learn more 👉 [validator tickets incentives](/protocol/validator-tickets).
 - Puffer uses a highly-aligned security counsel to reduce inactivity risk. Learn more 👉 [Guardian duties](/protocol/guardians#what-are-their-duties).
-- Puffer places strict guardrails around which AVSs are allowed as the restaking ecosystem evolves. Learn more 👉 [restaking AVSs](/protocol/restaking-modules#restricting-avss).
-- Puffer places strict guardrails around who can operate AVSs as the restaking ecosystem evolves. Learn more 👉 [restaking operators](/protocol/restaking-modules#restricting-reops).
-- Puffer adjusts risk by allocating the protocol's ETH amongst different Eigenlayer AVSs and Restaking Operators. Learn more 👉 [allocating ETH to modules](/protocol/restaking-modules).
+- Puffer places strict guardrails around which AVSs are allowed as the restaking ecosystem evolves. Learn more 👉 [restaking AVSs](/protocol/puffer-modules#restricting-avss).
+- Puffer places strict guardrails around who can operate AVSs as the restaking ecosystem evolves. Learn more 👉 [restaking operators](/protocol/puffer-modules#restricting-reops).
+- Puffer adjusts risk by allocating the protocol's ETH amongst different Eigenlayer AVSs and Restaking Operators. Learn more 👉 [allocating ETH to modules](/protocol/puffer-modules).
 
 ### Ethos-aligned
 > *The protocol must be aligned with Ethereum's ethos.*
@@ -37,12 +37,12 @@ The protocol strives to improve Ethereum validator diversity. In this spirit, th
 > *The protocol must be capital efficient to attract NoOps.*
 
 - Puffer reduces the ETH amount needed to become an Ethereum validator to as little as 1 ETH, inviting more participants. Learn more 👉 [validator tickets](/protocol/validator-tickets).
-- Puffer gives NoOps restaking exposure with less than 32 ETH. Learn more 👉 [modules](/protocol/restaking-modules).
+- Puffer gives NoOps restaking exposure with less than 32 ETH. Learn more 👉 [modules](/protocol/puffer-modules).
 
 ### Profitable 
 > *The protocol must be profitable to attract NoOps.*
 
-- Puffer allows NoOps to increase their profit margins through Eigenlayer restaking exposure. Learn more 👉 [modules](/protocol/restaking-modules).
+- Puffer allows NoOps to increase their profit margins through Eigenlayer restaking exposure. Learn more 👉 [modules](/protocol/puffer-modules).
 - Puffer NoOps use [enclave-compatible](/reference/glossary#enclave) hardware to protect themselves from slashing while unlocking unique restaking opportunities, increasing their hardware efficiency. Learn more 👉 [Secure-Signer](/technology/secure-signer).
 
 ### Scalable

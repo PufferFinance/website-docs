@@ -48,7 +48,7 @@ Within the burgeoning LSDeFi ecosystem, the adaptability of staking mechanisms t
 Unlike the two-step process of holding an LST and then restaking it into an LRP to earn restaking rewards, with pufETH, users achieve this with a single step. By merely holding onto pufETH, they inherently tap into restaking rewards. This streamlining ensures that stakers can maximize the utility and rewards of their staked assets without compromising on the flexibility and opportunities traditional LSTs offer in DeFi.
 
 ### How pufETH Works
-Stakers deposit ETH to the PufferVault contract to mint the pufETH nLRT. At the protocol's inception, pufETH's conversion rate is one-to-one, but is updated daily when the protocol performs [proof of reserves](/protocol/guardians#what-are-their-duties). Assuming the protocol performs well, i.e., accrues more rewards than penalties, the amount of ETH reedamable for pufETH will increase. 
+Stakers deposit ETH to the PufferVault contract to mint the pufETH nLRT. At the protocol's inception, pufETH's conversion rate is one-to-one, but is expected to increase over time. Assuming the protocol performs well, i.e., accrues more rewards than penalties, the amount of ETH reedamable for pufETH will increase. 
 
 #### Calculating the Conversion Rate
 The conversion rate can be calculated simply as:
@@ -60,9 +60,9 @@ The conversion rate can be calculated simply as:
 
 - `deposits` and `pufETH supply` increase proportionally as stakers deposit ETH to mint pufETH, leaving the `conversion rate` unaffected.
 
-- `rewards` increase as [restaking operators](/protocol/restaking-modules#restaking-operators) run AVSs and whenever validator tickets are minted.
+- `rewards` increase as [restaking operators](/protocol/puffer-modules#restaking-operators) run AVSs and whenever validator tickets are minted.
 
-- `penalties` accrue if validators are slashed on PoS for *more than their $1$ ETH* collateral, which is [disincentivized behavior](/protocol/validator-tickets#why--noop-incentives) and mitigated through [anti-slashing technology](/technology/secure-signer). Penalties can also accrue if the restaking operator is slashed running AVSs, which is why Puffer is [restricting restaking operator participation](/protocol/restaking-modules#restricting-reops) during its nascent stages.
+- `penalties` accrue if validators are slashed on PoS for *more than their $1$ ETH* collateral, which is [disincentivized behavior](/protocol/validator-tickets#why--noop-incentives) and mitigated through [anti-slashing technology](/technology/secure-signer). Penalties can also accrue if the restaking operator is slashed running AVSs, which is why Puffer is [restricting restaking operator participation](/protocol/puffer-modules#restricting-reops) during its nascent stages.
 
 #### Example
 At the protocol’s inception, Bob stakes $10$ ETH and receives $10$ pufETH. Then, after some time, the protocol earns $2$ ETH of rewards by minting validator tickets and restaking. Now Bob’s $10$ pufETH is backed by $12$ ETH, making the conversion rate $\frac{10+2-0}{10}=1.2$ ETH per pufETH. 
