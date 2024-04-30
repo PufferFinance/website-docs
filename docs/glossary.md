@@ -60,7 +60,7 @@ The validator’s entire balance that is withdrawn from the beacon chain to the 
 
 ### `Slashing`
 Slashing may refer to a loss of funds triggered by either of the following:
-1. Misbehavior of validator nodes, such as signing two different blocks for the same beacon slot (AKA double-signing). See [secure-signer](technology/secure-signer) for more info on this kind of slashing
+1. Misbehavior of validator nodes, such as signing two different blocks for the same beacon slot (AKA double-signing). See [secure-signer](../technology/secure-signer) for more info on this kind of slashing
 2. A Restaking Operator (ReOp) not fulfilling obligations defined by an AVS
 
 ### `Validator Ticket`
