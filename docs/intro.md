@@ -71,6 +71,10 @@ NoOps are entitled to **100% of their validators' [execution rewards](/reference
 
 NoOps also receive **100% of their validators' [consensus rewards](/reference/glossary#consensus-rewards)**, meaning their validator's profitability depends solely on themselves, incentivizing for excellent long-term NoOp performance.
 
+:::caution EigenLayer Partial Withdrawals Proofs are being improved 🚧  
+Currently it is [cost-prohibitive](https://docs.eigenlayer.xyz/eigenlayer/restaking-guides/restaking-user-guide/native-restaking/withdraw-from-eigenlayer/partial-withdrawals) to withdraw consensus rewards from EigenPods but the EigenLayer team is working to decrease these costs. Until then, withdrawing consensus rewards is temporarily disabled.
+:::
+
 NoOp collateral is converted to pufETH during registration, allowing them to earn additional passive rewards throughout their commitment.
 
 ### Why stake with Puffer? 🥩
