@@ -108,3 +108,17 @@ Make sure to set your `fee_recipient` value to your own wallet. Remember, Puffer
 ### Step 7: View your validators
 Proceed to the [Dashboard](https://launchpad.puffer.fi/Dashboard) to view the validators registered to your wallet.
 
+
+# Batch Registering Validators
+For operators interested in running many Puffer validators a convenience script has been provided. 
+
+1. Clone the PufferPool repo:
+```
+git clone https://github.com/PufferFinance/PufferPool.git
+cd PufferPool
+```
+
+2. Install [Foundry](https://book.getfoundry.sh/getting-started/installation)
+```
+curl -L https://foundry.paradigm.xyz | bash
+```
