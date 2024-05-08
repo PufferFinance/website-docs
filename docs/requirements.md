@@ -40,7 +40,11 @@ The current version of Secure-Signer requires Ubuntu 20.04!
 
 For instructions on how to set up an Azure instance with SGX, refer [here](https://pufferfinance.github.io/secure-signer/getting-started/). For information on compatible machines and instructions on how to set up Secure-Signer, please refer to this [documentation](https://pufferfinance.github.io/secure-signer/installation/).
 
-### Disclaimer
+### Disclaimers
 :::caution EigenLayer Partial Withdrawals Proofs are being improved 🚧  
 Currently it is [cost-prohibitive](https://docs.eigenlayer.xyz/eigenlayer/restaking-guides/restaking-user-guide/native-restaking/withdraw-from-eigenlayer/partial-withdrawals) to withdraw consensus rewards from EigenPods but the EigenLayer team is working to decrease these costs. Until then, withdrawing consensus rewards is temporarily disabled.
+:::
+
+:::caution TEE Registrations are not yet supported on mainnet 🚧  
+As part of our ongoing commitment to security and operational excellence, we are taking a phased approach to implementing enclave-based registrations. Due to recent changes in Intel’s support for certain enclave hardware, access to the necessary hardware has become more challenging. To ensure the highest standards of security, enclave-registrations will not be available during the initial phase of our mainnet launch.
 :::

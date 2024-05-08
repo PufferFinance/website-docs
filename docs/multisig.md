@@ -4,7 +4,7 @@ slug: /deployments/multisig
 ---
 
 # Multisig Governance 
-The Puffer contracts implement a timelock such that full contract upgrades and certain function calls cannot be executed without first waiting a one week to pass through the timelock. See [BlockSec's article](https://blocksec.com/blog/demystify-the-access-control-mechanism-in-puffer-protocol) on Puffer's access control mechanism for more details. There are three multisig accounts to be aware of: 
+The Puffer contracts implement a timelock such that full contract upgrades and certain function calls cannot be executed without first waiting a one week to pass through the timelock. See [BlockSec's article](https://blocksec.com/blog/demystify-the-access-control-mechanism-in-puffer-protocol) on Puffer's access control mechanism for more details and see [here](https://github.com/PufferFinance/Deployments-and-ACL/tree/main/docs/access-control) for the specific access control roles. There are three multisig accounts to be aware of: 
 
 ### The Pauser Multisig
 Puffer's Pauser Multisig is a 1-of-9 multisig designed to pause the Puffer contracts in case of emergencies. The pauser will include active monitoring systems to promptly pause the contracts should an invariant be broken (or is about to be). 

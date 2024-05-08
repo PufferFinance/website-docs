@@ -108,3 +108,75 @@ Make sure to set your `fee_recipient` value to your own wallet. Remember, Puffer
 ### Step 7: View your validators
 Proceed to the [Dashboard](https://launchpad.puffer.fi/Dashboard) to view the validators registered to your wallet.
 
+
+# Batch Registering Validators
+For operators interested in running many Puffer validators a convenience script has been provided to register multiple validators in one batch. 
+
+1. Clone the PufferPool repo:
+```
+git clone https://github.com/PufferFinance/PufferPool.git
+cd PufferPool
+```
+
+2. Install [Foundry](https://book.getfoundry.sh/getting-started/installation)
+```
+curl -L https://foundry.paradigm.xyz | bash
+```
+
+3. Create validator keys and registration JSONs as described [here](./registration.md#step-2-get-coral-cli-command) (NOTE: use the 2 ETH option).
+
+4. Create a folder called `registration-data` in the PufferProtocol repo and move your registration JSON files there:
+
+```
+ls ~/PufferProtocol/registration-data
+```
+
+> ```
+> registration-1.json
+> registration-2.json
+> registration-3.json
+> ```
+
+5. The script requires a local Eth keystore file to run. You can create a wallet by running the following and entering a keystore password:
+
+```
+mkdir -p ~/.foundry/keystores
+cast wallet new ~/.foundry/keystores
+```
+
+> Example output:
+> ```
+> Enter secret:
+> Created new encrypted keystore file: ~/.foundry/keystores/1d6cbbea-2b2d-42ac-b2e3-16fff98010de
+> Address: 0x4D42ABfB6D4bEDaf64dF8BE054676149BDfa224d
+> ```
+
+> ```
+> ls ~/.foundry/keystores
+> 1d6cbbea-2b2d-42ac-b2e3-16fff98010de
+> ```
+
+Alternatively, you can import an existing private key to create a local keystore following [Foundry's docs](https://book.getfoundry.sh/reference/cast/cast-wallet-import#directory-options).
+
+6. Fund the wallet with sufficient VTs, pufETH, and ETH to cover gas. These can be purchased as [described above](./registration.md#step-3-mint-pufeth-or-vts).
+
+7. Simulate the batch registration script: 
+- Replace with your RPC URL (either for mainnet or holesky)
+- Set the keystore `--account` to the name of your keystore located in `~/.foundry/keystores`
+- Set `--sender` to the keystore wallet address with your pufETH, VTs, and gas money.
+
+
+Example:
+> ```
+> export KEYSTORE_PW=my_password
+> ```
+ 
+> ```
+> forge script script/BatchRegisterValidator.s.sol:BatchRegisterValidator --rpc-url=https://eth.llamarpc.com --account 1d6cbbea-2b2d-42ac-b2e3-16fff98010de --password $KEYSTORE_PW -vvvv --sender=0x4D42ABfB6D4bEDaf64dF8BE054676149BDfa224d 
+> ```
+
+8. Rerun the command with the `--slow` and `--broadcast` flags to send the transaction on chain
+
+```
+forge script script/BatchRegisterValidator.s.sol:BatchRegisterValidator --rpc-url=https://eth.llamarpc.com --account 1d6cbbea-2b2d-42ac-b2e3-16fff98010de --password $KEYSTORE_PW -vvvv --sender=0x4D42ABfB6D4bEDaf64dF8BE054676149BDfa224d --slow --broadcast
+```
