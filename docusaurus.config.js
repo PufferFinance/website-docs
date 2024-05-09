@@ -6,7 +6,7 @@ const katex = require("rehype-katex");
 module.exports = {
   title: "Puffer Docs",
   tagline: "Documentation for the Puffer Protocol",
-  url: "https://pufferFinance.github.io",
+  url: "https://docs.puffer.fi",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
