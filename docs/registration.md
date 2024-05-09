@@ -125,7 +125,7 @@ curl -L https://foundry.paradigm.xyz | bash
 
 3. Create validator keys and registration JSONs as described [here](./registration.md#step-2-get-coral-cli-command) (NOTE: use the 2 ETH option).
 
-4. Create a folder called `registration-data` in the PufferProtocol repo and move your registration JSON files there:
+4. Create a folder called `registration-data` in the PufferPool repo and move your registration JSON files there:
 
 ```
 ls ~/PufferPool/registration-data
