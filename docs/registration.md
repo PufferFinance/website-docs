@@ -125,10 +125,10 @@ curl -L https://foundry.paradigm.xyz | bash
 
 3. Create validator keys and registration JSONs as described [here](./registration.md#step-2-get-coral-cli-command) (NOTE: use the 2 ETH option).
 
-4. Create a folder called `registration-data` in the PufferProtocol repo and move your registration JSON files there:
+4. Create a folder called `registration-data` in the PufferPool repo and move your registration JSON files there:
 
 ```
-ls ~/PufferProtocol/registration-data
+ls ~/PufferPool/registration-data
 ```
 
 > ```
@@ -160,7 +160,13 @@ Alternatively, you can import an existing private key to create a local keystore
 
 6. Fund the wallet with sufficient VTs, pufETH, and ETH to cover gas. These can be purchased as [described above](./registration.md#step-3-mint-pufeth-or-vts).
 
-7. Simulate the batch registration script: 
+7. Install dependencies
+
+> ```
+> forge install
+> ```
+
+8. Simulate the batch registration script: 
 - Replace with your RPC URL (either for mainnet or holesky)
 - Set the keystore `--account` to the name of your keystore located in `~/.foundry/keystores`
 - Set `--sender` to the keystore wallet address with your pufETH, VTs, and gas money.
@@ -175,7 +181,7 @@ Example:
 > forge script script/BatchRegisterValidator.s.sol:BatchRegisterValidator --rpc-url=https://eth.llamarpc.com --account 1d6cbbea-2b2d-42ac-b2e3-16fff98010de --password $KEYSTORE_PW -vvvv --sender=0x4D42ABfB6D4bEDaf64dF8BE054676149BDfa224d 
 > ```
 
-8. Rerun the command with the `--slow` and `--broadcast` flags to send the transaction on chain
+9. Rerun the command with the `--slow` and `--broadcast` flags to send the transaction on chain
 
 ```
 forge script script/BatchRegisterValidator.s.sol:BatchRegisterValidator --rpc-url=https://eth.llamarpc.com --account 1d6cbbea-2b2d-42ac-b2e3-16fff98010de --password $KEYSTORE_PW -vvvv --sender=0x4D42ABfB6D4bEDaf64dF8BE054676149BDfa224d --slow --broadcast
