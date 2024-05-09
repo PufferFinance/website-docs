@@ -178,11 +178,11 @@ Example:
 > ```
  
 > ```
-> forge script script/BatchRegisterValidator.s.sol:BatchRegisterValidator --rpc-url=https://eth.llamarpc.com --account 1d6cbbea-2b2d-42ac-b2e3-16fff98010de --password $KEYSTORE_PW -vvvv --sender=0x4D42ABfB6D4bEDaf64dF8BE054676149BDfa224d 
+> forge script script/BatchRegisterValidator.s.sol:BatchRegisterValidator --rpc-url=https://eth.llamarpc.com --account 1d6cbbea-2b2d-42ac-b2e3-16fff98010de --password $KEYSTORE_PW -vvv --sender=0x4D42ABfB6D4bEDaf64dF8BE054676149BDfa224d 
 > ```
 
 9. Rerun the command with the `--slow` and `--broadcast` flags to send the transaction on chain
 
 ```
-forge script script/BatchRegisterValidator.s.sol:BatchRegisterValidator --rpc-url=https://eth.llamarpc.com --account 1d6cbbea-2b2d-42ac-b2e3-16fff98010de --password $KEYSTORE_PW -vvvv --sender=0x4D42ABfB6D4bEDaf64dF8BE054676149BDfa224d --slow --broadcast
+forge script script/BatchRegisterValidator.s.sol:BatchRegisterValidator --rpc-url=https://eth.llamarpc.com --account 1d6cbbea-2b2d-42ac-b2e3-16fff98010de --password $KEYSTORE_PW -vvv --sender=0x4D42ABfB6D4bEDaf64dF8BE054676149BDfa224d --slow --broadcast
 ```
