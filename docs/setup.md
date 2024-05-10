@@ -7,7 +7,7 @@ slug: /nodes/setup
 In order to run a [validator](https://ethereum.org/en/developers/docs/nodes-and-clients/run-a-node/), you will need to run an Execution Layer client, a Consensus Layer client, and the validator software.
 
 :::note
-Puffer is in testnet and is using the 🦁 [Holesky testnet](https://holesky.dev/), so make sure to set the network to `holesky`
+Puffer is live on Mainnet! If you wish to setup a testnet validator, we're using the 🦁 [Holesky testnet](https://holesky.dev/), so make sure to set the network to `holesky`, otherwise use `mainnet`
 :::
 
 ### Easy Mode
@@ -52,6 +52,10 @@ cargo build --release
 
 ## Setup Validator Enclave (optional)
 Follow along to setup your enclave to run a validator with a 1 ETH bond.
+
+:::caution TEE Registrations are not yet supported on mainnet 🚧  
+As part of our ongoing commitment to security and operational excellence, we are taking a phased approach to implementing enclave-based registrations. Due to recent changes in Intel’s support for certain enclave hardware, access to the necessary hardware has become more challenging. To ensure the highest standards of security, enclave-registrations will not be available during the initial phase of our mainnet launch.
+:::
 
 :::caution
 Secure-Signer requires Ubuntu 20.04!
@@ -155,7 +159,7 @@ f3b600f2d50b4c1cc42495f6c4f20bdb0c9a1dd17d5923de83d2723c2d1cab04
 The following command run a container with the name `puffer_secure_signer_container` built from the pulled `puffer_validator` image. Notice we are mounting our volume `Puffer-Validator-Backup` to the `/Validator` enclave directory so any changes to the `/Validator` enclave directory persist if the container is removed:
 
 :::caution
-Ensure image tag matches latest version described on testnet repository before running the next command! (Here image tag is 1.1.0)
+Ensure image tag matches latest version described on [here](https://hub.docker.com/r/pufferfi/validator/tags) before running the next command! (Here image tag is 1.1.0)
 :::
 
 ```
