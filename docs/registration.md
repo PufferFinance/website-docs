@@ -109,80 +109,75 @@ Make sure to set your `fee_recipient` value to your own wallet. Remember, Puffer
 Proceed to the [Dashboard](https://launchpad.puffer.fi/Dashboard) to view the validators registered to your wallet.
 
 
-# Batch Registering Validators
-For operators interested in running many Puffer validators a convenience script has been provided to register multiple validators in one batch. 
+## Batch Registering Validators
+For operators interested in running many Puffer validators a convenience script has been provided to register create keys and register multiple validators in one batch. 
 
 1. Clone the PufferPool repo:
-```
-git clone https://github.com/PufferFinance/PufferPool.git
-cd PufferPool
-```
+> ```
+> git clone https://github.com/PufferFinance/PufferPool.git
+> cd PufferPool
+> ```
 
 2. Install [Foundry](https://book.getfoundry.sh/getting-started/installation)
-```
-curl -L https://foundry.paradigm.xyz | bash
-```
-
-3. Create validator keys and registration JSONs as described [here](./registration.md#step-2-get-coral-cli-command) (NOTE: use the 2 ETH option).
-
-4. Create a folder called `registration-data` in the PufferPool repo and move your registration JSON files there:
-
-```
-ls ~/PufferPool/registration-data
-```
-
 > ```
-> registration-1.json
-> registration-2.json
-> registration-3.json
+> curl -L https://foundry.paradigm.xyz | bash
 > ```
 
-5. The script requires a local Eth keystore file to run. You can create a wallet by running the following and entering a keystore password:
-
-```
-mkdir -p ~/.foundry/keystores
-cast wallet new ~/.foundry/keystores
-```
-
-> Example output:
+3. Install Coral-CLI 
 > ```
-> Enter secret:
-> Created new encrypted keystore file: ~/.foundry/keystores/1d6cbbea-2b2d-42ac-b2e3-16fff98010de
-> Address: 0x4D42ABfB6D4bEDaf64dF8BE054676149BDfa224d
+> cargo install -f --git https://github.com/PufferFinance/coral.git
 > ```
 
+4. The batch registration script requires a local Eth keystore file to run. You can create a keystore file by importing an existing private key as follows:
 > ```
-> ls ~/.foundry/keystores
-> 1d6cbbea-2b2d-42ac-b2e3-16fff98010de
+> cast wallet import -i puffer-test
+> Enter private key:
+> Enter password:
+> `puffer-test` keystore was saved successfully. Address: 0x4D42ABfB6D4bEDaf64dF8BE054676149BDfa224d
 > ```
 
-Alternatively, you can import an existing private key to create a local keystore following [Foundry's docs](https://book.getfoundry.sh/reference/cast/cast-wallet-import#directory-options).
+This command created a keystore file named `puffer-test` in the `ls ~/.foundry/keystores` directory. More instructions on working with Foundry keystores can be found [in their docs](https://book.getfoundry.sh/reference/cast/cast-wallet-import#directory-options).
 
-6. Fund the wallet with sufficient VTs, pufETH, and ETH to cover gas. These can be purchased as [described above](./registration.md#step-3-mint-pufeth-or-vts).
+5. Fund the wallet with sufficient VTs, pufETH, and ETH to cover gas. These can be purchased as [described above](./registration.md#step-3-mint-pufeth-or-vts).
 
-7. Install dependencies
-
+6. Inside the PufferPool repo, install the batch registration script dependencies:
 > ```
 > forge install
 > ```
 
-8. Simulate the batch registration script: 
-- Replace with your RPC URL (either for mainnet or holesky)
-- Set the keystore `--account` to the name of your keystore located in `~/.foundry/keystores`
-- Set `--sender` to the keystore wallet address with your pufETH, VTs, and gas money.
+7. Edit the `validator-keystore-password.txt` file. This will be the password used to encrypt your validator BLS keystore files.
 
+8. Create the `registration-data` directory for your output registration JSONs
+> ```
+> mkdir -p registration-data
+> ```
 
-Example:
-> ```
-> export KEYSTORE_PW=my_password
-> ```
+9. Simulate the batch registration script: 
+> - Replace with your RPC URL (either for mainnet or holesky)
+> - Set the keystore `--account` to the name of your keystore located in `~/.foundry/keystores` (from step 4)
+> - Set `--sender` to the keystore wallet address with your pufETH, VTs, and gas money (from step 4)
+> - Set `--password` to your keystore password (from step 4)
+
+> Example Holesky command:
+>> ```
+>forge script script/GenerateBLSKeysAndRegisterValidators.s.sol:GenerateBLSKeysAndRegisterValidators --rpc-url=https://ethereum-holesky.publicnode.com --account puffer-test -vvv --sender=0x4D42ABfB6D4bEDaf64dF8BE054676149BDfa224d --ffi
+>> ```
  
-> ```
-> forge script script/BatchRegisterValidator.s.sol:BatchRegisterValidator --rpc-url=https://eth.llamarpc.com --account 1d6cbbea-2b2d-42ac-b2e3-16fff98010de --password $KEYSTORE_PW -vvv --sender=0x4D42ABfB6D4bEDaf64dF8BE054676149BDfa224d 
-> ```
+> Example Mainnet command:
+>> ```
+>forge script script/GenerateBLSKeysAndRegisterValidators.s.sol:GenerateBLSKeysAndRegisterValidators --rpc-url=https://eth.llamarpc.com --account puffer-test -vvv --sender=0x4D42ABfB6D4bEDaf64dF8BE054676149BDfa224d --ffi
+>> ```
 
-9. Rerun the command with the `--slow` and `--broadcast` flags to send the transaction on chain
+10. Rerun the command with the `--slow` and `--broadcast` flags to send the transaction on chain. Note that the command may take several minutes to run.
 
-```
-forge script script/BatchRegisterValidator.s.sol:BatchRegisterValidator --rpc-url=https://eth.llamarpc.com --account 1d6cbbea-2b2d-42ac-b2e3-16fff98010de --password $KEYSTORE_PW -vvv --sender=0x4D42ABfB6D4bEDaf64dF8BE054676149BDfa224d --slow --broadcast
-```
+> Example Holesky command:
+>> ```
+>forge script script/GenerateBLSKeysAndRegisterValidators.s.sol:GenerateBLSKeysAndRegisterValidators --rpc-url=https://ethereum-holesky.publicnode.com --account puffer-test -vvv --sender=0x4D42ABfB6D4bEDaf64dF8BE054676149BDfa224d --ffi --slow --broadcast
+>> ```
+ 
+> Example Mainnet command:
+>> ```
+>forge script script/GenerateBLSKeysAndRegisterValidators.s.sol:GenerateBLSKeysAndRegisterValidators --rpc-url=https://eth.llamarpc.com --account puffer-test -vvv --sender=0x4D42ABfB6D4bEDaf64dF8BE054676149BDfa224d --ffi --slow --broadcast
+>> ```
+
+11. Your validator keys will be generated locally in the folder: `PufferPool/etc/keys/bls_keys/` and can be added to your validator client as described [here](./registration#step-6-prepare-your-validator).
