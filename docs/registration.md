@@ -160,24 +160,24 @@ This command created a keystore file named `puffer-test` in the `ls ~/.foundry/k
 
 - Example Holesky command:
 > ```
-forge script script/GenerateBLSKeysAndRegisterValidators.s.sol:GenerateBLSKeysAndRegisterValidators --rpc-url=https://ethereum-holesky.publicnode.com --account puffer-test -vvv --sender=0x4D42ABfB6D4bEDaf64dF8BE054676149BDfa224d --ffi
+> forge script script/GenerateBLSKeysAndRegisterValidators.s.sol:GenerateBLSKeysAndRegisterValidators --rpc-url=https://ethereum-holesky.publicnode.com --account puffer-test -vvv --sender=0x4D42ABfB6D4bEDaf64dF8BE054676149BDfa224d --ffi
 > ```
  
 - Example Mainnet command:
 > ```
-forge script script/GenerateBLSKeysAndRegisterValidators.s.sol:GenerateBLSKeysAndRegisterValidators --rpc-url=https://eth.llamarpc.com --account puffer-test -vvv --sender=0x4D42ABfB6D4bEDaf64dF8BE054676149BDfa224d --ffi
+> forge script script/GenerateBLSKeysAndRegisterValidators.s.sol:GenerateBLSKeysAndRegisterValidators --rpc-url=https://eth.llamarpc.com --account puffer-test -vvv --sender=0x4D42ABfB6D4bEDaf64dF8BE054676149BDfa224d --ffi
 > ```
 
 10. Rerun the command with the `--slow` and `--broadcast` flags to send the transaction on chain. Note that the command may take several minutes to run.
 
 - Example Holesky command:
 > ```
-forge script script/GenerateBLSKeysAndRegisterValidators.s.sol:GenerateBLSKeysAndRegisterValidators --rpc-url=https://ethereum-holesky.publicnode.com --account puffer-test -vvv --sender=0x4D42ABfB6D4bEDaf64dF8BE054676149BDfa224d --ffi --slow --broadcast
+> forge script script/GenerateBLSKeysAndRegisterValidators.s.sol:GenerateBLSKeysAndRegisterValidators --rpc-url=https://ethereum-holesky.publicnode.com --account puffer-test -vvv --sender=0x4D42ABfB6D4bEDaf64dF8BE054676149BDfa224d --ffi --slow --broadcast
 > ```
  
 - Example Mainnet command:
 > ```
-forge script script/GenerateBLSKeysAndRegisterValidators.s.sol:GenerateBLSKeysAndRegisterValidators --rpc-url=https://eth.llamarpc.com --account puffer-test -vvv --sender=0x4D42ABfB6D4bEDaf64dF8BE054676149BDfa224d --ffi --slow --broadcast
+> forge script script/GenerateBLSKeysAndRegisterValidators.s.sol:GenerateBLSKeysAndRegisterValidators --rpc-url=https://eth.llamarpc.com --account puffer-test -vvv --sender=0x4D42ABfB6D4bEDaf64dF8BE054676149BDfa224d --ffi --slow --broadcast
 > ```
 
 11. Your validator keys will be generated locally in the folder: `PufferPool/etc/keys/bls_keys/` and can be added to your validator client as described [here](./registration#step-6-prepare-your-validator).
