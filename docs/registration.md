@@ -18,14 +18,14 @@ The [Puffer Dashboard](https://launchpad.puffer.fi/Setup) UI is subject to chang
 
 
 # Registering a Validator
+The [Puffer Dashboard](https://launchpad.puffer.fi/Setup) supports launching both testnet and mainnet validators depending on the RPC that your wallet is connected to. 
+
 ### Step 1: Setup Wallet
 ![alt text](/img/holesky-config.png)
-Follow [the instructions](https://holesky.dev/), to add the Holesky network to your wallet.
+Follow [the instructions](https://holesky.dev/), to add the Holesky network to your wallet. If you're using mainnet, the default mainnet wallet config can be used or an RPC can be added [here](https://chainlist.org/chain/1).
 
 ### Step 2: Get Coral-CLI Command
 Navigate to https://launchpad.puffer.fi/Setup to copy the Coral-CLI command. 
-
-Make sure your wallet is set to the Holesky network. 
 
 Run the command where you [installed the Coral-CLI](/nodes/setup#setup-coral-cli).
 
@@ -39,7 +39,7 @@ The following **example** command will create a local validator keystore file in
 cargo run --bin coral-cli validator keygen --guardian-threshold 1 --module-name 0x5055464645525f4d4f44554c455f300000000000000000000000000000000000 --withdrawal-credentials 0x0100000000000000000000005ee9246f01e95c08ee767029c1d18765bb1779d0 --guardian-pubkeys 0x049cc1fbaa3cffd3e4c1f935c47720d013938ccb822a9cbd20c5f09ab65ae8300e7986b6ce75e916d3b59599ece72134adf2972d06a76a8ba5f3747d356117c342 --fork-version 0x01017000 --password-file password.txt --output-file registration.json
  ```
 
-#### With Enclave
+#### With Enclave (currently only supported on testnet)
 > ![alt text](/img/enclave-cli-cmd.png)
 1. Copy the displayed command
 2. Edit `<OPTIONAL_ENCLAVE_URL>` and `<PATH_TO_REGISTRATION_JSON>` 
