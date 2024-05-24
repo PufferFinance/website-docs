@@ -13,7 +13,7 @@ Puffer's Pauser Multisig is a 1-of-9 multisig designed to pause the Puffer contr
 Puffer's Operations Multisig is a 3-of-5 multisig operated by the team. The timelock enforces that important function calls and upgrades must go through a 7-day delay before being executed. Actions initiated by the operations multisig can be vetoed by the community multisig during this window.
 
 ### Community Multisig
-Puffer's Community Multisig is a 3-of-5 multisig composed of reputable and aligned Ethereum community members. The community multisig can bypass the timelock delay and has veto rights over actions initiated by the operations mulitsig. The multisig members are responsible for checking the actions of the operations multisig to ensure the protocol safely evolves over time. 
+Puffer's Community Multisig is a 3-of-7 multisig composed of reputable and aligned Ethereum community members and auditing firms. The community multisig can bypass the timelock delay and has veto rights over actions initiated by the operations mulitsig. The multisig members are responsible for checking the actions of the operations multisig to ensure the protocol safely evolves over time. 
 
 Members include:
 
@@ -22,3 +22,5 @@ Members include:
 - David Hoffman: Bankless
 - Domothy: Ethereum Foundation
 - Ladislaus: EthStaker Community
+- BlockSec: Auditing Firm
+- Creed DAO: Auditing Firm
