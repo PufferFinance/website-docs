@@ -55,7 +55,7 @@ Together, stakers and NoOps create a flywheel effect that allows Puffer to outpa
 
 
 The protocol is driven by **Stakers** and **Node Operators** (NoOps):
-- **NoOps** can join *any* Puffer [module](/protocol/puffer-modules) by locking [Validator Tickets](/protocol/validator-tickets) and 1 ETH as collateral. In exchange, they get to operate a 32 ETH validator and keep 100% of its PoS rewards until they run out of VTs. NoOps can boost their rewards by joining [restaking](/reference/glossary#Restaking) modules and delegating the validator's ETH to a [restaking operator](/protocol/puffer-modules#restaking-operators) in exchange for restaking rewards commission.
+- **NoOps** can join *any* Puffer [module](/protocol/puffer-modules) by locking [Validator Tickets](/protocol/validator-tickets) and 1 ETH as collateral. In exchange, they get to operate a 32 ETH validator and keep 100% of their PoS rewards until they run out of VTs. NoOps can boost their rewards by joining [restaking](/reference/glossary#Restaking) modules and delegating the validator's ETH to a [restaking operator](/protocol/puffer-modules#restaking-operators) in exchange for restaking rewards commission.
 
 
 - **Stakers** can deposit any amount of ETH to help fund the protocol's 32 ETH NoOp-controlled validators. In exchange, they receive the pufETH [native Liquid Restaking Token](/protocol/nlrt#what-is-an-lst) (nLRT) which grows in value as the protocol mints validator tickets and receives restaking rewards.
