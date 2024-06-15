@@ -83,7 +83,7 @@ You can find your generated keystore files in the `coral/etc/keys/bls_keys/` dir
 - [Import your validator keys to Nimbus ↗](https://nimbus.guide/run-a-validator.html#2-import-your-validator-keys) 
 - [Import your validator keys to Teku ↗](https://docs.teku.consensys.io/how-to/load-validators-without-restarting) 
 - [Import your validator keys to Lodestar ↗](https://chainsafe.github.io/lodestar/validator-management/vc-configuration/#import-a-validator-keystore-to-lodestar) 
-- [Import your validator keys to Lighthouse ↗](https://lighthouse-book.sigmaprime.io/validator-manager-create.html?highlight=import#2-import-the-validators) 
+- [Import your validator keys to Lighthouse ↗](https://lighthouse-book.sigmaprime.io/mainnet-validator.html#step-3-import-validator-keys-to-lighthouse) 
 - [Import your validator keys to Prysm ↗](https://docs.prylabs.network/docs/wallet/nondeterministic#import-validator-accounts) 
 
 **Using Secure-Signer**
