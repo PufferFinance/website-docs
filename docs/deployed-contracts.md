@@ -13,7 +13,7 @@ Puffer's smart contracts are located in two repos:
 > Visit the [technical documentation](https://github.com/PufferFinance/pufETH/tree/main/docs) for more information.
 
 ### [PufferFinance/PufferPool](https://github.com/PufferFinance/PufferPool)
-> This repo contains the core contracts for Puffer's protocol. The core fuctionality is to:
+> This repo contains the core contracts for Puffer's protocol. The core functionality is to:
 - allow for users to permissionlessly run Ethereum validators
 - interface with EigenLayer's contracts to enable native restaking and delegation
 

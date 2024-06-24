@@ -33,7 +33,7 @@ slug: /reference/faq
 
 > In the context of liquid staking, centralized protocols with permissioned validators do not require their operators to put down collateral. Rather, they rely on reputation to ensure they behave honestly. In practice, some operators run tens of thousands of validators each. For a decentralized liquid staking protocol, running this many validators requires operators to have tens of thousands of ETH.
 >
-> Puffer's goal is to break this cycle by empowering decentralized validators with higher rewards while lowering thier barrier to entry. 
+> Puffer's goal is to break this cycle by empowering decentralized validators with higher rewards while lowering their barrier to entry. 
 
 ### 🦈 How does Puffer help address some of these pain points?
 

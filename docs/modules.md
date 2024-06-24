@@ -34,7 +34,7 @@ When NoOps deploy their validators to PufferModules they automatically earn rest
 Restaking Operators (ReOps) are operators whose job is to perform all the required AVS duties on behalf of a given restaking module. ReOps may also be NoOps within their own or other modules. ReOps are expected to perform well to maximize restaking rewards for their own benefit and that of the NoOps in their module and pufETH holders downstream. In the Puffer protocol, ReOps operate through [RestakingOperator](https://github.com/PufferFinance/PufferPool/blob/master/docs/RestakingOperator.md) contracts, which allows governance to decide their AVS selections through the [PufferModuleManager](https://github.com/PufferFinance/PufferPool/blob/master/docs/PufferModuleManager.md) contract.
 
 ### Joining a module 👈
-To hold strong to our alignment to Ethereum's ethos, it is **always permissionless** for NoOps to join a module and deploy an Ethereum validator. 
+To hold strong to our alignment with Ethereum's ethos, it is **always permissionless** for NoOps to join a module and deploy an Ethereum validator. 
 
 :::tip 
 It is permissionless for NoOps to deploy validators to modules.
