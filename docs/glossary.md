@@ -71,7 +71,7 @@ An ERC20 token. Each Validator Ticket allows operating a validator on the Puffer
 An amount of pufETH a NoOp must lend to the protocol during the time of running their validator node. They may lose some or all of this bond if they misbehave or are slashed. NoOps may retrieve this bond after proving they have exited their validator node from the beacon chain
 
 ### `Puffer Module`
-A contract which defines a set of AVSs which NoOps opting into the module will delegate their ETH funds to running. These NoOps will receive corresponding rewards in return by participating in this Puffer Module
+A contract that defines a set of AVSs which NoOps opting into the module will delegate their ETH funds to running. These NoOps will receive corresponding rewards in return by participating in this Puffer Module
 
 ### `Restaking Operator`
 AKA ReOp: A NoOp that is delegated funds to operate an AVS on behalf of other NoOps, as part of a Puffer Module

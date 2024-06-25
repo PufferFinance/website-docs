@@ -48,7 +48,7 @@ The provisioning step will create a new validator within the EigenPod whose ETH 
 
 ---
 ### 4️⃣ PoS Rewards 
-Once their validator activates, the NoOp is eligible to validate for as many days as validator tickets they have deposited. Throughout this duration, the NoOp keeps 100% of the generated PoS rewards. Their [execution rewards](/reference/glossary#execution-rewards) are immediately deposited to their wallets, while their [consensus rewards](/reference/glossary#consensus-rewards) accrue in the module's EigenPod and can be withdrawn following the NoOp withdrawal process.
+Once their validator activates, the NoOp is eligible to validate for as many days as the validator tickets they have deposited. Throughout this duration, the NoOp keeps 100% of the generated PoS rewards. Their [execution rewards](/reference/glossary#execution-rewards) are immediately deposited to their wallets, while their [consensus rewards](/reference/glossary#consensus-rewards) accrue in the module's EigenPod and can be withdrawn following the NoOp withdrawal process.
 
 Since NoOps receive 100% of the PoS rewards they generate, they are [incentivized](/protocol/validator-tickets#why--noop-incentives) to maximize their validator performance, helping protect staker ETH. 
 
