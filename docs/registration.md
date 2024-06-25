@@ -186,7 +186,7 @@ This command created a keystore file named `puffer-test` in the `ls ~/.foundry/k
 ## Batch Registering Validators Using Gnosis SAFE
 A similar flow exists for operators that use [SAFE](https://app.safe.global). The process involves running a convenience script to generate the inputs, then executing a single SAFE transaction to batch register validator keys.
 
-**Prereq**: Make sure the SAFE multisig wallet is funded with sufficient VTs, pufETH, and ETH to cover gas.
+**Prereq**: Make sure the SAFE multisig wallet is funded with sufficient VTs and pufETH.
 
 1. Clone the puffer-contracts repo:
 > ```
