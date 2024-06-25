@@ -181,3 +181,71 @@ This command created a keystore file named `puffer-test` in the `ls ~/.foundry/k
 > ```
 
 11. Your validator keys will be generated locally in the folder: `PufferPool/etc/keys/bls_keys/` and can be added to your validator client as described [here](./registration#step-6-prepare-your-validator).
+
+
+## Batch Registering Validators Using Gnosis SAFE
+A similar flow exists for operators that use [SAFE](https://app.safe.global). The process involves running a convenience script to generate the inputs, then executing a single SAFE transaction to batch register validator keys.
+
+**Prereq**: Make sure the SAFE multisig wallet is funded with sufficient VTs and pufETH.
+
+1. Clone the puffer-contracts repo:
+> ```
+> git clone https://github.com/PufferFinance/puffer-contracts.git
+> cd puffer-contracts
+> ```
+
+2. Install Contract Dependencies
+> ```
+> yarn install
+> ```
+
+3. Install [Foundry](https://book.getfoundry.sh/getting-started/installation)
+> ```
+> curl -L https://foundry.paradigm.xyz | bash
+> ```
+
+4. Install Coral-CLI 
+> ```
+> cargo install -f --git https://github.com/PufferFinance/coral.git
+> ```
+
+5. Enter the utility-scripts directory
+> ```
+> cd utility-scripts
+> ```
+
+6. Edit the `validator-keystore-password.txt` file. This will be the password used to encrypt your validator BLS keystore files.
+
+7. Run the script:
+> ```
+> forge script script/GenerateBLSKeysAndRegisterValidatorsCalldata.s.sol:GenerateBLSKeysAndRegisterValidatorsCalldata --rpc-url=$RPC_URL -vvv --ffi
+> ```
+![alt text](/img/batch_registration_output.png)
+> Two things will happen:
+> - A new file `safe-registration-file.json` is created
+> - Your validator keys are created in the `utility-scripts/etc/keys/bls_keys` directory
+> 
+> :::caution
+> Re-running the script will overwrite this `safe-registration-file.json`
+> :::
+> :::caution
+> To avoid hitting the gas limit, limit registrations to batches of 50 validators.
+> :::
+
+8. Sign the transaction using the SAFE UI
+> Craft a transaction using the SAFE Transaction Builder
+> ![alt text](/img/safe_transaction_builder.png)
+> 
+> Upload `safe-registration-file.json`
+> ![alt text](/img/safe_upload.png)
+> 
+> Create a batch
+>
+> ![alt text](/img/safe_create_batch.png)
+>
+> Send the batch and sign the transaction
+![alt text](/img/safe_send_batch.png)
+> 
+> Upon success, your pending validators will be viewable on the [Dashboard](https://launchpad.puffer.fi/Dashboard).
+
+9. Your validator keys will be generated locally in the folder: `utility-scripts/etc/keys/bls_keys/` and can be added to your validator client as described [here](./registration#step-6-prepare-your-validator).
