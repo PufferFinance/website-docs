@@ -78,6 +78,8 @@ Assuming they deposited 28 VTs, after 28 days of validating, the NoOp's validato
 
 
 ### Pricing Validator Tickets
+Prices of Validator Tickets are secured and posted by [RedStone Oracles](https://redstone.finance/). The VT Oracle module is fully automated and data is delivered every 12 hours or if the deviation is 10% on MEV payouts or 5% on consensus rewards. The contract can be seen on the ValidatorTicketPricer contract events page [here](https://etherscan.io/address/0x9830ad1bd5cf73640e253edf97dee3791c4a53c3/advanced#events). The pricing module is the heart of the properly functioning Puffer system. Puffer’s stability is based on the correctness of the price from RedStone.
+
 During Puffer's Phase 1, VT prices will be posted by the [Guardians](/protocol/guardians#). The prices are calculated with the following formula, where $R_{expected}$ is the expected daily validator revenue based on historical consensus and execution rewards, and $D$ is a discount rate:
 
 <div style={{textAlign: 'center'}}>
