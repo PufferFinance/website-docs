@@ -119,4 +119,8 @@ module.exports = {
       { indexBlog: false, docsRouteBasePath: "/", indexPages: true },
     ],
   ],
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
 };
