@@ -12,23 +12,23 @@ To withdraw rewards, Node Operators need to sign a transaction on Base by follow
 
 1. Click the "Claim" button
 
-![PLACEHOLDER](../static/img/Logo%20Mark.svg)
+![Claim Rewards Card](../static/img/noop-rewards-1.png)
 
 2. Switch your wallet's network to Base. This step is necessary as the claiming process occurs on Base, and you'll need to sign a transaction there. Ensure you have sufficient ETH for gas.
 
-![PLACEHOLDER](../static/img/Logo%20Mark.svg)
+![Switch to Base](../static/img/noop-rewards-2.png)
 
 3. Click the "Claim" button again
 
-![PLACEHOLDER](../static/img/Logo%20Mark.svg)
+![Claim Rewards](../static/img/noop-rewards-3.png)
 
 4. Review the transaction details carefully, then sign it using your wallet.
 
-![PLACEHOLDER](../static/img/Logo%20Mark.svg)
+![Sign Transaction](../static/img/noop-rewards-4.png)
 
 5. Wait for the transaction confirmation. Once confirmed, you'll receive your rewards on Base.
 
-![PLACEHOLDER](../static/img/Logo%20Mark.svg)
+![Transaction Confirmed](../static/img/noop-rewards-5.png)
 
 After claiming the rewards, Node Operators can either bridge them back to Ethereum L1 or utilize them on Base L2.
 
