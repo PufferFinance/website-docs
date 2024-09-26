@@ -36,7 +36,7 @@ Where legally required, you will be presented with a cookie banner or other tool
 
 There are a number of ways to limit online tracking, which we have summarized below:
 
-- **Blocking cookies in your browser**. Most browsers let you remove or reject cookies, including cookies used for interest-based advertising. To do this, follow the instructions in your browser settings. Many browsers accept cookies by default until you change your settings. For more information about cookies, including how to see what cookies have been set on your device and how to manage and delete them, visit [www.allaboutcookies.org](www.allaboutcookies.org).
+- **Blocking cookies in your browser**. Most browsers let you remove or reject cookies, including cookies used for interest-based advertising. To do this, follow the instructions in your browser settings. Many browsers accept cookies by default until you change your settings. For more information about cookies, including how to see what cookies have been set on your device and how to manage and delete them, visit [www.allaboutcookies.org](https://www.allaboutcookies.org).
 
 - **Blocking advertising ID use in your mobile settings**. Your mobile device settings may provide functionality to limit use of the advertising ID associated with your mobile device for interest-based advertising purposes.
 
