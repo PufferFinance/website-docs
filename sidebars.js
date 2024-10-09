@@ -63,7 +63,7 @@ const sidebars = {
     {
       type: "category",
       label: "Reference",
-      items: ["glossary", "hardforks", "slash", "faq"]
+      items: ["glossary", "hardforks", "slash", "faq", "cookie-policy", "privacy-policy", "terms-of-service"]
     }
   ]
 };
