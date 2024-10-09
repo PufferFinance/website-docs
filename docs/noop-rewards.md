@@ -32,6 +32,39 @@ To withdraw rewards, Node Operators need to sign a transaction on Base by follow
 
 After claiming the rewards, Node Operators can either bridge them back to Ethereum L1 or utilize them on Base L2.
 
+# How Rewards Are Calculated
+
+Rewards are distributed daily, with the exception of the first distribution, which includes all rewards accumulated since Puffer's mainnet launch.
+
+For each daily interval, Puffer's Guardians perform the following steps:
+1. Compute individual rewards for each Node Operator (sum of all of their associated validators)
+2. Calculate the total rewards for the previous intervals
+3. Create and publish a Merkle tree of rewards, storing it on AWS S3
+4. Mint pufETH tokens and transfer them to the Base Layer 2 network
+5. Enforce a mandatory waiting period to revert in case of a security vulnerability
+6. Once the waiting period ends, Node Operators can claim their rewards through the L2RewardManager contract on Base using the [Puffer Dashboard](https://launchpad.puffer.fi/Dashboard)
+
+![Rewards Claiming on Base](../static/img/fwr.png)
+
+### Rewards Epochs and accounting
+
+**Current Rewards Epoch** — this is the epoch up to which rewards have been calculated and posted to Base. 
+
+**Next Rewards Epoch** — this is the epoch up to which rewards will be calculated in the upcoming accounting event. 
+
+We execute accounting automatically every 24 hours, but this period of time can be changed in the future.  
+
+:::note
+We only mint and send to Base the rewards that have been successfully withdrawn from your validator on the Beacon Chain. 
+:::
+
+### How to check if the rewards calculation is correct
+
+1. Take the Current Rewards Epoch from the dashboard.
+2. Go to [beaconcha.in](https://beaconcha.in/) (or any other similar website) and find all withdrawals that occurred with your validators BEFORE this epoch, STARTING from your last Puffer rewards claim.
+3. Sum up these withdrawals.
+4. This total represents your expected rewards in ETH, which will need to be converted using the exchange rate at the epoch from Step 1.
+
 ## Changing Your Rewards Recipient Address
 
 :::caution
@@ -46,7 +79,7 @@ To change your rewards claimer address on Base, a Node Operator should follow th
 2. Select `New transaction`
 3. Select `Transaction Builder`
 ![alt text](../static/img/change-address-23.png)
-4. Enter the L1RewardManager contract address: [0xbf11b5a0d7adeb5c1f2f3dbb85169594aa90c467](https://etherscan.io/address/0xbf11b5a0d7adeb5c1f2f3dbb85169594aa90c467)
+4. Enter the L1RewardManager contract implementation address: [0xbf11b5a0d7adeb5c1f2f3dbb85169594aa90c467](https://etherscan.io/address/0xbf11b5a0d7adeb5c1f2f3dbb85169594aa90c467)
 ![alt text](../static/img/change-address-4.png)
 
 5. Select `Use Implementation ABI`
@@ -59,23 +92,12 @@ To change your rewards claimer address on Base, a Node Operator should follow th
 9. Enter your new rewards claimer address that you control on Base
 10. Click `Add transaction` and then sign the generated SAFE transaction
 ![alt text](../static/img/change-address-678910.png)
+    :::note
+    If the `To Address` field doesn't auto-populate, it should be set to the L1RewardManager proxy contract address: [0x157788cc028Ac6405bD406f2D1e0A8A22b3cf17b](https://etherscan.io/address/0x157788cc028Ac6405bD406f2D1e0A8A22b3cf17b).
+    :::
 11. Wait for the transaction to be bridged from Ethereum Mainnet to Base Layer 2. This process typically takes between 3 to 6 hours, but may take longer if the relayer fee is insufficient.
 12. After the transaction is confirmed on Base, the Node Operator can now claim rewards using the specified rewards claimer address on Base.
 
 :::note
 Externally Owned Accounts (EOAs) do not need to perform this step. For EOAs, rewards will automatically be sent to the same Node Operators address that registered the validators on Ethereum Mainnet.
 :::
-
-# How Rewards Are Calculated
-
-Rewards are distributed daily, with the exception of the first distribution, which includes all rewards accumulated since Puffer's mainnet launch.
-
-For each daily interval, Puffer's Guardians perform the following steps:
-1. Compute individual rewards for each Node Operator (sum of all of their associated validators)
-2. Calculate the total rewards for the previous intervals
-3. Create and publish a Merkle tree of rewards, storing it on AWS S3
-4. Mint pufETH tokens and transfer them to the Base Layer 2 network
-5. Enforce a mandatory waiting period to revert in case of a security vulnerability
-6. Once the waiting period ends, Node Operators can claim their rewards through the L2RewardManager contract on Base using the [Puffer Dashboard](https://launchpad.puffer.fi/Dashboard)
-
-![Rewards Claiming on Base](../static/img/fwr.png)
