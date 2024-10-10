@@ -86,6 +86,16 @@ module.exports = {
           label: "GitHub",
           position: "right",
         },
+        {
+          href: "https://governance.puffer.fi",
+          label: "Forum",
+          position: "right",
+        },
+        {
+          href: "https://vote.puffer.fi",
+          label: "Voting",
+          position: "right",
+        },
       ],
     },
   },
