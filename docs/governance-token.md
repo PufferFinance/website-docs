@@ -30,7 +30,7 @@ The [PUFFER token](https://etherscan.io/address/0x4d1C297d39C5c1277964D0E3f8Aa90
 ### vePUFFER
 
 #### What is vePUFFER?
-![alt text](../static/img/vePUFFER.png)
+![alt text](/img/vePUFFER.png)
 
 vePUFFER is a novel ve (voting escrow) governance mechanism implemented as an ERC-721 token, developed in collaboration with [Aragon](https://aragon.org/). It's designed to align with Puffer's long-term goal of fostering value-aligned and committed participants in the ecosystem.
 
