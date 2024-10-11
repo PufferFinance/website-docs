@@ -32,7 +32,6 @@ const sidebars = {
         "rewards",
         "guardians",
         "burst-threshold",
-        "governance",
       ],
     },
     {
@@ -59,6 +58,11 @@ const sidebars = {
       type: "category",
       label: "UniFi AVS",
       items: ["unifi-avs-intro", "unifi-avs-background", "unifi-avs-protocol", "unifi-avs-getting-started"],
+    },
+    {
+      type: "category",
+      label: "Governance",
+      items: ["governance-mission", "governance-token", "governance-roadmap", "governance-voting"]
     },
     {
       type: "category",
