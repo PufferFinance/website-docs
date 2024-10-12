@@ -5,9 +5,9 @@ slug: /protocol/puffer-token
 
 # $PUFFER Token
 
-The [PUFFER token](https://etherscan.io/address/0x4d1C297d39C5c1277964D0E3f8Aa901493664530)  is the native governance token of the Puffer Protocol and UniFi ecosystem.
+The PUFFER token  is the native governance token of the Puffer Protocol and UniFi ecosystem.
 
-### The Role of $PUFFER
+### The Role of [$PUFFER](https://etherscan.io/address/0x4d1C297d39C5c1277964D0E3f8Aa901493664530)
 
 #### Puffer LRT
 - Govern key protocol parameters (fees, limits, bond requirements)
@@ -27,7 +27,7 @@ The [PUFFER token](https://etherscan.io/address/0x4d1C297d39C5c1277964D0E3f8Aa90
 - Manage treasury funds for long-term sustainability
 - Steer rollup upgrade decisions and feature prioritization
 
-### vePUFFER
+### [vePUFFER](https://etherscan.io/address/0xA55eD5808aeCDF23AE3782C1443185f5D2363ce7)
 
 #### What is vePUFFER?
 ![alt text](/img/vePuffer.png)
