@@ -1,6 +1,6 @@
 ---
 title: PUFFER Token
-slug: /protocol/puffer-token
+slug: /governance/token
 ---
 
 # $PUFFER Token
