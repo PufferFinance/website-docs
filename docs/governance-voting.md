@@ -27,3 +27,23 @@ Congratulations! You now have vePUFFER and can participate in governance.
 There is a three day warmup period after minting your vePUFFER tokens before you can start voting - see the [vePUFFER](governance-token.md#vepuffer-parameters) section for more details.
 :::
 ![alt text](/img/token-complete.png)
+
+## How to Vote
+
+Proposals are first created and discussed on the [Governance Forum](https://governance.puffer.fi) and then posted to the [Puffer DAO Hub](https://vote.puffer.fi) for voting.
+
+1. Navigate to [vote.puffer.fi](https://vote.puffer.fi)
+2. Connect your wallet
+3. View proposals on the `Latest proposals` window or via the `Community` tab
+![alt text](/img/vote-latest.png)
+4. Select the proposal to read more about it
+![alt text](/img/vote-proposal.png)
+5. Vote on proposals by clicking the `Vote` button
+
+The proposal passes unless rejections outnumber approvals after the voting period has ended. Specifically, a proposal is approved if:
+   - Approvals exceed or equal rejections
+   - No votes are cast (effectively treated as equal approvals and vetoes)
+
+:::note
+Initially the votes will be cast using Snapshot voting. In our next phase we will transition to fully on-chain voting. 
+:::
