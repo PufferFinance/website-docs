@@ -1,6 +1,6 @@
 ---
 title: Governance Roadmap
-slug: /protocol/governance-roadmap
+slug: /governance/roadmap
 ---
 
 # Puffer Governance Roadmap

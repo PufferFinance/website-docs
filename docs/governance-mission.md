@@ -1,6 +1,6 @@
 ---
 title: Mission
-slug: /protocol/governance-mission
+slug: /governance/mission
 ---
 
 ### Our Vision
