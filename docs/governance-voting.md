@@ -15,7 +15,7 @@ To mint vePUFFER, first claim your PUFFER tokens from the official [claims page]
 Once you have claimed your tokens, you will need to approve the [vePUFFER contract](https://etherscan.io/address/0xA55eD5808aeCDF23AE3782C1443185f5D2363ce7) to spend your [PUFFER tokens](https://etherscan.io/address/0x4d1C297d39C5c1277964D0E3f8Aa901493664530). Your vePUFFER voting power will start proportional to the amount of PUFFER you stake and increase the longer you hold the NFT.
 
 :::note
-The minimum stake amount is 100 PUFFER as outlined in the [vePUFFER parameters](governance-token.md#vepuffer-parameters).
+The minimum stake amount is 70 PUFFER as outlined in the [vePUFFER parameters](governance-token.md#vepuffer-parameters).
 :::
 ![alt text](/img/token-approve.png)
 
