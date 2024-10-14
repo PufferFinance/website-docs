@@ -65,7 +65,7 @@ The following parameters are the initial vePUFFER parameters. They can be change
 | Exit Queue | Cooldown | Cooldown is the period between the user entering the exit queue and being able to withdraw the underlying tokens. They do not have voting power at this time as their NFT is held in the staking contract. | 1 month |
 | Exit Queue | Min Lock | Min amount of time a staker must hold before they can begin the exit process. | 1 Month |
 | Exit Queue | Exit Fee Percent | Tax paid in the underlying token on exit. | 0% |
-| Escrow | Minimum Deposit | Number of PUFFER tokens a user must deposit as a minimum. | 100 PUFFER |
+| Escrow | Minimum Deposit | Number of PUFFER tokens a user must deposit as a minimum. | 70 PUFFER |
 
 ### PUFFER Allocations
 
