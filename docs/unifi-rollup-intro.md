@@ -12,7 +12,7 @@ Based rollups derive their transaction sequencing directly from Ethereum validat
 
 ### Key Features of UniFi Rollup
 - **Credibly Neutral Sequencing**: Transactions are sequenced by Ethereum's L1 validators, ensuring reliability and neutrality.
-- **Fast and Gasless Transactions**: Users enjoy 100ms pre-confirmations and gasless transactions, enhancing the overall experience.
+- **Fast Transactions**: Users enjoy 100ms pre-confirmations, enhancing the overall experience.
 - **Value Flow Back to Ethereum**: Sequencing fees flow back to block proposers on Ethereum, supporting the sustainability and value of the L1 network.
 
 ### Why Choose UniFi Rollup?

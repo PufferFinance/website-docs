@@ -13,7 +13,7 @@ To interact with UniFi Rollup, you need an Ethereum wallet like MetaMask or any 
 ### Installing MetaMask
 [Install MetaMask as a browser extension or mobile app](https://metamask.io/download/) to get started.
 
-## 2. Add the L1 Testnet to MetaMask
+## 2. Add the L2 Testnet to MetaMask
 To connect to the UniFi Helder Testnet, follow these steps:
 
 1. Open MetaMask and click on the network dropdown.
@@ -21,18 +21,12 @@ To connect to the UniFi Helder Testnet, follow these steps:
 3. Enter the following details:
    - **Network Name**: `UniFiHelder`
    - **New RPC URL**: `https://rpc.preconf-unifi.xyz/`
-   - **Chain ID**: `167200`
+   - **Chain ID**: `16700`
    - **Currency Symbol**: `testETH`
    - **Block Explorer URL**: `https://explorer.preconf-unifi.xyz/`
 
-## 3. Get L1 Testnet Tokens
+## 3. Get L2 Testnet Tokens
 You will need testnet tokens to interact with the UniFi Rollup. You can acquire them by using the [Telegram Faucet Bot](https://t.me/unfitestnetfaucet_bot).
-
-## 4. Bridge Tokens from L1 Testnet to UniFi L2
-Once you have testnet tokens, you can bridge them to the UniFi Rollup using the [UniFi Bridge](https://bridge.preconf-unifi.xyz/).
-
-- Visit the bridge link and connect your MetaMask wallet.
-- Follow the instructions on-screen to complete the bridging process.
 
 ## Additional Resources
 - [MetaMask Support](https://support.metamask.io)

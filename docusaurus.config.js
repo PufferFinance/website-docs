@@ -67,12 +67,14 @@ module.exports = {
       },
       items: [
         {
-          to: "/",
+          type: "doc",
+          docId: "intro",
           label: "Users",
           position: "left",
         },
         {
-          to: "/developers/getting-started/index",
+          type: "doc",
+          docId: "developers/getting-started/index",
           label: "Developers",
           position: "left",
         },
