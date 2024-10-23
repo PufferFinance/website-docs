@@ -18,7 +18,7 @@ const sidebars = {
 
   // But you can create a sidebar manually
 
-  background: [
+  docSidebar: [
     "intro",
     {
       type: "category",
@@ -50,9 +50,10 @@ const sidebars = {
       items: ["deployed-contracts", "multisig"],
     },
     {
+      // how to bridge and fund wallet etc
       type: "category",
       label: "UniFi Based Rollup",
-      items: ["unifi-rollup-intro"],
+      items: ["unifi-rollup-intro", "unifi-rollup-bridge"],
     },
     {
       type: "category",
@@ -68,6 +69,66 @@ const sidebars = {
       type: "category",
       label: "Reference",
       items: ["glossary", "hardforks", "slash", "faq", "cookie-policy", "privacy-policy", "terms-of-service"]
+    }
+  ],
+  developersSidebar: [
+    {
+      type: "doc",
+      label: "Getting started",
+      id: "developers/getting-started/index",
+    },
+    {
+      type: "category",
+      label: "UniFi Based Rollup",
+      link: {
+        type: "doc",
+        id: "developers/rollup/index",
+      },
+      items:[
+        {
+          type: "category",
+          label: "Deploy a Smart Contract",
+          link: {
+            type: "generated-index",
+          },
+          items: [
+            {
+              type: "doc", 
+              label: "Using Foundry",
+              id: "developers/rollup/smart-contracts/unifi-rollup-smart-contracts-foundry",
+            },
+            {
+              type: "doc", 
+              label: "Using Hardhat",
+              id: "developers/rollup/smart-contracts/unifi-rollup-smart-contracts-hardhat",
+            }
+          ]
+        },
+        {
+          type: "category",
+          label: "Reference",
+          link: {
+            type: "generated-index",
+          },
+          items: [
+            {
+              type: "doc",
+              label: "RPC Endpoints",
+              id: "developers/reference/rpc-endpoints",
+            },
+            {
+              type: "doc",
+              label: "Smart Contract Addresses",
+              id: "developers/reference/contract-addresses",
+            },
+            {
+              type: "doc",
+              label: "Opcodes",
+              id: "developers/reference/opcodes",
+            },
+          ]
+        }
+      ]
     }
   ]
 };

@@ -67,6 +67,16 @@ module.exports = {
       },
       items: [
         {
+          to: "/",
+          label: "Users",
+          position: "left",
+        },
+        {
+          to: "/developers/getting-started/index",
+          label: "Developers",
+          position: "left",
+        },
+        {
           href: "https://www.puffer.fi/",
           label: "Puffer.fi",
           position: "right",
