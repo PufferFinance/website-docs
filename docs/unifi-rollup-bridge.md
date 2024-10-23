@@ -20,10 +20,10 @@ To connect to the UniFi Helder Testnet, follow these steps:
 2. Select **Add network** → **Add a network manually**.
 3. Enter the following details:
    - **Network Name**: `UniFiHelder`
-   - **New RPC URL**: `https://rpc.preconf-unifi.xyz/`
+   - **New RPC URL**: `{PLACEHOLDER}`
    - **Chain ID**: `16700`
    - **Currency Symbol**: `testETH`
-   - **Block Explorer URL**: `https://explorer.preconf-unifi.xyz/`
+   - **Block Explorer URL**: `{PLACEHOLDER}`
 
 ## 3. Get L2 Testnet Tokens
 You will need testnet tokens to interact with the UniFi Rollup. You can acquire them by using the [Telegram Faucet Bot](https://t.me/unfitestnetfaucet_bot).

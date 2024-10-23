@@ -4,12 +4,12 @@ slug: /developers/rollup/reference/rpc-endpoints
 ---
 
 ## L1 Endpoints
-<p>L1 RPC endpoint: http://rpc.preconf-unifi.xyz/</p>
-<p>L1 Block explorer: https://explorer.preconf-unifi.xyz/</p>
+<p>L1 RPC endpoint: {PLACEHOLDER}</p>
+<p>L1 Block explorer: {PLACEHOLDER}</p>
 
 ## L2 Endpoints
-<p>L2 RPC endpoint: http://rpc.preconf-unifi.xyz/</p>
-<p>L2 Block explorer: https://explorer.preconf-unifi.xyz/</p>
+<p>L2 RPC endpoint: {PLACEHOLDER}</p>
+<p>L2 Block explorer: {PLACEHOLDER}</p>
 
 ## UniFi JSON-RPC API
 The JSON-RPC supports all Ethereum methods. In addition to that, several custom RPC endpoints have been are available in UniFi Rollup:
