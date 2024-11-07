@@ -30,4 +30,4 @@ slug: /developers/rollup/reference/contract-addresses
 | Bridge                      | 0x511a232eaef7aA4633BAc8E406a7886e46492AFC |
 | Signal Service              | 0x80d0AFe646Ba22e5E557F1dCC209e75b07e1b1BA |
 | Rollup Address Manager      | 0x91e75542D9da7C52089b71094e327307C51D6deD |
-| Shared Address Manager Impl | 0x6a23ea44177735E3700721817A181375A8afdb47 |
+| Shared Address Manager      | 0x251724F9AD5F23CdF8b9d63cb7c372462F834319 |
