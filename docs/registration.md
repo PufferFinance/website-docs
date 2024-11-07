@@ -72,7 +72,7 @@ scp your-server@XX.XXX.XXX.XX:/path/to/coral/registration.json ~/my/local/comput
 ### Step 5: Await Provisioning
 The Guardians will provision pending validators when there is 32 ETH of liquidity in the PufferVault. 
 
-Invalid registrations will be skipped by the Guardians. The NoOp's bond will be returned but their VTs are penalized to prevent griefing.  
+Invalid registrations will be skipped by the Guardians. The NoOp's bond will be returned but 10 VTs will be penalized to prevent griefing.  
 
 ### Step 6: Prepare your Validator
 Import your validator keys to your beacon/validator client. 
