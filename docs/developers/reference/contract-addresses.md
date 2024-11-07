@@ -17,7 +17,7 @@ slug: /developers/rollup/reference/contract-addresses
 | Bridge                    | [0x81bfCf0f7196C1772279846625F619f691755120](https://holesky.etherscan.io/address/0x81bfCf0f7196C1772279846625F619f691755120) |
 | Prover Set                | [0x3a4e7187720420FF208AfC4EA2602d3DE2C80E1d](https://holesky.etherscan.io/address/0x3a4e7187720420FF208AfC4EA2602d3DE2C80E1d) |
 | Signal Service            | [0x60646983250313B750D3657C648823d665305299](https://holesky.etherscan.io/address/0x60646983250313B750D3657C648823d665305299) |
-| UniFi Token               | [0x4543168F4C5b3EcDdeF36E15DbCD6914e3f585BD](https://holesky.etherscan.io/address/0x4543168F4C5b3EcDdeF36E15DbCD6914e3f585BD) |
+| PUFFER Token              | [0x4543168F4C5b3EcDdeF36E15DbCD6914e3f585BD](https://holesky.etherscan.io/address/0x4543168F4C5b3EcDdeF36E15DbCD6914e3f585BD) |
 | TDXVerifier               | [0x7c2B88Bb08467669e6ee3ed604f07aB0D5E78F1a](https://holesky.etherscan.io/address/0x7c2B88Bb08467669e6ee3ed604f07aB0D5E78F1a) |
 | GuardianProver            | [0xdE0e5FefE21af1C46F63c0Ee6381b512B95085F7](https://holesky.etherscan.io/address/0xdE0e5FefE21af1C46F63c0Ee6381b512B95085F7) |
 | GuardianProverMinority    | [0x51940246968853F696ab7761eA5Af86c542C0894](https://holesky.etherscan.io/address/0x51940246968853F696ab7761eA5Af86c542C0894) |
