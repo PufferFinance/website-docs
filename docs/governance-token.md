@@ -37,8 +37,8 @@ vePUFFER is a novel ve (voting escrow) governance mechanism implemented as an ER
 Key features of vePUFFER:
 - Users stake PUFFER tokens to mint vePUFFER NFTs
 - Voting power accrues over time as long as PUFFER remains staked
-- No fixed lockup duration is required
-- Users can unstake their PUFFER at any time
+- No fixed lockup duration is required (OTHER THAN 60 DAY EXIT QUEUE) 
+- Users can unstake their PUFFER at any time after 60 days.
 
 #### How is vePUFFER different from other ve tokens?
 
