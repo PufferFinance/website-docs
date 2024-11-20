@@ -79,7 +79,7 @@ To change your rewards claimer address on Base, a Node Operator should follow th
 2. Select `New transaction`
 3. Select `Transaction Builder`
 ![alt text](../static/img/change-address-23.png)
-4. Enter the L1RewardManager contract implementation address: [0xbf11b5a0d7adeb5c1f2f3dbb85169594aa90c467](https://etherscan.io/address/0xbf11b5a0d7adeb5c1f2f3dbb85169594aa90c467)
+4. Enter the L1RewardManager contract proxy address: [0x157788cc028Ac6405bD406f2D1e0A8A22b3cf17b](https://etherscan.io/address/0x157788cc028Ac6405bD406f2D1e0A8A22b3cf17b)
 ![alt text](../static/img/change-address-4.png)
 
 5. Select `Use Implementation ABI`
