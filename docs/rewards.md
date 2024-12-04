@@ -25,7 +25,7 @@ The protocol receives rewards from the [validator tickets](/protocol/validator-t
 - They get fees for doing [their jobs](/protocol/guardians#what-are-their-duties) and to help with their gas costs.
 
 #### **Puffer Protocol**
-- It gets a fee to support its growth and to give the governance token more [utility](/protocol/governance).
+- It gets a fee to support its growth and to give the governance token more [utility](/governance/mission).
 
 ### Rewards Breakdown
 #### Consensus Rewards
