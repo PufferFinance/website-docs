@@ -42,7 +42,7 @@ const sidebars = {
     {
       type: "category",
       label: "Node Operators",
-      items: ["requirements", "setup", "registration", "noop-rewards", "ejection-scenarios"],
+      items: ["requirements", "setup", "registration", "noop-rewards", "purchase-vts", "ejection-scenarios"],
     },
     {
       type: "category",
