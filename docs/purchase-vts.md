@@ -3,7 +3,7 @@ title: How to Purchase VTs
 slug: /nodes/purchase-vts
 ---
 
-Validator Tickets are ERC20 tokens that grant the holder the right to run a staker-funded Ethereum validator for a day. VTs are minted by ETH deposits. This ETH goes towards compensating pufETH holders for financing validators.
+Validator Tickets are ERC20 tokens that grant the holder the right to run a staker-funded Ethereum validator for a day. Each validator consumes one VT ticket per day.
 
 There are two ways to purchase VTs:
 
@@ -29,17 +29,17 @@ There are two ways to purchase VTs:
 
 ## Purchase VTs by Directly Calling the Smart Contract
 
-We will use Safe as an example for calling the smart contract function.
+You can use Safe or any other wallet/tool that allows direct contract interactions.
 
 1. Check the rate of `pufETH` to Validator Tickets on [Puffer Launchpad](https://launchpad.puffer.fi/Purchase). Based on the rate, decide how much `pufETH` you want to spend to purchase VTs.
 
    ![Rate](../static/img/purchase-vt-4-pufeth-vt-rate.png)
 
-2. Create a transaction to approve `pufETH` (`0xD9A442856C234a39a81a089C06451EBAa4306a72`) to be used by the `ValidatorTicket` contract (`0x7D26AD6F6BA9D6bA1de0218Ae5e20CD3a273a55A`).
+2. Create a transaction to **approve** `pufETH` (`0xD9A442856C234a39a81a089C06451EBAa4306a72`) to be used by the `ValidatorTicket` contract (`0x7D26AD6F6BA9D6bA1de0218Ae5e20CD3a273a55A`).
 
    ![Approve pufETH](../static/img/purchase-vt-5-approve-tx.png)
 
-3. Create a transaction to call the `purchaseValidatorTicketWithPufETH` function of the `ValidatorTicket` contract (`0x7D26AD6F6BA9D6bA1de0218Ae5e20CD3a273a55A`).
+3. Create a transaction to **call** the `purchaseValidatorTicketWithPufETH` function of the `ValidatorTicket` contract (`0x7D26AD6F6BA9D6bA1de0218Ae5e20CD3a273a55A`).
 
    ![Purchase VTs](../static/img/purchase-vt-6-purchase-tx.png)
 
