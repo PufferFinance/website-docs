@@ -1,5 +1,5 @@
 ---
-title: Governance Roadmap
+title: Roadmap
 slug: /governance/roadmap
 ---
 
