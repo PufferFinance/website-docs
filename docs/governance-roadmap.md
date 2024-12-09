@@ -21,7 +21,7 @@ Throughout all phases, we remain committed to:
   - This action initiates the accrual of voting power necessary for future governance participation
 - Opening of the [governance forum](https://governance.puffer.fi) for community discussions
 - Implementation of [off-chain voting mechanisms](https://vote.puffer.fi) for initial community input
-- Launch initial proposals to whitelist AVSs
+- Launch initial proposals for whitelisting AVSs
 
 ## Phase 1: vePUFFER Utility Expansion
 

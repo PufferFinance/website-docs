@@ -4,7 +4,7 @@ slug: /governance/mission
 ---
 
 ### Our Vision
-At Puffer, we envision a decentralized financial ecosystem that empowers users, fosters innovation, and upholds Ethereum's core principles. Puffer has always strived to preserve what we believe to be Ethereum's most important value - decentralization. This is why our ecosystems have been about fostering permissionless validator operations.
+At Puffer, we envision a decentralized financial ecosystem that empowers users, fosters innovation, and upholds Ethereum's core principles. Puffer has always striven to preserve what we believe to be Ethereum's most important value - decentralization. This is why our ecosystem has been about fostering permissionless validator operations.
 
 To embody these principles of decentralization within our own protocol, we're transitioning to a Decentralized Autonomous Organization (DAO). This move ensures that the future of Puffer is shaped not by a centralized authority, but by our community of token holders and ecosystem participants. Through the DAO, we're not just advocating for decentralization – we're living it, allowing our governance to reflect the very values we seek to promote in the broader Ethereum ecosystem.
 
