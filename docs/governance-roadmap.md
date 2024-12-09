@@ -23,7 +23,19 @@ Throughout all phases, we remain committed to:
 - Implementation of [off-chain voting mechanisms](https://vote.puffer.fi) for initial community input
 - Launch initial proposals to whitelist AVSs
 
-## Phase 1: On-Chain Voting
+## Phase 1: vePUFFER Utility Expansion
+
+- Full implementation of the vePUFFER model in collaboration with Aragon
+- Enhanced utility for vePUFFER holders:
+  - Boosted voting power based on lock duration
+  - Gauges for AVS allocations
+  - Potential for additional protocol rewards or benefits
+- Launch initial incentive gauges
+- Rollout initial governance processes
+- Refinement of governance mechanisms based on community feedback
+- Exploration of cross-protocol governance opportunities within the UniFi ecosystem
+
+## Phase 2: On-Chain Voting
 
 - Transition from off-chain to on-chain voting mechanisms
 - Implementation of smart contracts for governance proposals and voting
@@ -32,19 +44,9 @@ Throughout all phases, we remain committed to:
   - Puffer LRT: Adjusting protocol parameters, fees, and limits
   - UniFi AVS: Managing fee structures and whitelisting new rollups
   - UniFi Rollup: Setting fee parameters and directing ecosystem rewards
-- Introduction of more complex decision-making processes
+- Introduction of more complex governance decision-making processes
 - Launch of the UniFi Grants Program
   - Community-driven initiative to fund projects contributing to the UniFi ecosystem 
-
-## Phase 2: vePUFFER Utility Expansion
-
-- Full implementation of the vePUFFER model in collaboration with Aragon
-- Enhanced utility for vePUFFER holders:
-  - Boosted voting power based on lock duration
-  - Gauges for AVS allocations
-  - Potential for additional protocol rewards or benefits
-- Refinement of governance mechanisms based on community feedback
-- Exploration of cross-protocol governance opportunities within the UniFi ecosystem
 
 ## Phase 3: Protocol Ossification
 - Transition towards a fully autonomous and self-sustaining governance model
