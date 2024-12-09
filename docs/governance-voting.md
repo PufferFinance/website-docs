@@ -3,14 +3,26 @@ title: Voting
 slug: /governance/voting
 ---
 
-Voting will occur on the [Puffer Governance Hub](https://vote.puffer.fi) and requires you to have staked vePUFFER. See the [vePUFFER](governance-token.md#what-is-vepuffer) section for more information.
+This guide contains everything you need to get started with voting in Puffer Governance. Voting will occur on the [Puffer Voting Platform](https://vote.puffer.fi) and requires you to have staked vePUFFER. See the [vePUFFER](governance-token.md#what-is-vepuffer) section for more information.
+
+To participate in Puffer Governance, you will need:
+
+- A crypto wallet that supports Ethereum mainnet
+- [PUFFER](https://etherscan.io/address/0x4d1c297d39c5c1277964d0e3f8aa901493664530) tokens to mint vePUFFER, which will be explained below
+- ETH to cover for transaction costs
 
 ## Minting vePUFFER
 :::note
 Instructions are subject to change.
 :::
-To mint vePUFFER, first claim your PUFFER tokens from the official [claims page](https://claims.puffer.fi).
-![alt text](/img/token-claim.png)
+
+To mint vePUFFER, you must have PUFFER tokens which you can get from:
+
+- Puffer's official [claims page](https://claims.puffer.fi) if you have been allocated some in Season 1
+- [Uniswap](https://app.uniswap.org/explore/tokens/ethereum/0x4d1c297d39c5c1277964d0e3f8aa901493664530) to purchase some from existing Uniswap liquidity pools
+
+
+![Puffer's official claims page](/img/token-claim.png)
 
 Once you have claimed your tokens, you will need to approve the [vePUFFER contract](https://etherscan.io/address/0xA55eD5808aeCDF23AE3782C1443185f5D2363ce7) to spend your [PUFFER tokens](https://etherscan.io/address/0x4d1C297d39C5c1277964D0E3f8Aa901493664530). Your vePUFFER voting power will start proportional to the amount of PUFFER you stake and increase the longer you hold the NFT.
 
