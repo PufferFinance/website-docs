@@ -7,7 +7,7 @@ slug: /protocol/validator-tickets
 Validator Tickets are Puffer's novel addition to the validator lifecycle in LSTs.
 :::
 
-**Validator Tickets** are the evolution to Puffer's initial "[Smoothing Commitment](https://ethresear.ch/t/validator-smoothing-commitments/17356)" research collaboration with [Justin Drake](https://twitter.com/drakefjustin), and are closely related to the recent "[Execution Tickets](https://ethresear.ch/t/execution-tickets/17944)" proposal that was [added to Ethereum's roadmap](https://x.com/VitalikButerin/status/1741190491578810445?s=20).
+**Validator Tickets** are the evolution to Puffer's initial "[Smoothing Commitment](https://ethresear.ch/t/validator-smoothing-commitments/17356)" research collaboration with [Justin Drake](https://x.com/drakefjustin), and are closely related to the recent "[Execution Tickets](https://ethresear.ch/t/execution-tickets/17944)" proposal that was [added to Ethereum's roadmap](https://x.com/VitalikButerin/status/1741190491578810445?s=20).
 
 ### Overview
 

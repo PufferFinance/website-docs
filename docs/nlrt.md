@@ -27,7 +27,7 @@ Fundamentally, an nLRT is an LST that delivers traditional PoS rewards and boost
 
 nLRTs generate their restaking rewards through [native restaking](https://docs.eigenlayer.xyz/restaking-guides/restaking-user-guide/#liquid-vs-native-restaking) on Eigenlayer, where Ethereum PoS validator ETH is the staked asset. This sets them apart from Liquid Restaking Tokens (LRTs). An LRT tokenizes restaked LSTs within a Liquid Restaking Protocol (LRP). While the LRP yields rewards from restaking services, these are distinct from PoS rewards.
 
-Although the core concept aligns with LSTs, LRTs focus solely on rewards from restaking services. At Puffer, we've observed that LRTs might intensify the [decentralization challenges](https://twitter.com/dannyryan/status/1688644951230267392?s=46&t=bsdBaPIHlTHEWDDdVUJW4g) associated with LSTs in Ethereum. In contrast, nLRTs actively promote decentralization, integrating new validators into PoS while also enhancing their profitability. Importantly, this is why Puffer has been dedicated to launching with a permissionless validator set from day one.
+Although the core concept aligns with LSTs, LRTs focus solely on rewards from restaking services. At Puffer, we've observed that LRTs might intensify the [decentralization challenges](https://x.com/dannyryan/status/1688644951230267392?s=46&t=bsdBaPIHlTHEWDDdVUJW4g) associated with LSTs in Ethereum. In contrast, nLRTs actively promote decentralization, integrating new validators into PoS while also enhancing their profitability. Importantly, this is why Puffer has been dedicated to launching with a permissionless validator set from day one.
 
 ### pufETH
 
