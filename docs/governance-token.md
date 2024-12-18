@@ -5,7 +5,7 @@ slug: /governance/token
 
 # $PUFFER Token
 
-The PUFFER token  is the native governance token of the Puffer Protocol and UniFi ecosystem.
+The PUFFER token is the native governance token of the Puffer Protocol and UniFi ecosystem.
 
 ### The Role of [$PUFFER](https://etherscan.io/address/0x4d1C297d39C5c1277964D0E3f8Aa901493664530)
 
