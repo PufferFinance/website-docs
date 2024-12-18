@@ -9,7 +9,7 @@ Puffer allows Validators to get native restaking exposure to earn more than they
 
 
 ### Native restaking 🥩
-A *native restaker* is an Ethereum PoS validator that restakes their 32 ETH to operate Eigenlayer [AVSs](https://docs.eigenlayer.xyz/overview/key-terms). Native restakers are awarded AVS fees in exchange for their service, but are subject to penalties if they break the AVS's rules. To engage in native restaking, validators must point their [withdrawal credentials](/reference/glossary/#withdrawal-credentials) to an [EigenPod](https://github.com/Layr-Labs/eigenlayer-contracts/blob/master/docs/core/EigenPodManager.md#eigenpodmanager) contract which then opts-in to restaking and chooses its AVSs.
+A *native restaker* is an Ethereum PoS validator that restakes their 32 ETH to operate EigenLayer [AVSs](https://docs.eigenlayer.xyz/overview/key-terms). Native restakers are awarded AVS fees in exchange for their service, but are subject to penalties if they break the AVS's rules. To engage in native restaking, validators must point their [withdrawal credentials](/reference/glossary/#withdrawal-credentials) to an [EigenPod](https://github.com/Layr-Labs/eigenlayer-contracts/blob/master/docs/core/EigenPodManager.md#eigenpodmanager) contract which then opts-in to restaking and chooses its AVSs.
 
 Native restaking allows validators to better utilize their ETH capital and hardware to supplement their PoS rewards. However, the 32 ETH requirement is too high a barrier for most to participate. Additionally, some AVSs may require far greater computational requirements than what is expected from PoS. Puffer aims to address this through its PufferModules. 
 
