@@ -51,11 +51,6 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "UniFi Based Rollup",
-      items: ["unifi-rollup-intro"],
-    },
-    {
-      type: "category",
       label: "UniFi AVS",
       items: ["unifi-avs-intro", "unifi-avs-background", "unifi-avs-protocol", "unifi-avs-getting-started"],
     },
