@@ -101,7 +101,7 @@ You can change your vote at any point in time before the voting epoch ends.
 
 :::
 
-Once you are satisifed with your choices, click on **Submit votes** to submit your vote by way of signing a gasless transaction. This will not cost you any ETH at this point. You will then be shown the following notification if your vote has been registered.
+Once you are satisfied with your choices, click on **Submit votes** to submit your vote by way of signing a gasless transaction. This will not cost you any ETH at this point. You will then be shown the following notification if your vote has been registered.
 
 <img src="/img/governance-gauges-vote-successful.png" height="150" alt="Gauges vote successful"></img>
 
