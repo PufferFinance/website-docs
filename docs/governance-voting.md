@@ -5,18 +5,26 @@ slug: /governance/voting
 
 Voting will occur on the [Puffer Governance Hub](https://vote.puffer.fi) and requires you to have staked vePUFFER. See the [vePUFFER](governance-token.md#what-is-vepuffer) section for more information.
 
-## Minting vePUFFER
-:::note
-Instructions are subject to change.
-:::
-To mint vePUFFER, first claim your PUFFER tokens from the official [claims page](https://claims.puffer.fi).
-![alt text](/img/token-claim.png)
+## Staking PUFFER for vePUFFER
 
-Once you have claimed your tokens, you will need to approve the [vePUFFER contract](https://etherscan.io/address/0xA55eD5808aeCDF23AE3782C1443185f5D2363ce7) to spend your [PUFFER tokens](https://etherscan.io/address/0x4d1C297d39C5c1277964D0E3f8Aa901493664530). Your vePUFFER voting power will start proportional to the amount of PUFFER you stake and increase the longer you hold the NFT.
+In order for you to stake your PUFFER, you must first have at least 70 PUFFER tokens as outlined in the [vePUFFER parameters](governance-token.md#vepuffer-parameters). You can get PUFFER tokens from:
 
-:::note
-The minimum stake amount is 70 PUFFER as outlined in the [vePUFFER parameters](governance-token.md#vepuffer-parameters).
-:::
+- The official [claims page](https://claims.puffer.fi) if you are eligible for any of the campaigns.
+- A decentralized exchange, such as [Uniswap](https://app.uniswap.org/explore/tokens/ethereum/0x4d1c297d39c5c1277964d0e3f8aa901493664530).
+- A centralized exchange, such as [Bybit](https://www.bybit.com/en/trade/spot/PUFFER/USDT), [Bitget](https://www.bitget.com/spot/PUFFERUSDT), [Kraken](https://pro.kraken.com/app/trade/puffer-usd) and [many more](https://coinmarketcap.com/currencies/puffer/#Markets).
+
+![Puffer Governance Hub's staking page](/img/governance-stake.png)
+
+When you have your tokens, you will need to go to the [staking page](https://vote.puffer.fi/plugins/stake/) on our Puffer Governance Hub to stake your PUFFER tokens to receive voting power.
+
+If this is your first time staking your PUFFER tokens, you may be asked to approve the [vePUFFER contract](https://etherscan.io/address/0xA55eD5808aeCDF23AE3782C1443185f5D2363ce7) to spend your [PUFFER tokens](https://etherscan.io/address/0x4d1C297d39C5c1277964D0E3f8Aa901493664530). This is a required step before you can actually stake your PUFFER tokens. You can only stake your PUFFER tokens after the approval is given.
+
+We use the voting escrow (ve) model where your PUFFER tokens are locked up in an ERC-721 NFT that represents a receipt of your PUFFER tokens locked up for governance purposes - this is what we refer to as vePUFFER. Once you have the vePUFFER token in your wallet, your voting power will start to accrue over time, according to the current [vePUFFER parameters](governance-token.md#vepuffer-parameters):
+
+- Initially at a 1x multiplier, i.e. your vePUFFER voting power will be proportional to the amount of PUFFER you stake.
+- Up to a maximum of 2x multiplier at the end of two years.
+
+
 ![alt text](/img/token-approve.png)
 
 Once you have approved the vePUFFER contract, you can stake your PUFFER tokens. The vePUFFER NFT will be sent to your wallet.
