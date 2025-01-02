@@ -3,34 +3,37 @@ title: PUFFER Token
 slug: /governance/token
 ---
 
-# $PUFFER Token
+# PUFFER Token
 
-The PUFFER token  is the native governance token of the Puffer Protocol and UniFi ecosystem.
+The PUFFER token is the native governance token of the Puffer Protocol and UniFi ecosystem.
 
-### The Role of [$PUFFER](https://etherscan.io/address/0x4d1C297d39C5c1277964D0E3f8Aa901493664530)
+## The Role of [PUFFER](https://etherscan.io/address/0x4d1C297d39C5c1277964D0E3f8Aa901493664530)
 
-#### Puffer LRT
+<img src="/img/governance-puffer-dao-overview.webp" height="350" alt="Puffer DAO overview"></img>
+
+### Puffer LRT
 - Govern key protocol parameters (fees, limits, bond requirements)
 - Select guardians and restaking operators
 - Curate supported AVSs
 - Future feature: Help allocate ETH to different operators and AVSs (more details coming soon)
 
-#### UniFi AVS
+### UniFi AVS
 - Manage fee structures
 - Whitelist new rollups for AVS support
 - Oversee AVS security parameters
 - Guide the integration of new preconfirmation and proposer commitment services
 
-#### UniFi Rollup
+### UniFi Rollup
 - Set fee parameters for rollup transactions
 - Direct ecosystem rewards to promote adoption
 - Manage treasury funds for long-term sustainability
 - Steer rollup upgrade decisions and feature prioritization
 
-### [vePUFFER](https://etherscan.io/address/0xA55eD5808aeCDF23AE3782C1443185f5D2363ce7)
+## [vePUFFER](https://etherscan.io/address/0xA55eD5808aeCDF23AE3782C1443185f5D2363ce7)
 
-#### What is vePUFFER?
-![alt text](/img/vePuffer.png)
+### What is vePUFFER?
+
+<img src="/img/governance-puffer-ve-model.webp" height="350" alt="Puffer voting escrow model overview"></img>
 
 vePUFFER is a novel ve (voting escrow) governance mechanism implemented as an ERC-721 token, developed in collaboration with [Aragon](https://aragon.org/). It's designed to align with Puffer's long-term goal of fostering value-aligned and committed participants in the ecosystem.
 
@@ -40,7 +43,7 @@ Key features of vePUFFER:
 - No fixed lockup duration is required
 - Users can unstake their PUFFER at any time
 
-#### How is vePUFFER different from other ve tokens?
+### How is vePUFFER different from other ve tokens?
 
 vePUFFER builds on learnings from protocols like Curve and Prisma, but introduces several key innovations:
 
@@ -51,10 +54,10 @@ vePUFFER builds on learnings from protocols like Curve and Prisma, but introduce
 - **Incentivizes long-term engagement:** The accruing voting power mechanism rewards users for sustained participation in the protocol.
 - **Flexible stake management:** Users can adjust their stake based on personal or market conditions while still participating in governance.
 
-#### How is vePUFFER used?
+### How is vePUFFER used?
 vePUFFER is used for voting within the ecosystem. To start participating in governance, users will stake PUFFER to mint a vePUFFER NFT which will begin accruing voting power on a weekly cadence. After the warmup period, they will be able to begin voting. This mechanism empowers users to actively shape the future of the Puffer ecosystem through voting rights, kickstarting true decentralization and community-led governance within the Puffer ecosystem.
 
-#### vePUFFER Parameters
+### vePUFFER Parameters
 The following parameters are the initial vePUFFER parameters. They can be changed by the PUFFER community through future governance proposals.
 
 | Category | Name | Description | Value |
@@ -67,7 +70,7 @@ The following parameters are the initial vePUFFER parameters. They can be change
 | Exit Queue | Exit Fee Percent | Tax paid in the underlying token on exit. | 0% |
 | Escrow | Minimum Deposit | Number of PUFFER tokens a user must deposit as a minimum. | 70 PUFFER |
 
-### PUFFER Allocations
+## PUFFER Allocations
 
 Total Supply: 1,000,000,000
 
