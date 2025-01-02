@@ -76,7 +76,9 @@ The proposal passes unless rejections outnumber approvals after the voting perio
 
 ### Voting on Incentive Gauges
 
-An incentive gauge is a type of proposal where it is used to direct incentives, such as to various DeFi protocols. To direct incentives, simply go to the [Gauges](https://vote.puffer.fi/plugins/gauges/) tab.
+An incentive gauge is a type of proposal where it is used to direct incentives, such as to various DeFi protocols. These DeFi protocols compete for a share of incentives, which is allocated based on the percentage of votes earned.
+
+To direct incentives, simply go to the [Gauges](https://vote.puffer.fi/plugins/gauges/) tab.
 
 Like proposals, you can only vote on incentive gauges when there is an active voting epoch. You can see whether there is an active voting epoch in the Gauges tab, and a timer will be shown on the deadline to vote.
 
@@ -103,4 +105,4 @@ Once you are satisifed with your choices, click on **Submit votes** to submit yo
 
 <img src="/img/governance-gauges-vote-successful.png" height="150" alt="Gauges vote successful"></img>
 
-Voting results will be tallied after the conclusion of every voting epoch.
+Voting results will be tallied after the conclusion of every voting epoch. The rewards will be distributed through [Puffer DeFi](https://defi.puffer.fi), and only if you are a participant of the eligible pools.
