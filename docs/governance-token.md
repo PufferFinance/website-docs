@@ -63,9 +63,9 @@ The following parameters are the initial vePUFFER parameters. They can be change
 
 | Category | Name | Description | Value |
 |----------|------|-------------|--------|
-| Voting Power Curve | Max Multiplier | Maximum boost on initial deposit that will be reached if a user leaves staked tokens in, indefinitely. | 2x |
-| Voting Power Curve | Max Duration | The time it takes to reach the max multiplier following a linear increasing curve .| 2 years |
-| Voting Power Curve | Warmup Period | Time after locking in which a user can vote. | 3 days |
+| Voting Power Curve | Max Multiplier | Maximum boost on initial deposit that will be reached if a user leaves staked tokens as vePUFFER indefinitely. | 2x |
+| Voting Power Curve | Max Duration | The time it takes to reach the max multiplier following a linear increasing curve. | 2 years |
+| Voting Power Curve | Warmup Period | Minimum time that must have elapsed after staking in which a user can vote. | 3 days |
 | Exit Queue | Cooldown | Cooldown is the period between the user entering the exit queue and being able to withdraw the underlying tokens. They do not have voting power at this time as their NFT is held in the staking contract. | 1 month |
 | Exit Queue | Min Lock | Min amount of time a staker must hold before they can begin the exit process. | 1 Month |
 | Exit Queue | Exit Fee Percent | Tax paid in the underlying token on exit. | 0% |
