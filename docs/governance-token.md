@@ -33,15 +33,16 @@ The PUFFER token is the native governance token of the Puffer Protocol and UniFi
 
 ### What is vePUFFER?
 
-<img src="/img/governance-puffer-ve-model.webp" height="350" alt="Puffer voting escrow model overview"></img>
+<img src="/img/governance-puffer-ve-model.webp" height="600" alt="Puffer voting escrow model overview"></img>
 
 vePUFFER is a novel ve (voting escrow) governance mechanism implemented as an ERC-721 token, developed in collaboration with [Aragon](https://aragon.org/). It's designed to align with Puffer's long-term goal of fostering value-aligned and committed participants in the ecosystem.
 
-Key features of vePUFFER:
-- Users stake PUFFER tokens to mint vePUFFER NFTs
-- Voting power accrues over time as long as PUFFER remains staked
+Here are some key features of vePUFFER:
+
+- Users stake PUFFER tokens to mint vePUFFER NFTs in receipt of the staked PUFFER tokens
+- Voting power accrues over time as long as PUFFER remains staked as vePUFFER
 - No fixed lockup duration is required
-- Users can unstake their PUFFER at any time
+- Users can unstake their PUFFER at any time, to receive their original staked PUFFER amount
 
 ### How is vePUFFER different from other ve tokens?
 
