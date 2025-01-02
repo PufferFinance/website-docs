@@ -51,7 +51,7 @@ cargo run --bin coral-cli validator keygen --guardian-threshold 1 --module-name 
 
 ---
 #### Fetching the registration payload
-If you ran the Coral-CLI on a remote server you can fetch the registration payload by substituing your information in the following command:
+If you ran the Coral-CLI on a remote server you can fetch the registration payload by substituting your information in the following command:
 ```
 scp your-server@XX.XXX.XXX.XX:/path/to/coral/registration.json ~/my/local/computer/registration.json
 ```

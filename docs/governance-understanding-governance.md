@@ -38,7 +38,7 @@ The Puffer Governance Review Committee plays a critical role in assessing propos
 
 The minimum two-day review process ensures only quality proposals advance to the voting stage. The committee will:
 
-- Finalize and prepare aproved proposals for voting.
+- Finalize and prepare approved proposals for voting.
 - Request additional refinement from proposals authors, feedback included if required.
 - Archive any rejected proposals with documented reasons for transparency.
 

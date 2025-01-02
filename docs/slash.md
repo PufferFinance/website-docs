@@ -51,7 +51,7 @@ In the case of an inactivity leak, a validator will lose increasingly more ETH a
 
 > ### Inactivity Risk
 >
-> The PoS validator set will only eject inactive validators after their effective balance falls below 16 ETH. In a stake pool, an inactive node could lose $16 - B$ ETH of Staker capital at the cost of only $B$ ETH to themself. Without a means to perform automatic ejections, protocols have set their bonds to $B=16$ ETH to protect Stakers from losing capital.
+> The PoS validator set will only eject inactive validators after their effective balance falls below 16 ETH. In a stake pool, an inactive node could lose $16 - B$ ETH of Staker capital at the cost of only $B$ ETH to themselves. Without a means to perform automatic ejections, protocols have set their bonds to $B=16$ ETH to protect Stakers from losing capital.
 
 > Currently, the only way to withdraw a validator is by signing a VoluntaryExit message (VEM) with the validator key. In a permissioned pool where nodes are trusted, the problem of getting them to sign a VEM is easy; however, the node may go offline or refuse to sign the VEM in a permissionless pool.
 
