@@ -73,9 +73,9 @@ The following parameters are the initial vePUFFER parameters. They can be change
 
 ## PUFFER Allocations
 
-Total Supply: 1,000,000,000
+The PUFFER token has a maximum total supply of 1,000,000,000. As of writing, there is currently an initial circulating supply of 102,300,000 (10.23%) PUFFER tokens.
 
-Initial Supply: 102,300,000 (10.23%)
+In the table below, we have a breakdown of how the PUFFER tokens are allocated across the Puffer ecosystem.
 
 | Allocation | Percentage | Description |
 |------------|------------|-------------|
