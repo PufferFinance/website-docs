@@ -66,6 +66,11 @@ const sidebars = {
     },
     {
       type: "category",
+      label: "Campaigns",
+      items: ["campaigns-season-1", "campaigns-season-2"]
+    },
+    {
+      type: "category",
       label: "Reference",
       items: ["glossary", "hardforks", "slash", "faq", "cookie-policy", "privacy-policy", "terms-of-service"]
     }
