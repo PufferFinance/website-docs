@@ -27,7 +27,7 @@ The VT (Validator Tickets) consumption calculation is a critical process for man
 Basically 1 VT is consumed daily per validator.
 :::
 
-6. **Minimum VT Requirement Check**: The system checks if the present VT balance meets the minimum required VTs per validator. If the balance is below this threshold, the node operator's validators may be ejected to prevent further VT consumption.
+6. **Minimum VT Requirement Check**: The system checks if the present VT balance meets the minimum required VTs per validator. If the balance is below this threshold, **ALL** of the the node operator's validators will be ejected to prevent further VT consumption.
 
 ### When Do We Eject?
 
