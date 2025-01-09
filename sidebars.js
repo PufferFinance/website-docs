@@ -62,7 +62,7 @@ const sidebars = {
     {
       type: "category",
       label: "Governance",
-      items: ["governance-mission", "governance-understanding-governance", "governance-calendar", "governance-token", "governance-roadmap", "governance-voting"]
+      items: ["governance-mission", "governance-understanding-governance", "governance-calendar", "governance-token", "governance-voting", "governance-roadmap"]
     },
     {
       type: "category",
