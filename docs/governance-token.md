@@ -3,7 +3,7 @@ title: PUFFER Token
 slug: /governance/token
 ---
 
-# PUFFER Token
+# The PUFFER Token
 
 The PUFFER token is the native governance token of the Puffer Protocol and UniFi ecosystem.
 
@@ -59,19 +59,25 @@ vePUFFER builds on learnings from protocols like Curve and Prisma, but introduce
 vePUFFER is used for voting within the ecosystem. To start participating in governance, users will stake PUFFER to mint a vePUFFER NFT which will begin accruing voting power on a weekly cadence. After the warmup period, they will be able to begin voting. This mechanism empowers users to actively shape the future of the Puffer ecosystem through voting rights, kickstarting true decentralization and community-led governance within the Puffer ecosystem.
 
 ### vePUFFER Parameters
-The following parameters are the initial vePUFFER parameters. They can be changed by the PUFFER community through future governance proposals.
+The following parameters are the initial vePUFFER parameters. They can be changed by the Puffer community through future governance proposals.
 
 | Category | Name | Description | Value |
 |----------|------|-------------|--------|
 | Voting Power Curve | Max Multiplier | Maximum boost on initial deposit that will be reached if a user leaves staked tokens as vePUFFER indefinitely. | 2x |
 | Voting Power Curve | Max Duration | The time it takes to reach the max multiplier following a linear increasing curve. | 2 years |
-| Voting Power Curve | Warmup Period | Minimum time that must have elapsed after staking in which a user can vote. | 3 days |
+| Voting Power | Warmup Period | Minimum time that must have elapsed after staking in which a user can vote i.e. the vePUFFER becomes active. | 3 days |
+| Voting Power | Cutoff Time | Cutoff time for staking so that the vePUFFER becomes active by the voting epoch. If you stake after the cutoff time, your vePUFFER will not be active. | Sundays at 23:59:59 UTC |
+| Voting Epoch | Epoch Period | Epoch period for voting is the period in which a voting period is active for. | 7 days |
+| Voting Epoch | Start Time | Start time for all voting, including proposals and gauges, and all vePUFFER must be at least 3 days old at this time for it to become active. | Thursdays at 00:00:00 UTC |
 | Exit Queue | Cooldown | Cooldown is the period between the user entering the exit queue and being able to withdraw the underlying tokens. They do not have voting power at this time as their NFT is held in the staking contract. | 1 month |
-| Exit Queue | Min Lock | Min amount of time a staker must hold before they can begin the exit process. | 1 Month |
+| Exit Queue | Min Lock | Min amount of time a staker must hold before they can begin the exit process. | 1 month |
 | Exit Queue | Exit Fee Percent | Tax paid in the underlying token on exit. | 0% |
 | Escrow | Minimum Deposit | Number of PUFFER tokens a user must deposit as a minimum. | 70 PUFFER |
 
+
 ## PUFFER Allocations
+
+<img src="/img/governance-puffer-tokenomics.webp" height="350" alt="The $PUFFER tokenomics overview"></img>
 
 The PUFFER token has a maximum total supply of 1,000,000,000. As of writing, there is currently an initial circulating supply of 102,300,000 (10.23%) PUFFER tokens.
 
