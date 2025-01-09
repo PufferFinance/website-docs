@@ -7,7 +7,7 @@ slug: /campaigns/season-1
 
 Puffer’s Season 1 demonstrated our commitment to Ethereum’s decentralization and user empowerment. This inaugural campaign preceded our TGE, anchored by the Crunchy Carrot Quest, distributed rewards to bolster decentralization, enhance protocol collaboration, and onboard more participants to the Ethereum ecosystem through Puffer.
 
-## Crunchy Carrot Quest: Redefining Participation
+## Crunchy Carrot Quest
 
 The Crunchy Carrot Quest was our flagship incentive campaign in Season 1. By distributing Puffer Points across a carefully curated set of protocol partners, we encouraged activity in key areas of Ethereum’s infrastructure while rewarding meaningful contributions to decentralization. Participants could earn points through activities like restaking via EigenLayer, liquidity provisioning and engaging with partner protocols.
 
