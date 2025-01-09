@@ -15,6 +15,11 @@ The VT (Validator Tickets) consumption calculation is a critical process for man
 
 2. **Fetching VT Balance**: The current VT balance of the node operator is retrieved from the Puffer Protocol. This balance represents the total VTs available for consumption by the node operator's validators.
 
+:::note
+
+**Exited but Not Finalized Validators**: These are validators that have started the exit process from the beacon chain. Although they are no longer actively validating, the exit process is not fully complete until the bond is returned to the user. This stage is crucial as it ensures that validators are properly accounted for and that their resources are returned once all exit conditions are met.
+:::
+
 3. **Epoch and Validator Data Retrieval**: The latest epoch is fetched from the beacon chain, along with the list of active validators and those that have exited but not yet finalized. Active validators consume VTs daily, while exited validators may still consume VTs until they are fully finalized.
 
 4. **VT Consumption Calculation**:
@@ -75,4 +80,14 @@ curl -X 'GET' \
 ```
 
 This API provides real-time information about your VT status and validator health. Since the VT consumption is calculated per epoch the response is updated every epoch.
+
+:::warning Important Notice for Node Operators
+It is the responsibility of node operators to actively monitor their VT balance and ensure timely deposits. Do not wait until the last minute to deposit additional VTs, as this may lead to unwanted results. If your balance falls below the defined threshold, all validators associated with your node operator address will be ejected from the protocol.
+
+Best practices:
+- Regularly check your VT balance using the API
+- Set up monitoring alerts for low balance warnings
+- Plan VT deposits well in advance of depletion
+- Maintain a buffer above the minimum required balance
+:::
 
