@@ -9,7 +9,7 @@ This page is a guide to help you understand how Validator Tickets (VTs) are calc
 
 ### VT Consumption Calculation Summary
 
-The VT (Validator Tickets) consumption calculation is a critical process for managing node operators within the Puffer Protocol. This process ensures that node operators maintain sufficient VT balances to support their active and exiting validators. Here's a breakdown of how VT consumption is calculated:
+The VT (Validator Tickets) consumption calculation is a critical process for managing node operators within the Puffer Protocol. This process ensures that node operators maintain sufficient VT balances to support their active validators. Here's a breakdown of how VT consumption is calculated:
 
 1. **Node Operator Address Validation**: The process begins by validating the node operator's address to ensure it is in the correct format.
 
