@@ -3,7 +3,9 @@ title: Understanding Governance
 slug: /governance/understanding-governance
 ---
 
-# Governance Workflow
+# Understanding Governance
+
+In this article, we describe how governance works, and how proposals move along the pipeline, from the initial creation phase, to discussion and review by the community and the Puffer team, and finally, to the voting phase.
 
 <img src="/img/governance-workflow-model.webp" height="500" alt="Puffer"></img>
 
@@ -38,7 +40,7 @@ The Puffer Governance Review Committee plays a critical role in assessing propos
 
 The minimum two-day review process ensures only quality proposals advance to the voting stage. The committee will:
 
-- Finalize and prepare aproved proposals for voting.
+- Finalize and prepare approved proposals for voting.
 - Request additional refinement from proposals authors, feedback included if required.
 - Archive any rejected proposals with documented reasons for transparency.
 

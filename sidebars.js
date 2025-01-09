@@ -50,6 +50,11 @@ const sidebars = {
       items: ["deployed-contracts", "multisig"],
     },
     {
+      type: "link",
+      label: "UniFi",
+      href: 'https://docs-unifi.puffer.fi/',
+    },
+    {
       type: "category",
       label: "UniFi AVS",
       items: ["unifi-avs-intro", "unifi-avs-background", "unifi-avs-protocol", "unifi-avs-getting-started"],
@@ -57,7 +62,12 @@ const sidebars = {
     {
       type: "category",
       label: "Governance",
-      items: ["governance-mission", "governance-understanding-governance", "governance-token", "governance-roadmap", "governance-voting"]
+      items: ["governance-mission", "governance-understanding-governance", "governance-calendar", "governance-token", "governance-voting", "governance-roadmap"]
+    },
+    {
+      type: "category",
+      label: "Campaigns",
+      items: ["campaigns-season-1", "campaigns-season-2"]
     },
     {
       type: "category",
