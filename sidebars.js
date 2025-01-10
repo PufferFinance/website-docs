@@ -29,6 +29,7 @@ const sidebars = {
         "nlrt",
         "modules",
         "validator-tickets",
+        "validator-tickets-calculation",
         "rewards",
         "guardians",
         "burst-threshold",
