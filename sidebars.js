@@ -33,7 +33,6 @@ const sidebars = {
         "rewards",
         "guardians",
         "burst-threshold",
-        "purchase-vt-through-smart-contract",
       ],
     },
     {
