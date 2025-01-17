@@ -29,7 +29,7 @@ This cutoff aligns with the existing [vePUFFER parameters](./governance-token.md
 
 Staking before this cutoff, currently set to the Sunday 23:59:59 UTC before every voting epoch ensures voting power is activated when the voting epoch starts.
 
-### Voting Eochs
+### Voting Epochs
 
 The voting epoch is when vePUFFER holders can cast their votes on governance proposals and incentive gauges. These are critical moments for shaping the Puffer ecosystem, as decisions on incentive gauges, funding allocations, protocol upgrades, and key initiatives are determined during these periods.
 
