@@ -74,6 +74,11 @@ const sidebars = {
       type: "category",
       label: "Reference",
       items: ["glossary", "hardforks", "slash", "faq", "cookie-policy", "privacy-policy", "terms-of-service"]
+    },
+    {
+      type: "link",
+      label: "Puffer SDK",
+      href: 'https://pufferfinance.github.io/puffer-sdk/',
     }
   ]
 };
