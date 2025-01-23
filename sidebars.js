@@ -43,7 +43,7 @@ const sidebars = {
     {
       type: "category",
       label: "Node Operators",
-      items: ["requirements", "setup", "registration", "noop-rewards", "purchase-vts", "purchase-vt-through-smart-contract"],
+      items: ["requirements", "setup", "registration", "noop-rewards", "purchase-vts", "purchase-vt-using-safe"],
     },
     {
       type: "category",
