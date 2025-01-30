@@ -52,7 +52,7 @@ For each daily interval, Puffer's Guardians perform the following steps:
 
 **Next Rewards Epoch** — this is the epoch up to which rewards will be calculated in the upcoming accounting event. 
 
-We execute accounting automatically every 24 hours, but this period of time can be changed in the future.  
+We execute accounting automatically once a week on Monday, but this period of time can be changed in the future.  
 
 :::note
 We only mint and send to Base the rewards that have been successfully withdrawn from your validator on the Beacon Chain. 
