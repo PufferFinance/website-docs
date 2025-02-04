@@ -22,7 +22,7 @@ The [Puffer Dashboard](https://launchpad.puffer.fi/Setup) supports launching bot
 
 ### Step 1: Setup Wallet
 ![alt text](/img/holesky-config.png)
-Follow [the instructions](https://holesky.dev/), to add the Holesky network to your wallet. If you're using mainnet, the default mainnet wallet config can be used or an RPC can be added [here](https://chainlist.org/chain/1).
+Follow [the instructions](https://holesky.dev/) to add the Holesky network to your wallet. If you're using mainnet, the default mainnet wallet config can be used or an RPC can be added [here](https://chainlist.org/chain/1).
 
 ### Step 2: Get Coral-CLI Command
 Navigate to https://launchpad.puffer.fi/Setup to copy the Coral-CLI command. 

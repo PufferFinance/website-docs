@@ -23,7 +23,7 @@ slug: /reference/faq
 
 ### ✌️ Explain restaking to me like I'm five?
 
-> With 32 ETH you can stake to run a solo validator. Your ETH is used solely for the purpose of PoS. Restaking let's you use this ETH for running other jobs, allowing for more rewards but also more risk since you can get slashed from these new jobs. Puffer likes restaking because it allows validators to earn more with their existing hardware which isn't being fully taken advantage of through PoS alone.
+> With 32 ETH you can stake to run a solo validator. Your ETH is used solely for the purpose of PoS. Restaking lets you use this ETH for running other jobs, allowing for more rewards but also more risk since you can get slashed from these new jobs. Puffer likes restaking because it allows validators to earn more with their existing hardware which isn't being fully taken advantage of through PoS alone.
 
 ### 🐟 What problems do LSPs currently face?
 
