@@ -34,8 +34,8 @@ module.exports = {
               href: "https://discord.gg/pufferfi",
             },
             {
-              label: "Twitter",
-              href: "https://twitter.com/puffer_finance",
+              label: "X",
+              href: "https://x.com/puffer_finance",
             },
           ],
         },
@@ -72,8 +72,8 @@ module.exports = {
           position: "right",
         },
         {
-          href: "https://twitter.com/puffer_finance",
-          label: "Twitter",
+          href: "https://x.com/puffer_finance",
+          label: "X",
           position: "right",
         },
         {

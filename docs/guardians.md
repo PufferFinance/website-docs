@@ -18,7 +18,7 @@ Guardians have three main responsibilities within the Puffer Protocol:
 
 
 1. **Ejecting validators**: Until [**EIP-7002**](https://eips.ethereum.org/EIPS/eip-7002) is realized, the protocol relies on the Guardians to eject validators under certain conditions. They use encrypted validator keyshares, stored in specialized enclaves designed solely to sign exit messages. A validator will be ejected if:
-   - Its beacon chain balance falls below below the DAO threshold.
+   - Its beacon chain balance falls below the DAO threshold.
    - Its [module](/protocol/puffer-modules#puffer-modules-) was slashed due to an AVS violation.
    - It consumes all of its validator tickets without renewal.
    - The protocol requires ETH liquidity to satisfy pufETH withdrawal requests (validators will be selected randomly).
