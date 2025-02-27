@@ -29,6 +29,7 @@ const sidebars = {
         "nlrt",
         "modules",
         "validator-tickets",
+        "validator-tickets-calculation",
         "rewards",
         "guardians",
         "burst-threshold",
@@ -42,7 +43,7 @@ const sidebars = {
     {
       type: "category",
       label: "Node Operators",
-      items: ["requirements", "setup", "registration", "noop-rewards", "purchase-vts", "ejection-scenarios"],
+      items: ["requirements", "setup", "registration", "noop-rewards", "purchase-vts", "purchase-vt-using-safe", "ejection-scenarios"],
     },
     {
       type: "category",
@@ -50,9 +51,9 @@ const sidebars = {
       items: ["deployed-contracts", "multisig"],
     },
     {
-      type: "category",
-      label: "UniFi Based Rollup",
-      items: ["unifi-rollup-intro"],
+      type: "link",
+      label: "UniFi",
+      href: 'https://docs-unifi.puffer.fi/',
     },
     {
       type: "category",
@@ -62,12 +63,22 @@ const sidebars = {
     {
       type: "category",
       label: "Governance",
-      items: ["governance-mission", "governance-token", "governance-roadmap", "governance-voting"]
+      items: ["governance-mission", "governance-understanding-governance", "governance-calendar", "governance-token", "governance-voting", "governance-roadmap"]
+    },
+    {
+      type: "category",
+      label: "Campaigns",
+      items: ["campaigns-season-1", "campaigns-season-2"]
     },
     {
       type: "category",
       label: "Reference",
       items: ["glossary", "hardforks", "slash", "faq", "cookie-policy", "privacy-policy", "terms-of-service"]
+    },
+    {
+      type: "link",
+      label: "Puffer SDK",
+      href: 'https://pufferfinance.github.io/puffer-sdk/',
     }
   ]
 };
