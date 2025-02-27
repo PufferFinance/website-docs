@@ -18,7 +18,7 @@ Validator ejection is the process where a validator is forced to exit from activ
 ### 1. Balance-Related Ejection
 
 :::danger
-If a Node Operator does not top-up their validator within 5mins of the balance dropping below 8VT per validator, all their active validators will be ejected from the active validator set.
+If a Node Operator does not top-up their VT within 5 mins of the balance dropping below 5 VT per validator, all their active validators will be ejected from the active validator set.
 :::
 
 This is a core Puffer protocol rule designed to ensure validators maintain sufficient stake for network security.
