@@ -3,7 +3,9 @@ title: Understanding Governance
 slug: /governance/understanding-governance
 ---
 
-# Governance Workflow
+# Understanding Governance
+
+In this article, we describe how governance works, and how proposals move along the pipeline, from the initial creation phase, to discussion and review by the community and the Puffer team, and finally, to the voting phase.
 
 <img src="/img/governance-workflow-model.webp" height="500" alt="Puffer"></img>
 

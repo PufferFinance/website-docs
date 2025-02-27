@@ -101,8 +101,8 @@ You can change your vote at any point in time before the voting epoch ends.
 
 :::
 
-Once you are satisfied with your choices, click on **Submit votes** to submit your vote by way of signing a gasless transaction. This will not cost you any ETH at this point. You will then be shown the following notification if your vote has been registered.
+Once you are satisfied with your choices, click on **Submit votes** to submit your vote by way of signing a gasless transaction. This will not cost you any ETH as we use Snapshot voting currently. You will then be shown the following notification if your vote has been registered.
 
 <img src="/img/governance-gauges-vote-successful.png" height="150" alt="Gauges vote successful"></img>
 
-Voting results will be tallied after the conclusion of every voting epoch. The rewards will be distributed through [Puffer DeFi](https://defi.puffer.fi), and only if you are a participant of the eligible pools.
+Voting results will be tallied after the conclusion of every voting epoch. The rewards will be distributed through [Puffer DeFi](https://defi.puffer.fi), and only if you are a participant of the eligible gauges.
