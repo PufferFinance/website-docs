@@ -1,66 +1,100 @@
 ---
-title: Purchasing Validator Tickets using Safe multisig
+title: Purchasing VTs using Safe Multisig Wallet
 slug: /protocol/purchase-vt-through-using-safe
 ---
 
 :::info 
-This page is to help you understand how to purchase Validator Tickets using Safe multisig.
+This guide will help you purchase Validator Tickets using your Safe multisig wallet.
 :::
 
-## Purchasing Validator Tickets (VTs) through Puffer.fi
+## Introduction
 
-To purchase Validator Tickets (VTs) through the Puffer Protocol, you can use wallet connect to connect your Safe multisig to our dashboard. If you are purchasing VT with pufETH, you can expect to see two transactions on your Safe interface. After you sign the first transaction, a second will appear.
-With Safe, you can sign multiple transactions, after signing them you can batch execute them together in one transaction, or you can execute them individually.
+Validator Tickets (VTs) allow you to participate in the Puffer Protocol as a node operator. This guide will walk you through the process of connecting your Safe multisig wallet to our dashboard and purchasing VTs using either ETH or pufETH.
 
-### Step-by-Step Guide purchase VT with ETH
+## Connecting Your Safe Multisig to Puffer LaunchPad
 
-1. **Connect Your Wallet:**
-   - Ensure your wallet is connected to your Safe on the Launchpad Puffer.fi platform.
+1. Navigate to the [Puffer Launchpad](https://launchpad.puffer.fi).
 
-2. **The second transaction is the purchase of the VT with ETH:**
-   - After approval, purchase the VTs using the following transaction:
-     ```solidity
-     validatorTickets.purchaseValidatorTicket(recipient);
-     ```
-   - **Important:** Do not use the Puffer Protocol as the recipient if you are executing this transaction manually. Specify the correct recipient address (it is recommended to use your own multisig address)
+2. On the Puffer LaunchPad, You will be prompted to connect your wallet. Select WalletConnect from the list of options.
 
-4. **Deposit VTs to Puffer Protocol:**
-   - Once the VTs are purchased, deposit them into the PufferProtocol contract.
+   ![Wallet Connect](../static/img/purchase-vt-safe-1.png)
 
-### Notes
-- Ensure you have sufficient ETH balance in your wallet before initiating these transactions.
-- Monitor the transaction status on the Ethereum network to confirm successful execution.
 
-### Step-by-Step Guide purchase VT with pufETH
+3. Click on `OPEN` to get the official WalletConnect modal.
 
-1. **Connect Your Wallet:**
-   - Ensure your wallet is connected to your Safe on the Launchpad Puffer.fi platform.
+   ![WalletConnect](../static/img/purchase-vt-safe-2.png)
 
-2. **The first transaction is approval for pufETH to be spent by the VT contract:**
-   - Execute the following transaction to allow the VT contract to spend your pufETH:
-     ```solidity
-     pufETH.approve(validatorTicketsAddress, pufETHAmount);
-     ```
-   - This transaction approves the specified amount of pufETH to be spent by the Validator Tickets contract.
 
-3. **The second transaction is the purchase of the VT with pufETH:**
-   - After approval, purchase the VTs using the following transaction:
-     ```solidity
-     validatorTickets.purchaseValidatorTicketWithPufETH(recipient, vtAmount);
-     ```
-   - **Important:** Do not use the Puffer Protocol as the recipient if you are executing this transaction manually. Specify the correct recipient address. (it is recommended to use your own multisig address)
+4. Copy the WalletConnect link by clicking on the `Copy` button.
 
-4. **Deposit VTs to Puffer Protocol:**
-   - Once the VTs are purchased, deposit them into the PufferProtocol contract.
-   
+   ![Safe Multisig](../static/img/purchase-vt-safe-3.png)
 
-### Example Transactions
+5. In your Safe interface, click on the WalletConnect icon in the top right in the bar.
 
-For a detailed view of what needs to happen on-chain, you can refer to the mainnet-fork and example transactions available on Tenderly:
-- [Tenderly Dashboard - Example Transactions](https://dashboard.tenderly.co/explorer/vnet/ad20a314-c817-46ee-a7f1-1f5c8c315e4a/transactions)
+   ![Safe Multisig](../static/img/purchase-vt-safe-4.png)
 
-### Notes
-- Ensure you have sufficient pufETH balance in your wallet before initiating these transactions.
-- Monitor the transaction status on the Ethereum network to confirm successful execution.
+6. Paste the WalletConnect link from Puffer LaunchPad into the popup window and confirm the connection.
 
-By following these steps, you can efficiently purchase and deposit Validator Tickets through the Puffer Protocol, enabling you to participate in the network as a node operator.
+   ![Safe Multisig](../static/img/purchase-vt-safe-5.png)
+
+7. Return to the Puffer LaunchPad. You should now see your Safe wallet connected and ready to purchase VTs. Click on `Continue` to move to the next step.
+
+   ![Safe Multisig](../static/img/purchase-vt-1-step.png)
+
+## Purchasing VTs with ETH
+
+1. Navigate to the Top Up section on the LaunchPad. Select `Validator Ticket` option.
+
+   ![Safe Multisig](../static/img/purchase-vt-safe-6.png)
+
+2. Select `ETH` as the payment currency, enter the amount of VT you want to purchase and `Submit Transaction`.
+
+   ![Safe Multisig](../static/img/purchase-vt-safe-7.png)
+
+3. You'll be redirected to your Safe interface where you can review the transaction details. Verify the amount of ETH being spent and the number of VTs you're purchasing. You can also simulate the transaction. Click on `Sign` to approve the transaction. 
+
+   ![Safe Multisig](../static/img/purchase-vt-safe-8.png)
+
+4. Other owners of the Safe will need to sign the transaction as well, according to your Safe's signature requirements. Once executed, you can view the transaction on the Puffer LaunchPad. And your VT will be added to your account.
+
+   ![Safe Multisig](../static/img/purchase-vt-3-transaction-submitted.png)
+
+## Purchasing VTs with pufETH
+
+When using pufETH, you'll need to complete two separate transactions:
+
+1. Navigate to the Validator Ticket purchase section on the LaunchPad. Select `Validator Ticket` option, select `pufETH` as the payment currency, enter the amount of VT you want to purchase and `Submit Transaction`. 
+
+![Safe Multisig](../static/img/purchase-vt-safe-9.png)
+
+2. The first transaction will ask for approval to spend your pufETH:
+   - Review the approval amount and address of the spender contract which should be ValidatorTicket contract address : [0x7D26AD6F6BA9D6bA1de0218Ae5e20CD3a273a55A](https://etherscan.io/address/0x7D26AD6F6BA9D6bA1de0218Ae5e20CD3a273a55A)
+   - Click "Add to Batch" to add the transaction to the batch.
+
+   ![Safe Multisig](../static/img/purchase-vt-safe-10.png)  ![Safe Multisig](../static/img/purchase-vt-safe-11.png)
+
+3. After the approval transaction is added to the batch, a second transaction will appear:
+   - This transaction is for the actual VT purchase
+   - Verify the number of VTs you're purchasing
+   - Click "Add to Batch" to add the transaction to the batch.
+   - Wait for other Safe owners to sign
+
+4. Once batch is signed, get it signed by other owners of the Safe and execute the batch.
+
+5. After successful execution, you'll see the transaction on the Puffer LaunchPad. And your VT will be added to your account.
+
+   ![Safe Multisig](../static/img/purchase-vt-3-transaction-submitted.png)
+
+## Transaction Batching (Optional)
+
+With Safe, you have the option to:
+- Execute transactions individually as they are signed
+- Or batch multiple signed transactions together and execute them in a single transaction to save on gas fees
+- In this guide, we've shown how to batch the transactions together.
+
+## Important Notes
+
+- Ensure you have sufficient ETH or pufETH balance in your Safe wallet before initiating these transactions.
+- The minimum purchase is 1 VT.
+- You can track all your transactions in the "Activity" section of your Safe.
+- If you encounter any issues, please contact Puffer team.
