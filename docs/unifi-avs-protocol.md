@@ -163,6 +163,16 @@ graph TD
     E -->|Distribute rewards| H[Gateway]
 ```
 
+#### Claiming Rewards
+
+Rewards will be distributed for each validator on the L2. Validators will be able to claim their rewards by setting a claimer address on the rewards contract by signing an EIP-712 transaction.
+
+Rewards will be calculated based on the successful participation of the validators in the preconfirmations during each reward period.
+
+Unclaimed rewards will persist and all of it can be claimed any time in the future in a single transaction.
+
+In addition to L2 rewards, we might distribute some rewards on the EigenLayer AVS to incentivize node operators and validators to participate in the system. Each operator can claim these rewards directly from the EigenLayer's interface.
+
 ### Slashing Mechanism
 
 UniFi AVS will employ a DisputeManager contract to handle slashing and incentivize for honest operator behavior:
