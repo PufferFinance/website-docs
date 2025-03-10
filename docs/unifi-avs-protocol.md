@@ -165,7 +165,7 @@ graph TD
 
 #### Claiming Rewards
 
-Rewards will be distributed for each validator on the L2. Validators will be able to claim their rewards by setting a claimer address on the rewards contract by signing an EIP-712 transaction.
+Rewards will be distributed for each validator on the L2. Validators will be able to claim their rewards by setting a claimer address on the rewards contract by signing an EIP-712 hash with their BLS validator key.
 
 Rewards will be calculated based on the successful participation of the validators in the preconfirmations during each reward period.
 
