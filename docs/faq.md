@@ -71,7 +71,7 @@ slug: /reference/faq
 
 ### 🪼 How many validators have been slashed? Should we even care about slashable offenses?
 
-> At the time of writing, there have been [262 slashing events](https://beaconcha.in/validators/slashings). While this number may seem low, slashing poses an existential threat to all Ethereum validators and LST holders.
+> At the time of writing, there have been [472 slashing events](https://beaconcha.in/validators/slashings). While this number may seem low, slashing poses an existential threat to all Ethereum validators and LST holders.
 
 > For example, assume there is a bug in one of the five consensus clients that causes a slashing rule to be broken (for simplicity, assume each consensus client is used by 20% of the validators). The anti-correlation penalty causes the slashing amount to increase as the number of offenders increases, in this case to $1 + 3*20\%*32 = 20.2$ ETH. Unfortunately, 20% of the validators using this consensus client would face a 20.2 ETH slashing penalty. This would wipe out years of staking revenue for the nodes and LST holders.
 

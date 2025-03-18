@@ -36,7 +36,7 @@ Basically 1 VT is consumed daily per validator.
 6. **Minimum VT Requirement Check**: The system checks if the present VT balance meets the minimum required VTs per validator. If the balance is below this threshold, **ALL** of the node operator's validators will be ejected to prevent further VT consumption.
 
 :::note
-The threshold is currently set to 5 days, meaning node operators must maintain a VT balance sufficient for at least 5 before running out of VT or ejection will be triggered.
+The threshold is currently set to 5 days, meaning node operators must maintain a VT balance sufficient for at least 5 days before running out of VT or ejection will be triggered.
 
 A warning message will be issued when there are 8 days left before reaching the threshold, allowing node operators to take necessary actions to avoid ejection.
 :::
