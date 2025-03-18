@@ -2,9 +2,10 @@
 title: Node Operator Rewards
 slug: /nodes/rewards
 ---
+
 ## Withdrawing Consensus Layer Rewards
 
-Node Operators receive rewards in the same way as any other validator on Ethereum. However, while Execution Layer rewards are earned normally and sent to the fee recipient address configured in the Beacon Node client, Consensus Layer rewards flow through the EigenLayer contracts and normally incur a delay. 
+Node Operators receive rewards in the same way as any other validator on Ethereum. However, while Execution Layer rewards are earned normally and sent to the fee recipient address configured in the Beacon Node client, Consensus Layer rewards flow through the EigenLayer contracts and normally incur a delay.
 
 To make the rewards withdrawal process fast and gas-efficient, Puffer has created a way for withdrawing rewards on Base L2. It requires a minimal amount of gas to withdraw rewards, and it allows validators to receive their rewards as quickly as possible and as often as they need. Node Operator Consensus Layer rewards are automatically bridged to [Base L2](https://www.base.org/) using [Everclear](https://bridge.connext.network/), which validators can withdraw in the form of pufETH.
 
@@ -37,6 +38,7 @@ After claiming the rewards, Node Operators can either bridge them back to Ethere
 Rewards are distributed weekly, with the exception of the first distribution, which includes all rewards accumulated since Puffer's mainnet launch.
 
 For each weekly interval, Puffer's Guardians perform the following steps:
+
 1. Compute individual rewards for each Node Operator (sum of all of their associated validators)
 2. Calculate the total rewards for the previous intervals
 3. Create and publish a Merkle tree of rewards, storing it on AWS S3
@@ -48,14 +50,14 @@ For each weekly interval, Puffer's Guardians perform the following steps:
 
 ### Rewards Epochs and accounting
 
-**Current Rewards Epoch** — this is the epoch up to which rewards have been calculated and posted to Base. 
+**Current Rewards Epoch** — this is the epoch up to which rewards have been calculated and posted to Base.
 
-**Next Rewards Epoch** — this is the epoch up to which rewards will be calculated in the upcoming accounting event. 
+**Next Rewards Epoch** — this is the epoch up to which rewards will be calculated in the upcoming accounting event.
 
-We execute accounting automatically once a week on Monday, but this period of time can be changed in the future.  
+We execute accounting automatically once a week on Monday, but this period of time can be changed in the future.
 
 :::note
-We only mint and send to Base the rewards that have been successfully withdrawn from your validator on the Beacon Chain. 
+We only mint and send to Base the rewards that have been successfully withdrawn from your validator on the Beacon Chain.
 :::
 
 ### How to check if the rewards calculation is correct
@@ -78,9 +80,9 @@ To change your rewards claimer address on Base, a Node Operator should follow th
 1. Navigate to your [SAFE](https://app.safe.global) account
 2. Select `New transaction`
 3. Select `Transaction Builder`
-![alt text](../static/img/change-address-23.png)
+   ![alt text](../static/img/change-address-23.png)
 4. Enter the L1RewardManager contract proxy address: [0x157788cc028Ac6405bD406f2D1e0A8A22b3cf17b](https://etherscan.io/address/0x157788cc028Ac6405bD406f2D1e0A8A22b3cf17b)
-![alt text](../static/img/change-address-4.png)
+   ![alt text](../static/img/change-address-4.png)
 
 5. Select `Use Implementation ABI`
 
@@ -91,7 +93,7 @@ To change your rewards claimer address on Base, a Node Operator should follow th
 8. Set the `bridge (address)` to Everclear's bridge address [0x8898B472C54c31894e3B9bb83cEA802a5d0e63C6](https://etherscan.io/address/0x8898b472c54c31894e3b9bb83cea802a5d0e63c6)
 9. Enter your new rewards claimer address that you control on Base
 10. Click `Add transaction` and then sign the generated SAFE transaction
-![alt text](../static/img/change-address-678910.png)
+    ![alt text](../static/img/change-address-678910.png)
     :::note
     If the `To Address` field doesn't auto-populate, it should be set to the L1RewardManager proxy contract address: [0x157788cc028Ac6405bD406f2D1e0A8A22b3cf17b](https://etherscan.io/address/0x157788cc028Ac6405bD406f2D1e0A8A22b3cf17b).
     :::

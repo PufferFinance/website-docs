@@ -4,6 +4,7 @@ slug: /nodes/setup
 ---
 
 ## Setup Beacon Node and Execution Node
+
 In order to run a [validator](https://ethereum.org/en/developers/docs/nodes-and-clients/run-a-node/), you will need to run an Execution Layer client, a Consensus Layer client, and the validator software.
 
 :::note
@@ -11,39 +12,48 @@ Puffer is live on Mainnet! If you wish to setup a testnet validator, we're using
 :::
 
 ### Easy Mode
+
 There are some great open-source [projects](https://ethereum.org/en/staking/solo/#node-and-client-tools) that make it easy to run an Ethereum full node and a validator. Here are some of the popular ones:
+
 - [Eth Docker](https://github.com/eth-educators/eth-docker): Docker automation for Ethereum nodes.
 - [🍄 Stereum](https://github.com/stereum-dev/ethereum-node): Ethereum Node Setup & Manager
 - [Dappnode](https://docs.dappnode.io/docs/user/getting-started/choose-your-path/): Operating System for running Ethereum nodes and more.
 
-
 ### Manual Installation
+
 You may want to run the clients separately, in which case you can follow the installation instructions for each client below.
 
 #### Execution Clients
+
 - [Nethermind installation documentation ↗](https://downloads.nethermind.io/)
 - [Geth installation documentation ↗](https://geth.ethereum.org/docs/install-and-build/installing-geth)
 - [Besu installation documentation ↗](https://besu.hyperledger.org/public-networks/get-started/install)
 - [Erigon installation documentation ↗️](https://github.com/ledgerwatch/erigon#beacon-chain)
 
 #### Consensus Clients
+
 - [Nimbus installation documentation ↗](https://nimbus.guide/quick-start.html)
 - [Teku installation documentation ↗](https://docs.teku.consensys.io/get-started/install)
 - [Lodestar installation documentation ↗️](https://chainsafe.github.io/lodestar/getting-started/quick-start/)
 - [Lighthouse installation documentation ↗](https://lighthouse-book.sigmaprime.io/installation.html)
 - [Prysm installation documentation ↗](https://docs.prylabs.network/docs/install/install-with-script)
 
-
 ## Setup Coral-CLI
+
 The Coral-CLI is used to generate validator keys, prepare registration payloads, and sign voluntary exit messages.
 
 ### Pre-built binary
+
 [Download the Coral-CLI binary](https://github.com/PufferFinance/coral/releases)
 
 ### Docker
+
 [Run using Docker](https://github.com/PufferFinance/coral/tree/main/docker)
+
 ### Build from source
+
 - Dependencies: [Rust](https://www.rust-lang.org/learn/get-started)
+
 ```
 git clone https://github.com/PufferFinance/coral
 cd coral
@@ -51,6 +61,7 @@ cargo build --release
 ```
 
 ## Setup Validator Enclave (optional)
+
 Follow along to setup your enclave to run a validator with a 1 ETH bond.
 
 :::caution TEE Registrations are not yet supported on mainnet 🚧  
@@ -62,6 +73,7 @@ Secure-Signer requires Ubuntu 20.04!
 :::
 
 #### Prepare a Docker Volume
+
 By default, any data created within a Docker container is lost if the container is removed. Secure-Signer maintains our keys and slashing protection databases, so we want this data to persist should anything happen to the container. To do so, we will create a Docker volume called Puffer-Validator-Backup.
 
 ```
@@ -75,6 +87,7 @@ docker volume inspect Puffer-Validator-Backup
 ```
 
 Output:
+
 ```
         $ docker volume inspect Puffer-Validator-Backup
         [
@@ -93,10 +106,12 @@ Output:
 ### Install SGX Drivers
 
 #### Via Scripts
+
 :::note
 The following commands should be run from `coral` directory, unless otherwise stated.
 :::
 Run commands:
+
 ```
 git clone https://github.com/PufferFinance/coral
 cd scripts
@@ -155,7 +170,9 @@ f3b600f2d50b4c1cc42495f6c4f20bdb0c9a1dd17d5923de83d2723c2d1cab04
 [SUCCESS] Container deployed successfully!
 [SUCCESS] Container puffer_secure_signer_container is running successfully!
 ```
+
 #### Start the Container
+
 The following command run a container with the name `puffer_secure_signer_container` built from the pulled `puffer_validator` image. Notice we are mounting our volume `Puffer-Validator-Backup` to the `/Validator` enclave directory so any changes to the `/Validator` enclave directory persist if the container is removed:
 
 :::caution
@@ -167,6 +184,7 @@ docker run -itd --network host --mount type=volume,source=Puffer-Validator-Backu
 ```
 
 Output:
+
 ```
 puffer@Puffer-Dev:~/coral/scripts$ docker run -itd --network host --mount type=volume,source=Puffer-Validator-Backup,destination=/Validator -v /var/run/aesmd:/var/run/aesmd --device /dev/sgx/enclave --device /dev/sgx/provision --name puffer_secure_signer_container pufferfi/validator:1.0.0
 d72c2f398f9823b91073b92d608e02bfe3fbebb113fbb3e46b2ebfaa74712d9e
@@ -179,6 +197,7 @@ docker container ls
 ```
 
 Output:
+
 ```
 puffer@Puffer-Dev:~/coral/scripts$ docker container ls
 CONTAINER ID   IMAGE                                  COMMAND                  CREATED         STATUS         PORTS     NAMES
@@ -196,6 +215,7 @@ docker exec puffer_secure_signer_container /bin/bash -c "cd /Validator && occlum
 ```
 
 Output:
+
 ```
 puffer@Puffer-Dev:~/coral/scripts$ docker exec puffer_secure_signer_container /bin/bash -c "cd /Validator && occlum run /bin/validator 9001"
 
@@ -230,12 +250,8 @@ occlum run /bin/validator 9001
 ```
 
 Output:
+
 ```
 root@Puffer-Dev:/Validator# occlum run /bin/validator 9001
 2024-03-26T03:18:01.292913Z  INFO validator: Starting SGX Validator: localhost:9001, using genesis_fork_version: [0, 0, 0, 0]
 ```
-
-
-
-
-

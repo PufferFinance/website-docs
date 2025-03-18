@@ -30,6 +30,7 @@ Node operators can initiate a controlled exit through their validator client whe
 :::
 
 The process involves:
+
 - Generating exit message
 - Signing with validator keys
 - Broadcasting to the network
@@ -42,6 +43,7 @@ Serious protocol violations result in immediate ejection and possible slashing p
 :::
 
 Common violations include:
+
 - Double signing blocks
 - Proposing multiple blocks for the same slot
 - Attesting to conflicting blocks
@@ -50,6 +52,7 @@ Common violations include:
 ### 4. Guardian-Initiated Ejection
 
 Puffer Guardians may trigger ejection under these circumstances:
+
 - Consistent failure to meet performance metrics
 - Detection of malicious behavior
 - Violation of protocol rules or terms of service
@@ -85,12 +88,13 @@ Puffer Guardians may trigger ejection under these circumstances:
 ## Prevention Best Practices
 
 :::tip Best Practices
+
 1. Regular system maintenance and updates
 2. Continuous monitoring of validator performance
 3. Proper security measures implementation
 4. Maintaining stable network connectivity
 5. Following all protocol guidelines
-:::
+   :::
 
 ## Additional Resources
 

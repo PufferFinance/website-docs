@@ -9,7 +9,7 @@ slug: /reference/faq
 
 > Through our anti-slashing technology, we are reducing the risk of correlated slashing events across Ethereum while simultaneously promoting decentralization by lowering the barrier to entry for at-home validators and allowing for a more diverse node operator set.
 
-> However, reducing barriers to entry is one thing, but creating a more profitable platform for validators is crucial and is why Puffer has been pioneering in native restaking. 
+> However, reducing barriers to entry is one thing, but creating a more profitable platform for validators is crucial and is why Puffer has been pioneering in native restaking.
 
 > Ultimately, through Puffer's protocol, we hope to extend Ethereum's decentralization runway while its roadmap is being implemented.
 
@@ -33,7 +33,7 @@ slug: /reference/faq
 
 > In the context of liquid staking, centralized protocols with permissioned validators do not require their operators to put down collateral. Rather, they rely on reputation to ensure they behave honestly. In practice, some operators run tens of thousands of validators each. For a decentralized liquid staking protocol, running this many validators requires operators to have tens of thousands of ETH.
 >
-> Puffer's goal is to break this cycle by empowering decentralized validators with higher rewards while lowering their barrier to entry. 
+> Puffer's goal is to break this cycle by empowering decentralized validators with higher rewards while lowering their barrier to entry.
 
 ### 🦈 How does Puffer help address some of these pain points?
 
@@ -55,11 +55,11 @@ slug: /reference/faq
 
 ### 🧜‍♀️ How much ETH do I need to run a Puffer node?
 
-> As preserving decentralization is our top priority, the minimum collateral requirement will start at 2 ETH for Puffer node operators. This lowers the barrier to entry for solo stakers, allowing for a robust and scalable permissionless node operator set. If the validator is using Puffer's anti-slasher, they can reduce this collateral requirement to 1 ETH. 
+> As preserving decentralization is our top priority, the minimum collateral requirement will start at 2 ETH for Puffer node operators. This lowers the barrier to entry for solo stakers, allowing for a robust and scalable permissionless node operator set. If the validator is using Puffer's anti-slasher, they can reduce this collateral requirement to 1 ETH.
 
 ### 🐢 When will Puffer launch?
 
-> Puffer is coming soon™️! 
+> Puffer is coming soon™️!
 
 ### 🦞 Who runs Secure-Signer?
 

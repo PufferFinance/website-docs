@@ -44,7 +44,6 @@ Once you see the notification informing you that you've staked successfully, you
 There is a three day warmup period after minting your vePUFFER tokens before you can start voting - see the [vePUFFER](governance-token.md#vepuffer-parameters) section for more details.
 :::
 
-
 <img src="/img/governance-stake-puffer-successful.png" height="150" alt="Successfully staked PUFFER for vePUFFER"></img>
 
 Congratulations! You now have vePUFFER and can soon participate in Puffer's governance activities once your vePUFFER has become active.
@@ -61,7 +60,7 @@ While you require an active vePUFFER stake, you will not need native ETH as curr
 
 ### Voting on Proposals
 
-You can view all proposals in the **Latest proposals** section on the [Puffer DAO Hub](https://vote.puffer.fi), or via the [Proposals](https://vote.puffer.fi/plugins/community/) tab. If a voting epoch is currently active, and there are votable proposals, you will see the here. 
+You can view all proposals in the **Latest proposals** section on the [Puffer DAO Hub](https://vote.puffer.fi), or via the [Proposals](https://vote.puffer.fi/plugins/community/) tab. If a voting epoch is currently active, and there are votable proposals, you will see the here.
 
 <img src="/img/governance-vote-latest.png" height="300" alt="Proposals tab"></img>
 
@@ -83,7 +82,6 @@ To direct incentives, simply go to the [Gauges](https://vote.puffer.fi/plugins/g
 Like proposals, you can only vote on incentive gauges when there is an active voting epoch. You can see whether there is an active voting epoch in the Gauges tab, and a timer will be shown on the deadline to vote.
 
 A list of gauges will be shown to you, and you can click on a gauge to view more information of the gauge that can be voted for. These will generally be specific pools on other DeFi protocols, where you can perform certain actions (e.g. staking pufETH or PUFFER, providing liquidity, holding a token, etc.) and your vote will determine how much incentives will be directed to each pool.
-
 
 <img src="/img/governance-gauges.png" height="500" alt="Gauges tab"></img>
 
