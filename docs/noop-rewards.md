@@ -34,9 +34,9 @@ After claiming the rewards, Node Operators can either bridge them back to Ethere
 
 # How Rewards Are Calculated
 
-Rewards are distributed daily, with the exception of the first distribution, which includes all rewards accumulated since Puffer's mainnet launch.
+Rewards are distributed weekly, with the exception of the first distribution, which includes all rewards accumulated since Puffer's mainnet launch.
 
-For each daily interval, Puffer's Guardians perform the following steps:
+For each weekly interval, Puffer's Guardians perform the following steps:
 1. Compute individual rewards for each Node Operator (sum of all of their associated validators)
 2. Calculate the total rewards for the previous intervals
 3. Create and publish a Merkle tree of rewards, storing it on AWS S3
