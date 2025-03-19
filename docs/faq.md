@@ -57,13 +57,9 @@ slug: /reference/faq
 
 > As preserving decentralization is our top priority, the minimum collateral requirement will start at 2 ETH for Puffer node operators. This lowers the barrier to entry for solo stakers, allowing for a robust and scalable permissionless node operator set. If the validator is using Puffer's anti-slasher, they can reduce this collateral requirement to 1 ETH.
 
-### 🐢 When will Puffer launch?
+### 🐢 When did Puffer launch?
 
-> Puffer is coming soon™️!
-
-### 🦞 Who runs Secure-Signer?
-
-> Nodes run Secure-Signer alongside their consensus client. Nodes could be anyone with compatible hardware and at least 1 ETH.
+> Puffer deployed on mainnet on 31th January 2024.
 
 ### 🦐 Can I get slashed if I go offline?
 

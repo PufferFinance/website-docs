@@ -38,7 +38,7 @@ const sidebars = {
     {
       type: "category",
       label: "Technology",
-      items: ["secure-signer", "rave"],
+      items: ["rave"],
     },
     {
       type: "category",
