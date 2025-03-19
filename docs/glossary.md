@@ -100,10 +100,6 @@ A contract that defines a set of AVSs which NoOps opting into the module will de
 
 AKA ReOp: A NoOp that is delegated funds to operate an AVS on behalf of other NoOps, as part of a Puffer Module
 
-### `Secure Signer`
-
-A software developed by Puffer that helps prevent validators from being slashed. It utilizes Trusted Execution Environments (TEEs) such as Intel SGX
-
 ### `Proof of Rewards`
 
 This refers to the process by which NoOps prove and receive the rewards generated as a result of running their validator node
