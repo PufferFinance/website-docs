@@ -23,7 +23,7 @@ The idea is simple but powerful:
 
 - **pufETH**: People stake their ETH and receive pufETH, a token representing their staked ETH within the Puffer protocol, which is used to fund Ethereum validators.
 - **Validator Tickets (VTs)**: VTs are ERC20 tokens that grant the holder the right to run a staker-funded Ethereum validator for a day. VTs are minted by ETH deposits. This ETH goes towards compensating pufETH holders for financing validators.
-- **Running Validators**: To run a validator, a node operator must lock VTs and lock in 1 ETH of pufETH as collateral.
+- **Running Validators**: To run a validator, a node operator must lock VTs and lock in 2 ETH of pufETH as collateral.
 - **Pricing VTs**: The price of a VT is set based on the expected daily earnings from running a validator. This price directly influences the expected pufETH APR.
 - **Benefits**: VTs create new trading opportunities, address “rug-pooling”, and incentivize good performance. pufETH holders earn rewards immediately when VTs are purchased. Consuming VTs allows the node operator to keep 100% of the validator’s earnings.
 
@@ -49,7 +49,7 @@ Puffer uses the _bonded model_ as it is more ethos-aligned, but adds VTs to addr
 
 </div>
 
-**Validator Tickets** supplement validator bonds. When registering a validator, the NoOp locks 1 ETH worth of pufETH as a bond and deposits at least 28 VTs.
+**Validator Tickets** supplement validator bonds. When registering a validator, the NoOp locks 2 ETH worth of pufETH as a bond and deposits at least 28 VTs.
 
 In exchange, they are allocated 32 ETH to run a validator, and are entitled to 100% of the Proof of Stake (PoS) rewards they produce over as many days as VTs they've deposited. In other words, NoOps pay pufETH holders ETH upfront to run a validator.
 
@@ -67,7 +67,7 @@ While this collateral approach discourages penalties, it does not strongly incen
 
 Puffer changes this incentive landscape through the use of VTs. Since NoOps have already purchased VTs, they stand to gain nothing from underperforming since they cannot recoup this initial payment (as days pass and their VTs are burned), even if they maintain their validator balance. Thus, for a NoOp to turn a profit, they must perform at least on par with the average validator. Those who excel can earn even more.
 
-While VTs provide strong disincentives for slashing, to further protect the staker's ETH, Puffer requires a [1 or 2 ETH](/reference/faq#%EF%B8%8F-how-many-eth-do-i-need-to-run-a-puffer-node) bond and for NoOps to use [anti-slashing technology](/technology/secure-signer) for defense-in-depth.
+While VTs provide strong disincentives for slashing, to further protect the staker's ETH, Puffer requires a [2 ETH](/reference/faq#%EF%B8%8F-how-much-eth-do-i-need-to-run-a-puffer-node) bond.
 
 This new approach neatly tackles two traditional problems:
 
@@ -76,7 +76,7 @@ This new approach neatly tackles two traditional problems:
 
 ### Requirements
 
-For PoS stability and NoOp incentive alignment, [1 or 2 ETH](/reference/faq#%EF%B8%8F-how-many-eth-do-i-need-to-run-a-puffer-node) worth of pufETH and a minimum of 28 VTs are required to be deposited at registration time. Their duration begins at the moment their validator is activated on the beacon chain, and each VT represents 1 day or 255 epochs.
+For PoS stability and NoOp incentive alignment, [2 ETH](/reference/faq#%EF%B8%8F-how-much-eth-do-i-need-to-run-a-puffer-node) worth of pufETH and a minimum of 28 VTs are required to be deposited at registration time. Their duration begins at the moment their validator is activated on the beacon chain, and each VT represents 1 day or 255 epochs.
 
 Assuming they deposited 28 VTs, after 28 days of validating, the NoOp's validator will be automatically ejected, its 32 ETH returned to the protocol, and bond returned. If they wish to extend their duration, NoOps can deposit additional VTs at any time. NoOps who have Validators with unconsumed VTs (e.g deposited 100 VTs) may retrieve them from the protocol (e.g., 72 VTs).
 
@@ -104,7 +104,7 @@ $P_{VT} = R_{expected} * (1 - D)$
 
 **Pros**:
 
-- **Capital Efficiency**: By requiring just $1$ ETH collateral and VTs, NoOps can get started with less than 2 ETH, which is significantly less than traditional LSPs. This capital-efficient approach means that barriers to entry are reduced, enabling a broader range of participants to contribute to securing the network without having to commit a full 32 ETH.
+- **Capital Efficiency**: By requiring just $1$ ETH collateral and VTs, NoOps can get started with 2 ETH, which is significantly less than traditional LSPs. This capital-efficient approach means that barriers to entry are reduced, enabling a broader range of participants to contribute to securing the network without having to commit a full 32 ETH.
 
 - **Fuels Growth**: The VT model is a game-changer for LSPs. It ensures that the LSP continues to earn rewards _even when the validator queue is long_. In traditional setups, lengthy validator queues could stifle an LSP's ability to grow, but with VTs, this obstacle is greatly diminished.
 
@@ -112,15 +112,12 @@ $P_{VT} = R_{expected} * (1 - D)$
 
 - **Addresses Lazy NoOps**: Traditional bonded models do not fully disincentivize NoOps from denying the pool rewards by going offline frequently. With VTs, NoOps are naturally incentivized to perform their best since their upfront payment cannot be recouped through subpar performance.
 
-- **Slash Resistant**:
-  With a combination of just 1 ETH collateral, favorable NoOp incentives, and Puffer's [anti-slashing technology](/technology/secure-signer), the risk of staker ETH getting penalized from an irresponsible NoOp is considerably reduced.
-
 - **MEV Lottery**: NoOps can participate in the MEV lottery, an attractive proposition for many, without having to lock up 32 ETH. This opens the door for more NoOps to benefit from potential MEV gains, further incentivizing participation.
 
 **Cons**
 
 - **Novelty**: VTs introduce a new paradigm in the staking industry. While innovation can be beneficial, it also comes with the challenge of gaining trust amidst established practices.
 
-- **Increased Capital**: VTs requires more upfront ETH compared to just having a bond. Yet, this concern is substantially offset as Puffer offers the lowest bond ($1$ ETH) among all permissionless LSPs, making the added ETH requirement relatively small in the overall context.
+- **Increased Capital**: VTs requires more upfront ETH compared to just having a bond. Yet, this concern is substantially offset as Puffer offers the lowest bond (2 ETH) among all permissionless LSPs, making the added ETH requirement relatively small in the overall context.
 
 - **Pricing VTs**: Although PoS rewards maintain stability, they are influenced by market dynamics (execution rewards) and fluctuations in the validator set size (consensus rewards). However, since VTs are equal to a validator-day and are repriced daily, volatility is mitigated. Additionally, VTs are liquid and can be traded on the secondary market.

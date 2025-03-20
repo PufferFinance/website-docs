@@ -77,27 +77,40 @@ The reason for this requirement is that addresses on Ethereum Mainnet do not aut
 
 To change your rewards claimer address on Base, a Node Operator should follow these steps:
 
-1. Navigate to your [SAFE](https://app.safe.global) account
-2. Select `New transaction`
-3. Select `Transaction Builder`
-   ![alt text](../static/img/change-address-23.png)
-4. Enter the L1RewardManager contract proxy address: [0x157788cc028Ac6405bD406f2D1e0A8A22b3cf17b](https://etherscan.io/address/0x157788cc028Ac6405bD406f2D1e0A8A22b3cf17b)
-   ![alt text](../static/img/change-address-4.png)
+1.  Navigate to your [SAFE](https://app.safe.global) account
 
-5. Select `Use Implementation ABI`
+2.  Select `New transaction`
 
-![alt text](../static/img/change-address-5.png)
+3.  Select `Transaction Builder`
 
-6. Set the `ETH value` amount to a small number, e.g., `0.000042`, this is the relayer fee to pay the bridge who will broadcast the transaction to Base.
-7. Set the `Contract Method Selector` to `setL2RewardClaimer`
-8. Set the `bridge (address)` to Everclear's bridge address [0x8898B472C54c31894e3B9bb83cEA802a5d0e63C6](https://etherscan.io/address/0x8898b472c54c31894e3b9bb83cea802a5d0e63c6)
-9. Enter your new rewards claimer address that you control on Base
+    ![alt text](../static/img/change-address-23.png)
+
+4.  Enter the L1RewardManager contract proxy address: [0x157788cc028Ac6405bD406f2D1e0A8A22b3cf17b](https://etherscan.io/address/0x157788cc028Ac6405bD406f2D1e0A8A22b3cf17b)
+
+    ![alt text](../static/img/change-address-4.png)
+
+5.  Select `Use Implementation ABI`
+
+    ![alt text](../static/img/change-address-5.png)
+
+6.  Set the `ETH value` amount to a small number, e.g., `0.000042`, this is the relayer fee to pay the bridge who will broadcast the transaction to Base.
+
+7.  Set the `Contract Method Selector` to `setL2RewardClaimer`
+
+8.  Set the `bridge (address)` to Everclear's bridge address [0x8898B472C54c31894e3B9bb83cEA802a5d0e63C6](https://etherscan.io/address/0x8898b472c54c31894e3b9bb83cea802a5d0e63c6)
+
+9.  Enter your new rewards claimer address that you control on Base
+
 10. Click `Add transaction` and then sign the generated SAFE transaction
+
     ![alt text](../static/img/change-address-678910.png)
+
     :::note
     If the `To Address` field doesn't auto-populate, it should be set to the L1RewardManager proxy contract address: [0x157788cc028Ac6405bD406f2D1e0A8A22b3cf17b](https://etherscan.io/address/0x157788cc028Ac6405bD406f2D1e0A8A22b3cf17b).
     :::
+
 11. Wait for the transaction to be bridged from Ethereum Mainnet to Base Layer 2. This process typically takes between 3 to 6 hours, but may take longer if the relayer fee is insufficient.
+
 12. After the transaction is confirmed on Base, the Node Operator can now claim rewards using the specified rewards claimer address on Base.
 
 :::note

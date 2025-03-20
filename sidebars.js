@@ -37,11 +37,6 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "Technology",
-      items: ["rave"],
-    },
-    {
-      type: "category",
       label: "Node Operators",
       items: [
         "requirements",

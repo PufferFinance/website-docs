@@ -39,7 +39,7 @@ In [contrast with conventional liquid staking tokens (LSTs)](/protocol/nlrt#what
 
 ### 2️⃣ Registering a NoOp Validator
 
-To register a new validator, NoOps deposit [validator tickets](/protocol/validator-tickets) and [1 or 2 ETH](/reference/faq#%EF%B8%8F-how-many-eth-do-i-need-to-run-a-puffer-node) as collateral to the PufferProtocol contract. In return, the protocol mints pufETH, which remains locked until it's confirmed that their validator has successfully exited. Locking pufETH serves to:
+To register a new validator, NoOps deposit [validator tickets](/protocol/validator-tickets) and [2 ETH](/reference/faq#%EF%B8%8F-how-much-eth-do-i-need-to-run-a-puffer-node) as collateral to the PufferProtocol contract. In return, the protocol mints pufETH, which remains locked until it's confirmed that their validator has successfully exited. Locking pufETH serves to:
 
 - Align NoOp incentives
 - Safeguard staker ETH

@@ -69,7 +69,7 @@ The conversion rate can be calculated simply as:
 
 - `rewards` increase as [restaking operators](/protocol/puffer-modules#restaking-operators) run AVSs and whenever validator tickets are minted.
 
-- `penalties` accrue if validators are slashed on PoS for _more than their $1$ ETH_ collateral, which is [disincentivized behavior](/protocol/validator-tickets#why--noop-incentives) and mitigated through [anti-slashing technology](/technology/secure-signer). Penalties can also accrue if the restaking operator is slashed running AVSs, which is why Puffer is [restricting restaking operator participation](/protocol/puffer-modules#restricting-reops) during its nascent stages.
+- `penalties` accrue if validators are slashed on PoS for _more than their $1$ ETH_ collateral, which is [disincentivized behavior](/protocol/validator-tickets#why--noop-incentives). Penalties can also accrue if the restaking operator is slashed running AVSs, which is why Puffer is [restricting restaking operator participation](/protocol/puffer-modules#restricting-reops) during its nascent stages.
 
 #### Example
 

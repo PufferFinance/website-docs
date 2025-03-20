@@ -31,8 +31,6 @@ Navigate to https://launchpad.puffer.fi/Setup to copy the Coral-CLI command.
 
 Run the command where you [installed the Coral-CLI](/nodes/setup#setup-coral-cli).
 
-#### Without Enclave
-
 > ![alt text](/img/no-enclave-cli-cmd.png)
 
 1. Copy the displayed command
@@ -42,19 +40,6 @@ The following **example** command will create a local validator keystore file in
 
 ```
 cargo run --bin coral-cli validator keygen --guardian-threshold 1 --module-name 0x5055464645525f4d4f44554c455f300000000000000000000000000000000000 --withdrawal-credentials 0x0100000000000000000000005ee9246f01e95c08ee767029c1d18765bb1779d0 --guardian-pubkeys 0x049cc1fbaa3cffd3e4c1f935c47720d013938ccb822a9cbd20c5f09ab65ae8300e7986b6ce75e916d3b59599ece72134adf2972d06a76a8ba5f3747d356117c342 --fork-version 0x01017000 --password-file password.txt --output-file registration.json
-```
-
-#### With Enclave (currently only supported on testnet)
-
-> ![alt text](/img/enclave-cli-cmd.png)
-
-1. Copy the displayed command
-2. Edit `<OPTIONAL_ENCLAVE_URL>` and `<PATH_TO_REGISTRATION_JSON>`
-
-The following **example** command will create a validator key using the enclave running at `http://localhost:9001` and create a registration payload called `registration.json`. See ([here](/nodes/setup#setup-validator-enclave-optional)) to setup your enclave.
-
-```
-cargo run --bin coral-cli validator keygen --guardian-threshold 1 --module-name 0x5055464645525f4d4f44554c455f300000000000000000000000000000000000 --withdrawal-credentials 0x0100000000000000000000005ee9246f01e95c08ee767029c1d18765bb1779d0 --guardian-pubkeys 0x049cc1fbaa3cffd3e4c1f935c47720d013938ccb822a9cbd20c5f09ab65ae8300e7986b6ce75e916d3b59599ece72134adf2972d06a76a8ba5f3747d356117c342 --fork-version 0x01017000 --enclave-url http://localhost:9001 --output-file registration.json
 ```
 
 ---
@@ -71,8 +56,7 @@ scp your-server@XX.XXX.XXX.XX:/path/to/coral/registration.json ~/my/local/comput
 
 ![alt text](/img/mint-pufeth-vt.png)
 
-- Enclave users must deposit 1 ETH worth of pufETH to register
-- Non-enclave users must deposit 2 ETH worth of pufETH to register
+- Users must deposit 2 ETH worth of pufETH to register
 - A minimum of 28 Validator Tickets (VTs) are required to be deposited when registering a validator. The Guardians will exit validators if their VTs expire after 28 days without being refilled.
 
 ### Step 4: Register Validator
@@ -94,8 +78,6 @@ Invalid registrations will be skipped by the Guardians. The NoOp's bond will be 
 
 Import your validator keys to your beacon/validator client.
 
-**Without Secure-Signer**:
-
 You can find your generated keystore files in the `coral/etc/keys/bls_keys/` directory where each keystore file name is your BLS public key. The contents are encrypted using your supplied password file adhering to [ERC-2335](https://github.com/ethereum/ercs/blob/master/ERCS/erc-2335.md).
 
 - [Import your validator keys to Nimbus ↗](https://nimbus.guide/run-a-validator.html#2-import-your-validator-keys)
@@ -103,21 +85,6 @@ You can find your generated keystore files in the `coral/etc/keys/bls_keys/` dir
 - [Import your validator keys to Lodestar ↗](https://chainsafe.github.io/lodestar/validator-management/vc-configuration/#import-a-validator-keystore-to-lodestar)
 - [Import your validator keys to Lighthouse ↗](https://lighthouse-book.sigmaprime.io/mainnet-validator.html#step-3-import-validator-keys-to-lighthouse)
 - [Import your validator keys to Prysm ↗](https://docs.prylabs.network/docs/wallet/nondeterministic#import-validator-accounts)
-
-**Using Secure-Signer**
-
-Secure-Signer follows the same API as [Web3Signer](https://consensys.github.io/web3signer/web3signer-eth2.html) so the same instructions apply. Since your BLS private keys are encrypted at all times, you cannot directly view your keystore files. However, you can list all of your enclave's public keys by calling this API (assuming the enclave is running at `localhost:9001`):
-
-```bash
-curl -X GET localhost:9001/api/v1/eth2/publicKeys
-```
-
-This is the same API that many consensus/validator clients use to interface with a remote signer:
-
-- [Connect Secure-Signer to Nimbus ↗](https://nimbus.guide/run-a-validator.html#2-import-your-validator-keys)
-- [Connect Secure-Signer to Teku ↗](https://docs.teku.consensys.io/how-to/use-external-signer/use-web3signer)
-- [Connect Secure-Signer to Lighthouse ↗](https://lighthouse-book.sigmaprime.io/validator-web3signer.html?highlight=web3signer#usage)
-- [Connect Secure-Signer to Prysm ↗](https://docs.prylabs.network/docs/wallet/web3signer)
 
 :::tip
 Make sure to set your `fee_recipient` value to your own wallet. Remember, Puffer takes no execution reward fees because of [Validator Tickets](https://docs.puffer.fi/protocol/validator-tickets#how-are-vts-used)!
