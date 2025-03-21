@@ -19,7 +19,7 @@ At its core, the Puffer protocol is a collection of **PufferModule** contracts. 
 
 <div style={{textAlign: 'center'}}>
 
-![PufferModule](/img/PufferModule.png)
+![PufferModule](/img/PufferModule_v2.png)
 
 </div>
 

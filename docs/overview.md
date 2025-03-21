@@ -11,7 +11,7 @@ Puffer is a native liquid restaking protocol (nLRP) designed to harness the powe
 
 <div style={{textAlign: 'center'}}>
 
-![PufferFlywheel](/img/PufferProtocol.png)
+![PufferProtocol](/img/PufferProtocol_v2.png)
 
 </div>
 
