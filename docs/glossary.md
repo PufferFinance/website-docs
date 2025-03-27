@@ -86,7 +86,7 @@ Slashing may refer to a loss of funds triggered by either of the following:
 
 ### `Validator Ticket`
 
-An ERC20 token. Each Validator Ticket allows operating a validator on the Puffer Protocol for one day.
+An ERC20 token. Each Validator Ticket allows operating 1 validator (32 ETH) on the Puffer Protocol for one day. In Pectra upgrade, validator balances can be up to 2048, so a validator that has a balance of 2048 ETH would be consuming 64 VT per day
 
 ### `Bond`
 
