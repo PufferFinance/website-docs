@@ -26,4 +26,4 @@ Puffer's smart contracts are located in two repos:
 
 ## Deployment Addresses
 
-Please check [Deployments and Access Control](https://github.com/PufferFinance/Deployments-and-ACL/tree/main/docs/deployments) Github repository for the definitive addresses of all deployed contracts on mainnet and Holesky and the associated ABIs.
+Please check [Deployments and Access Control](https://github.com/PufferFinance/Deployments-and-ACL/tree/main/docs/deployments) Github repository for the definitive addresses of all deployed contracts on all chains.

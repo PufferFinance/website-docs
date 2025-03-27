@@ -49,7 +49,7 @@ slug: /reference/faq
 
 ### 🐢 When did Puffer launch?
 
-> Puffer deployed on mainnet on 31th January 2024.
+> Puffer deployed on mainnet on 31st January 2024.
 
 ### 🦐 Can I get slashed if I go offline?
 
