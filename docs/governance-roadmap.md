@@ -8,6 +8,7 @@ slug: /governance/roadmap
 Our transition to full community governance will occur in stages, ensuring a smooth, secure, and effective implementation. Note that the roadmap and timeline are subject to change as the protocol evolves.
 
 Throughout all phases, we remain committed to:
+
 - Fostering broad community participation in discussions and decision-making
 - Maintaining transparency in all governance processes
 - Balancing innovation with security and stability
@@ -46,8 +47,9 @@ Throughout all phases, we remain committed to:
   - UniFi Rollup: Setting fee parameters and directing ecosystem rewards
 - Introduction of more complex governance decision-making processes
 - Launch of the UniFi Grants Program
-  - Community-driven initiative to fund projects contributing to the UniFi ecosystem 
+  - Community-driven initiative to fund projects contributing to the UniFi ecosystem
 
 ## Phase 3: Protocol Ossification
+
 - Transition towards a fully autonomous and self-sustaining governance model
 - Ossify governance processes and smart contracts

@@ -3,7 +3,6 @@ title: Hello UniFi AVS 🦄
 slug: /unifi-avs-intro
 ---
 
-> ### 
 :::info About UniFi AVS
 UniFi AVS is an EigenLayer-based solution addressing challenges in Ethereum's preconfirmation (preconf) ecosystem. It offers permissionless validator participation, an on-chain registry, and slashing mechanisms for accountability.
 
@@ -40,13 +39,14 @@ Built on EigenLayer and integrating [Commit-Boost](https://commit-boost.github.i
 - 🌟 Open Source: Developed as a public good.
 - 🔧 Standardization: Facilitates easier integration with validator software.
 
------
+---
 
 ### The UniFi AVS Ecosystem 🌐
 
 <div style={{textAlign: 'center'}}>
 
 ![UniFiAVSFlywheel](/img/unifi-avs-flywheel.png)
+
 </div>
 
 UniFi AVS creates a robust ecosystem that enhances Ethereum's capabilities without compromising its core principles. It brings together validators, users, and the broader Ethereum community to provide faster, more secure, and more efficient transaction processing.

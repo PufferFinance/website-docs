@@ -61,30 +61,34 @@ Preconfirmations provide near-instant transaction assurances by leveraging a net
 To build an effective preconfirmation protocol for based rollups, several key requirements must be met:
 
 1. **Validator Network**: 🌐
+
    - A network of Ethereum validators willing to participate in preconfirmations
    - Open system allowing any eligible validator to join
 
 2. **Economic Incentives**: 💰
+
    - A system to reward validators for honest participation
    - Penalties (e.g., slashing) for malicious behavior (safety faults) or non-performance (liveness faults)
 
 3. **Security Guarantees**: 🔒
+
    - Cryptographic proofs of validator commitments
    - Mechanisms to ensure the integrity of preconfirmations
 
 4. **Standardization**: 🔧
+
    - On-chain registry of participating validators
    - Common interfaces for validator software
 
 5. **Capital Efficiency**: 💼
-    - Mechanisms to allow validators to participate without locking up additional capital
-    - Potential integration with restaking protocols
+   - Mechanisms to allow validators to participate without locking up additional capital
+   - Potential integration with restaking protocols
 
 By addressing these requirements, a preconfirmation protocol can provide the necessary infrastructure to enable near-instant, secure transaction confirmations for based rollups, significantly enhancing the user experience and efficiency of the Ethereum ecosystem.
 
 ## UniFi AVS: Pioneering Preconfirmations 🦄
 
-UniFi AVS steps in as the first instantiation of a preconfirmation protocol for based rollups. 
+UniFi AVS steps in as the first instantiation of a preconfirmation protocol for based rollups.
 
 By combining EigenLayer's restaking capabilities with Commit-Boost's standardization, UniFi AVS creates a robust, efficient, and secure preconfirmation system for based rollups.
 
