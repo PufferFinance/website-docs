@@ -51,6 +51,11 @@ const sidebars = {
       items: ["deployed-contracts", "multisig"],
     },
     {
+      type: "category",
+      label: "Institutional",
+      items: ["institutional"],
+    },
+    {
       type: "link",
       label: "UniFi",
       href: 'https://docs-unifi.puffer.fi/',
