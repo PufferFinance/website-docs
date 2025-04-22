@@ -23,15 +23,11 @@ In practice, this is done by maintaining a history of previously signed material
 
 While this technique reduces the risk of slashing events, there are instances in which the remote-signer is vulnerable. For example, a validator may be slashed if its validator key is shared amongst multiple remote-signers or due to a bug in the consensus client. Additionally, a slash may happen if the validator’s EIP-3076 slash protection database is accidentally or maliciously corrupted.
 
-Check out [Secure-Signer](secure-signer.md) to find out how Puffer prevents slashing.
-
 ## Slashing penalties
 
 The Ethereum PoS specifications introduce the notion of an [anti-correlation penalty](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#aside-anti-correlation-penalties-in-eth2). To disincentivize validator collusion, the slashing penalty is proportional to the number of validators that were slashed within approximately 18 days. More concretely, if any of the three slashing offenses are breached, the validator will lose $1 + \frac{3s}{D} * 32$ ETH, where $s$ is the amount of ETH slashed within 18 days, and $D$ is the total amount of ETH staked on Ethereum.
 
 For low-correlation slashing events (e.g., user error), a validator will lose close to the 1 ETH minimum, but for high-correlation events (e.g., consensus client bug), they could lose their full 32 ETH. See this [article](https://dankradfeist.de/ethereum/2022/03/24/run-the-majority-client-at-your-own-peril.html) for more information.
-
-The existence of slashable offenses and the large penalty increase risk and motivate Puffer's Secure-Signer.
 
 ## Inactivity Penalties
 

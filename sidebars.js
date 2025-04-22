@@ -37,13 +37,21 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "Technology",
-      items: ["secure-signer", "rave"],
+      label: "Node Operators",
+      items: [
+        "requirements",
+        "setup",
+        "registration",
+        "noop-rewards",
+        "purchase-vts",
+        "purchase-vt-using-safe",
+        "ejection-scenarios",
+      ],
     },
     {
       type: "category",
-      label: "Node Operators",
-      items: ["requirements", "setup", "registration", "noop-rewards", "purchase-vts", "purchase-vt-using-safe", "ejection-scenarios"],
+      label: "Stakers",
+      items: ["stake", "withdraw"],
     },
     {
       type: "category",
@@ -58,34 +66,54 @@ const sidebars = {
     {
       type: "link",
       label: "UniFi",
-      href: 'https://docs-unifi.puffer.fi/',
+      href: "https://docs-unifi.puffer.fi/",
     },
     {
       type: "category",
       label: "UniFi AVS",
-      items: ["unifi-avs-intro", "unifi-avs-background", "unifi-avs-protocol", "unifi-avs-getting-started"],
+      items: [
+        "unifi-avs-intro",
+        "unifi-avs-background",
+        "unifi-avs-protocol",
+        "unifi-avs-getting-started",
+      ],
     },
     {
       type: "category",
       label: "Governance",
-      items: ["governance-mission", "governance-understanding-governance", "governance-calendar", "governance-token", "governance-voting", "governance-roadmap"]
+      items: [
+        "governance-mission",
+        "governance-understanding-governance",
+        "governance-calendar",
+        "governance-token",
+        "governance-voting",
+        "governance-roadmap",
+      ],
     },
     {
       type: "category",
       label: "Campaigns",
-      items: ["campaigns-season-1", "campaigns-season-2"]
+      items: ["campaigns-season-1", "campaigns-season-2"],
     },
     {
       type: "category",
       label: "Reference",
-      items: ["glossary", "hardforks", "slash", "faq", "cookie-policy", "privacy-policy", "terms-of-service"]
+      items: [
+        "glossary",
+        "hardforks",
+        "slash",
+        "faq",
+        "cookie-policy",
+        "privacy-policy",
+        "terms-of-service",
+      ],
     },
     {
       type: "link",
       label: "Puffer SDK",
-      href: 'https://pufferfinance.github.io/puffer-sdk/',
-    }
-  ]
+      href: "https://pufferfinance.github.io/puffer-sdk/",
+    },
+  ],
 };
 
 module.exports = sidebars;

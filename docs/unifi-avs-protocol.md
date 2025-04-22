@@ -4,11 +4,13 @@ slug: /unifi-avs-protocol
 ---
 
 ## Overview
+
 UniFi AVS is composed of off-chain software for handling pre-conf operations, and on-chain AVS contracts for handling registrations, rewards, and punishments.
 
 <div style={{textAlign: 'center'}}>
 
 ![UniFiAVSOverview](/img/unifi-avs-overview.png)
+
 </div>
 
 ### Definitions
@@ -26,6 +28,7 @@ The UniFi AVS ecosystem involves several key components and actors:
 ## Protocol Architecture
 
 ### High Level Preconf Flow
+
 ```mermaid
 sequenceDiagram
     autonumber
@@ -55,6 +58,7 @@ sequenceDiagram
     L1->>G: gateway fee
     O->>RM: Claim AVS rewards
 ```
+
 The preconf flow in UniFi AVS involves several interactions:
 
 1. Operators set their delegate key to point to a Gateway
@@ -87,6 +91,7 @@ This powerful concept allows for robust guarantees around both inclusion and exe
 As UniFi AVS evolves, it may support additional types of preconfirmations, further expanding its utility in the Ethereum ecosystem.
 
 ## On-Chain Components
+
 UniFi AVS utilizes several smart contracts to manage its operations:
 
 1. **UniFiAVSManager**: Handles AVS registrations, including operator and validator registrations.
@@ -98,11 +103,13 @@ UniFi AVS utilizes several smart contracts to manage its operations:
 UniFi AVS implements a double opt-in registration process for operators and validators, ensuring security and flexibility:
 
 1. **Operator Onboarding**:
+
    - Operators first register with EigenLayer's delegation system.
    - They then opt into the UniFi AVS, signaling their intent to participate.
    - The UniFi AVS system records the operator's registration in EigenLayer's AVS directory.
 
 2. **Commitment Declaration**:
+
    - Operators specify their service parameters:
      - A delegate key for signing preconfirmations.
      - Supported based rollup chain IDs.
@@ -111,6 +118,7 @@ UniFi AVS implements a double opt-in registration process for operators and vali
      - Finalize the change after a predetermined delay.
 
 3. **Validator Enrollment**:
+
    - Operators enroll validators linked to EigenPods under their delegation. They either own directly or have a trusted relationship with the EigenPod owner.
    - This trust relationship is important, as validators ultimately run Commit-Boost and propose the blocks.
    - The system verifies:
@@ -119,6 +127,7 @@ UniFi AVS implements a double opt-in registration process for operators and vali
    - Enrollment is completed using the validators' BLS public key hashes.
 
 4. **Unified Key Management**:
+
    - A single delegate key represents all of an operator's registered validators.
    - The system supports various key types for future flexibility.
 
@@ -132,26 +141,30 @@ This process ensures secure and efficient onboarding of operators and validators
 
 UniFi AVS will implement a rewards distribution mechanism designed to provide consistent and attractive incentives for participating validators while addressing challenges of volatility and infrequent payouts.
 
-1. **Pre-confirmation Fees**: 
+1. **Pre-confirmation Fees**:
+
    - Primary source of rewards, paid by users for execution preconfs.
    - Fees can be volatile and block reward payouts may be infrequent for individual validators.
 
-2. **MEV-Smoothing**: 
+2. **MEV-Smoothing**:
+
    - Distributes rewards more evenly over time.
    - Mitigates volatility and infrequency of rewards.
    - Provides validators with a more stable and predictable income stream.
    - Mitigates economies of scale.
 
-3. **Ether Payouts**: 
+3. **Ether Payouts**:
+
    - All rewards are paid out in ETH.
    - Ensures liquidity and simplicity for validators.
    - Avoids issues with illiquid or non-native tokens.
 
-4. **Competitive Earnings**: 
+4. **Competitive Earnings**:
    - Validators can potentially earn more than traditional PBS (Proposer-Builder Separation) methods.
    - Creates a compelling economic incentive for participation in the preconf process.
 
 #### Rewards Flow
+
 ```mermaid
 graph TD
     A[User] -->|Pays preconf tips in priority fees| B[Gateway]
@@ -186,6 +199,7 @@ The implementation of the mechanism will depend on EigenLayer's slashing design 
 :::
 
 #### Slashing Flow
+
 ```mermaid
 graph TD
     A[Validator Signs Pre-confirmation] --> B{Validator Behavior}

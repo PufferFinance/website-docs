@@ -7,61 +7,64 @@ slug: /protocol/puffer-modules
 Puffer allows Validators to get native restaking exposure to earn more than they could in traditional liquid staking protocols or solo staking.
 :::
 
-
 ### Native restaking 🥩
-A *native restaker* is an Ethereum PoS validator that restakes their 32 ETH to operate EigenLayer [AVSs](https://docs.eigenlayer.xyz/overview/key-terms). Native restakers are awarded AVS fees in exchange for their service, but are subject to penalties if they break the AVS's rules. To engage in native restaking, validators must point their [withdrawal credentials](/reference/glossary/#withdrawal-credentials) to an [EigenPod](https://github.com/Layr-Labs/eigenlayer-contracts/blob/master/docs/core/EigenPodManager.md#eigenpodmanager) contract which then opts-in to restaking and chooses its AVSs.
 
-Native restaking allows validators to better utilize their ETH capital and hardware to supplement their PoS rewards. However, the 32 ETH requirement is too high a barrier for most to participate. Additionally, some AVSs may require far greater computational requirements than what is expected from PoS. Puffer aims to address this through its PufferModules. 
+A _native restaker_ is an Ethereum PoS validator that restakes their 32 ETH to operate EigenLayer [AVSs](https://docs.eigenlayer.xyz/overview/key-terms). Native restakers are awarded AVS fees in exchange for their service, but are subject to penalties if they break the AVS's rules. To engage in native restaking, validators must point their [withdrawal credentials](/reference/glossary/#withdrawal-credentials) to an [EigenPod](https://github.com/Layr-Labs/eigenlayer-contracts/blob/master/docs/core/EigenPodManager.md#eigenpodmanager) contract which then opts-in to restaking and chooses its AVSs.
+
+Native restaking allows validators to better utilize their ETH capital and hardware to supplement their PoS rewards. However, the 32 ETH requirement is too high a barrier for most to participate. Additionally, some AVSs may require far greater computational requirements than what is expected from PoS. Puffer aims to address this through its PufferModules.
 
 ### Puffer Modules 🐡
-At its core, the Puffer protocol is a collection of **PufferModule** contracts. Each module controls an EigenPod that functions as a single native restaker but is composed of *many* NoOp-controlled validators.
+
+At its core, the Puffer protocol is a collection of **PufferModule** contracts. Each module controls an EigenPod that functions as a single native restaker but is composed of _many_ NoOp-controlled validators.
 
 <div style={{textAlign: 'center'}}>
 
-![PufferModule](/img/PufferModule.png)
+![PufferModule](/img/PufferModule_v2.png)
 
 </div>
 
-Modules are filled with the validators of NoOps whose sole job is to perform Ethereum PoS validation. The validators' ETH is then restaked and used as collateral for EigenLayer AVSs. During Puffer's initial phase, the responsibility of operating the AVSs is delegated to a DAO-chosen [**restaking operator**](/protocol/puffer-modules#restaking-operators) (ReOp), who provides the service in exchange for a portion of the generated AVS fees. 
+Modules are filled with the validators of NoOps whose sole job is to perform Ethereum PoS validation. The validators' ETH is then restaked and used as collateral for EigenLayer AVSs. During Puffer's initial phase, the responsibility of operating the AVSs is delegated to a DAO-chosen [**restaking operator**](/protocol/puffer-modules#restaking-operators) (ReOp), who provides the service in exchange for a portion of the generated AVS fees.
 
-The protocol decides which AVSs the modules are assigned, allowing restaked ETH to be allocated to AVSs according to the protocol's risk preferences. Given the delegation risk, the NoOps are awarded commission on the AVS fees with the rest returned to the protocol, helping grow the value of pufETH. This allows NoOps with less than 2 ETH to earn rewards from native restaking.
+The protocol decides which AVSs the modules are assigned, allowing restaked ETH to be allocated to AVSs according to the protocol's risk preferences. Given the delegation risk, the NoOps are awarded commission on the AVS fees with the rest returned to the protocol, helping grow the value of pufETH. This allows NoOps with 2 ETH to earn rewards from native restaking.
 
 :::tip
-When NoOps deploy their validators to PufferModules they automatically earn restaking rewards commission. 
+When NoOps deploy their validators to PufferModules they automatically earn restaking rewards commission.
 :::
 
 ### Restaking Operators
+
 Restaking Operators (ReOps) are operators whose job is to perform all the required AVS duties on behalf of a given restaking module. ReOps may also be NoOps within their own or other modules. ReOps are expected to perform well to maximize restaking rewards for their own benefit and that of the NoOps in their module and pufETH holders downstream. In the Puffer protocol, ReOps operate through [RestakingOperator](https://github.com/PufferFinance/PufferPool/blob/master/docs/RestakingOperator.md) contracts, which allows governance to decide their AVS selections through the [PufferModuleManager](https://github.com/PufferFinance/PufferPool/blob/master/docs/PufferModuleManager.md) contract.
 
 ### Joining a module 👈
-To hold strong to our alignment with Ethereum's ethos, it is **always permissionless** for NoOps to join a module and deploy an Ethereum validator. 
 
-:::tip 
+To hold strong to our alignment with Ethereum's ethos, it is **always permissionless** for NoOps to join a module and deploy an Ethereum validator.
+
+:::tip
 It is permissionless for NoOps to deploy validators to modules.
 :::
 
-To join, NoOps lock [1 or 2 ETH](/reference/faq#%EF%B8%8F-how-many-eth-do-i-need-to-run-a-puffer-node) collateral and lock [validator tickets](/protocol/validator-tickets#what), which represent a long-term commitment to run a validator in the module. Their collateral is then locked as pufETH and they are provisioned 32 ETH to deploy their validator to the module's [EigenPod](https://github.com/Layr-Labs/eigenlayer-contracts/blob/master/docs/core/EigenPodManager.md#eigenpodmanager) contract.
+To join, NoOps lock [2 ETH](/reference/faq#%EF%B8%8F-how-much-eth-do-i-need-to-run-a-puffer-node) collateral and lock [validator tickets](/protocol/validator-tickets), which represent a long-term commitment to run a validator in the module. Their collateral is then locked as pufETH and they are provisioned 32 ETH to deploy their validator to the module's [EigenPod](https://github.com/Layr-Labs/eigenlayer-contracts/blob/master/docs/core/EigenPodManager.md#eigenpodmanager) contract.
 
 The NoOp is now entitled to keep all of the PoS rewards (consensus and execution) generated by their validator. The NoOps that joined PufferModules will also receive restaking rewards.
 
 ## Restaking risks and mitigations 🚧
+
 The concept of restaking, while promising, introduces certain inherent risks to stakers and NoOps alike. These primarily revolve around the vulnerabilities of smart contracts and potential AVS slashing risks.
 
 :::tip
-Puffer strives to mitigate these risks by taking a conservative approach as restaking matures. 
+Puffer strives to mitigate these risks by taking a conservative approach as restaking matures.
 :::
 
 Through the sustainable rewards that it can offer, restaking can reshape the dynamics of the liquid staking market, which is currently on a dangerous path towards complete centralization.
 
-
 ### Restricting ReOps
 
-To ensure a safe transition into the world of restaking, Puffer will rely more heavily on governance to decide restaking qualifications during its nascent stages. During this time, only reputable ReOps with excellent performance that have been selected through governance will be eligible to operate the AVSs on behalf of a given module. 
+To ensure a safe transition into the world of restaking, Puffer will rely more heavily on governance to decide restaking qualifications during its nascent stages. During this time, only reputable ReOps with excellent performance that have been selected through governance will be eligible to operate the AVSs on behalf of a given module.
 
 As Eigenlayer, AVSs, and Puffer’s anti-slashing mechanisms mature, proven NoOps will have the option to become ReOps without DAO-approval.
 
 ### Restricting AVSs
 
-As an open platform, EigenLayer allows anyone to deploy an AVS. Thus, allowing PufferModules to service any AVS would expose the stakers and NoOps to too much slashing risk. 
+As an open platform, EigenLayer allows anyone to deploy an AVS. Thus, allowing PufferModules to service any AVS would expose the stakers and NoOps to too much slashing risk.
 
 To mitigate this risk, Puffer requires the DAO to onboard new modules, carefully vet the allowed AVSs, and manage the allocation of modules to AVSs.
