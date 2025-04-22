@@ -20,16 +20,13 @@ The Puffer Protocol app currently supports the following assets:
 - **ETH**: The native token of the Ethereum blockchain.
 - **stETH**: A liquid staking token for Ethereum that represents the staked version of ETH in the Lido protocol. It is pegged 1:1 with ETH.
 - **wstETH**: A wrapped version of stETH. It is not 1:1 with stETH.
+- **WETH**: A wrapped version of ETH. It is 1:1 with ETH.
 
 ![Select Asset](/img/stake/select_asset.png)
 
-:::info
-The Puffer Protocol actually supports WETH as well. However the frontend app does not currently support it. In order to stake WETH, you can interact directly with the smart contract or unwrap your WETH into ETH and stake it through the frontend app.
-:::
-
 ## Select amount
 
-You can select the amount of ETH, stETH, or wstETH you want to stake. The app will automatically calculate the amount of pufETH you will receive in return. The exchange rate will be the same for ETH and stETH since they are pegged 1:1. For wstETH, the exchange rate will be different.
+You can select the amount of ETH, stETH, wstETH, or WETH you want to stake. The app will automatically calculate the amount of pufETH you will receive in return. The exchange rate will be the same for ETH, WETH and stETH since they are pegged 1:1. For wstETH, the exchange rate will be different.
 
 ![Select Amount](/img/stake/select_amount.png)
 
@@ -42,5 +39,7 @@ Once you have selected the amount you want to stake, you can click on the "Stake
 In the case of stETH and wstETH, you will need to first sign a Permit in order to allow the Puffer Protocol to spend your stETH/wstETH. Please note that the Permit is a signature and not a transaction, so you will not be charged any gas fees for it.
 
 In the case of ETH, no Permit is needed since ETH is a native token on the Ethereum blockchain.
+
+If you are staking WETH, you will need to sign a transaction to approve the Puffer Protocol to spend your WETH.
 
 In any case, you will need to sign a transaction to stake your funds and receive your pufETH.
