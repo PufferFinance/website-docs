@@ -38,23 +38,25 @@ Run the command where you [installed the Coral-CLI](/nodes/setup#setup-coral-cli
 
 The following **example** command will create a local validator keystore file in the `./etc/keys/bls_keys` directory. The keystore is encrypted using the password contained in `password.txt`. The command will create a registration payload called `registration.json`.
 
-```
+```text
 cargo run --bin coral-cli validator keygen --guardian-threshold 1 --module-name 0x5055464645525f4d4f44554c455f300000000000000000000000000000000000 --withdrawal-credentials 0x0100000000000000000000005ee9246f01e95c08ee767029c1d18765bb1779d0 --guardian-pubkeys 0x049cc1fbaa3cffd3e4c1f935c47720d013938ccb822a9cbd20c5f09ab65ae8300e7986b6ce75e916d3b59599ece72134adf2972d06a76a8ba5f3747d356117c342 --fork-version 0x01017000 --password-file password.txt --output-file registration.json
-```
-
+```text
 ---
 
 #### Fetching the registration payload
 
 If you ran the Coral-CLI on a remote server you can fetch the registration payload by substituting your information in the following command:
 
-```
+```text
 scp your-server@XX.XXX.XXX.XX:/path/to/coral/registration.json ~/my/local/computer/registration.json
-```
-
+```text
 ### Step 3: Mint pufETH or VTs
 
 ![alt text](/img/mint-pufeth-vt.png)
+{/* MDX-BLOCK-START */}
+{/* MDX-BLOCK-START */}
+{/* MDX-BLOCK-START */}
+{/* MDX-BLOCK-START */}
 
 - Users must deposit 2 ETH worth of pufETH to register
 - A minimum of 28 Validator Tickets (VTs) are required to be deposited when registering a validator. The Guardians will exit validators if their VTs expire after 28 days without being refilled.
@@ -100,49 +102,43 @@ For operators interested in running many Puffer validators a convenience script 
 
 1. Clone the PufferPool repo:
 
-   > ```
+   > ```text
    > git clone https://github.com/PufferFinance/PufferPool.git
    > cd PufferPool
-   > ```
-
+   > ```text
 2. Install [Foundry](https://book.getfoundry.sh/getting-started/installation)
 
-   > ```
+   > ```text
    > curl -L https://foundry.paradigm.xyz | bash
-   > ```
-
+   > ```text
 3. Install Coral-CLI
 
-   > ```
+   > ```text
    > cargo install -f --git https://github.com/PufferFinance/coral.git
-   > ```
-
+   > ```text
 4. The batch registration script requires a local Eth keystore file to run. You can create a keystore file by importing an existing private key as follows:
-   > ```
+   > ```text
    > cast wallet import -i puffer-test
    > Enter private key:
    > Enter password:
    > `puffer-test` keystore was saved successfully. Address: 0x4D42ABfB6D4bEDaf64dF8BE054676149BDfa224d
-   > ```
-
+   > ```text
 This command created a keystore file named `puffer-test` in the `ls ~/.foundry/keystores` directory. More instructions on working with Foundry keystores can be found [in their docs](https://book.getfoundry.sh/reference/cast/cast-wallet-import#directory-options).
 
 5. Fund the wallet with sufficient VTs, pufETH, and ETH to cover gas. These can be purchased as [described above](./registration.md#step-3-mint-pufeth-or-vts).
 
 6. Inside the PufferPool repo, install the batch registration script dependencies:
 
-   > ```
+   > ```text
    > forge install
-   > ```
-
+   > ```text
 7. Edit the `validator-keystore-password.txt` file. This will be the password used to encrypt your validator BLS keystore files.
 
 8. Create the `registration-data` directory for your output registration JSONs
 
-   > ```
+   > ```text
    > mkdir -p registration-data
-   > ```
-
+   > ```text
 9. Simulate the batch registration script:
    > - Replace with your RPC URL (either for mainnet or holesky)
    > - Set the keystore `--account` to the name of your keystore located in `~/.foundry/keystores` (from step 4)
@@ -151,28 +147,24 @@ This command created a keystore file named `puffer-test` in the `ls ~/.foundry/k
 
 - Example Holesky command:
 
-  > ```
+  > ```text
   > forge script script/GenerateBLSKeysAndRegisterValidators.s.sol:GenerateBLSKeysAndRegisterValidators --rpc-url=https://ethereum-holesky.publicnode.com --account puffer-test -vvv --sender=0x4D42ABfB6D4bEDaf64dF8BE054676149BDfa224d --ffi
-  > ```
-
+  > ```text
 - Example Mainnet command:
-  > ```
+  > ```text
   > forge script script/GenerateBLSKeysAndRegisterValidators.s.sol:GenerateBLSKeysAndRegisterValidators --rpc-url=https://eth.llamarpc.com --account puffer-test -vvv --sender=0x4D42ABfB6D4bEDaf64dF8BE054676149BDfa224d --ffi
-  > ```
-
+  > ```text
 10. Rerun the command with the `--slow` and `--broadcast` flags to send the transaction on chain. Note that the command may take several minutes to run.
 
 - Example Holesky command:
 
-  > ```
+  > ```text
   > forge script script/GenerateBLSKeysAndRegisterValidators.s.sol:GenerateBLSKeysAndRegisterValidators --rpc-url=https://ethereum-holesky.publicnode.com --account puffer-test -vvv --sender=0x4D42ABfB6D4bEDaf64dF8BE054676149BDfa224d --ffi --slow --broadcast
-  > ```
-
+  > ```text
 - Example Mainnet command:
-  > ```
+  > ```text
   > forge script script/GenerateBLSKeysAndRegisterValidators.s.sol:GenerateBLSKeysAndRegisterValidators --rpc-url=https://eth.llamarpc.com --account puffer-test -vvv --sender=0x4D42ABfB6D4bEDaf64dF8BE054676149BDfa224d --ffi --slow --broadcast
-  > ```
-
+  > ```text
 11. Your validator keys will be generated locally in the folder: `PufferPool/etc/keys/bls_keys/` and can be added to your validator client as described [here](./registration#step-6-prepare-your-validator).
 
 ## Batch Registering Validators Using Gnosis SAFE
@@ -183,42 +175,37 @@ A similar flow exists for operators that use [SAFE](https://app.safe.global). Th
 
 1. Clone the puffer-contracts repo:
 
-   > ```
+   > ```text
    > git clone https://github.com/PufferFinance/puffer-contracts.git
    > cd puffer-contracts
-   > ```
-
+   > ```text
 2. Install Contract Dependencies
 
-   > ```
+   > ```text
    > yarn install
-   > ```
-
+   > ```text
 3. Install [Foundry](https://book.getfoundry.sh/getting-started/installation)
 
-   > ```
+   > ```text
    > curl -L https://foundry.paradigm.xyz | bash
-   > ```
-
+   > ```text
 4. Install Coral-CLI
 
-   > ```
+   > ```text
    > cargo install -f --git https://github.com/PufferFinance/coral.git
-   > ```
-
+   > ```text
 5. Enter the utility-scripts directory
 
-   > ```
+   > ```text
    > cd utility-scripts
-   > ```
-
+   > ```text
 6. Edit the `validator-keystore-password.txt` file. This will be the password used to encrypt your validator BLS keystore files.
 
 7. Run the script:
 
-   > ```
+   > ```text
    > forge script script/GenerateBLSKeysAndRegisterValidatorsCalldata.s.sol:GenerateBLSKeysAndRegisterValidatorsCalldata --rpc-url=$RPC_URL -vvv --ffi
-   > ```
+   > ```text
    >
    > ![alt text](/img/batch_registration_output.png)
    > Two things will happen:

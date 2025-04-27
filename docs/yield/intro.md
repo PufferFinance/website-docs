@@ -1,6 +1,6 @@
 ---
 title: Hello Puffer 🐡
-slug: /
+slug: /intro
 ---
 
 :::info About Puffer
@@ -13,19 +13,19 @@ It makes [native restaking](/protocol/puffer-modules/#native-restaking-) on [Eig
 
 ### **Protocol**
 
-- 🟢 Permissionless: anyone can run a validator on Puffer.
+- 🟢 Permissionless: anyone can run a validator on Puffer.
 
-- 🥩 Native Restaking: the first native liquid restaking protocol on Eigenlayer.
+- 🥩 Native Restaking: the first native liquid restaking protocol on Eigenlayer.
 
-- 🧢 Ethos Alignment: the protocol is self-capped to protect Ethereum.
+- 🧢 Ethos Alignment: the protocol is self-capped to protect Ethereum.
 
-- 🐡 Explosive Growth: pufETH can grow in value even if validator queues are long.
+- 🐡 Explosive Growth: pufETH can grow in value even if validator queues are long.
 
 ### **NoOps**
 
 - 💯 Capital Efficiency: 2 ETH to run a validator.
 
-- 🐢 Slash Protection: first-of-its-kind anti-slashing hardware support.
+- 🐢 Slash Protection: first-of-its-kind anti-slashing hardware support.
 
 - 🎲 MEV Autonomy: NoOps choose their MEV strategy.
 
@@ -33,7 +33,7 @@ It makes [native restaking](/protocol/puffer-modules/#native-restaking-) on [Eig
 
 - 💦 Liquid Staking: anyone can stake any ETH amount.
 
-- 🚀 Restaking Rewards: Eigenlayer integration supercharges rewards.
+- 🚀 Restaking Rewards: Eigenlayer integration supercharges rewards.
 
 - 🎟️ Validator Tickets: aligns NoOp incentives, smooths MEV, and creates new markets.
 

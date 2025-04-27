@@ -1,6 +1,6 @@
 ---
 title: UniFi AVS Protocol
-slug: /unifi-avs-protocol
+slug: /protocol
 ---
 
 ## Overview
@@ -30,6 +30,10 @@ The UniFi AVS ecosystem involves several key components and actors:
 ### High Level Preconf Flow
 
 ```mermaid
+// MERMAID-DIAGRAM
+// MERMAID-DIAGRAM
+// MERMAID-DIAGRAM
+// MERMAID-DIAGRAM
 sequenceDiagram
     autonumber
     participant U as Users
@@ -57,10 +61,12 @@ sequenceDiagram
     CB->>L1: Propose L1 block
     L1->>G: gateway fee
     O->>RM: Claim AVS rewards
-```
-
+```text
+{/* MDX-BLOCK-START */}
 The preconf flow in UniFi AVS involves several interactions:
+{/* MDX-BLOCK-START */}
 
+{/* MDX-BLOCK-START */}
 1. Operators set their delegate key to point to a Gateway
 2. Gateway queries the Beacon Node for the lookahead window to check the upcoming proposers
 3. Gateway checks if any of the upcoming proposers are delegated to them
@@ -166,6 +172,10 @@ UniFi AVS will implement a rewards distribution mechanism designed to provide co
 #### Rewards Flow
 
 ```mermaid
+// MERMAID-DIAGRAM
+// MERMAID-DIAGRAM
+// MERMAID-DIAGRAM
+// MERMAID-DIAGRAM
 graph TD
     A[User] -->|Pays preconf tips in priority fees| B[Gateway]
     B -->|Aggregates transactions and produces blocks| C[Validators]
@@ -174,8 +184,7 @@ graph TD
     E -->|Distribute rewards| F[Operators]
     E -->|Distribute rewards| G[Validators]
     E -->|Distribute rewards| H[Gateway]
-```
-
+```text
 #### Claiming Rewards
 
 Rewards will be distributed for each validator on the L2. Validators will be able to claim their rewards by setting a claimer address on the rewards contract by signing an EIP-712 hash with their BLS validator key.
@@ -201,6 +210,10 @@ The implementation of the mechanism will depend on EigenLayer's slashing design 
 #### Slashing Flow
 
 ```mermaid
+// MERMAID-DIAGRAM
+// MERMAID-DIAGRAM
+// MERMAID-DIAGRAM
+// MERMAID-DIAGRAM
 graph TD
     A[Validator Signs Pre-confirmation] --> B{Validator Behavior}
     B -->|Breaks Promise| C[Safety Fault]
@@ -211,4 +224,4 @@ graph TD
     E --> F
     F --> G[Slashing Mechanism Triggered]
     G --> H[Penalize Validator's Restaked Ether]
-```
+```text

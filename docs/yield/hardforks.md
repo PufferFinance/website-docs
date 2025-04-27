@@ -8,9 +8,9 @@ slug: /reference/ethereum-hard-forks
 In September 2022, Ethereum officially merged its Beacon Chain with its proof-of-work chain, upgrading
 its consensus layer to proof-of-stake (PoS). Validators replaced miners as the actors participating in
 the consensus protocol. This transition shifted the limiting resource from electricity and computational
-power to pure capital (32 ETH), significantly reducing Ethereum’s energy footprint.
+power to pure capital (32 ETH), significantly reducing Ethereum's energy footprint.
 
-The core principle of PoS is that validators with 32 ETH staked (worth approximately $60,000 USD at the time of writing) are incentivized to perform their consensus duties honestly or risk forfeiting their collateral or bond. The high capital requirement should make it infeasible for a centralized entity to acquire more than two-thirds of the validator set (a critical consensus threshold).
+The core principle of PoS is that validators with \(32\) ETH staked (worth approximately $60,000 USD at the time of writing) are incentivized to perform their consensus duties honestly or risk forfeiting their collateral or bond. The high capital requirement should make it infeasible for a centralized entity to acquire more than two-thirds of the validator set (a critical consensus threshold).
 
 Validators are incentivized to participate through consensus and execution rewards. Consensus rewards are earned by performing duties like attesting to the validity of proposed blocks and vary depending on factors like the validator's performance. Execution rewards are earned when the validator is randomly selected to propose a new block.
 

@@ -6,25 +6,218 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #6B4EFF;
+  --ifm-color-primary-dark: #5A3DFF;
+  --ifm-color-primary-darker: #4B2EFF;
+  --ifm-color-primary-darkest: #3B1EFF;
+  --ifm-color-primary-light: #7B5EFF;
+  --ifm-color-primary-lighter: #8B6EFF;
+  --ifm-color-primary-lightest: #9B7EFF;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(107, 78, 255, 0.1);
+  --puffer-primary: #6B4EFF;
+  --puffer-primary-dark: #4B2EFF;
+  --puffer-gradient: linear-gradient(135deg, var(--puffer-primary) 0%, var(--puffer-primary-dark) 100%);
+  --puffer-text: #1A1A1A;
+  --puffer-text-light: #666666;
+  --puffer-background: #FFFFFF;
+  --puffer-card-bg: #F8F9FA;
+  --puffer-border: #E5E7EB;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #8B6EFF;
+  --ifm-color-primary-dark: #7B5EFF;
+  --ifm-color-primary-darker: #6B4EFF;
+  --ifm-color-primary-darkest: #5A3DFF;
+  --ifm-color-primary-light: #9B7EFF;
+  --ifm-color-primary-lighter: #AB8EFF;
+  --ifm-color-primary-lightest: #BB9EFF;
+  --docusaurus-highlighted-code-line-bg: rgba(107, 78, 255, 0.2);
+}
+
+/* Sidebar styling */
+.menu__link {
+  color: var(--puffer-text-light);
+  transition: color 0.2s ease;
+}
+
+.menu__link:hover {
+  color: var(--puffer-primary);
+}
+
+.menu__link--active {
+  color: var(--puffer-primary);
+  font-weight: 600;
+}
+
+.menu__link--active:hover {
+  color: var(--puffer-primary-dark);
+}
+
+/* Navigation bar */
+.navbar {
+  background-color: var(--puffer-background);
+  box-shadow: 0 2px 8px rgba(107, 78, 255, 0.08);
+}
+
+.navbar__link {
+  color: var(--puffer-text);
+}
+
+.navbar__link:hover {
+  color: var(--puffer-primary);
+}
+
+.navbar__link--active {
+  color: var(--puffer-primary);
+  font-weight: 600;
+}
+
+/* Headings */
+.markdown h1 {
+  color: var(--puffer-text);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.markdown h2 {
+  color: var(--puffer-text);
+  font-size: 2rem;
+  margin: 2rem 0 1rem;
+  font-weight: 600;
+}
+
+.markdown h3 {
+  color: var(--puffer-primary);
+  font-size: 1.5rem;
+  margin: 1.5rem 0 1rem;
+  font-weight: 600;
+}
+
+.markdown h4 {
+  color: var(--puffer-text);
+  font-size: 1.25rem;
+  margin: 1.25rem 0 0.75rem;
+  font-weight: 600;
+}
+
+/* Links */
+.markdown a {
+  color: var(--puffer-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.markdown a:hover {
+  color: var(--puffer-primary-dark);
+  text-decoration: underline;
+}
+
+/* Code blocks */
+.markdown pre {
+  background-color: var(--puffer-card-bg);
+  border: 1px solid var(--puffer-border);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.markdown code {
+  color: var(--puffer-primary);
+  background-color: var(--puffer-card-bg);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* Tables */
+.markdown table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.markdown th {
+  background-color: var(--puffer-card-bg);
+  color: var(--puffer-text);
+  font-weight: 600;
+  padding: 0.75rem;
+  border: 1px solid var(--puffer-border);
+}
+
+.markdown td {
+  padding: 0.75rem;
+  border: 1px solid var(--puffer-border);
+  color: var(--puffer-text-light);
+}
+
+/* Lists */
+.markdown ul, .markdown ol {
+  color: var(--puffer-text-light);
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.markdown li {
+  margin: 0.5rem 0;
+}
+
+/* Blockquotes */
+.markdown blockquote {
+  border-left: 4px solid var(--puffer-primary);
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  background-color: var(--puffer-card-bg);
+  color: var(--puffer-text-light);
+}
+
+/* Horizontal rule */
+.markdown hr {
+  border: none;
+  border-top: 1px solid var(--puffer-border);
+  margin: 2rem 0;
+}
+
+/* Images */
+.markdown img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+/* Callouts and notes */
+.markdown .admonition {
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: var(--puffer-card-bg);
+  border: 1px solid var(--puffer-border);
+}
+
+.markdown .admonition-title {
+  color: var(--puffer-primary);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 996px) {
+  .markdown h1 {
+    font-size: 2rem;
+  }
+  
+  .markdown h2 {
+    font-size: 1.75rem;
+  }
+  
+  .markdown h3 {
+    font-size: 1.4rem;
+  }
+  
+  .markdown h4 {
+    font-size: 1.2rem;
+  }
 }

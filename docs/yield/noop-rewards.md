@@ -13,23 +13,27 @@ To withdraw rewards, Node Operators need to sign a transaction on Base by follow
 
 1. Click the "Claim" button
 
-![Claim Rewards Card](../static/img/noop-rewards-1.png)
+![Claim Rewards Card](/img/noop-rewards-1.png)
 
 2. Switch your wallet's network to Base. This step is necessary as the claiming process occurs on Base, and you'll need to sign a transaction there. Ensure you have sufficient ETH for gas.
 
-![Switch to Base](../static/img/noop-rewards-2.png)
+![Switch to Base](/img/noop-rewards-2.png)
 
 3. Click the "Claim" button again
 
-![Claim Rewards](../static/img/noop-rewards-3.png)
+![Claim Rewards](/img/noop-rewards-3.png)
 
 4. Review the transaction details carefully, then sign it using your wallet.
 
-![Sign Transaction](../static/img/noop-rewards-4.png)
+![Sign Transaction](/img/noop-rewards-4.png)
 
 5. Wait for the transaction confirmation. Once confirmed, you'll receive your rewards on Base.
 
-![Transaction Confirmed](../static/img/noop-rewards-5.png)
+{/* MDX-BLOCK-START */}
+{/* MDX-BLOCK-START */}
+{/* MDX-BLOCK-START */}
+{/* MDX-BLOCK-START */}
+![Transaction Confirmed](/img/noop-rewards-5.png)
 
 After claiming the rewards, Node Operators can either bridge them back to Ethereum L1 or utilize them on Base L2.
 
@@ -46,7 +50,7 @@ For each weekly interval, Puffer's Guardians perform the following steps:
 5. Enforce a mandatory waiting period to revert in case of a security vulnerability
 6. Once the waiting period ends, Node Operators can claim their rewards through the L2RewardManager contract on Base using the [Puffer Dashboard](https://launchpad.puffer.fi/Dashboard)
 
-![Rewards Claiming on Base](../static/img/fwr.png)
+![Rewards Claiming on Base](/img/fwr.png)
 
 ### Rewards Epochs and accounting
 
@@ -83,15 +87,15 @@ To change your rewards claimer address on Base, a Node Operator should follow th
 
 3.  Select `Transaction Builder`
 
-    ![alt text](../static/img/change-address-23.png)
+    ![alt text](/img/change-address-23.png)
 
 4.  Enter the L1RewardManager contract proxy address: [0x157788cc028Ac6405bD406f2D1e0A8A22b3cf17b](https://etherscan.io/address/0x157788cc028Ac6405bD406f2D1e0A8A22b3cf17b)
 
-    ![alt text](../static/img/change-address-4.png)
+    ![alt text](/img/change-address-4.png)
 
 5.  Select `Use Implementation ABI`
 
-    ![alt text](../static/img/change-address-5.png)
+    ![alt text](/img/change-address-5.png)
 
 6.  Set the `ETH value` amount to a small number, e.g., `0.000042`, this is the relayer fee to pay the bridge who will broadcast the transaction to Base.
 
@@ -103,7 +107,7 @@ To change your rewards claimer address on Base, a Node Operator should follow th
 
 10. Click `Add transaction` and then sign the generated SAFE transaction
 
-    ![alt text](../static/img/change-address-678910.png)
+    ![alt text](/img/change-address-678910.png)
 
     :::note
     If the `To Address` field doesn't auto-populate, it should be set to the L1RewardManager proxy contract address: [0x157788cc028Ac6405bD406f2D1e0A8A22b3cf17b](https://etherscan.io/address/0x157788cc028Ac6405bD406f2D1e0A8A22b3cf17b).

@@ -37,6 +37,10 @@ Basically 1 VT is consumed daily per validator.
 
 :::note
 The threshold is currently set to 5 days, meaning node operators must maintain a VT balance sufficient for at least 5 days before running out of VT or ejection will be triggered.
+{/* MDX-BLOCK-START */}
+{/* MDX-BLOCK-START */}
+{/* MDX-BLOCK-START */}
+{/* MDX-BLOCK-START */}
 
 A warning message will be issued when there are 8 days left before reaching the threshold, allowing node operators to take necessary actions to avoid ejection.
 :::
@@ -64,10 +68,9 @@ To check your VT consumption and validator status, you can use the Puffer API. H
 
 #### Endpoint
 
-```
+```text
 GET https://api.puffer.fi/puffer-withdrawal-service/api/v1/noop/consumption/calculate/{node_address}
-```
-
+```text
 Replace `{node_address}` with your node operator's Ethereum address.
 
 #### Request
@@ -76,8 +79,7 @@ Replace `{node_address}` with your node operator's Ethereum address.
 curl -X 'GET' \
   'https://api.puffer.fi/puffer-withdrawal-service/api/v1/noop/consumption/calculate/{node_address}' \
   -H 'accept: application/json'
-```
-
+```text
 #### Response
 
 ```json
@@ -89,8 +91,7 @@ curl -X 'GET' \
   "ticketsConsumed": "string", // Total VTs consumed
   "showWarning": true // Whether low VT balance warning should be shown
 }
-```
-
+```text
 This API provides real-time information about your VT status and validator health. Since the VT consumption is calculated per epoch the response is updated every epoch.
 
 :::warning Important Notice for Node Operators

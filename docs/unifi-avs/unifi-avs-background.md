@@ -1,6 +1,6 @@
 ---
 title: Background
-slug: /unifi-avs-background
+slug: /background
 ---
 
 ## The Ethereum Scalability Challenge 🏗️
@@ -49,6 +49,10 @@ Preconfirmations provide near-instant transaction assurances by leveraging a net
 - 🛡️ Backed by economic security from Ethereum validators
   - Validators stake ETH as collateral, ensuring honest behavior
   - Breaking preconf promises can result in slashing of staked assets
+{/* MDX-BLOCK-START */}
+{/* MDX-BLOCK-START */}
+{/* MDX-BLOCK-START */}
+{/* MDX-BLOCK-START */}
 - 🌐 Maintain neutrality and decentralization
   - Multiple validators participate, preventing single points of failure
   - Open participation ensures no central authority controls the process

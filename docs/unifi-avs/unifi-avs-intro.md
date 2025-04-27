@@ -1,6 +1,6 @@
 ---
-title: Hello UniFi AVS 🦄
-slug: /unifi-avs-intro
+title: Introduction to UniFi AVS
+slug: /intro
 ---
 
 :::info About UniFi AVS

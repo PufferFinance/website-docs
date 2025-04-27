@@ -21,6 +21,10 @@ These instant withdrawals are made possible by Puffer's liquidity vault, but inc
 
 ![1-step withdrawals](/img/withdraw/1sw.png)
 
+{/* MDX-BLOCK-START */}
+{/* MDX-BLOCK-START */}
+{/* MDX-BLOCK-START */}
+{/* MDX-BLOCK-START */}
 ## 2-step withdrawals (2sw)
 
 Also known as "standard withdrawals", this option allows you to convert your pufETH into WETH without paying any fees. This mode ensures the Protocol will have enough liquidity to cover the withdrawal, although it might take around 14 days to complete.

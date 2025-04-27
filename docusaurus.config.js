@@ -4,8 +4,8 @@ const math = require("remark-math");
 const katex = require("rehype-katex");
 
 module.exports = {
-  title: "Puffer Docs",
-  tagline: "Documentation for the Puffer Protocol",
+  title: "Puffer Finance Docs",
+  tagline: "Documentation for the Puffer products",
   url: "https://docs.puffer.fi",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -13,6 +13,11 @@ module.exports = {
   favicon: "img/favicon.ico",
   organizationName: "pufferfinance",
   projectName: "doctest",
+  markdown: {
+    mermaid: true,
+    format: 'detect'
+  },
+  themes: ['@docusaurus/theme-mermaid'],
   themeConfig: {
     footer: {
       style: "dark",
@@ -42,10 +47,6 @@ module.exports = {
         {
           title: "More",
           items: [
-            // {
-            //   label: "Blog",
-            //   to: "/blog",
-            // },
             {
               label: "GitHub",
               href: "https://github.com/PufferFinance",
@@ -53,9 +54,7 @@ module.exports = {
           ],
         },
       ],
-      // copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     },
-
     prism: {
       additionalLanguages: ["solidity"],
     },
@@ -101,16 +100,89 @@ module.exports = {
   },
   presets: [
     [
-      "@docusaurus/preset-classic",
-      {
-        docs: {
-          routeBasePath: "/",
-          sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          editUrl: "https://github.com/PufferFinance/website-docs/tree/main",
-          remarkPlugins: [math],
-          rehypePlugins: [katex],
+      '@docusaurus/preset-classic',
+      /** @type {import('@docusaurus/preset-classic').Options} */
+      ({
+        docs: false,
+        blog: false,
+        theme: {
+          customCss: require.resolve('./src/css/custom.css'),
         },
+      }),
+    ],
+  ],
+  plugins: [
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "yield",
+        path: "docs/yield",
+        routeBasePath: "yield",
+        sidebarPath: require.resolve("./sidebars-yield.js"),
+        editUrl: "https://github.com/PufferFinance/website-docs/tree/main",
+        remarkPlugins: [math],
+        rehypePlugins: [[katex, {
+          strict: false,
+          throwOnError: false,
+          globalGroup: true
+        }]],
+        include: ["**/*.{md,mdx}"],
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "unifi-avs",
+        path: "docs/unifi-avs",
+        routeBasePath: "unifi-avs",
+        sidebarPath: require.resolve("./sidebars-unifi-avs.js"),
+        editUrl: "https://github.com/PufferFinance/website-docs/tree/main",
+        remarkPlugins: [math],
+        rehypePlugins: [[katex, {
+          strict: false,
+          throwOnError: false,
+          globalGroup: true
+        }]],
+        include: ["**/*.{md,mdx}"],
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "institutional",
+        path: "docs/institutional",
+        routeBasePath: "institutional",
+        sidebarPath: require.resolve("./sidebars-institutional.js"),
+        editUrl: "https://github.com/PufferFinance/website-docs/tree/main",
+        remarkPlugins: [math],
+        rehypePlugins: [[katex, {
+          strict: false,
+          throwOnError: false,
+          globalGroup: true
+        }]],
+        include: ["**/*.{md,mdx}"],
+      },
+    ],
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      {
+        indexBlog: false,
+        docsRouteBasePath: ["/yield", "/unifi-avs", "/institutional"],
+        indexPages: true,
+        hashed: true,
+        language: ["en"],
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+        searchResultLimits: 8,
+        searchResultContextMaxLength: 50,
+        removeDefaultStopWordFilter: true,
+        searchBarShortcut: true,
+        searchBarShortcutHint: true,
+        searchBarPosition: "left",
+        docsPluginIdForPreferredVersion: "yield",
+        indexDocs: true,
+        hideSearchBarWithNoSearchContext: false,
+        useAllContextsWithNoSearchContext: true,
       },
     ],
   ],
@@ -123,14 +195,4 @@ module.exports = {
       crossorigin: "anonymous",
     },
   ],
-  plugins: [
-    [
-      require.resolve("@easyops-cn/docusaurus-search-local", "@rehype-katex"),
-      { indexBlog: false, docsRouteBasePath: "/", indexPages: true },
-    ],
-  ],
-  markdown: {
-    mermaid: true,
-  },
-  themes: ['@docusaurus/theme-mermaid'],
 };

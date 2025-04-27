@@ -61,6 +61,10 @@ EigenLayer is in active development with more detailed information regarding AVS
 [Validator Tickets](/protocol/validator-tickets) cost ETH to mint and are allocated as follows:
 
 - Guardians are paid a fee to incentivize honest behavior and cover gas-fees.
+{/* MDX-BLOCK-START */}
+{/* MDX-BLOCK-START */}
+{/* MDX-BLOCK-START */}
+{/* MDX-BLOCK-START */}
 - The treasury is allocated a portion as a protocol fee.
 - Stakers get the remainder deposited to the PufferVault.
 

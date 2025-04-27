@@ -11,7 +11,7 @@ Validator Tickets are Puffer's novel addition to the validator lifecycle in LSTs
 
 ### Overview
 
-<div style={{textAlign: 'center'}}>
+{/* JSX-FIX */} <div style={{textAlign: 'center'}}> {/* END-JSX-FIX */}
 
 ![Minting VTs](/img/mint-vt.png)
 
@@ -25,7 +25,7 @@ The idea is simple but powerful:
 - **Validator Tickets (VTs)**: VTs are ERC20 tokens that grant the holder the right to run a staker-funded Ethereum validator for a day. VTs are minted by ETH deposits. This ETH goes towards compensating pufETH holders for financing validators.
 - **Running Validators**: To run a validator, a node operator must lock VTs and lock in 2 ETH of pufETH as collateral.
 - **Pricing VTs**: The price of a VT is set based on the expected daily earnings from running a validator. This price directly influences the expected pufETH APR.
-- **Benefits**: VTs create new trading opportunities, address “rug-pooling”, and incentivize good performance. pufETH holders earn rewards immediately when VTs are purchased. Consuming VTs allows the node operator to keep 100% of the validator’s earnings.
+- **Benefits**: VTs create new trading opportunities, address "rug-pooling", and incentivize good performance. pufETH holders earn rewards immediately when VTs are purchased. Consuming VTs allows the node operator to keep 100% of the validator's earnings.
 
 :::tip
 Before EigenLayer restaking is live, selling VTs is pufETH's source of rewards.
@@ -41,9 +41,13 @@ Typically, Liquid Staking Protocols (LSPs) use two methods for validators:
 
 Puffer uses the _bonded model_ as it is more ethos-aligned, but adds VTs to address some of its shortcomings.
 
+{/* MDX-BLOCK-START */}
+{/* MDX-BLOCK-START */}
+{/* MDX-BLOCK-START */}
+{/* MDX-BLOCK-START */}
 ### How are VTs used?
 
-<div style={{textAlign: 'center'}}>
+{/* JSX-FIX */} <div style={{textAlign: 'center'}}> {/* END-JSX-FIX */}
 
 ![Using VTs](/img/using-vt.png)
 
@@ -82,23 +86,25 @@ Assuming they deposited 28 VTs, after 28 days of validating, the NoOp's validato
 
 ### Pricing Validator Tickets
 
-Prices of Validator Tickets are secured and posted by [RedStone Oracles](https://redstone.finance/). The VT Oracle module is fully automated and data is delivered every 12 hours or if the deviation is 10% on MEV payouts or 5% on consensus rewards. The contract can be seen on the ValidatorTicketPricer contract events page [here](https://etherscan.io/address/0x9830ad1bd5cf73640e253edf97dee3791c4a53c3/advanced#events). The pricing module is the heart of the properly functioning Puffer system. Puffer’s stability is based on the correctness of the price from RedStone.
+Prices of Validator Tickets are secured and posted by [RedStone Oracles](https://redstone.finance/). The VT Oracle module is fully automated and data is delivered every 12 hours or if the deviation is 10% on MEV payouts or 5% on consensus rewards. The contract can be seen on the ValidatorTicketPricer contract events page [here](https://etherscan.io/address/0x9830ad1bd5cf73640e253edf97dee3791c4a53c3/advanced#events). The pricing module is the heart of the properly functioning Puffer system. Puffer's stability is based on the correctness of the price from RedStone.
 
-During Puffer's Phase 1, VT prices will be posted by the [Guardians](/protocol/guardians#). The prices are calculated with the following formula, where $R_{expected}$ is the expected daily validator revenue based on historical consensus and execution rewards, and $D$ is a discount rate:
+During Puffer's Phase 1, VT prices will be posted by the [Guardians](/protocol/guardians#). The prices are calculated with the following formula, where \\(R_{expected}\\) is the expected daily validator revenue based on historical consensus and execution rewards, and \\(D\\) is a discount rate:
 
-<div style={{textAlign: 'center'}}>
+{/* JSX-FIX */} <div style={{textAlign: 'center'}}> {/* END-JSX-FIX */}
 
-$P_{VT} = R_{expected} * (1 - D)$
+\$
+P_{VT} = R_{expected} * (1 - D) \
+$
 
 </div>
 
 **Example**
 
-- Assuming the expected [consensus](/reference/glossary#consensus-rewards) and [execution](/reference/glossary#execution-rewards) rewards from running a validator for a year is $5\% * 32 = 1.6$ ETH.
-- A simplified $R_{expected}$ can be calculated as $1.6 / 365 = 0.00438$ ETH.
-- Given a discount $D = 10\%$, the VT price is $P_{VT} = 0.00438 * 90\% = 0.00394$ ETH.
-- A NoOp that pays $P_{VT}$ is expected to earn on average $R_{expected} = 0.00438$ ETH by consuming the VT to run a validator for a day.
-- The result is $0.00438 * 10\% = 0.000438$ ETH profit. Note, the $R_{expected}$ depends on factors like the NoOp's performance, validator set size, and MEV conditions.
+- Assuming the expected [consensus](/reference/glossary#consensus-rewards) and [execution](/reference/glossary#execution-rewards) rewards from running a validator for a year is \\(5\% * 32 = 1.6\\) ETH.
+- A simplified \\(R_{expected}\\) can be calculated as \\(1.6 / 365 = 0.00438\\) ETH.
+- Given a discount \\(D = 10\%\\), the VT price is \\(P_{VT} = 0.00438 * 90\% = 0.00394\\) ETH.
+- A NoOp that pays \\(P_{VT}\\) is expected to earn on average \\(R_{expected} = 0.00438\\) ETH by consuming the VT to run a validator for a day.
+- The result is \\(0.00438 * 10\% = 0.000438\\) ETH profit. Note, the \\(R_{expected}\\) depends on factors like the NoOp's performance, validator set size, and MEV conditions.
 
 ### Pros and Cons
 

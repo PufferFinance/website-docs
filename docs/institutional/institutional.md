@@ -1,6 +1,6 @@
 ---
 title: Puffer Institutional Staking Solution
-slug: puffer-institutional
+slug: intro
 ---
 
 # Puffer Institutional Solution
