@@ -1,6 +1,6 @@
 ---
 title: Introduction to UniFi AVS
-slug: /intro
+slug: /unifi-avs-intro
 ---
 
 :::info About UniFi AVS

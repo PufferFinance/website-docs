@@ -1,6 +1,6 @@
 ---
 title: UniFi AVS Protocol
-slug: /protocol
+slug: /unifi-avs-protocol
 ---
 
 ## Overview
@@ -30,38 +30,48 @@ The UniFi AVS ecosystem involves several key components and actors:
 ### High Level Preconf Flow
 
 ```mermaid
-// MERMAID-DIAGRAM
-// MERMAID-DIAGRAM
-// MERMAID-DIAGRAM
-// MERMAID-DIAGRAM
 sequenceDiagram
     autonumber
-    participant U as Users
-    participant O as Operator
-    participant UAM as UniFiAVSManager
-    participant G as Gateway
-    participant BN as Beacon Node
-    participant CB as Commit-Boost
-    participant RM as RewardsManager
-    participant L1 as Ethereum L1
+    participant U as 👤 Users
+    participant O as 👨‍💼 Operator
+    participant UAM as 📋 UniFiAVSManager
+    participant G as 🌐 Gateway
+    participant BN as 📡 Beacon Node
+    participant CB as ⚡ Commit-Boost
+    participant RM as 💰 RewardsManager
+    participant L1 as 🔗 Ethereum L1
 
+    Note over O,UAM: 🚀 Registration Phase
     O->>UAM: Set delegate key to Gateway
+    
+    Note over G,BN: 🔍 Discovery Phase
     G->>BN: Query lookahead window
     BN-->>G: Return upcoming proposer indices
-    loop For each validator
+    
+    loop 🔄 For each validator
         G->>UAM: getValidator(validatorIndex)
         UAM-->>G: Validator registration status
     end
-    Note over G: confirm Gateway is delegated to
+    
+    Note over G: ✅ Confirm Gateway is delegated to
+    
+    Note over U,G: 💳 Transaction Phase
     U->>G: Send transactions to preconf RPC / router
     G-->>U: Return Gateway-signed pre-confs
-    CB->>CB: wait for slot...
+    
+    Note over CB: ⏳ wait for slot...
+    
+    Note over CB,L1: 🏗️ Block Production Phase
     CB->>G: Request L1 block
     G-->>CB: Provide L1 block
     CB->>L1: Propose L1 block
+    
+    Note over L1,G: 💸 Fee Distribution
     L1->>G: gateway fee
+    
+    Note over O,RM: 🎁 Rewards Phase
     O->>RM: Claim AVS rewards
-```text
+```
 {/* MDX-BLOCK-START */}
 The preconf flow in UniFi AVS involves several interactions:
 {/* MDX-BLOCK-START */}
@@ -171,20 +181,7 @@ UniFi AVS will implement a rewards distribution mechanism designed to provide co
 
 #### Rewards Flow
 
-```mermaid
-// MERMAID-DIAGRAM
-// MERMAID-DIAGRAM
-// MERMAID-DIAGRAM
-// MERMAID-DIAGRAM
-graph TD
-    A[User] -->|Pays preconf tips in priority fees| B[Gateway]
-    B -->|Aggregates transactions and produces blocks| C[Validators]
-    C -->|Publish blocks| D[Fee Recipient]
-    D -->|Sends block rewards| E[RewardsManager Contract]
-    E -->|Distribute rewards| F[Operators]
-    E -->|Distribute rewards| G[Validators]
-    E -->|Distribute rewards| H[Gateway]
-```text
+<img src="/img/unifi-avs-rewards.png" alt="UniFi AVS Rewards Flow" style={{maxWidth: '100%', height: 'auto', width: '50%', minWidth: '300px', display: 'block', margin: '0 auto'}} />
 #### Claiming Rewards
 
 Rewards will be distributed for each validator on the L2. Validators will be able to claim their rewards by setting a claimer address on the rewards contract by signing an EIP-712 hash with their BLS validator key.
@@ -209,19 +206,4 @@ The implementation of the mechanism will depend on EigenLayer's slashing design 
 
 #### Slashing Flow
 
-```mermaid
-// MERMAID-DIAGRAM
-// MERMAID-DIAGRAM
-// MERMAID-DIAGRAM
-// MERMAID-DIAGRAM
-graph TD
-    A[Validator Signs Pre-confirmation] --> B{Validator Behavior}
-    B -->|Breaks Promise| C[Safety Fault]
-    B -->|Misses Block Proposal| D[Liveness Fault]
-    B -->|Steals MEV| E[Rug Pooling]
-    C --> F[Proof Submitted]
-    D --> F
-    E --> F
-    F --> G[Slashing Mechanism Triggered]
-    G --> H[Penalize Validator's Restaked Ether]
-```text
+<img src="/img/unifi-avs-slashing.png" alt="UniFi AVS Slashing Flow" style={{maxWidth: '100%', height: 'auto', width: '50%', minWidth: '300px', display: 'block', margin: '0 auto'}} />

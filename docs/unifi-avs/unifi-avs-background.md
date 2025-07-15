@@ -1,6 +1,6 @@
 ---
 title: Background
-slug: /background
+slug: /unifi-avs-background
 ---
 
 ## The Ethereum Scalability Challenge 🏗️

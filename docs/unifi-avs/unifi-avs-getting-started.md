@@ -1,6 +1,6 @@
 ---
 title: Getting Started
-slug: /getting-started
+slug: /unifi-avs-getting-started
 ---
 
 # Getting Started with UniFi AVS

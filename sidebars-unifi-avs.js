@@ -3,10 +3,10 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
   unifiAVS: [
-    "intro",
-    "background",
-    "protocol",
-    "getting-started",
+    "unifi-avs-intro",
+    "unifi-avs-background",
+    "unifi-avs-protocol",
+    "unifi-avs-getting-started",
   ],
 };
 

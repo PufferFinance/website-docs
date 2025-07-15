@@ -24,19 +24,13 @@ In practice, this is done by maintaining a history of previously signed material
 While this technique reduces the risk of slashing events, there are instances in which the remote-signer is vulnerable. For example, a validator may be slashed if its validator key is shared amongst multiple remote-signers or due to a bug in the consensus client. Additionally, a slash may happen if the validator's EIP-3076 slash protection database is accidentally or maliciously corrupted.
 
 ## Slashing penalties
+The Ethereum PoS specifications introduce the notion of an [anti-correlation penalty](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#aside-anti-correlation-penalties-in-eth2). To disincentivize validator collusion, the slashing penalty is proportional to the number of validators that were slashed within approximately 18 days. More concretely, if any of the three slashing offenses are breached, the validator will lose:
 
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-END */}
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-END */}
-The Ethereum PoS specifications introduce the notion of an [anti-correlation penalty](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#aside-anti-correlation-penalties-in-eth2). To disincentivize validator collusion, the slashing penalty is proportional to the number of validators that were slashed within approximately 18 days. More concretely, if any of the three slashing offenses are breached, the validator will lose \\$
-{/* MDX-BLOCK-END */}
-1 + \\\frac{3s}{D} * 32\\
-$ ETH, where \\\(s\\\) is the amount of ETH slashed within 18 days, and \\\(D\\\) is the total amount of ETH staked on Ethereum.
+$$
+1 + \frac{3s}{D} \times 32
+$$
 
-{/* MDX-BLOCK-END */}
+ETH, where $s$ is the amount of ETH slashed within 18 days, and $D$ is the total amount of ETH staked on Ethereum.
 For low-correlation slashing events (e.g., user error), a validator will lose close to the 1 ETH minimum, but for high-correlation events (e.g., consensus client bug), they could lose their full 32 ETH. See this [article](https://dankradfeist.de/ethereum/2022/03/24/run-the-majority-client-at-your-own-peril.html) for more information.
 
 ## Inactivity Penalties
@@ -57,7 +51,7 @@ In the case of an inactivity leak, a validator will lose increasingly more ETH a
 
 > ### Inactivity Risk
 >
-> The PoS validator set will only eject inactive validators after their effective balance falls below 16 ETH. In a stake pool, an inactive node could lose \\\((16 - B)\\\) ETH of Staker capital at the cost of only \\\(B\\\) ETH to themselves. Without a means to perform automatic ejections, protocols have set their bonds to \\\(B=16\\\) ETH to protect Stakers from losing capital.
+> The PoS validator set will only eject inactive validators after their effective balance falls below 16 ETH. In a stake pool, an inactive node could lose $(16 - B)$ ETH of Staker capital at the cost of only $B$ ETH to themselves. Without a means to perform automatic ejections, protocols have set their bonds to $B=16$ ETH to protect Stakers from losing capital.
 
 > Currently, the only way to withdraw a validator is by signing a VoluntaryExit message (VEM) with the validator key. In a permissioned pool where nodes are trusted, the problem of getting them to sign a VEM is easy; however, the node may go offline or refuse to sign the VEM in a permissionless pool.
 

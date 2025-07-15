@@ -15,7 +15,6 @@ module.exports = {
   projectName: "doctest",
   markdown: {
     mermaid: true,
-    format: 'detect'
   },
   themes: ['@docusaurus/theme-mermaid'],
   themeConfig: {
