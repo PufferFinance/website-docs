@@ -61,7 +61,7 @@ export default function Home() {
               <ProductCard
                 title="Institutional Solutions"
                 description="Our Institutional Staking Solutions deliver enterprise-grade, scalable infrastructure for large-scale participation in Ethereum's decentralized economy. Designed for institutions seeking reliable and secure staking services."
-                link="/institutional/institutional"
+                link="/institutional/institutional-intro"
               />
             </div>
           </div>
