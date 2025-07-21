@@ -1,6 +1,6 @@
 ---
 title: Setup
-slug: /nodes/setup
+slug: /setup
 ---
 
 ## Setup Beacon Node and Execution Node

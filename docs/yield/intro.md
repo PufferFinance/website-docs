@@ -6,7 +6,7 @@ slug: /intro
 :::info About Puffer
 Puffer is a decentralized native liquid restaking protocol (nLRP) built on Eigenlayer 🐡🤝🟣
 
-It makes [native restaking](/protocol/puffer-modules/#native-restaking-) on [Eigenlayer](https://www.eigenlayer.xyz/) more accessible, allowing anyone to run an Ethereum Proof of Stake (PoS) validator while supercharging their rewards.
+It makes [native restaking](/yield/protocol/puffer-modules/#native-restaking-) on [Eigenlayer](https://www.eigenlayer.xyz/) more accessible, allowing anyone to run an Ethereum Proof of Stake (PoS) validator while supercharging their rewards.
 :::
 
 ## What does Puffer bring? 🍽️
@@ -55,9 +55,9 @@ Together, stakers and NoOps create a flywheel effect that allows Puffer to outpa
 
 The protocol is driven by **Stakers** and **Node Operators** (NoOps):
 
-- **NoOps** can join _any_ Puffer [module](/protocol/puffer-modules) by locking [Validator Tickets](/protocol/validator-tickets) and 2 ETH as collateral. In exchange, they get to operate a 32 ETH validator and keep 100% of their PoS rewards until they run out of VTs. NoOps can boost their rewards by joining [restaking](/reference/glossary#restaking) modules and delegating the validator's ETH to a [restaking operator](/protocol/puffer-modules#restaking-operators) in exchange for restaking rewards commission.
+- **NoOps** can join _any_ Puffer [module](/yield/protocol/puffer-modules) by locking [Validator Tickets](/yield/protocol/validator-tickets) and 2 ETH as collateral. In exchange, they get to operate a 32 ETH validator and keep 100% of their PoS rewards until they run out of VTs. NoOps can boost their rewards by joining [restaking](/yield/reference/glossary#restaking) modules and delegating the validator's ETH to a [restaking operator](/yield/protocol/puffer-modules#restaking-operators) in exchange for restaking rewards commission.
 
-- **Stakers** can deposit any amount of ETH to help fund the protocol's 32 ETH NoOp-controlled validators. In exchange, they receive the pufETH [native Liquid Restaking Token](/protocol/nlrt#what-is-an-lst) (nLRT) which grows in value as the protocol mints validator tickets and receives restaking rewards.
+- **Stakers** can deposit any amount of ETH to help fund the protocol's 32 ETH NoOp-controlled validators. In exchange, they receive the pufETH [native Liquid Restaking Token](/yield/protocol/nlrt#what-is-an-lst) (nLRT) which grows in value as the protocol mints validator tickets and receives restaking rewards.
 
 ### Why be a NoOp? 🤖
 
@@ -67,9 +67,9 @@ Anyone with 2 ETH can run their own validator to earn sustainable PoS rewards wh
 Puffer has the best capital efficiency for a permissionless liquid staking protocol and this extends to restaking.
 :::
 
-NoOps are entitled to **100% of their validators' [execution rewards](/reference/glossary#execution-rewards)**. This means they get to decide their MEV strategy which helps strengthen Ethereum's censorship-resistance and [can be very lucrative in some cases](https://etherscan.io/block/17806773#mevinfo).
+NoOps are entitled to **100% of their validators' [execution rewards](/yield/reference/glossary#execution-rewards)**. This means they get to decide their MEV strategy which helps strengthen Ethereum's censorship-resistance and [can be very lucrative in some cases](https://etherscan.io/block/17806773#mevinfo).
 
-NoOps also receive **100% of their validators' [consensus rewards](/reference/glossary#consensus-rewards)**, meaning their validator's profitability depends solely on themselves, incentivizing for excellent long-term NoOp performance.
+NoOps also receive **100% of their validators' [consensus rewards](/yield/reference/glossary#consensus-rewards)**, meaning their validator's profitability depends solely on themselves, incentivizing for excellent long-term NoOp performance.
 
 :::caution EigenLayer Partial Withdrawals Proofs are being improved 🚧  
 Currently it is [cost-prohibitive](https://docs.eigenlayer.xyz/eigenlayer/restaking-guides/restaking-user-guide/native-restaking/withdraw-from-eigenlayer/partial-withdrawals) to withdraw consensus rewards from EigenPods but the EigenLayer team is working to decrease these costs. Until then, withdrawing consensus rewards is temporarily disabled.
@@ -92,6 +92,6 @@ Traditional liquid staking tokens (LSTs) only accrue PoS rewards. As a nLRT, puf
 Puffer prioritizes the safety of stakers' ETH. To ensure staked ETH is safe, the protocol requires:
 
 - NoOps to lock 2 ETH of collateral
-- [Ejecting validators](/protocol/guardians#what-are-their-duties) whose balance falls too low
-- Guardrails around [which AVSs are allowed](/protocol/puffer-modules#restricting-avss)
-- Guardrails around who can become a [restaking operator](/protocol/puffer-modules#restricting-reops)
+- [Ejecting validators](/yield/protocol/guardians#what-are-their-duties) whose balance falls too low
+- Guardrails around [which AVSs are allowed](/yield/protocol/puffer-modules#restricting-avss)
+- Guardrails around who can become a [restaking operator](/yield/protocol/puffer-modules#restricting-reops)

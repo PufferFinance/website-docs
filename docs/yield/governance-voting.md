@@ -19,7 +19,7 @@ You can get PUFFER tokens from:
 
 <img src="/img/governance-stake.png" height="400" alt="Puffer Governance Hub's staking page"></img>
 
-When you have your tokens, you will need to go to the [staking page](https://vote.puffer.fi/plugins/stake/) on our Puffer Governance Hub to stake your PUFFER tokens to receive voting power.
+When you have your tokens, you will need to go to the [staking page](https://vote.puffer.fi/staking) on our Puffer Governance Hub to stake your PUFFER tokens to receive voting power.
 
 If this is your first time staking your PUFFER tokens, you may be asked to approve the [vePUFFER voting escrow](https://etherscan.io/address/0xA55eD5808aeCDF23AE3782C1443185f5D2363ce7) to spend your [PUFFER tokens](https://etherscan.io/address/0x4d1C297d39C5c1277964D0E3f8Aa901493664530).
 
@@ -60,7 +60,7 @@ While you require an active vePUFFER stake, you will not need native ETH as curr
 
 ### Voting on Proposals
 
-You can view all proposals in the **Latest proposals** section on the [Puffer DAO Hub](https://vote.puffer.fi), or via the [Proposals](https://vote.puffer.fi/plugins/community/) tab. If a voting epoch is currently active, and there are votable proposals, you will see the here.
+You can view all proposals in the **Latest proposals** section on the [Puffer DAO Hub](https://vote.puffer.fi), or via the [Proposals](https://vote.puffer.fi/community) tab. If a voting epoch is currently active, and there are votable proposals, you will see the here.
 
 <img src="/img/governance-vote-latest.png" height="300" alt="Proposals tab"></img>
 

@@ -3,7 +3,7 @@ title: Stake
 slug: /stakers/stake
 ---
 
-This section will guide you through the process of staking to the Puffer Protocol. Review the [native Liquid Restaking Tokens](/protocol/nlrt) section to understand the benefits of staking to the Puffer Protocol.
+This section will guide you through the process of staking to the Puffer Protocol. Review the [native Liquid Restaking Tokens](/yield/protocol/nlrt) section to understand the benefits of staking to the Puffer Protocol.
 
 Basically, when you stake your funds to the Puffer Protocol, you will receive a native Liquid Restaking Token (pufETH) in return. This pufETH will be minted to your wallet and will represent your staked ETH. The pufETH is expected to increase its value overtime.
 
@@ -34,7 +34,7 @@ You can select the amount of ETH, stETH, wstETH, or WETH you want to stake. The 
 {/* MDX-BLOCK-START */}
 {/* MDX-BLOCK-START */}
 
-To understand the exchange rate, check out the [docs](/protocol/nlrt#calculating-the-conversion-rate).
+To understand the exchange rate, check out the [docs](/yield/protocol/nlrt#calculating-the-conversion-rate).
 
 ## Stake
 

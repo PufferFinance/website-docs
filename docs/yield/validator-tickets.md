@@ -71,7 +71,7 @@ While this collateral approach discourages penalties, it does not strongly incen
 
 Puffer changes this incentive landscape through the use of VTs. Since NoOps have already purchased VTs, they stand to gain nothing from underperforming since they cannot recoup this initial payment (as days pass and their VTs are burned), even if they maintain their validator balance. Thus, for a NoOp to turn a profit, they must perform at least on par with the average validator. Those who excel can earn even more.
 
-While VTs provide strong disincentives for slashing, to further protect the staker's ETH, Puffer requires a [2 ETH](/reference/faq#%EF%B8%8F-how-much-eth-do-i-need-to-run-a-puffer-node) bond.
+While VTs provide strong disincentives for slashing, to further protect the staker's ETH, Puffer requires a [2 ETH](/yield/reference/faq#%EF%B8%8F-how-much-eth-do-i-need-to-run-a-puffer-node) bond.
 
 This new approach neatly tackles two traditional problems:
 
@@ -80,7 +80,7 @@ This new approach neatly tackles two traditional problems:
 
 ### Requirements
 
-For PoS stability and NoOp incentive alignment, [2 ETH](/reference/faq#%EF%B8%8F-how-much-eth-do-i-need-to-run-a-puffer-node) worth of pufETH and a minimum of 28 VTs are required to be deposited at registration time. Their duration begins at the moment their validator is activated on the beacon chain, and each VT represents 1 day or 255 epochs.
+For PoS stability and NoOp incentive alignment, [2 ETH](/yield/reference/faq#%EF%B8%8F-how-much-eth-do-i-need-to-run-a-puffer-node) worth of pufETH and a minimum of 28 VTs are required to be deposited at registration time. Their duration begins at the moment their validator is activated on the beacon chain, and each VT represents 1 day or 255 epochs.
 
 Assuming they deposited 28 VTs, after 28 days of validating, the NoOp's validator will be automatically ejected, its 32 ETH returned to the protocol, and bond returned. If they wish to extend their duration, NoOps can deposit additional VTs at any time. NoOps who have Validators with unconsumed VTs (e.g deposited 100 VTs) may retrieve them from the protocol (e.g., 72 VTs).
 
@@ -88,23 +88,23 @@ Assuming they deposited 28 VTs, after 28 days of validating, the NoOp's validato
 
 Prices of Validator Tickets are secured and posted by [RedStone Oracles](https://redstone.finance/). The VT Oracle module is fully automated and data is delivered every 12 hours or if the deviation is 10% on MEV payouts or 5% on consensus rewards. The contract can be seen on the ValidatorTicketPricer contract events page [here](https://etherscan.io/address/0x9830ad1bd5cf73640e253edf97dee3791c4a53c3/advanced#events). The pricing module is the heart of the properly functioning Puffer system. Puffer's stability is based on the correctness of the price from RedStone.
 
-During Puffer's Phase 1, VT prices will be posted by the [Guardians](/protocol/guardians#). The prices are calculated with the following formula, where \\(R_{expected}\\) is the expected daily validator revenue based on historical consensus and execution rewards, and \\(D\\) is a discount rate:
+During Puffer's Phase 1, VT prices will be posted by the [Guardians](/yield/protocol/guardians#). The prices are calculated with the following formula, where $R_{expected}$ is the expected daily validator revenue based on historical consensus and execution rewards, and $D$ is a discount rate:
 
 {/* JSX-FIX */} <div style={{textAlign: 'center'}}> {/* END-JSX-FIX */}
 
-\$
-P_{VT} = R_{expected} * (1 - D) \
-$
+$$
+P_{VT} = R_{expected} \times (1 - D)
+$$
 
 </div>
 
 **Example**
 
-- Assuming the expected [consensus](/reference/glossary#consensus-rewards) and [execution](/reference/glossary#execution-rewards) rewards from running a validator for a year is \\(5\% * 32 = 1.6\\) ETH.
-- A simplified \\(R_{expected}\\) can be calculated as \\(1.6 / 365 = 0.00438\\) ETH.
-- Given a discount \\(D = 10\%\\), the VT price is \\(P_{VT} = 0.00438 * 90\% = 0.00394\\) ETH.
-- A NoOp that pays \\(P_{VT}\\) is expected to earn on average \\(R_{expected} = 0.00438\\) ETH by consuming the VT to run a validator for a day.
-- The result is \\(0.00438 * 10\% = 0.000438\\) ETH profit. Note, the \\(R_{expected}\\) depends on factors like the NoOp's performance, validator set size, and MEV conditions.
+- Assuming the expected [consensus](/yield/reference/glossary#consensus-rewards) and [execution](/yield/reference/glossary#execution-rewards) rewards from running a validator for a year is $5\% \times 32 = 1.6$ ETH.
+- A simplified $R_{expected}$ can be calculated as $1.6 / 365 = 0.00438$ ETH.
+- Given a discount $D = 10\%$, the VT price is $P_{VT} = 0.00438 \times 90\% = 0.00394$ ETH.
+- A NoOp that pays $P_{VT}$ is expected to earn on average $R_{expected} = 0.00438$ ETH by consuming the VT to run a validator for a day.
+- The result is $0.00438 \times 10\% = 0.000438$ ETH profit. Note, the $R_{expected}$ depends on factors like the NoOp's performance, validator set size, and MEV conditions.
 
 ### Pros and Cons
 

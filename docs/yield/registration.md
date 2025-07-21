@@ -13,12 +13,12 @@ The Puffer Dashboard provides an interface for users to:
 - View their validators
 
 :::caution
-The [Puffer Dashboard](https://launchpad.puffer.fi/Setup) UI is subject to change as more features are added
+The [Puffer Dashboard](https://launchpad.puffer.fi/setup-validators) UI is subject to change as more features are added
 :::
 
 # Registering a Validator
 
-The [Puffer Dashboard](https://launchpad.puffer.fi/Setup) supports launching both testnet and mainnet validators depending on the RPC that your wallet is connected to.
+The [Puffer Dashboard](https://launchpad.puffer.fi/setup-validators) supports launching both testnet and mainnet validators depending on the RPC that your wallet is connected to.
 
 ### Step 1: Setup Wallet
 
@@ -27,9 +27,9 @@ Follow [the instructions](https://holesky.dev/) to add the Holesky network to yo
 
 ### Step 2: Get Coral-CLI Command
 
-Navigate to https://launchpad.puffer.fi/Setup to copy the Coral-CLI command.
+Navigate to https://launchpad.puffer.fi/setup-validators to copy the Coral-CLI command.
 
-Run the command where you [installed the Coral-CLI](/nodes/setup#setup-coral-cli).
+Run the command where you [installed the Coral-CLI](/yield/setup#setup-coral-cli).
 
 > ![alt text](/img/no-enclave-cli-cmd.png)
 
@@ -89,7 +89,7 @@ You can find your generated keystore files in the `coral/etc/keys/bls_keys/` dir
 - [Import your validator keys to Prysm ↗](https://docs.prylabs.network/docs/wallet/nondeterministic#import-validator-accounts)
 
 :::tip
-Make sure to set your `fee_recipient` value to your own wallet. Remember, Puffer takes no execution reward fees because of [Validator Tickets](https://docs.puffer.fi/protocol/validator-tickets#how-are-vts-used)!
+Make sure to set your `fee_recipient` value to your own wallet. Remember, Puffer takes no execution reward fees because of [Validator Tickets](https://docs.puffer.fi/yield/protocol/validator-tickets#how-are-vts-used)!
 :::
 
 ### Step 7: View your validators

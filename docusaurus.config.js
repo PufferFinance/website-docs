@@ -118,7 +118,9 @@ module.exports = {
         path: "docs/yield",
         routeBasePath: "yield",
         sidebarPath: require.resolve("./sidebars-yield.js"),
-        editUrl: "https://github.com/PufferFinance/website-docs/tree/main",
+        editUrl: ({docPath}) => {
+          return `https://github.com/PufferFinance/website-docs/tree/main/docs/${docPath}`;
+        },
         remarkPlugins: [math],
         rehypePlugins: [[katex, {
           strict: false,
@@ -135,7 +137,9 @@ module.exports = {
         path: "docs/unifi-avs",
         routeBasePath: "unifi-avs",
         sidebarPath: require.resolve("./sidebars-unifi-avs.js"),
-        editUrl: "https://github.com/PufferFinance/website-docs/tree/main",
+        editUrl: ({docPath}) => {
+          return `https://github.com/PufferFinance/website-docs/tree/main/docs/${docPath}`;
+        },
         remarkPlugins: [math],
         rehypePlugins: [[katex, {
           strict: false,
@@ -152,7 +156,9 @@ module.exports = {
         path: "docs/institutional",
         routeBasePath: "institutional",
         sidebarPath: require.resolve("./sidebars-institutional.js"),
-        editUrl: "https://github.com/PufferFinance/website-docs/tree/main",
+        editUrl: ({docPath}) => {
+          return `https://github.com/PufferFinance/website-docs/tree/main/docs/${docPath}`;
+        },
         remarkPlugins: [math],
         rehypePlugins: [[katex, {
           strict: false,

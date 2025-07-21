@@ -102,7 +102,7 @@ Puffer Guardians may trigger ejection under these circumstances:
 <summary>Helpful Links</summary>
 
 - [Puffer Dashboard](https://launchpad.puffer.fi/Dashboard)
-- [Technical Requirements](/nodes/requirements)
+- [Technical Requirements](/yield/nodes/requirements)
 
 </details>
 
