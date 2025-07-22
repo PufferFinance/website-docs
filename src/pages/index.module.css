@@ -3,16 +3,250 @@
  * and scoped locally.
  */
 
+:root {
+  --puffer-primary: #6B4EFF;
+  --puffer-primary-dark: #4B2EFF;
+  --puffer-gradient: linear-gradient(135deg, var(--puffer-primary) 0%, var(--puffer-primary-dark) 100%);
+  --puffer-text: #1A1A1A;
+  --puffer-text-light: #666666;
+  --puffer-background: #FFFFFF;
+  --puffer-card-bg: #F8F9FA;
+  --puffer-border: #E5E7EB;
+}
+
 .heroBanner {
   padding: 4rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
+  background: var(--puffer-gradient);
+}
+
+.heroBanner h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--puffer-background);
+}
+
+.heroBanner p {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  color: var(--puffer-background);
+  opacity: 0.9;
+}
+
+.features {
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+  width: 100%;
+}
+
+.aboutSection {
+  text-align: center;
+  margin: 4rem 0;
+  padding: 2rem 0;
+}
+
+.aboutSection h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-darker) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+.aboutCard {
+  background: var(--ifm-card-background-color);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: left;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.aboutCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.aboutCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-primary);
+}
+
+.aboutCard p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ifm-color-emphasis-700);
+  margin: 0;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  background: var(--puffer-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  padding: 0 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.productCard {
+  padding: 2.5rem;
+  border-radius: 16px;
+  background-color: var(--puffer-card-bg);
+  box-shadow: 0 4px 20px rgba(107, 78, 255, 0.08);
+  transition: all 0.3s ease-in-out;
+  border: 1px solid var(--puffer-border);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.productCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(107, 78, 255, 0.12);
+  border-color: var(--puffer-primary);
+}
+
+.productCard h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--puffer-primary);
+  line-height: 1.3;
+}
+
+.productCard p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--puffer-text-light);
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.productCard .button {
+  width: 100%;
+  justify-content: center;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+  background: var(--puffer-gradient);
+  border: none;
+  color: var(--puffer-background);
+}
+
+.productCard .button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(107, 78, 255, 0.2);
+  opacity: 0.95;
 }
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 2rem;
+    padding: 2rem 1rem;
+  }
+  
+  .aboutGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .aboutSection h2 {
+    font-size: 2rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .productGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .productCard {
+    padding: 1.5rem;
+    margin: 0 0.5rem;
+  }
+  
+  .productCard h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .productCard p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .productCard .button {
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .productCard:hover {
+    transform: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .heroBanner h1 {
+    font-size: 2rem;
+  }
+
+  .heroBanner p {
+    font-size: 1.2rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.6rem;
+  }
+
+  .productCard {
+    padding: 1.25rem;
+    margin: 0 0.25rem;
+  }
+
+  .productCard h3 {
+    font-size: 1.3rem;
+  }
+
+  .productCard p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 997px) and (max-width: 1400px) {
+  .productGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 0 2rem;
   }
 }
 
