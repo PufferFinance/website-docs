@@ -1,6 +1,6 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 
-const math = require("remark-math");
+const math = require("remark-math").default;
 const katex = require("rehype-katex").default;
 
 module.exports = {
