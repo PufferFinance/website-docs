@@ -68,9 +68,9 @@ To check your VT consumption and validator status, you can use the Puffer API. H
 
 #### Endpoint
 
-```text
+```
 GET https://api.puffer.fi/puffer-withdrawal-service/api/v1/noop/consumption/calculate/{node_address}
-```text
+```
 Replace `{node_address}` with your node operator's Ethereum address.
 
 #### Request
@@ -79,7 +79,7 @@ Replace `{node_address}` with your node operator's Ethereum address.
 curl -X 'GET' \
   'https://api.puffer.fi/puffer-withdrawal-service/api/v1/noop/consumption/calculate/{node_address}' \
   -H 'accept: application/json'
-```text
+```
 #### Response
 
 ```json
@@ -91,7 +91,7 @@ curl -X 'GET' \
   "ticketsConsumed": "string", // Total VTs consumed
   "showWarning": true // Whether low VT balance warning should be shown
 }
-```text
+```
 This API provides real-time information about your VT status and validator health. Since the VT consumption is calculated per epoch the response is updated every epoch.
 
 :::warning Important Notice for Node Operators
