@@ -40,7 +40,7 @@ The protocol receives rewards from the [validator tickets](/yield/protocol/valid
 
 Due to validator tickets, **NoOps receive 100% of consensus rewards**. These consensus rewards are directed to the [withdrawal credentials](/yield/reference/glossary#withdrawal-credentials) which will, in this case, be the [module's EigenPod](/yield/protocol/puffer-modules). However, these rewards are not immediately accessible for withdrawal. After a delay, NoOps can withdraw their consensus rewards using a merkle rewards tree.
 
-:::caution EigenLayer Partial Withdrawals Proofs are being improved 🚧  
+:::caution EigenLayer Partial Withdrawals Proofs are being improved 🚧
 Currently it is [cost-prohibitive](https://docs.eigenlayer.xyz/eigenlayer/restaking-guides/restaking-user-guide/native-restaking/withdraw-from-eigenlayer/partial-withdrawals) to withdraw consensus rewards from EigenPods but the EigenLayer team is working to decrease these costs. Until then, withdrawing consensus rewards is temporarily disabled.
 :::
 
@@ -52,7 +52,7 @@ Thanks to validator tickets, **NoOps also receive 100% of execution rewards**. T
 
 Restaking rewards are the fees derived from operating AVSs. While some protocols, like EigenDA, remit their payments in ETH and are straightforward to manage, others might use ERC20 tokens for payment. In such cases, these ERC20 rewards must be converted into ETH before being distributed to the Puffer protocol's participants.
 
-:::caution EigenLayer Specs not finalized 🚧  
+:::caution EigenLayer Specs not finalized 🚧
 EigenLayer is in active development with more detailed information regarding AVS payments coming soon.
 :::
 
@@ -61,11 +61,5 @@ EigenLayer is in active development with more detailed information regarding AVS
 [Validator Tickets](/yield/protocol/validator-tickets) cost ETH to mint and are allocated as follows:
 
 - Guardians are paid a fee to incentivize honest behavior and cover gas-fees.
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
 - The treasury is allocated a portion as a protocol fee.
 - Stakers get the remainder deposited to the PufferVault.
-
----

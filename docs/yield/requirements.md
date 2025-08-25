@@ -29,10 +29,6 @@ If a validator is slashed, the NoOp will forfeit their entire bond.
 - Storage: 2 TB SSD (NVMe SSD recommended) for full node
   - To run a full archive node, over 13.5 TB is needed
   - Note: As the Ethereum blockchain grows, about 14GB additional storage is needed per week
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
 - Bandwidth: >= 25 Mbps download speed
 
 For more information, please see [Geth hardware requirements](https://geth.ethereum.org/docs/getting-started/hardware-requirements)

@@ -57,10 +57,6 @@ Stakers deposit ETH to the PufferVault contract to mint the pufETH nLRT. At the 
 
 #### Calculating the Conversion Rate
 
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
 The conversion rate can be calculated simply as:
 
 $$

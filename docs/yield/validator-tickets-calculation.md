@@ -37,10 +37,6 @@ Basically 1 VT is consumed daily per validator.
 
 :::note
 The threshold is currently set to 5 days, meaning node operators must maintain a VT balance sufficient for at least 5 days before running out of VT or ejection will be triggered.
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
 
 A warning message will be issued when there are 8 days left before reaching the threshold, allowing node operators to take necessary actions to avoid ejection.
 :::

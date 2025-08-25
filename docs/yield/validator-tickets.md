@@ -25,7 +25,7 @@ The idea is simple but powerful:
 - **Validator Tickets (VTs)**: VTs are ERC20 tokens that grant the holder the right to run a staker-funded Ethereum validator for a day. VTs are minted by ETH deposits. This ETH goes towards compensating pufETH holders for financing validators.
 - **Running Validators**: To run a validator, a node operator must lock VTs and lock in 2 ETH of pufETH as collateral.
 - **Pricing VTs**: The price of a VT is set based on the expected daily earnings from running a validator. This price directly influences the expected pufETH APR.
-- **Benefits**: VTs create new trading opportunities, address "rug-pooling", and incentivize good performance. pufETH holders earn rewards immediately when VTs are purchased. Consuming VTs allows the node operator to keep 100% of the validator's earnings.
+- **Benefits**: VTs create new trading opportunities, address "rug-pulling", and incentivize good performance. pufETH holders earn rewards immediately when VTs are purchased. Consuming VTs allows the node operator to keep 100% of the validator's earnings.
 
 :::tip
 Before EigenLayer restaking is live, selling VTs is pufETH's source of rewards.
@@ -41,10 +41,6 @@ Typically, Liquid Staking Protocols (LSPs) use two methods for validators:
 
 Puffer uses the _bonded model_ as it is more ethos-aligned, but adds VTs to address some of its shortcomings.
 
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
 ### How are VTs used?
 
 {/* JSX-FIX */} <div style={{textAlign: 'center'}}> {/* END-JSX-FIX */}
@@ -65,7 +61,7 @@ Each VT represents one validator-day of expected Proof of Stake (PoS) rewards. T
 
 ### Why? ~ NoOp Incentives
 
-The success of an LSP largely depends upon the performance of its NoOps. Traditionally, having NoOps deposit collateral has been a method to ensure alignment with the protocol's objectives. The logic is simple: with a financial stake in play, NoOps have a deterrent against going offline, suffering slashing penalties, or engaging in nefarious activities like MEV theft ("_rug-pooling_"). If they were to engage in such activities, they'd stand to lose their collateral.
+The success of an LSP largely depends upon the performance of its NoOps. Traditionally, having NoOps deposit collateral has been a method to ensure alignment with the protocol's objectives. The logic is simple: with a financial stake in play, NoOps have a deterrent against going offline, suffering slashing penalties, or engaging in nefarious activities like MEV theft ("_rug-pulling_"). If they were to engage in such activities, they'd stand to lose their collateral.
 
 While this collateral approach discourages penalties, it does not strongly incentivize performance. For instance, a "lazy" NoOp could alternate between being online and offline, ensuring their validator balance stays at 32 ETH. This strategy results in no reward generation for the LSP, but also no collateral loss for the NoOp.
 
@@ -75,7 +71,7 @@ While VTs provide strong disincentives for slashing, to further protect the stak
 
 This new approach neatly tackles two traditional problems:
 
-- _Rug-pooling_: With NoOps entitled to all the MEV they generate, there's no longer a need to police or penalize them for rug-pooling.
+- _Rug-pulling_: With NoOps entitled to all the MEV they generate, there's no longer a need to police or penalize them for rug-pulling.
 - _Lazy NoOps_: Since stakers get a proxy for PoS rewards upfront via minting VTs, they aren't adversely affected if a NoOp underperforms.
 
 ### Requirements
@@ -114,7 +110,7 @@ $$
 
 - **Fuels Growth**: The VT model is a game-changer for LSPs. It ensures that the LSP continues to earn rewards _even when the validator queue is long_. In traditional setups, lengthy validator queues could stifle an LSP's ability to grow, but with VTs, this obstacle is greatly diminished.
 
-- **No More Rug-Pooling Oversight**: The previous need to constantly watch over and penalize rug-pooling activities added overhead and complexity that may only be solvable with in-protocol solutions like [MEV-Burn](https://ethresear.ch/t/burning-mev-through-block-proposer-auctions/14029). With NoOps entitled to 100% of the execution rewards they generate, this oversight becomes unnecessary, simplifying operations.
+- **No More Rug-Pulling Oversight**: The previous need to constantly watch over and penalize rug-pulling activities added overhead and complexity that may only be solvable with in-protocol solutions like [MEV-Burn](https://ethresear.ch/t/burning-mev-through-block-proposer-auctions/14029). With NoOps entitled to 100% of the execution rewards they generate, this oversight becomes unnecessary, simplifying operations.
 
 - **Addresses Lazy NoOps**: Traditional bonded models do not fully disincentivize NoOps from denying the pool rewards by going offline frequently. With VTs, NoOps are naturally incentivized to perform their best since their upfront payment cannot be recouped through subpar performance.
 

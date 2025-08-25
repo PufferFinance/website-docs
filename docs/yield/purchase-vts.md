@@ -25,10 +25,6 @@ This guide will walk you through the process of purchasing Validator Tickets (VT
    ![alt text](/img/purchase-vt-2-currency-select.png)
 
 4. Review the transaction details and click "Confirm"
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
 
    ![alt text](/img/purchase-vt-3-transaction-submitted.png)
 

@@ -29,10 +29,6 @@ To withdraw rewards, Node Operators need to sign a transaction on Base by follow
 
 5. Wait for the transaction confirmation. Once confirmed, you'll receive your rewards on Base.
 
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
 ![Transaction Confirmed](/img/noop-rewards-5.png)
 
 After claiming the rewards, Node Operators can either bridge them back to Ethereum L1 or utilize them on Base L2.
