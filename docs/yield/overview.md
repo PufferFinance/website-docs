@@ -45,10 +45,6 @@ To register a new validator, NoOps deposit [validator tickets](/yield/protocol/v
 - Safeguard staker ETH
 - Increase NoOp profit margins
 
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
 To ensure the safety of stakers, NoOps must distribute their encrypted validator keyshares to the Guardians' [enclaves](/yield/reference/glossary#enclave), allowing them to eject the NoOps if their validator balance falls too low or they run out of validator tickets. This requirement is to protect stakers and it will be [upgraded to a trustless solution](/yield/protocol/guardians#roadmap-to-decentralization) once Ethereum's protocol allows it via [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002).
 
 ---

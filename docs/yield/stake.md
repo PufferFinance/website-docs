@@ -29,10 +29,6 @@ The Puffer Protocol app currently supports the following assets:
 You can select the amount of ETH, stETH, wstETH, or WETH you want to stake. The app will automatically calculate the amount of pufETH you will receive in return. The exchange rate will be the same for ETH, WETH and stETH since they are pegged 1:1. For wstETH, the exchange rate will be different.
 
 ![Select Amount](/img/stake/select_amount.png)
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
 
 To understand the exchange rate, check out the [docs](/yield/protocol/nlrt#calculating-the-conversion-rate).
 

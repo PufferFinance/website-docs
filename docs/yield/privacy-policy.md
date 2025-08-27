@@ -46,10 +46,6 @@ When you access our website, we and our service providers may obtain or request 
 
 - In pursuance of our legitimate interests, or those of a third party to whom your personal data are disclosed, including:
   - complying with a legal, tax, accounting or regulatory obligation to which we or the third party are subject;
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
   - assessing and processing requests you make;
   - investigating any complaints, or pursuing or defending any claims, proceedings or disputes;
   - providing you with, and informing you about, products and services;

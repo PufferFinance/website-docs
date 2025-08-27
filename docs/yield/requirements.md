@@ -9,7 +9,7 @@ Becoming a Puffer NoOp requires running a validator. NoOps must lock a refundabl
 
 #### Bond and Validator Tickets
 
-The bond is required as slashing and inactivity insurance. The locked validator tickets act as an incentive alignment. The amount of validator tickets locked determines the length of time the NoOp is entitled to run the validator. Read more about validator tickets [here](./validator-tickets.md). The ETH bond will eventually be converted into pufETH, so NoOps can alternatively deposit their bond as pufETH. In either case, if the validator exits the beacon chain with at least \\(32\\) ETH, and was not slashed, the NoOp will receive the entirety of their bond back. If the validator was not slashed, but its balance is less than \\(32\\) ETH, the difference will come out of the NoOps bond.
+The bond is required as slashing and inactivity insurance. The locked validator tickets act as an incentive alignment. The amount of validator tickets locked determines the length of time the NoOp is entitled to run the validator. Read more about validator tickets [here](./validator-tickets.md). The ETH bond will eventually be converted into pufETH, so NoOps can alternatively deposit their bond as pufETH. In either case, if the validator exits the beacon chain with at least 32 ETH, and was not slashed, the NoOp will receive the entirety of their bond back. If the validator was not slashed, but its balance is less than 32 ETH, the difference will come out of the NoOps bond.
 
 :::warning
 If a validator is slashed, the NoOp will forfeit their entire bond.
@@ -29,10 +29,6 @@ If a validator is slashed, the NoOp will forfeit their entire bond.
 - Storage: 2 TB SSD (NVMe SSD recommended) for full node
   - To run a full archive node, over 13.5 TB is needed
   - Note: As the Ethereum blockchain grows, about 14GB additional storage is needed per week
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
 - Bandwidth: >= 25 Mbps download speed
 
 For more information, please see [Geth hardware requirements](https://geth.ethereum.org/docs/getting-started/hardware-requirements)

@@ -49,10 +49,6 @@ The Coral-CLI is used to generate validator keys, prepare registration payloads,
 ### Docker
 
 [Run using Docker](https://github.com/PufferFinance/coral/tree/main/docker)
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
 
 ### Build from source
 
