@@ -13,7 +13,7 @@ When withdrawing, there are two different modes: 1-step withdrawals and 2-step w
 
 Also known as "instant withdrawals", this option allows you to receive your WETH immediately. With a single transaction, the Puffer Protocol converts your pufETH into WETH and transfers it directly to your wallet.
 
-These instant withdrawals are made possible by Puffer's liquidity vault, but include a 1% fee on the withdrawn amount. This fee  will be sent to the protocol treasury.
+These instant withdrawals are made possible by Puffer's liquidity vault, but include a 1% fee on the withdrawn amount. The collected fee is directed to the protocol treasury, where it will later be used to fund in-protocol improvements and buybacks of the PUFFER token.
 
 ![1-step withdrawals](/img/withdraw/1sw.png)
 
