@@ -63,4 +63,4 @@ slug: /reference/faq
 
 ### 🐊 Why don't other permissionless pools reduce their bond requirement to 2 ETH?
 
-> Reducing the bond requirement [increases node and staker risk](slash.md#liquid-staking-protocol-considerations) which Puffer mitigates through [Guardian support](./guardians.md). Also as the bond requirement decreases, the threat of "rug-pooling" increases, which Puffer's [Validator Tickets](/yield/protocol/validator-tickets#why--noop-incentives) address.
+> Reducing the bond requirement [increases node and staker risk](slash.md#liquid-staking-protocol-considerations) which Puffer mitigates through [Guardian support](./guardians.md). Also as the bond requirement decreases, the threat of "rug-pulling" increases, which Puffer's [Validator Tickets](/yield/protocol/validator-tickets#why--noop-incentives) address.

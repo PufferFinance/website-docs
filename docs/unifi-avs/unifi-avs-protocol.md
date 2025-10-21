@@ -72,11 +72,8 @@ sequenceDiagram
     Note over O,RM: 🎁 Rewards Phase
     O->>RM: Claim AVS rewards
 ```
-{/* MDX-BLOCK-START */}
 The preconf flow in UniFi AVS involves several interactions:
-{/* MDX-BLOCK-START */}
 
-{/* MDX-BLOCK-START */}
 1. Operators set their delegate key to point to a Gateway
 2. Gateway queries the Beacon Node for the lookahead window to check the upcoming proposers
 3. Gateway checks if any of the upcoming proposers are delegated to them
@@ -198,7 +195,7 @@ UniFi AVS will employ a DisputeManager contract to handle slashing and incentivi
 
 1. **Safety Faults**: Penalties for breaking preconf promises, i.e., violating an execution preconf guarantee.
 2. **Liveness Faults**: Penalties for missing block proposals after signing pre-confirmations.
-3. **Rug Pooling**: Penalties for stealing block rewards that are meant to be smoothed.
+3. **Rug Pulling**: Penalties for stealing block rewards that are meant to be smoothed.
 
 :::caution
 The implementation of the mechanism will depend on EigenLayer's slashing design which is still TBD.

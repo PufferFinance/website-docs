@@ -37,10 +37,6 @@ Validator Tickets (VTs) allow you to participate in the Puffer Protocol as a nod
 
 7. Return to the Puffer LaunchPad. You should now see your Safe wallet connected and ready to purchase VTs. Click on `Continue` to move to the next step.
 
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
-{/* MDX-BLOCK-START */}
    ![Safe Multisig](/img/purchase-vt-1-step.png)
 
 ## Purchasing VTs with ETH
