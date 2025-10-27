@@ -54,9 +54,9 @@ export default function Home() {
                 link="https://docs-unifi.puffer.fi/"
               />
               <ProductCard
-                title="UniFi AVS"
-                description="UniFi AVS provides a preconfirmation layer designed for the next wave of rollup scalability and performance. This innovative solution enhances the entire rollup ecosystem, bringing unprecedented efficiency to Ethereum's infrastructure."
-                link="/unifi-avs/unifi-avs-intro"
+                title="Puffer Preconf"
+                description="Puffer Preconf provides fast, secure, and neutral preconfirmation services for Layer 2 rollups. Backed by 3M ETH of restaked security, it brings ~100ms transaction confirmations to any L2 while maintaining decentralization and economic sustainability."
+                link="/puffer-preconf/puffer-preconf-intro"
               />
               <ProductCard
                 title="Institutional Solutions"
