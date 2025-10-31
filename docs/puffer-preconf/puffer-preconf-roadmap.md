@@ -12,7 +12,7 @@ Puffer Preconf is rolling out in three phases, each introducing new capabilities
 | Phase | Status | Key Features | Timeline |
 |-------|--------|--------------|----------|
 | **Phase 1** | 🟢 Current | Gateway delegation, reward forfeiture, Gattaca live | Live soon |
-| **Phase 2** | 🟡 Coming Soon | Multiple gateways, enhanced lookahead, Google gateway | TBA |
+| **Phase 2** | 🟡 Coming Soon | Multiple gateways, enhanced lookahead | TBA |
 | **Phase 3** | ⚪ Future | Full slashing, additional, advanced features | TBA |
 
 ---
@@ -87,7 +87,6 @@ Phase 2 expands the gateway ecosystem and introduces enhanced coordination mecha
 ### Planned Features
 
 **Multiple Gateway Providers**:
-- 🎯 **Google Gateway** joins as second major provider
 - Additional gateway providers onboarded
 - Redundancy and competition improve service quality
 
@@ -119,7 +118,7 @@ Phase 2 expands the gateway ecosystem and introduces enhanced coordination mecha
 
 **For Validators**:
 - Can continue delegating to Gattaca
-- Option to delegate to Google or other gateways
+- Option to delegate or other gateways
 - Support for multi-gateway delegation (future) -->
 
 ### Timeline
@@ -208,7 +207,7 @@ Phase 3 will launch after we've gathered sufficient data from Phase 1 and 2.
 | Feature | Phase 1 | Phase 2 | Phase 3 |
 |---------|---------|---------|---------|
 | **Execution Preconfs** | ✅ ~100ms | ✅ ~100ms | ✅ ~100ms |
-| **Gateway Providers** | Gattaca | Gattaca + Google + Others | Multiple |
+| **Gateway Providers** | Gattaca | Gattaca + Others | Multiple |
 | **Slashing** | ❌ (Reward forfeiture) | ❌ (Reward forfeiture) | ✅ Full slashing |
 | **Rollup Support** | OP Stack | OP Stack + Others | Broad support |
 | **User Refunds** | ❌ | ❌ | ✅ Yes |
@@ -234,7 +233,6 @@ Phase 3 will launch after we've gathered sufficient data from Phase 1 and 2.
 - ⏳ You want multiple gateway options
 - ⏳ You're not using OP Stack (yet)
 - ⏳ You prefer more mature production deployments
-- ⏳ You want Google gateway specifically
 
 **Wait for Phase 3 If**:
 - ⏳ You require full slashing for security model

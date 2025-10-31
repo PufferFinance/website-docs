@@ -17,7 +17,7 @@ Puffer Preconf offers a unique value proposition for Layer 2 rollups seeking to 
 - **💰 Economic Alignment**: Revenue sharing model that benefits both your rollup and Ethereum validators—you don't cede all fees to L1
 - **🔒 Cryptographic Guarantees**: Strong execution guarantees backed by 3M ETH of economic security
 - **🌐 Permissionless & Neutral**: No governance tokens required, open to all L2s regardless of affiliation
-- **🤝 No Vendor Lock-in**: Open protocol with multiple gateway providers (Gattaca, Google coming soon)
+- **🤝 No Vendor Lock-in**: Open protocol with multiple gateway providers (Gattaca, more to come)
 - **📊 Transparent**: On-chain registry with verifiable commitments
 
 ### **The L2 Sequencing Trade-offs**
@@ -61,11 +61,6 @@ Description: Show the flow from L2 user → Gateway → Validator → L1 settlem
 - OP-based rollup support
 - Live and ready for integration
 
-**Google** - Coming soon:
-- Enterprise-grade infrastructure
-- Additional redundancy and reliability
-- Timeline: [To be announced]
-
 ## Permissionless & Neutral by Design 🌐
 
 Puffer Preconf is built to serve the entire Ethereum ecosystem, not just Puffer's own rollup (UniFi):
@@ -78,7 +73,7 @@ We understand that integrating with a preconf service requires trust that the pr
 - **📖 Open Protocol**: Fully open-source with transparent on-chain registry
 - **⚖️ Equal Treatment**: All L2s receive the same service level and economic terms
 - **🔐 Cryptographic Commitments**: Trust the math, not the operator—preconfs are cryptographically signed and slashable
-- **🌍 Multi-Gateway**: Multiple independent gateways (Gattaca, Google, etc.) prevent centralization
+- **🌍 Multi-Gateway**: Multiple independent gateways (Gattaca, more to come) prevent centralization
 - **🎯 Aligned Incentives**: Validators earn from all L2s, not just UniFi—more L2s = better validator economics
 
 ### UniFi: Leading by Example
@@ -128,7 +123,7 @@ This makes based rollup economics viable for appchains and general-purpose L2s.
 - OP-based rollup support
 
 **Phase 2** (Coming Soon):
-- Additional gateways including Google
+- Additional gateways
 - Enhanced lookahead mechanism
 - Expanded rollup architecture support
 

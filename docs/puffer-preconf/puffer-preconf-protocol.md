@@ -77,7 +77,7 @@ For Puffer Preconf to serve the entire Ethereum ecosystem:
 - **No Token Gating**: No governance tokens required to participate
 - **Equal Treatment**: All L2s receive the same service level
 - **Aligned Economics**: Validators earn from all L2s, not just UniFi
-- **Multiple Gateways**: Independent operators (Gattaca, Google, etc.)
+- **Multiple Gateways**: Independent operators (Gattaca, more to come)
 - **Open Source**: Transparent, auditable codebase
 
 ## Overview
@@ -241,12 +241,6 @@ More detailed gateway architecture: [Gateway Block Building & Pipelining](https:
 - **Production Tested**: Live and serving preconf traffic
 - **OP Stack Integration**: Native support for OP-based rollups
 - **High Availability**: Enterprise-grade reliability
-
-**Coming Soon: Google Gateway**
-Google will join as a gateway provider, offering:
-- Enterprise infrastructure and global redundancy
-- Additional decentralization through multiple gateway operators
-- Enhanced geographic distribution
 
 ## Slashing
 

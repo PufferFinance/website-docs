@@ -57,7 +57,6 @@ Validator → Delegates to → Gateway → Provides preconfs → Earns rewards �
 - Handles preconf signing and L2 block building
 
 **Future Gateways** (Phase 2+):
-- Google gateway coming soon
 - Additional third-party gateways
 
 ## Setup Instructions 🛠️

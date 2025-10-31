@@ -47,11 +47,6 @@ Puffer Preconf supports multiple gateway providers, giving you flexibility in in
 3. Configure your rollup to route transactions
 4. Set up fee sharing parameters
 
-**Google Gateway** - Coming Soon:
-- Enterprise-grade infrastructure
-- Additional redundancy
-- Timeline: TBA
-
 ### Option B: Run Your Own Gateway
 
 For L2s wanting maximum control, you can operate your own gateway.

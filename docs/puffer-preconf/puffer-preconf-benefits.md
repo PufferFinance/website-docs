@@ -64,10 +64,6 @@ Puffer Preconf enables OP Stack and other L2s to transition from centralized seq
 
 ![Gateway Architecture](/img/puffer-preconf-gateway-architecture.png)
 
-:::info
-Google is joining as a gateway provider soon, offering additional redundancy and enterprise-grade infrastructure for L2s.
-:::
-
 ## Economic Model: Aligned Incentives 💰
 
 Unlike L2s where none of the fees flow to L1 validators or traditional based rollup models where all fees flow to L1 validators, Puffer Preconf introduces a **revenue sharing model** that creates sustainable economics for both L2 operators and Ethereum validators.
