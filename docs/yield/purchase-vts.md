@@ -16,21 +16,25 @@ This guide will walk you through the process of purchasing Validator Tickets (VT
 
 1. Navigate to the [Puffer Dashboard](https://launchpad.puffer.fi/Dashboard)
 
-2. Click on the "Purchase VT" button
+2. Click on the "Buy VT" button
 
-   ![alt text](/img/purchase-vt-1-step.png)
+   ![alt text](/img/purchase-vt-v2-select.png)
 
-3. Select the amount of VT you want to purchase
+3. Select the currency you want to purchase VT with
 
-   ![alt text](/img/purchase-vt-2-currency-select.png)
+   ![alt text](/img/purchase-vt-v2-currency.png)
 
-4. Review the transaction details and click "Confirm"
+4. Select the amount of VT you want to purchase
 
-   ![alt text](/img/purchase-vt-3-transaction-submitted.png)
+   ![alt text](/img/purchase-vt-v2-amount.png)
 
-5. Wait for the transaction to be confirmed on the blockchain
+5. Review the transaction details and click "Confirm"
+   
+6. Wait for the transaction to be confirmed on the blockchain
 
-6. Once confirmed, you can verify your VT balance on the [Puffer Dashboard](https://launchpad.puffer.fi/Dashboard)
+   ![alt text](/img/purchase-vt-v2-transaction-submitted.png)
+
+7. Once confirmed, you can verify your VT balance on the [Puffer Dashboard](https://launchpad.puffer.fi/Dashboard)
 
 ## Notes
 
