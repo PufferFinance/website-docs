@@ -133,10 +133,10 @@ module.exports = {
     [
       "@docusaurus/plugin-content-docs",
       {
-        id: "unifi-avs",
-        path: "docs/unifi-avs",
-        routeBasePath: "unifi-avs",
-        sidebarPath: require.resolve("./sidebars-unifi-avs.js"),
+        id: "puffer-preconf",
+        path: "docs/puffer-preconf",
+        routeBasePath: "puffer-preconf",
+        sidebarPath: require.resolve("./sidebars-puffer-preconf.js"),
         editUrl: ({docPath}) => {
           return `https://github.com/PufferFinance/website-docs/tree/main/docs/${docPath}`;
         },
@@ -172,7 +172,7 @@ module.exports = {
       require.resolve("@easyops-cn/docusaurus-search-local"),
       {
         indexBlog: false,
-        docsRouteBasePath: ["/yield", "/unifi-avs", "/institutional"],
+        docsRouteBasePath: ["/yield", "/puffer-preconf", "/institutional"],
         indexPages: true,
         hashed: true,
         language: ["en"],

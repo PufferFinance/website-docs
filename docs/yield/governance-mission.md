@@ -15,7 +15,7 @@ The Puffer ecosystem now encompasses:
 
 - [Puffer LRT](https://www.puffer.fi/restake): Our flagship Liquid Restaking Protocol
 - [Puffer UniFi](https://unifi.puffer.fi/): Our Based Rollup stack
-- [UniFi AVS](https://docs.puffer.fi/unifi-avs-intro/): The first-of-its-kind preconf service for based rollup preconfirmations
+- [Puffer Preconf](https://docs.puffer.fi/puffer-preconf-intro/): The first-of-its-kind preconf service for based rollup preconfirmations
 
 ### Our Commitment
 
