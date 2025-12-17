@@ -93,25 +93,18 @@ To change your rewards claimer address on Base, a Node Operator should follow th
 
     ![alt text](/img/change-address-5.png)
 
-6.  Set the `ETH value` amount to a small number, e.g., `0.000042`, this is the relayer fee to pay the bridge who will broadcast the transaction to Base.
+6.  Set the `Contract Method Selector` to `setL2RewardClaimer`
+7.  Set the `ETH value` amount to a small number, e.g., `0.001`, this is the relayer fee to pay the bridge who will broadcast the transaction to Base. Don't worry excess ETH will be refunded back to the caller.
+8.  Enter your new rewards claimer address that you control on Base
+9.  Click `Add transaction` and then sign the generated SAFE transaction
+    ![alt text](../../static/img/change-address-6789.png)
 
-7.  Set the `Contract Method Selector` to `setL2RewardClaimer`
+:::note
+If the `To Address` field doesn't auto-populate, it should be set to the L1RewardManager proxy contract address: [0x157788cc028Ac6405bD406f2D1e0A8A22b3cf17b](https://etherscan.io/address/0x157788cc028Ac6405bD406f2D1e0A8A22b3cf17b).
+:::
 
-8.  Set the `bridge (address)` to Everclear's bridge address [0x8898B472C54c31894e3B9bb83cEA802a5d0e63C6](https://etherscan.io/address/0x8898b472c54c31894e3b9bb83cea802a5d0e63c6)
-
-9.  Enter your new rewards claimer address that you control on Base
-
-10. Click `Add transaction` and then sign the generated SAFE transaction
-
-    ![alt text](/img/change-address-678910.png)
-
-    :::note
-    If the `To Address` field doesn't auto-populate, it should be set to the L1RewardManager proxy contract address: [0x157788cc028Ac6405bD406f2D1e0A8A22b3cf17b](https://etherscan.io/address/0x157788cc028Ac6405bD406f2D1e0A8A22b3cf17b).
-    :::
-
-11. Wait for the transaction to be bridged from Ethereum Mainnet to Base Layer 2. This process typically takes between 3 to 6 hours, but may take longer if the relayer fee is insufficient.
-
-12. After the transaction is confirmed on Base, the Node Operator can now claim rewards using the specified rewards claimer address on Base.
+10. Wait for the transaction to be bridged from Ethereum Mainnet to Base Layer 2. This process typically takes between 5-10 minutes. You can track your transaction on Layerzero scan: [https://layerzeroscan.com/](https://layerzeroscan.com/)
+11. After the transaction is confirmed on Base, the Node Operator can now claim rewards using the specified rewards claimer address on Base.
 
 :::note
 Externally Owned Accounts (EOAs) do not need to perform this step. For EOAs, rewards will automatically be sent to the same Node Operators address that registered the validators on Ethereum Mainnet.
