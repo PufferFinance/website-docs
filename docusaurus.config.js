@@ -16,7 +16,7 @@ module.exports = {
   markdown: {
     mermaid: true,
   },
-  themes: ['@docusaurus/theme-mermaid'],
+  themes: ["@docusaurus/theme-mermaid"],
   themeConfig: {
     footer: {
       style: "dark",
@@ -90,7 +90,7 @@ module.exports = {
           position: "right",
         },
         {
-          href: "https://vote.puffer.fi",
+          href: "https://app.puffer.fi/puffer?tab=Stake",
           label: "Voting",
           position: "right",
         },
@@ -99,13 +99,13 @@ module.exports = {
   },
   presets: [
     [
-      '@docusaurus/preset-classic',
+      "@docusaurus/preset-classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: false,
         blog: false,
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       }),
     ],
@@ -118,15 +118,20 @@ module.exports = {
         path: "docs/yield",
         routeBasePath: "yield",
         sidebarPath: require.resolve("./sidebars-yield.js"),
-        editUrl: ({docPath}) => {
+        editUrl: ({ docPath }) => {
           return `https://github.com/PufferFinance/website-docs/tree/main/docs/${docPath}`;
         },
         remarkPlugins: [math],
-        rehypePlugins: [[katex, {
-          strict: false,
-          throwOnError: false,
-          globalGroup: true
-        }]],
+        rehypePlugins: [
+          [
+            katex,
+            {
+              strict: false,
+              throwOnError: false,
+              globalGroup: true,
+            },
+          ],
+        ],
         include: ["**/*.{md,mdx}"],
       },
     ],
@@ -137,15 +142,20 @@ module.exports = {
         path: "docs/puffer-preconf",
         routeBasePath: "puffer-preconf",
         sidebarPath: require.resolve("./sidebars-puffer-preconf.js"),
-        editUrl: ({docPath}) => {
+        editUrl: ({ docPath }) => {
           return `https://github.com/PufferFinance/website-docs/tree/main/docs/${docPath}`;
         },
         remarkPlugins: [math],
-        rehypePlugins: [[katex, {
-          strict: false,
-          throwOnError: false,
-          globalGroup: true
-        }]],
+        rehypePlugins: [
+          [
+            katex,
+            {
+              strict: false,
+              throwOnError: false,
+              globalGroup: true,
+            },
+          ],
+        ],
         include: ["**/*.{md,mdx}"],
       },
     ],
@@ -156,15 +166,20 @@ module.exports = {
         path: "docs/institutional",
         routeBasePath: "institutional",
         sidebarPath: require.resolve("./sidebars-institutional.js"),
-        editUrl: ({docPath}) => {
+        editUrl: ({ docPath }) => {
           return `https://github.com/PufferFinance/website-docs/tree/main/docs/${docPath}`;
         },
         remarkPlugins: [math],
-        rehypePlugins: [[katex, {
-          strict: false,
-          throwOnError: false,
-          globalGroup: true
-        }]],
+        rehypePlugins: [
+          [
+            katex,
+            {
+              strict: false,
+              throwOnError: false,
+              globalGroup: true,
+            },
+          ],
+        ],
         include: ["**/*.{md,mdx}"],
       },
     ],
