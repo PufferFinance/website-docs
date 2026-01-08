@@ -48,15 +48,15 @@ To ensure timely inclusion in governance, approved proposals are queued for the 
 
 ## Proposal Voting
 
-The final stage of the governance process is voting, exclusive to vePUFFER holders and conducted through the [Puffer Voting Platform](https://vote.puffer.fi/). Key voting guidelines include:
+The final stage of the governance process is voting, exclusive to vlPUFFER holders and conducted through the [[Proposals Section](https://app.puffer.fi/proposals). Key voting guidelines include:
 
-- Seven-day voting epoch
-- Occurs every other Thursday at 12am UTC
+- Fourteen-day voting epoch
+- Occurs every four Saturdays at 7am UTC
 - Quorum depends on proposal type
   - For proposals, simple majority determines proposal passage
   - For incentive gauges, protocols compete for a share of votes and in turn, the incentives for their users
 - Results are tallied after the voting period and shared through the Governance Forum and official communication channels.
 
-Each Voting Epoch lasts for seven calendar days and it happens every other Thursday at 12am UTC time.
+Each Voting Epoch lasts for fourteen calendar days and it happens every four Saturdays at 7am UTC time.
 
 For more information on voting, please refer to our article on [Voting](./governance-voting.md).

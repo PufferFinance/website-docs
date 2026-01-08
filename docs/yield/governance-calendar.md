@@ -7,9 +7,9 @@ slug: /governance/calendar
 
 ## Overview
 
-The Puffer Governance Calendar is your one-stop resource for staying updated on key dates and events in Puffer’s governance processes. From proposal submission deadlines to voting cycles, our calendar ensures that all participants — be it vePUFFER holders, or proposal creators — remain informed and engaged.
+The Puffer Governance Calendar is your one-stop resource for staying updated on key dates and events in Puffer’s governance processes. From proposal submission deadlines to voting cycles, our calendar ensures that all participants — be it vlPUFFER holders, or proposal creators — remain informed and engaged.
 
-This calendar is embedded directly below for your convenience, and it is also accessible via the [Puffer DAO Hub](https://vote.puffer.fi/). You can choose to import the calendar by importing the following iCal link to any calendar application that you use.
+This calendar is embedded directly below for your convenience, and it is also accessible via the [Gauges section](https://app.puffer.fi/gauges). You can choose to import the calendar by importing the following iCal link to any calendar application that you use.
 
 ```
 https://calendar.google.com/calendar/ical/c_494d83a09d16868a70acdfb137ef9e3aff678c9fd688700cccd07bfc806a0422%40group.calendar.google.com/public/basic.ics
@@ -21,25 +21,17 @@ Adding the calendar to your personal tools is highly encouraged if you would lik
 
 ## Key Events on the Governance Calendar
 
-### vePUFFER Staking Cutoff
-
-The vePUFFER staking cutoff marks the deadline for staking PUFFER tokens to receive vePUFFER voting power for the upcoming voting epoch.
-
-This cutoff aligns with the existing [vePUFFER parameters](./governance-token.md#vepuffer-parameters) i.e. every vePUFFER stake must be at least three (3) days old when the upcoming voting epoch begins at designated Thursdays at 00:00:00 UTC.
-
-Staking before this cutoff, currently set to the Sunday 23:59:59 UTC before every voting epoch ensures voting power is activated when the voting epoch starts.
-
 ### Voting Epochs
 
-The voting epoch is when vePUFFER holders can cast their votes on governance proposals and incentive gauges. These are critical moments for shaping the Puffer ecosystem, as decisions on incentive gauges, funding allocations, protocol upgrades, and key initiatives are determined during these periods.
+The voting epoch is when vlPUFFER holders can cast their votes on governance proposals and incentive gauges. These are critical moments for shaping the Puffer ecosystem, as decisions on incentive gauges, funding allocations, protocol upgrades, and key initiatives are determined during these periods.
 
-Voting epochs currently lasts for seven (7) days as per existing [vePUFFER parameters](./governance-token.md#vepuffer-parameters) and are clearly marked on the calendar. They typically occur on a bi-weekly basis.
+Voting epochs currently lasts for fourteen (14) days and are clearly marked on the calendar. They typically occur on a monthly basis.
 
 ### Rewards Epochs
 
 Rewards epochs dictate the distribution of incentives based on the outcomes of governance voting. These rewards epochs typically follow each voting epoch, with some operational buffer period, ensuring that rewards allocations to liquidity pools, validators, or other protocol participants are executed transparently and efficiently. Users can expect reward distributions to align with the incentive gauges voting results during the preceding voting epoch.
 
-Rewards epochs currently lasts for fourteen (14) days as per existing [vePUFFER parameters](./governance-token.md#vepuffer-parameters) and are clearly marked on the calendar. They typically occur right after the previous rewards epoch ends (and likewise, the preceding voting epoch as well), with some operational buffer period.
+Rewards epochs currently lasts for four (4) weeks and are clearly marked on the calendar. They typically occur right after the previous rewards epoch ends (and likewise, the preceding voting epoch as well), with some operational buffer period.
 
 ### Governance Announcements
 
