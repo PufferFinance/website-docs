@@ -39,7 +39,7 @@ Throughout all phases, we remain committed to:
 ## Phase 1.5: Change to vlPUFFER
 
 - Change voting token from vePUFFER to vlPUFFER
-- vlPUFFER uses a different model from vePUFFER, where users lock PUFFER tokens to receive vlPUFFER voting power based on a multiplier system ([vlPUFFER documentation](./governance-token.md#vlpuffer))
+- vlPUFFER uses a different model from vePUFFER, where users lock $PUFFER tokens to receive vlPUFFER voting power based on a multiplier system ([vlPUFFER documentation](./governance-token.md#vlpuffer))
 - New voting page, divided into [Proposals](https://app.puffer.fi/proposals) and [Gauges](https://app.puffer.fi/gauges) sections
 
 ## Phase 2: On-Chain Voting

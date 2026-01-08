@@ -38,7 +38,7 @@ To direct incentives, simply go to the [Gauges Section](https://app.puffer.fi/ga
 
 Like proposals, you can only vote on incentive gauges when there is an active voting epoch. You can see whether there is an active voting epoch in the Gauges tab, and a timer will be shown on the deadline to vote.
 
-A list of gauges will be shown to you, and you can click on a gauge to view more information of the gauge that can be voted for. These will generally be specific pools on other DeFi protocols, where you can perform certain actions (e.g. staking pufETH or PUFFER, providing liquidity, holding a token, etc.) and your vote will determine how much incentives will be directed to each pool.
+A list of gauges will be shown to you, and you can click on a gauge to view more information of the gauge that can be voted for. These will generally be specific pools on other DeFi protocols, where you can perform certain actions (e.g. staking pufETH or $PUFFER, providing liquidity, holding a token, etc.) and your vote will determine how much incentives will be directed to each pool.
 
 <img src="/img/vlPuffer/gauges.png" height="500" alt="Gauges tab"></img>
 

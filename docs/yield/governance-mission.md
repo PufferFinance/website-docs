@@ -46,7 +46,7 @@ The [PUFFER token](./governance-token.md) is the cornerstone of our governance m
 We believe in the power of diverse perspectives. Therefore:
 
 - We invite everyone interested in Puffer's mission to join the conversation and contribute ideas.
-- While voting rights are reserved for PUFFER token holders who have locked their tokens in our voting token vlPUFFER, we value input from our entire community.
+- While voting rights are reserved for $PUFFER token holders who have locked their tokens in our voting token vlPUFFER, we value input from our entire community.
 - Your voice matters in shaping our protocol and contributing to the broader Ethereum ecosystem, regardless of token ownership.
 
 Together, we're not just building protocols; we're shaping the future of decentralized finance on Ethereum.

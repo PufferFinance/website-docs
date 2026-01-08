@@ -46,10 +46,10 @@ Your vlPUFFER balance determines your influence in governance votes and reward d
 
 ### How it Works
 
-1. **Lock your PUFFER tokens** for a chosen duration (from 30 days up to 2 years).
+1. **Lock your $PUFFER tokens** for a chosen duration (from 30 days up to 2 years).
 2. The system grants you **vlPUFFER** based on a **multiplier** determined by the lock duration.
 3. **Use your vlPUFFER** to vote in governance, influence emissions, and access certain protocol rewards.
-4. After the lock period ends, **you can withdraw your original PUFFER tokens**.
+4. After the lock period ends, **you can withdraw your original $PUFFER tokens**.
 
 > vlPUFFER is non-transferable. It cannot be traded or moved between wallets. It only represents voting power.
 
@@ -65,19 +65,18 @@ Your vlPUFFER balance determines your influence in governance votes and reward d
 | 18 months     | 18x        |
 | 24 months     | 24x        |
 
-**Example:** Locking 100 PUFFER for 12 months gives you **1,200 vlPUFFER** (12x multiplier).
+**Example:** Locking 100 $PUFFER for 12 months gives you **1,200 vlPUFFER** (12x multiplier).
 
-### Locking your PUFFER
+### Locking your $PUFFER
 
-This is the interface that allows you to stake your PUFFER [here](https://app.puffer.fi/puffer?tab=Stake).
-
+This is the interface that allows you to stake your $PUFFER [here](https://app.puffer.fi/puffer?tab=Stake).
 ![stake](/img/vlPuffer/stake.png)
 
-Minimum lock amount: **10 PUFFER**
+Minimum lock amount: **10 $PUFFER**
 
 Once you have staked, you will see the information of your lock, where you can:
 
-- **Add more PUFFER** to increase your total locked amount and thus you vlPUFFER.
+- **Add more $PUFFER** to increase your total locked amount and thus you vlPUFFER.
 - **Extend your lock duration** to earn a higher multiplier, increasing your vlPUFFER as well.
 - **Do both** to maximize your voting power.
 
@@ -89,7 +88,7 @@ In the ["Manage"](https://app.puffer.fi/puffer?tab=Manage) tab you can see the d
 
 ![manage](/img/vlPuffer/manage.png)
 
-If you click the "Manage Lock" button, you will be able to renew the lock, by adding more PUFFER, extending the lock duration or doing both, just as shown before:
+If you click the "Manage Lock" button, you will be able to renew the lock, by adding more $PUFFER, extending the lock duration or doing both, just as shown before:
 
 ![renew](/img/vlPuffer/renew.png)
 
@@ -113,9 +112,9 @@ Using different wallets, you can manage multiple locks. If you delegate all of t
 
 When your lock expires:
 
-1. You can **withdraw your PUFFER tokens** at any time after the end date.
+1. You can **withdraw your $PUFFER tokens** at any time after the end date.
 2. If you don't withdraw within **7 days**, anyone can **"kick"** your expired lock:
-   - The kicker receives **1%** of your locked PUFFER as a fee.
+   - The kicker receives **1%** of your locked $PUFFER as a fee.
    - The remaining **99%** is automatically returned to you.
 
 ### Governance Power and Utility
