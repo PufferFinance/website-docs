@@ -32,6 +32,23 @@ The PUFFER token is the native governance token of the Puffer Protocol and UniFi
 - Manage treasury funds for long-term sustainability
 - Steer rollup upgrade decisions and feature prioritization
 
+## PUFFER Allocations
+
+<img src="/img/governance-puffer-tokenomics.webp" height="350" alt="The $PUFFER tokenomics overview"></img>
+
+The PUFFER token has a maximum total supply of 1,000,000,000. As of writing, there is currently an initial circulating supply of 102,300,000 (10.23%) PUFFER tokens.
+
+In the table below, we have a breakdown of how the PUFFER tokens are allocated across the Puffer ecosystem.
+
+| Allocation                    | Percentage | Description                                                                                                                                                                                                                                                                               |
+| ----------------------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Ecosystem and Community       | 40%        | Allocated to initiatives that build a dynamic and engaged ecosystem, rewarding community support and ensuring continuous growth. This reserve will fund future airdrop seasons, community incentives, and initial liquidity on exchanges.                                                 |
+| Airdrop Season 1              | 7.5%       | Allocated to the Crunchy Carrot Quest Season One airdrop, available immediately to reward early Puffer supporters from the Crunchy Carrot Campaign. 65% is available on day 1 and for larger depositors, the rest is vested over 6 months for equal opportunity for all of our community. |
+| Airdrop Season 2              | 5.5%       | Allocated to Crunchy Carrot Quest Season Two participants. Season 2 has already started after the snapshot of Season 1 on October 5, 2024.                                                                                                                                                |
+| Investors                     | 26%        | By providing resources and support, investors enabled Puffer to build great products for the community. Investors will receive their allocation over 3 years, with a 1-year cliff and 2 years vesting.                                                                                    |
+| Early Contributors & Advisors | 20%        | This allocation is for the Puffer core team and advisors, who are fully committed to Puffer's success. This will vest over 3 years, with a 1-year cliff, ensuring long-term dedication to the ecosystem's vision.                                                                         |
+| Protocol Guild                | 1%         | In alignment with the Protocol Guild Pledge, 1% of the total $PUFFER supply will support Ethereum core development, vested over a 4-year period. This contribution strengthens the security and scalability of Ethereum, benefiting the broader ecosystem.                                |
+
 ## vlPUFFER
 
 **vlPUFFER** is Puffer Finance's governance and locking system.
