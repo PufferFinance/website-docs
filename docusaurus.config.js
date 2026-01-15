@@ -119,7 +119,7 @@ module.exports = {
         routeBasePath: "yield",
         sidebarPath: require.resolve("./sidebars-yield.js"),
         editUrl: ({ docPath }) => {
-          return `https://github.com/PufferFinance/website-docs/tree/main/docs/${docPath}`;
+          return `https://github.com/PufferFinance/website-docs/tree/main/docs/yield/${docPath}`;
         },
         remarkPlugins: [math],
         rehypePlugins: [
@@ -143,7 +143,7 @@ module.exports = {
         routeBasePath: "puffer-preconf",
         sidebarPath: require.resolve("./sidebars-puffer-preconf.js"),
         editUrl: ({ docPath }) => {
-          return `https://github.com/PufferFinance/website-docs/tree/main/docs/${docPath}`;
+          return `https://github.com/PufferFinance/website-docs/tree/main/docs/puffer-preconf/${docPath}`;
         },
         remarkPlugins: [math],
         rehypePlugins: [
@@ -167,7 +167,7 @@ module.exports = {
         routeBasePath: "institutional",
         sidebarPath: require.resolve("./sidebars-institutional.js"),
         editUrl: ({ docPath }) => {
-          return `https://github.com/PufferFinance/website-docs/tree/main/docs/${docPath}`;
+          return `https://github.com/PufferFinance/website-docs/tree/main/docs/institutional/${docPath}`;
         },
         remarkPlugins: [math],
         rehypePlugins: [
