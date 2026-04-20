@@ -2,7 +2,7 @@
 
 This repository contains the documentation for Puffer Finance products.
 
-## MDX Issues Resolution
+## MDX Issues Resolution 
 
 We've implemented several fixes to resolve MDX compilation errors that occurred with Docusaurus 3.x:
 
