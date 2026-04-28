@@ -205,6 +205,7 @@ module.exports = {
         useAllContextsWithNoSearchContext: true,
       },
     ],
+    "docusaurus-plugin-copy-page-button",
   ],
   stylesheets: [
     {

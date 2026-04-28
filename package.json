@@ -23,6 +23,7 @@
     "@easyops-cn/docusaurus-search-local": "^0.49.2",
     "@mdx-js/react": "3.0.0",
     "clsx": "2.1.0",
+    "docusaurus-plugin-copy-page-button": "^0.4.2",
     "dompurify": "3.2.4",
     "hast-util-is-element": "3.0.0",
     "katex": "^0.16.22",
