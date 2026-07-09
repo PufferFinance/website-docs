@@ -83,6 +83,29 @@ Unlike L2s where none of the fees flow to L1 validators or traditional based rol
 Priority fees and congestion fees can be directed entirely to the rollup owner, giving L2 operators flexibility in their economic models.
 :::
 
+### Gateway Profit Estimation: Real-World Example
+
+To understand the potential returns for gateways operating Puffer Preconf services, consider this analysis based on L2 profitability data:
+
+**Example Calculation** (Data snapshot: November 21, 2025):
+
+Based on a [Dune Analytics dashboard analysis](https://dune.com/queries/2914457/4844106) of nine major L2 rollups:
+- **Average L2 Monthly Profit**: approximately USD 13.4M
+- **Gateway Revenue Share**: 35% (varies based on individual rollup deals)
+- **Estimated Monthly Gateway Rewards**: 13.4M × 35% = **approximately USD 4.69M**
+
+![L2 Profit Dashboard Snapshot](/img/puffer-preconf-l2-profit-dashboard.png)
+
+This demonstrates the substantial economic opportunity for gateways operating Puffer Preconf services. The actual distribution depends on:
+- Number of active L2 integrations
+- Transaction volume per L2
+- Specific revenue-sharing agreements negotiated with each rollup
+- Gateway efficiency and uptime
+
+:::warning Data Currency
+These figures are based on L2 profit data from November 2025. Market conditions, L2 profitability, and gateway deals evolve over time. For current projections relevant to your decision-making, we recommend conducting your own analysis or contacting gateway operators directly for up-to-date economics. You can access the Dune dashboard directly to view the latest data: [L2 Profit Query](https://dune.com/queries/2914457/4844106)
+:::
+
 ## Comparison: Puffer Preconf vs. Alternatives
 
 | Feature | Puffer Preconf | Centralized Sequencer | Pure Based Rollup |
