@@ -52,7 +52,7 @@ Validator → Delegates to → Gateway → Provides preconfs → Earns rewards �
 
 ### Current Gateway: Gattaca
 
-**[Gattaca](https://gattaca-com.github.io/based-op/)** is the primary gateway in Phase 1:
+**Google Cloud** is the primary gateway in Phase 1:
 - Production-ready for OP-based rollups
 - Handles preconf signing and L2 block building
 
