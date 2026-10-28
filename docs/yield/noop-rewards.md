@@ -7,17 +7,21 @@ slug: /nodes/rewards
 
 Node Operators receive rewards in the same way as any other validator on Ethereum. However, while Execution Layer rewards are earned normally and sent to the fee recipient address configured in the Beacon Node client, Consensus Layer rewards flow through the EigenLayer contracts and normally incur a delay.
 
-To make the rewards withdrawal process fast and gas-efficient, Puffer has created a way for withdrawing rewards on Base L2. It requires a minimal amount of gas to withdraw rewards, and it allows validators to receive their rewards as quickly as possible and as often as they need. Node Operator Consensus Layer rewards are automatically bridged to [Base L2](https://www.base.org/) using [Everclear](https://bridge.connext.network/), which validators can withdraw in the form of pufETH.
+To make the rewards withdrawal process fast and gas-efficient, Node Operator Consensus Layer rewards are not withdrawn from the EigenPods for each validator. Instead, Puffer mints them as pufETH on Ethereum through the `L1RewardManager` contract, and Node Operators claim their pufETH with a single transaction on Ethereum.
 
-To withdraw rewards, Node Operators need to sign a transaction on Base by following these steps on the [Puffer Dashboard](https://launchpad.puffer.fi/Dashboard):
+:::note
+Until October 2026, rewards were bridged to [Base](https://www.base.org/) and claimed there. Rewards minted before that change can still be claimed on Base. The [Puffer Dashboard](https://launchpad.puffer.fi/Dashboard) shows on which network your rewards are claimed.
+:::
+
+To withdraw rewards, Node Operators need to sign a transaction by following these steps on the [Puffer Dashboard](https://launchpad.puffer.fi/Dashboard):
 
 1. Click the "Claim" button
 
 ![Claim Rewards Card](/img/noop-rewards-1.png)
 
-2. Switch your wallet's network to Base. This step is necessary as the claiming process occurs on Base, and you'll need to sign a transaction there. Ensure you have sufficient ETH for gas.
+2. If your wallet is not on the network where the rewards are claimed (Ethereum, or Base for older rewards), you will be asked to switch it. Ensure you have sufficient ETH for gas on that network.
 
-![Switch to Base](/img/noop-rewards-2.png)
+![Switch to Ethereum](/img/noop-rewards-2.png)
 
 3. Click the "Claim" button again
 
@@ -27,37 +31,33 @@ To withdraw rewards, Node Operators need to sign a transaction on Base by follow
 
 ![Sign Transaction](/img/noop-rewards-4.png)
 
-5. Wait for the transaction confirmation. Once confirmed, you'll receive your rewards on Base.
+5. Wait for the transaction confirmation. Once confirmed, you'll receive your rewards as pufETH in your wallet.
 
 ![Transaction Confirmed](/img/noop-rewards-5.png)
 
-After claiming the rewards, Node Operators can either bridge them back to Ethereum L1 or utilize them on Base L2.
-
 # How Rewards Are Calculated
 
-Rewards are distributed weekly, with the exception of the first distribution, which includes all rewards accumulated since Puffer's mainnet launch.
+Rewards are distributed about every 2 weeks.
 
-For each weekly interval, Puffer's Guardians perform the following steps:
+For each interval, Puffer's Guardians perform the following steps:
 
 1. Compute individual rewards for each Node Operator (sum of all of their associated validators)
-2. Calculate the total rewards for the previous intervals
-3. Create and publish a Merkle tree of rewards, storing it on AWS S3
-4. Mint pufETH tokens and transfer them to the Base Layer 2 network
-5. Enforce a mandatory waiting period to revert in case of a security vulnerability
-6. Once the waiting period ends, Node Operators can claim their rewards through the L2RewardManager contract on Base using the [Puffer Dashboard](https://launchpad.puffer.fi/Dashboard)
-
-![Rewards Claiming on Base](/img/fwr.png)
+2. Calculate the total rewards for the interval
+3. Create and publish a Merkle tree of rewards, storing it on IPFS. Its URL is recorded on-chain with each mint
+4. Mint the rewards as pufETH on Ethereum, in the `L1RewardManager` contract
+5. Enforce a mandatory waiting period of 24 hours, during which a wrong interval can be frozen and reverted in case of a security vulnerability
+6. Once the waiting period ends, Node Operators can claim their rewards from the `L1RewardManager` contract on Ethereum using the [Puffer Dashboard](https://launchpad.puffer.fi/Dashboard)
 
 ### Rewards Epochs and accounting
 
-**Current Rewards Epoch** — this is the epoch up to which rewards have been calculated and posted to Base.
+**Current Rewards Epoch** — this is the epoch up to which rewards have been calculated and minted.
 
 **Next Rewards Epoch** — this is the epoch up to which rewards will be calculated in the upcoming accounting event.
 
-We execute accounting automatically once a week on Monday, but this period of time can be changed in the future.
+We execute accounting about every 2 weeks, but this period of time can be changed in the future.
 
 :::note
-We only mint and send to Base the rewards that have been successfully withdrawn from your validator on the Beacon Chain.
+We only mint the rewards that have been successfully withdrawn from your validator on the Beacon Chain.
 :::
 
 ### How to check if the rewards calculation is correct
@@ -67,45 +67,6 @@ We only mint and send to Base the rewards that have been successfully withdrawn 
 3. Sum up these withdrawals.
 4. This total represents your expected rewards in ETH, which will need to be converted using the exchange rate at the epoch from Step 1.
 
-## Changing Your Rewards Recipient Address
+## Smart Contract Wallets
 
-:::caution
-Node Operators who used a smart contract (such as a multisig wallet) to register their validators on Ethereum Mainnet **MUST** set a specific rewards claimer address on Base. This step is crucial; without it, they may be unable to claim their rewards on Base.
-
-The reason for this requirement is that addresses on Ethereum Mainnet do not automatically correspond to the same addresses on Base. Therefore, to ensure you can access your rewards, you need to explicitly specify which address on Base should be authorized to claim them.
-:::
-
-To change your rewards claimer address on Base, a Node Operator should follow these steps:
-
-1.  Navigate to your [SAFE](https://app.safe.global) account
-
-2.  Select `New transaction`
-
-3.  Select `Transaction Builder`
-
-    ![alt text](/img/change-address-23.png)
-
-4.  Enter the L1RewardManager contract proxy address: [0x157788cc028Ac6405bD406f2D1e0A8A22b3cf17b](https://etherscan.io/address/0x157788cc028Ac6405bD406f2D1e0A8A22b3cf17b)
-
-    ![alt text](/img/change-address-4.png)
-
-5.  Select `Use Implementation ABI`
-
-    ![alt text](/img/change-address-5.png)
-
-6.  Set the `Contract Method Selector` to `setL2RewardClaimer`
-7.  Set the `ETH value` amount to a small number, e.g., `0.001`, this is the relayer fee to pay the bridge who will broadcast the transaction to Base. Don't worry excess ETH will be refunded back to the caller.
-8.  Enter your new rewards claimer address that you control on Base
-9.  Click `Add transaction` and then sign the generated SAFE transaction
-    ![alt text](../../static/img/change-address-6789.png)
-
-:::note
-If the `To Address` field doesn't auto-populate, it should be set to the L1RewardManager proxy contract address: [0x157788cc028Ac6405bD406f2D1e0A8A22b3cf17b](https://etherscan.io/address/0x157788cc028Ac6405bD406f2D1e0A8A22b3cf17b).
-:::
-
-10. Wait for the transaction to be bridged from Ethereum Mainnet to Base Layer 2. This process typically takes between 5-10 minutes. You can track your transaction on Layerzero scan: [https://layerzeroscan.com/](https://layerzeroscan.com/)
-11. After the transaction is confirmed on Base, the Node Operator can now claim rewards using the specified rewards claimer address on Base.
-
-:::note
-Externally Owned Accounts (EOAs) do not need to perform this step. For EOAs, rewards will automatically be sent to the same Node Operators address that registered the validators on Ethereum Mainnet.
-:::
+Rewards claimed on Ethereum are always sent to the address that registered the validators on Ethereum, including smart contract wallets such as a multisig. No additional setup is required to claim them.
